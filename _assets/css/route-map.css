@@ -1,0 +1,103 @@
+/* route-map.css — Barefoot Baltic static route map.
+ * Just an image. That's it.
+ */
+
+.route-map-section {
+  margin: 2.4rem 0 2.6rem;
+  font-family: var(--font-body, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+  color: #3a2e22;
+}
+.route-map-section .route-map-section-title {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #3a2e22;
+}
+.route-map-section .route-map-section-sub {
+  font-size: 0.95rem;
+  color: #6b5947;
+  margin: 0 0 1rem;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* Stat-line chip just above the map: "~200 km · 8 stops · seasonal stops" */
+.route-map-summary {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.55rem 1rem;
+  background: #f5efe1;
+  border: 1px solid rgba(58, 46, 34, 0.12);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #3a2e22;
+  line-height: 1.5;
+  max-width: 100%;
+  font-weight: 500;
+}
+
+.route-map-static {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 660 / 360;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(58, 46, 34, 0.08);
+  background: linear-gradient(135deg, #f5efe1 0%, #ece2cc 100%);
+  object-fit: cover;
+}
+
+/* Google Maps "Share → Embed" iframe wrapper. We strip whatever inline
+ * width/height the author pasted in, force the iframe to fill the
+ * wrapper, and round the corners to match the static-image variant. */
+.route-map-google {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 660 / 420;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(58, 46, 34, 0.08);
+  background: linear-gradient(135deg, #f5efe1 0%, #ece2cc 100%);
+}
+.route-map-google iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  display: block;
+}
+
+/* Single-line key beneath the map: numbered chip + stop name. Wraps to
+ * multiple lines on narrow screens. */
+.route-map-legend {
+  margin: 0.85rem 0 0;
+  padding: 0;
+  font-size: 0.86rem;
+  color: #3a2e22;
+  line-height: 1.7;
+}
+.route-map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0.85rem 0.3rem 0;
+  white-space: nowrap;
+}
+.route-map-legend-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #9e1b32;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.74rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .route-map-section .route-map-section-title { font-size: 1.35rem; }
+  .route-map-legend { font-size: 0.82rem; }
+}

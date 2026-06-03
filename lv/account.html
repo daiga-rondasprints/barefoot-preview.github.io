@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mans konts — Barefoot Baltic</title>
+<meta name="description" content="Pieslēdzieties, lai apskatītu un pārvaldītu savas Barefoot Baltic rezervācijas.">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand: #f5f0e8;
+  --sand-dark: #e8e0d0;
+  --bark: #3a2f28;
+  --bark-light: #5c4a3e;
+  --moss: #4A5D3A;
+  --moss-light: #5E7648;
+  --moss-pale: #E3E9D9;
+  --amber: #B8862E;
+  --amber-light: #D4A547;
+  --cream: #fffcf5;
+  --clay: #b8705a;
+  --white: #ffffff;
+  --focus: #3b82f6;
+  --carmine: #9E1B32;
+  --carmine-dark: #7A1426;
+  --indigo: #253961;
+  --indigo-dark: #1A2A48;
+  --linen: #FBF7EE;
+  --peat: #2B1F1A;
+  --bronze: #8C6D2E;
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1da851;
+  --gold-stamp: #d9a84a;
+  --sand-rgb: 245, 240, 232;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-display: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --line-height-body: 1.65;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* Restore [hidden] semantics — display:flex/grid on .login-form, .modal etc.
+   would otherwise win over the browser default and leak hidden elements. */
+[hidden]{display:none !important}
+html{font-size:16px}
+body{
+  font-family:var(--font-body);
+  color:var(--bark);
+  background:var(--linen);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.2;color:var(--bark)}
+a{color:var(--indigo);text-decoration:none;transition:color .2s}
+a:hover{color:var(--carmine)}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* ── ACCESSIBILITY ── */
+.skip-link{
+  position:absolute;top:-100%;left:1rem;z-index:9999;
+  background:var(--bark);color:var(--white);
+  padding:var(--space-3) var(--space-6);border-radius:0 0 8px 8px;
+  font-weight:600;font-size:.9rem;
+  text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:0}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.page-header{
+  padding:var(--space-5) var(--space-5);
+  border-bottom:1px solid var(--sand-dark);
+  background:var(--white);
+}
+.page-header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--space-4);
+  flex-wrap:wrap;
+}
+.logo-link{
+  font-family:var(--font-display);
+  font-size:1.4rem;
+  color:var(--bark);
+  letter-spacing:.01em;
+}
+.logo-link:hover{color:var(--carmine)}
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:var(--space-5);
+  font-size:.95rem;
+}
+.back-link{
+  color:var(--bark-light);
+  font-weight:500;
+}
+.back-link:hover{color:var(--carmine)}
+.user-menu{
+  display:none;
+  align-items:center;
+  gap:var(--space-3);
+}
+.user-menu[data-shown="true"]{display:flex}
+.user-email{
+  color:var(--bark);
+  font-size:.9rem;
+  max-width:240px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.logout-btn{
+  color:var(--bark-light);
+  font-size:.9rem;
+  text-decoration:underline;
+  text-decoration-color:var(--sand-dark);
+  text-underline-offset:3px;
+  padding:var(--space-1) var(--space-2);
+  transition:color .15s;
+}
+.logout-btn:hover{color:var(--carmine);text-decoration-color:var(--carmine)}
+
+/* ── Main ───────────────────────────────────────────────────── */
+.main{
+  flex:1;
+  padding:var(--space-10) var(--space-5) var(--space-16);
+}
+.container{
+  max-width:760px;
+  margin:0 auto;
+}
+.container-narrow{max-width:460px}
+.state-section{display:none}
+.state-section[data-shown="true"]{display:block}
+
+/* ── Login UI ───────────────────────────────────────────────── */
+.login-heading{
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  margin-bottom:var(--space-3);
+  text-align:center;
+}
+.login-lede{
+  text-align:center;
+  color:var(--bark-light);
+  margin-bottom:var(--space-10);
+  font-size:1.05rem;
+}
+.login-card{
+  background:var(--white);
+  border:1px solid var(--sand-dark);
+  border-radius:12px;
+  padding:var(--space-8) var(--space-6);
+  box-shadow:0 2px 12px rgba(58,47,40,.04);
+}
+.login-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--space-3);
+  width:100%;
+  padding:.85rem 1.25rem;
+  font-size:1rem;
+  font-weight:500;
+  border-radius:8px;
+  transition:background .15s, border-color .15s, transform .1s;
+  border:1px solid var(--sand-dark);
+  background:var(--white);
+  color:var(--bark);
+  text-align:center;
+}
+.login-btn:hover{border-color:var(--bark);background:var(--cream)}
+.login-btn:active{transform:translateY(1px)}
+.login-btn svg{flex-shrink:0}
+
+.divider{
+  display:flex;
+  align-items:center;
+  gap:var(--space-4);
+  margin:var(--space-6) 0;
+  color:var(--bark-light);
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.divider::before,.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--sand-dark);
+}
+
+.login-form{display:flex;flex-direction:column;gap:var(--space-3)}
+.login-form label{
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--bark);
+  letter-spacing:.02em;
+}
+.login-form input{
+  font-family:inherit;
+  font-size:1rem;
+  padding:.7rem .85rem;
+  border:1px solid var(--sand-dark);
+  border-radius:6px;
+  background:var(--white);
+  color:var(--bark);
+  transition:border-color .15s;
+}
+.login-form input:focus{outline:none;border-color:var(--bark)}
+.login-form input:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-color:var(--bark)}
+.login-form button[type="submit"]{
+  margin-top:var(--space-2);
+  background:var(--bark);
+  color:var(--white);
+  padding:.85rem 1.25rem;
+  border-radius:8px;
+  font-size:1rem;
+  font-weight:600;
+  transition:background .15s, transform .1s;
+}
+.login-form button[type="submit"]:hover{background:var(--carmine)}
+.login-form button[type="submit"]:active{transform:translateY(1px)}
+.login-form button[type="submit"]:disabled{
+  background:var(--bark-light);
+  cursor:not-allowed;
+  opacity:.7;
+}
+.form-error{
+  color:var(--carmine);
+  font-size:.9rem;
+  margin-top:var(--space-1);
+}
+.otp-sent-msg{
+  font-size:.95rem;
+  color:var(--bark-light);
+  margin-bottom:var(--space-3);
+}
+.otp-sent-msg strong{color:var(--bark)}
+.link-btn{
+  background:none;
+  color:var(--indigo);
+  text-decoration:underline;
+  text-decoration-color:rgba(37,57,97,.3);
+  text-underline-offset:2px;
+  font-size:inherit;
+  padding:0;
+  font-family:inherit;
+}
+.link-btn:hover{color:var(--carmine);text-decoration-color:var(--carmine)}
+
+/* ── Bookings UI ────────────────────────────────────────────── */
+.bookings-heading{
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  margin-bottom:var(--space-2);
+}
+.bookings-subhead{
+  color:var(--bark-light);
+  margin-bottom:var(--space-10);
+  font-size:1rem;
+}
+.bookings-section{display:none;margin-bottom:var(--space-10)}
+.bookings-section[data-shown="true"]{display:block}
+.bookings-section-title{
+  font-size:.85rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--bark-light);
+  margin-bottom:var(--space-4);
+  font-family:var(--font-body);
+  font-weight:600;
+}
+.bookings-list{
+  display:flex;
+  flex-direction:column;
+  gap:var(--space-4);
+}
+.booking-card{
+  background:var(--white);
+  border:1px solid var(--sand-dark);
+  border-radius:10px;
+  padding:var(--space-5);
+  transition:border-color .2s;
+}
+.booking-card:hover{border-color:var(--bark-light)}
+.booking-card.is-cancelled{opacity:.65;background:var(--cream)}
+.booking-card-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:var(--space-3);
+  margin-bottom:var(--space-4);
+}
+.booking-card-title{
+  font-family:var(--font-display);
+  font-size:1.25rem;
+  color:var(--bark);
+  line-height:1.25;
+}
+.booking-card-status{
+  flex-shrink:0;
+  font-size:.7rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:.3rem .6rem;
+  border-radius:4px;
+  background:var(--sand);
+  color:var(--bark-light);
+  white-space:nowrap;
+}
+.status-cancelled{background:var(--carmine);color:var(--white)}
+.status-paid{background:var(--moss);color:var(--white)}
+.booking-card-details{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:var(--space-3) var(--space-5);
+  font-size:.92rem;
+  margin-bottom:var(--space-4);
+}
+.booking-card-details > div{display:flex;flex-direction:column;gap:.1rem}
+.booking-card-details dt{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--bark-light);
+  font-weight:600;
+}
+.booking-card-details dd{
+  font-size:.95rem;
+  color:var(--bark);
+}
+.booking-card-details code{
+  font-family:var(--font-mono);
+  font-size:.88rem;
+}
+.booking-card-actions{
+  display:flex;
+  gap:var(--space-5);
+  padding-top:var(--space-4);
+  border-top:1px solid var(--sand-dark);
+  flex-wrap:wrap;
+}
+.cancel-btn{color:var(--carmine)}
+.cancel-btn:hover{color:var(--bark)}
+
+.empty-state, .error-state{
+  text-align:center;
+  padding:var(--space-12) var(--space-5);
+}
+.empty-state p, .error-state p{
+  color:var(--bark-light);
+  margin-bottom:var(--space-6);
+}
+.primary-btn{
+  display:inline-block;
+  background:var(--bark);
+  color:var(--white);
+  padding:.9rem 2rem;
+  border-radius:8px;
+  font-weight:600;
+  font-size:1rem;
+  transition:background .2s, transform .1s;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+}
+.primary-btn:hover{background:var(--carmine);color:var(--white)}
+.primary-btn:active{transform:translateY(1px)}
+.primary-btn:disabled{background:var(--bark-light);cursor:not-allowed;opacity:.7}
+.secondary-btn{
+  display:inline-block;
+  background:var(--white);
+  color:var(--bark);
+  padding:.9rem 2rem;
+  border-radius:8px;
+  font-weight:500;
+  font-size:1rem;
+  border:1px solid var(--sand-dark);
+  transition:border-color .15s, background .15s;
+  cursor:pointer;
+  font-family:inherit;
+}
+.secondary-btn:hover{border-color:var(--bark)}
+
+.banner{
+  max-width:760px;
+  margin:0 auto var(--space-6);
+  padding:var(--space-3) var(--space-4);
+  border-radius:8px;
+  font-size:.92rem;
+}
+.banner-error{background:#fbeaee;color:var(--carmine);border:1px solid rgba(158,27,50,.2)}
+.banner-success{background:#eaf2e3;color:var(--moss);border:1px solid rgba(74,93,58,.2)}
+
+/* ── Cancel modal ───────────────────────────────────────────── */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  padding:var(--space-4);
+}
+.modal[data-shown="true"]{display:flex}
+.modal-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(58,47,40,.55);
+  backdrop-filter:blur(2px);
+}
+.modal-content{
+  position:relative;
+  background:var(--white);
+  border-radius:12px;
+  padding:var(--space-8) var(--space-6);
+  max-width:480px;
+  width:100%;
+  box-shadow:0 8px 32px rgba(0,0,0,.16);
+}
+.modal-content h2{
+  font-size:1.5rem;
+  margin-bottom:var(--space-3);
+}
+.modal-content p{
+  color:var(--bark);
+  margin-bottom:var(--space-3);
+}
+.modal-policy{
+  font-size:.9rem;
+  color:var(--bark-light);
+  background:var(--cream);
+  padding:var(--space-3) var(--space-4);
+  border-radius:6px;
+  border-left:3px solid var(--carmine);
+  margin-bottom:var(--space-6);
+}
+.modal-actions{
+  display:flex;
+  gap:var(--space-3);
+  flex-wrap:wrap;
+}
+.modal-actions .primary-btn,
+.modal-actions .secondary-btn{flex:1;text-align:center;min-width:140px}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer{
+  padding:var(--space-6) var(--space-5);
+  border-top:1px solid var(--sand-dark);
+  text-align:center;
+  color:var(--bark-light);
+  font-size:.85rem;
+  background:var(--cream);
+}
+.footer a{color:var(--bark-light)}
+.footer a:hover{color:var(--carmine)}
+.josta-strip{
+  height:22px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='22' viewBox='0 0 64 22'><rect width='64' height='22' fill='%239E1B32'/><line x1='0' y1='3' x2='64' y2='3' stroke='%23FBF7EE' stroke-width='0.6'/><line x1='0' y1='19' x2='64' y2='19' stroke='%23FBF7EE' stroke-width='0.6'/><g fill='none' stroke='%23FBF7EE' stroke-width='1.1' stroke-linejoin='miter'><path d='M32 6.5L37.5 11L32 15.5L26.5 11Z'/></g><g fill='%23FBF7EE'><circle cx='32' cy='11' r='1.1'/><rect x='7' y='10.25' width='1.5' height='1.5' transform='rotate(45 7.75 11)'/><rect x='56' y='10.25' width='1.5' height='1.5' transform='rotate(45 56.75 11)'/><rect x='18' y='10.5' width='1' height='1'/><rect x='46' y='10.5' width='1' height='1'/></g></svg>");
+  background-repeat:repeat-x;
+  background-size:64px 22px;
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Pāriet uz galveno saturu</a>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <a href="/" class="logo-link">Barefoot Baltic</a>
+    <div class="header-right">
+      <a href="/" class="back-link">← Atpakaļ uz vietni</a>
+      <div class="user-menu" id="user-menu">
+        <span class="user-email" id="user-email"></span>
+        <button class="logout-btn" id="logout-btn" type="button">Iziet</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main" id="main-content">
+
+  <!-- Loading state — shown briefly while /account/me resolves -->
+  <div class="state-section" id="loading-state" data-shown="true">
+    <div class="container container-narrow" style="text-align:center;padding-top:var(--space-12)">
+      <p style="color:var(--bark-light)">Ielādē…</p>
+    </div>
+  </div>
+
+  <!-- Login state — shown when /account/me returns 401 -->
+  <div class="state-section" id="login-state">
+    <div class="container container-narrow">
+      <div id="auth-error-banner" class="banner banner-error" hidden></div>
+
+      <h1 class="login-heading">Jūsu rezervācijas</h1>
+      <p class="login-lede">Pieslēdzieties, lai apskatītu pagātnes un nākotnes Barefoot Baltic rezervācijas, lejupielādētu rēķinus un pieprasītu atcelšanu.</p>
+
+      <div class="login-card">
+        <a href="/auth/google/start" rel="nofollow" class="login-btn" id="google-login-btn">
+          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+            <path fill="#FF3D00" d="M6.3 14.1l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.1z"/>
+            <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.6 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+            <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.2-4.1 5.6l6.2 5.2C42.1 35.6 44 30.2 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+          </svg>
+          <span>Turpināt ar Google</span>
+        </a>
+
+        <div class="divider">vai</div>
+
+        <form class="login-form" id="otp-start-form" novalidate>
+          <label for="otp-email-input">E-pasta adrese</label>
+          <input id="otp-email-input" type="email" name="email" required placeholder="tu@piemers.lv" autocomplete="email">
+          <button type="submit" id="otp-start-btn">Nosūtīt 6 ciparu kodu uz e-pastu</button>
+          <p class="form-error" id="otp-start-error" hidden></p>
+        </form>
+
+        <form class="login-form" id="otp-verify-form" hidden novalidate>
+          <p class="otp-sent-msg"><span>Mēs nosūtījām kodu uz</span> <strong id="otp-sent-to"></strong>. <button type="button" class="link-btn" id="otp-restart">Izmantot citu e-pastu</button></p>
+          <label for="otp-code-input">Apstiprinājuma kods</label>
+          <input id="otp-code-input" type="text" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required pattern="[0-9]{6}" placeholder="123456">
+          <button type="submit" id="otp-verify-btn">Pieslēgties</button>
+          <p class="form-error" id="otp-verify-error" hidden></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookings state — shown when authenticated -->
+  <div class="state-section" id="bookings-state">
+    <div class="container">
+      <h1 class="bookings-heading">Jūsu rezervācijas</h1>
+      <p class="bookings-subhead" id="bookings-subhead"><span>Laipni lūdzam atpakaļ</span><span id="bookings-name-suffix"></span>.</p>
+
+      <div id="bookings-loading" style="text-align:center;padding:var(--space-10) 0;color:var(--bark-light)">
+        <p>Ielādē jūsu rezervācijas…</p>
+      </div>
+
+      <div id="bookings-error" class="error-state" hidden>
+        <p>Mums neizdevās ielādēt jūsu rezervācijas. Lūdzu, pēc brīža atjaunojiet lapu.</p>
+        <button class="primary-btn" type="button" onclick="window.location.reload()">Atsvaidzināt</button>
+      </div>
+
+      <div id="bookings-empty" class="empty-state" hidden>
+        <p>Jums vēl nav rezervāciju.</p>
+        <a href="/#excursions" class="primary-btn">Apskatīt mūsu ekskursijas</a>
+      </div>
+
+      <section class="bookings-section" id="upcoming-section">
+        <h2 class="bookings-section-title">Gaidāmās</h2>
+        <div class="bookings-list" id="upcoming-list"></div>
+      </section>
+
+      <section class="bookings-section" id="past-section">
+        <h2 class="bookings-section-title">Iepriekšējās</h2>
+        <div class="bookings-list" id="past-list"></div>
+      </section>
+    </div>
+  </div>
+
+</main>
+
+<!-- Cancellation confirm modal -->
+<div class="modal" id="cancel-modal" role="dialog" aria-modal="true" aria-labelledby="cancel-modal-title">
+  <div class="modal-overlay" id="cancel-modal-overlay"></div>
+  <div class="modal-content">
+    <h2 id="cancel-modal-title">Atcelt šo rezervāciju?</h2>
+    <p><span>Jūs gatavojaties pieprasīt atcelšanu rezervācijai</span> <strong id="cancel-modal-ref"></strong> <span>datumā</span> <span id="cancel-modal-date"></span>.</p>
+    <p class="modal-policy">Daiga izskatīs jūsu pieprasījumu un apstrādās piemērojamo atmaksu 2&ndash;3 darba dienu laikā. Jūs saņemsiet apstiprinājuma e-pastu, kad atmaksa būs veikta.</p>
+    <div class="modal-actions">
+      <button class="primary-btn" id="cancel-modal-confirm" type="button">Jā, pieprasīt atcelšanu</button>
+      <button class="secondary-btn" id="cancel-modal-abort" type="button">Saglabāt rezervāciju</button>
+    </div>
+    <p class="form-error" id="cancel-modal-error" hidden style="margin-top:var(--space-3)"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p><span>&copy; Barefoot Baltic &middot; Licencēti tūri no Rīgas, Latvijas</span> · <a href="/privacy-policy.html">Privātums</a></p>
+</footer>
+<div class="josta-strip" role="presentation" aria-hidden="true"></div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(id){ return document.getElementById(id); };
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // i18n — strings baked in at build time (G-AUTH-9 v2)
+  //
+  // The active locale's account.* strings (with the `account.` prefix
+  // stripped) are emitted as a single JSON object below. No fallback
+  // chain at runtime — every key the JS calls via t() is guaranteed
+  // present because the build refuses to ship if any account.* key is
+  // missing for any deployed locale.
+  //
+  // To translate: edit _strings/<locale>.json and add account.<key>:
+  // "value" entries. The build pipeline regenerates this STRINGS object
+  // and rewrites the static {{account.<key>}} placeholders in the
+  // markup above.
+  // ═══════════════════════════════════════════════════════════════════════
+  var LOCALE      = 'lv';
+  var DATE_LOCALE = 'lv-LV';
+  var STRINGS     = {"page.title": "Mans konts — Barefoot Baltic", "meta.description": "Pieslēdzieties, lai apskatītu un pārvaldītu savas Barefoot Baltic rezervācijas.", "header.backToSite": "← Atpakaļ uz vietni", "header.signOut": "Iziet", "login.heading": "Jūsu rezervācijas", "login.lede": "Pieslēdzieties, lai apskatītu pagātnes un nākotnes Barefoot Baltic rezervācijas, lejupielādētu rēķinus un pieprasītu atcelšanu.", "login.continueWithGoogle": "Turpināt ar Google", "login.dividerOr": "vai", "login.emailLabel": "E-pasta adrese", "login.emailPlaceholder": "tu@piemers.lv", "login.emailMeCode": "Nosūtīt 6 ciparu kodu uz e-pastu", "login.sending": "Nosūta…", "login.weSentCodeTo": "Mēs nosūtījām kodu uz", "login.useDifferentEmail": "Izmantot citu e-pastu", "login.codeLabel": "Apstiprinājuma kods", "login.codePlaceholder": "123456", "login.signIn": "Pieslēgties", "login.verifying": "Pārbauda…", "login.errPleaseEnterEmail": "Lūdzu, ievadiet e-pasta adresi.", "login.errPleaseEnterCode": "Lūdzu, ievadiet 6 ciparu kodu.", "login.errNetwork": "Tīkla kļūda. Lūdzu, mēģiniet vēlreiz.", "login.errSendCodeFailed": "Neizdevās nosūtīt kodu. Lūdzu, pārbaudiet e-pastu un mēģiniet vēlreiz.", "login.errVerifyFailed": "Neizdevās apstiprināt.", "bookings.loading": "Ielādē…", "bookings.heading": "Jūsu rezervācijas", "bookings.welcomeBack": "Laipni lūdzam atpakaļ", "bookings.loadingBookings": "Ielādē jūsu rezervācijas…", "bookings.errLoad": "Mums neizdevās ielādēt jūsu rezervācijas. Lūdzu, pēc brīža atjaunojiet lapu.", "bookings.refresh": "Atsvaidzināt", "bookings.empty": "Jums vēl nav rezervāciju.", "bookings.browseExcursions": "Apskatīt mūsu ekskursijas", "bookings.sectionUpcoming": "Gaidāmās", "bookings.sectionPast": "Iepriekšējās", "card.date": "Datums", "card.bookingRef": "Rezervācijas nr.", "card.party": "Grupa", "card.total": "Kopā", "card.adultSingular": "pieaugušais", "card.adultPlural": "pieaugušie", "card.childSingular": "bērns", "card.childPlural": "bērni", "card.partyJoin": " + ", "card.downloadInvoice": "Lejupielādēt rēķinu", "card.requestCancellation": "Pieprasīt atcelšanu", "card.statusCancellationRequested": "Atcelšana pieprasīta", "cancel.modalTitle": "Atcelt šo rezervāciju?", "cancel.modalIntro": "Jūs gatavojaties pieprasīt atcelšanu rezervācijai", "cancel.modalIntroMid": "datumā", "cancel.modalPolicy": "Daiga izskatīs jūsu pieprasījumu un apstrādās piemērojamo atmaksu 2&ndash;3 darba dienu laikā. Jūs saņemsiet apstiprinājuma e-pastu, kad atmaksa būs veikta.", "cancel.modalConfirm": "Jā, pieprasīt atcelšanu", "cancel.modalAbort": "Saglabāt rezervāciju", "cancel.submitting": "Iesniedz…", "cancel.errGeneric": "Atcelšana neizdevās. Lūdzu, mēģiniet vēlreiz.", "cancel.errNetwork": "Tīkla kļūda. Lūdzu, mēģiniet vēlreiz.", "invoice.errFallback": "Neizdevās lejupielādēt rēķinu. Lūdzu, atbildiet uz savu rezervācijas apstiprinājuma e-pastu, un Daiga nosūtīs kvīti manuāli.", "invoice.errUnavailable": "Rēķins vēl nav pieejams.", "authError.prefix": "Pieslēgšanās neizdevās:", "authError.suffix": "Lūdzu, mēģiniet vēlreiz.", "authError.tokenExchange": "neizdevās pabeigt apmaiņu ar Google.", "authError.noIdToken": "Google neatgrieza identitātes marķieri.", "authError.idTokenInvalid": "Google identitātes marķieris nebija derīgs.", "authError.sessionStorage": "neizdevās saglabāt jūsu sesiju.", "authError.accessDenied": "jūs atcēlāt piekrišanas ekrānā.", "authError.generic": "kaut kas nogāja greizi", "footer.copyright": "&copy; Barefoot Baltic &middot; Licencēti tūri no Rīgas, Latvijas", "footer.privacy": "Privātums"};
+
+  function t(key){
+    return STRINGS[key] !== undefined ? STRINGS[key] : key;
+  }
+
+  var session = null;
+  var bookings = [];
+  var pendingCancel = null;          // { ref, date }
+  var otpCtx = null;                  // { email, token, timestamp }
+
+  // ── State switcher ────────────────────────────────────────────
+  function showState(name){
+    ['loading-state','login-state','bookings-state'].forEach(function(s){
+      $(s).setAttribute('data-shown', s === name ? 'true' : 'false');
+    });
+  }
+
+  // ── Init ──────────────────────────────────────────────────────
+  function init(){
+    // Surface auth_error from the OAuth callback redirect.
+    var params = new URLSearchParams(window.location.search);
+    var authError = params.get('auth_error');
+    if (authError){
+      var banner = $('auth-error-banner');
+      banner.textContent = buildAuthErrorMessage(authError);
+      banner.hidden = false;
+      // Clean the query string so a refresh doesn't re-show the banner.
+      try { history.replaceState({}, '', window.location.pathname); } catch(e){}
+    }
+
+    fetch('/account/me', {credentials:'same-origin'})
+      .then(function(r){
+        // Anything other than a 200 with JSON means the user isn't signed
+        // in (or the API is unreachable) — show the login UI quietly. We
+        // intentionally don't log: a 401 is the normal anonymous case, and
+        // a 404/5xx during local static preview is also expected.
+        if (r.status !== 200) return null;
+        return r.json().catch(function(){ return null; });
+      })
+      .then(function(data){
+        if (!data){
+          showState('login-state');
+          return;
+        }
+        session = data;
+        $('user-email').textContent = data.email || '';
+        $('user-menu').setAttribute('data-shown','true');
+        var firstName = (data.name || '').split(' ')[0];
+        if (firstName) $('bookings-name-suffix').textContent = ', ' + firstName;
+        showState('bookings-state');
+        return loadBookings();
+      })
+      .catch(function(){
+        showState('login-state');
+      });
+  }
+
+  function describeAuthError(code){
+    var key;
+    switch (code){
+      case 'token_exchange':   key = 'authError.tokenExchange';   break;
+      case 'no_id_token':      key = 'authError.noIdToken';       break;
+      case 'id_token_invalid': key = 'authError.idTokenInvalid';  break;
+      case 'session_storage':  key = 'authError.sessionStorage';  break;
+      case 'access_denied':    key = 'authError.accessDenied';    break;
+      default:                  return t('authError.generic') + ' (' + code + ').';
+    }
+    return t(key);
+  }
+
+  function buildAuthErrorMessage(code){
+    return t('authError.prefix') + ' ' + describeAuthError(code) + ' ' + t('authError.suffix');
+  }
+
+  // ── Bookings load + render ────────────────────────────────────
+  function loadBookings(){
+    $('bookings-loading').hidden = false;
+    $('bookings-error').hidden = true;
+    $('bookings-empty').hidden = true;
+    $('upcoming-section').setAttribute('data-shown','false');
+    $('past-section').setAttribute('data-shown','false');
+
+    return fetch('/account/bookings', {credentials:'same-origin'})
+      .then(function(r){
+        if (!r.ok) throw new Error('bookings ' + r.status);
+        return r.json();
+      })
+      .then(function(data){
+        bookings = (data && data.bookings) || [];
+        renderBookings();
+      })
+      .catch(function(err){
+        console.error('loadBookings failed', err);
+        $('bookings-loading').hidden = true;
+        $('bookings-error').hidden = false;
+      });
+  }
+
+  function renderBookings(){
+    $('bookings-loading').hidden = true;
+
+    if (bookings.length === 0){
+      $('bookings-empty').hidden = false;
+      return;
+    }
+
+    var todayIso = new Date().toISOString().slice(0,10);
+    var upcoming = bookings.filter(function(b){ return b.date && b.date >= todayIso; });
+    var past     = bookings.filter(function(b){ return !b.date || b.date < todayIso; });
+
+    if (upcoming.length){
+      $('upcoming-section').setAttribute('data-shown','true');
+      $('upcoming-list').innerHTML = upcoming.map(renderCard).join('');
+    }
+    if (past.length){
+      $('past-section').setAttribute('data-shown','true');
+      $('past-list').innerHTML = past.map(renderCard).join('');
+    }
+
+    // Wire up action buttons in newly-rendered cards.
+    document.querySelectorAll('.cancel-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        openCancelModal(btn.getAttribute('data-ref'), btn.getAttribute('data-date'));
+      });
+    });
+    document.querySelectorAll('.invoice-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        downloadInvoice(btn.getAttribute('data-ref'));
+      });
+    });
+  }
+
+  function renderCard(b){
+    var cancelled = !!b.cancelled;
+    var dateStr = formatDate(b.date);
+    // Cancellation status localised; raw API status (pay-later, stripe-paid)
+    // falls through verbatim — those are data not UI strings.
+    var statusLabel = cancelled ? t('card.statusCancellationRequested') : (b.status || '').replace(/-/g,' ');
+    var statusClass = cancelled ? 'status-cancelled' : (/paid/i.test(b.status) ? 'status-paid' : '');
+    var adultWord = (b.adults === 1) ? t('card.adultSingular') : t('card.adultPlural');
+    var party = b.adults + ' ' + adultWord;
+    if (b.children > 0){
+      var childWord = (b.children === 1) ? t('card.childSingular') : t('card.childPlural');
+      party += t('card.partyJoin') + b.children + ' ' + childWord;
+    }
+
+    var actions = cancelled ? '' :
+      '<div class="booking-card-actions">' +
+        '<button class="link-btn invoice-btn" type="button" data-ref="' + esc(b.ref) + '">' + esc(t('card.downloadInvoice')) + '</button>' +
+        '<button class="link-btn cancel-btn" type="button" data-ref="' + esc(b.ref) + '" data-date="' + esc(b.date || '') + '">' + esc(t('card.requestCancellation')) + '</button>' +
+      '</div>';
+
+    return (
+      '<article class="booking-card' + (cancelled ? ' is-cancelled' : '') + '">' +
+        '<div class="booking-card-head">' +
+          '<h3 class="booking-card-title">' + esc(b.excursion || '') + '</h3>' +
+          (statusLabel ? '<span class="booking-card-status ' + statusClass + '">' + esc(statusLabel) + '</span>' : '') +
+        '</div>' +
+        '<dl class="booking-card-details">' +
+          '<div><dt>' + esc(t('card.date')) + '</dt><dd>' + esc(dateStr) + '</dd></div>' +
+          '<div><dt>' + esc(t('card.bookingRef')) + '</dt><dd><code>' + esc(b.ref) + '</code></dd></div>' +
+          '<div><dt>' + esc(t('card.party')) + '</dt><dd>' + esc(party) + '</dd></div>' +
+          '<div><dt>' + esc(t('card.total')) + '</dt><dd>€' + (b.total || 0) + '</dd></div>' +
+        '</dl>' +
+        actions +
+      '</article>'
+    );
+  }
+
+  function formatDate(iso){
+    if (!iso) return '—';
+    var d = new Date(iso + 'T00:00:00');
+    if (isNaN(d.getTime())) return iso;
+    try {
+      return d.toLocaleDateString(DATE_LOCALE, {day:'numeric', month:'long', year:'numeric'});
+    } catch (e) {
+      return d.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'});
+    }
+  }
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  // ── Cancel modal ──────────────────────────────────────────────
+  function openCancelModal(ref, date){
+    pendingCancel = { ref: ref, date: date };
+    $('cancel-modal-ref').textContent = ref;
+    $('cancel-modal-date').textContent = formatDate(date);
+    $('cancel-modal-error').hidden = true;
+    $('cancel-modal-confirm').disabled = false;
+    $('cancel-modal-confirm').textContent = t('cancel.modalConfirm');
+    $('cancel-modal').setAttribute('data-shown','true');
+  }
+  function closeCancelModal(){
+    pendingCancel = null;
+    $('cancel-modal').setAttribute('data-shown','false');
+  }
+  function confirmCancel(){
+    if (!pendingCancel) return;
+    var ref = pendingCancel.ref;
+    var btn = $('cancel-modal-confirm');
+    var errEl = $('cancel-modal-error');
+    btn.disabled = true;
+    btn.textContent = t('cancel.submitting');
+    errEl.hidden = true;
+
+    fetch('/account/cancel', {
+      method:'POST',
+      credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ ref: ref })
+    })
+      .then(function(r){ return r.json().then(function(data){ return {status:r.status, data:data}; }); })
+      .then(function(res){
+        if (!res.data || !res.data.ok){
+          errEl.textContent = (res.data && res.data.error) || t('cancel.errGeneric');
+          errEl.hidden = false;
+          btn.disabled = false;
+          btn.textContent = t('cancel.modalConfirm');
+          return;
+        }
+        closeCancelModal();
+        return loadBookings();
+      })
+      .catch(function(err){
+        errEl.textContent = t('cancel.errNetwork');
+        errEl.hidden = false;
+        btn.disabled = false;
+        btn.textContent = t('cancel.modalConfirm');
+      });
+  }
+
+  // ── Invoice (stub — backend returns 404 until generation lands) ─
+  function downloadInvoice(ref){
+    fetch('/account/invoice/' + encodeURIComponent(ref), {credentials:'same-origin'})
+      .then(function(r){
+        if (r.status === 404){
+          return r.json().then(function(d){ alert(d.error || t('invoice.errUnavailable')); });
+        }
+        if (!r.ok) throw new Error('invoice ' + r.status);
+        // Future: when invoice generation lands, stream the PDF.
+        return r.blob().then(function(blob){
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = 'barefoot-baltic-' + ref + '.pdf';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+        });
+      })
+      .catch(function(err){
+        alert(t('invoice.errFallback'));
+      });
+  }
+
+  // ── OTP login flow ────────────────────────────────────────────
+  function startOtp(e){
+    e.preventDefault();
+    var emailInput = $('otp-email-input');
+    var email = emailInput.value.trim();
+    var errEl = $('otp-start-error');
+    var btn = $('otp-start-btn');
+    errEl.hidden = true;
+    if (!email){ errEl.textContent = t('login.errPleaseEnterEmail'); errEl.hidden = false; return; }
+
+    btn.disabled = true;
+    btn.textContent = t('login.sending');
+
+    fetch('/auth/email/start', {
+      method:'POST',
+      credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ email: email })
+    })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (!data.sent){
+          errEl.textContent = data.reason || t('login.errSendCodeFailed');
+          errEl.hidden = false;
+          return;
+        }
+        otpCtx = { email: email, token: data.token, timestamp: data.timestamp };
+        $('otp-sent-to').textContent = email;
+        $('otp-start-form').hidden = true;
+        $('otp-verify-form').hidden = false;
+        setTimeout(function(){ $('otp-code-input').focus(); }, 50);
+      })
+      .catch(function(){
+        errEl.textContent = t('login.errNetwork');
+        errEl.hidden = false;
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.textContent = t('login.emailMeCode');
+      });
+  }
+
+  function verifyOtp(e){
+    e.preventDefault();
+    if (!otpCtx) return;
+    var code = $('otp-code-input').value.trim();
+    var errEl = $('otp-verify-error');
+    var btn = $('otp-verify-btn');
+    errEl.hidden = true;
+    if (!code || !/^\d{6}$/.test(code)){
+      errEl.textContent = t('login.errPleaseEnterCode');
+      errEl.hidden = false;
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = t('login.verifying');
+
+    fetch('/auth/email/verify', {
+      method:'POST',
+      credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        email: otpCtx.email,
+        code: code,
+        token: otpCtx.token,
+        timestamp: otpCtx.timestamp
+      })
+    })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (!data.ok){
+          errEl.textContent = data.reason || t('login.errVerifyFailed');
+          errEl.hidden = false;
+          btn.disabled = false;
+          btn.textContent = t('login.signIn');
+          return;
+        }
+        // Success — reload to fetch /account/me with the new cookie.
+        window.location.reload();
+      })
+      .catch(function(){
+        errEl.textContent = t('login.errNetwork');
+        errEl.hidden = false;
+        btn.disabled = false;
+        btn.textContent = t('login.signIn');
+      });
+  }
+
+  function restartOtp(){
+    otpCtx = null;
+    $('otp-code-input').value = '';
+    $('otp-verify-error').hidden = true;
+    $('otp-verify-form').hidden = true;
+    $('otp-start-form').hidden = false;
+    setTimeout(function(){ $('otp-email-input').focus(); }, 50);
+  }
+
+  function logout(){
+    fetch('/auth/logout', {method:'POST', credentials:'same-origin'})
+      .catch(function(){})
+      .finally(function(){ window.location.reload(); });
+  }
+
+  // ── Wire up ───────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function(){
+    $('otp-start-form').addEventListener('submit', startOtp);
+    $('otp-verify-form').addEventListener('submit', verifyOtp);
+    $('otp-restart').addEventListener('click', restartOtp);
+    $('logout-btn').addEventListener('click', logout);
+    $('cancel-modal-confirm').addEventListener('click', confirmCancel);
+    $('cancel-modal-abort').addEventListener('click', closeCancelModal);
+    $('cancel-modal-overlay').addEventListener('click', closeCancelModal);
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && $('cancel-modal').getAttribute('data-shown') === 'true'){
+        closeCancelModal();
+      }
+    });
+    init();
+  });
+})();
+</script>
+
+</body>
+</html>

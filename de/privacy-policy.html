@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZD41Z0FMD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZD41Z0FMD');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://barefootbaltic.com/privacy-policy.html">
+  <title>Datenschutzerklärung — Barefoot Baltic</title>
+<meta name="description" content="Datenschutzerklärung von Barefoot Baltic — geführte Tagesausflüge und Wandertouren in Lettland.">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["TouristInformationCenter", "TravelAgency", "Organization"],
+      "@id": "https://barefootbaltic.com/#organization",
+      "name": "Barefoot Baltic",
+      "legalName": "Ronda Sprints Solutions SIA",
+      "url": "https://barefootbaltic.com",
+      "logo": "https://barefootbaltic.com/images/logo-full.png",
+      "telephone": "+37126440152",
+      "email": "info@barefootbaltic.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brīvības gatve 418 – 27",
+        "addressLocality": "Riga",
+        "postalCode": "LV-1024",
+        "addressRegion": "Rīga",
+        "addressCountry": "LV"
+      },
+      "founder": { "@id": "https://barefootbaltic.com/#daiga" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f5f0e8;--bark:#3a2f28;--bark-light:#5c4a3e;
+  --moss:#4A5D3A;--moss-light:#5E7648;
+  --amber:#B8862E;--amber-light:#D4A547;
+  --cream:#fffcf5;--white:#ffffff;--sand-dark:#e8e0d0;--peat:#2B1F1A;
+  --carmine:#9E1B32;--carmine-dark:#7A1426;
+  --indigo:#253961;--indigo-dark:#1A2A48;
+  --bronze:#8C6D2E;--linen:#FBF7EE;
+  --space-1: 0.25rem;--space-2: 0.5rem;--space-3: 0.75rem;--space-4: 1rem;
+  --space-5: 1.25rem;--space-6: 1.5rem;--space-8: 2rem;--space-10: 2.5rem;
+  --space-12: 3rem;--space-16: 4rem;--space-20: 5rem;--space-24: 6rem;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-display: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --space-7: 1.75rem;
+  --line-height-body: 1.65;
+  --gold-stamp: #d9a84a;
+  --sand-rgb: 245, 240, 232;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--font-body);
+  background:var(--linen);color:var(--bark);
+  line-height:1.65;
+}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:var(--linen);border-bottom:3px solid var(--carmine)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:var(--space-3) var(--space-8)}
+.nav-logo{display:flex;align-items:center;gap:var(--space-4);text-decoration:none;height:56px}
+.nav-logo img{height:56px;width:auto;display:block}
+.nav-logo-stamp{
+  display:flex;flex-direction:column;
+  padding-left:.9rem;
+  border-left:2px solid var(--bronze);
+  line-height:1;
+}
+.nav-logo-stamp-top{
+  font-size:.65rem;font-weight:800;letter-spacing:.16em;
+  color:var(--carmine);text-transform:uppercase;
+  font-family:var(--font-display);
+  font-style:normal;
+}
+.nav-logo-stamp-bot{
+  font-size:.58rem;font-weight:700;letter-spacing:.22em;
+  color:var(--indigo);text-transform:uppercase;
+  margin-top:4px;
+}
+.nav-links{display:flex;gap:var(--space-8);list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{font-size:.875rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--bark-light);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--carmine)}
+.nav-cta{background:var(--indigo)!important;color:#fff!important;padding:.55rem 1.3rem;border-radius:6px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;font-size:.875rem}
+.nav-cta:hover{background:var(--indigo-dark)!important;color:#fff!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--bark);border-radius:2px;transition:all .3s}
+@media(max-width:640px){.nav-logo-stamp{display:none}}
+/* Nav locale-robustness — Lesson 16. */
+.nav-logo{flex-shrink:0}
+.nav-logo-stamp-top,.nav-logo-stamp-bot{white-space:nowrap}
+.nav .nav-links a{white-space:nowrap}
+/* ── NAV COLLAPSE — see Lesson 16 ── */
+@media(max-width:1100px){
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--linen);border-bottom:1px solid var(--sand-dark);padding:var(--space-4) var(--space-8) var(--space-6);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.nav-links.open{display:flex}
+.nav-links li{padding:.6rem 0}
+.nav-links .nav-cta{margin-top:var(--space-2);text-align:center;display:block}
+.hamburger{display:flex}
+}
+
+.policy{
+  max-width:760px;margin:0 auto;
+  padding:var(--space-12) var(--space-8) var(--space-20);
+}
+.policy h1{
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  margin-bottom:var(--space-2);
+}
+.policy .updated{
+  font-size:.85rem;color:var(--bark-light);
+  margin-bottom:var(--space-10);
+}
+.policy h2{
+  font-family:var(--font-display);
+  font-size:1.25rem;
+  margin-top:var(--space-10);margin-bottom:var(--space-3);
+  color:var(--bark);
+}
+.policy p{
+  font-size:.95rem;color:var(--bark-light);
+  margin-bottom:var(--space-4);
+}
+.policy ul{
+  margin:0 0 var(--space-4) var(--space-6);
+  font-size:.95rem;color:var(--bark-light);
+}
+.policy li{margin-bottom:.4rem}
+.policy a{color:var(--moss);text-decoration:underline}
+.policy strong{color:var(--bark);font-weight:600}
+
+footer{
+  background:#2a211b;
+  padding:var(--space-8) var(--space-8) var(--space-6);
+  text-align:center;
+}
+footer p{color:rgba(var(--sand-rgb),.35);font-size:.8rem}
+footer a{color:rgba(var(--sand-rgb),.4);text-decoration:none}
+
+/* ── CANONICAL FOOTER (homepage parity) ── */
+footer{margin-top:0;background:var(--peat);color:rgba(251,247,238,.65);text-align:center;font-size:.8rem;padding:0}
+.footer-content{padding:var(--space-10) var(--space-8) var(--space-8);max-width:700px;margin:0 auto}
+.footer-content a{color:rgba(251,247,238,.85);text-decoration:underline}
+.footer-content a:hover{color:var(--gold-stamp)}
+.footer-stamp{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-stamp);font-weight:800;margin:var(--space-4) 0 .15rem;font-family:var(--font-display);font-style:normal}
+.footer-stamp-lv{font-size:.68rem;letter-spacing:.06em;color:rgba(251,247,238,.55);font-style:italic;margin:0 0 var(--space-5)}
+.footer-attribution{margin:1.75rem auto var(--space-1);max-width:560px;font-size:.72rem;line-height:1.7;font-style:italic;color:rgba(251,247,238,.55);padding-top:var(--space-5);border-top:1px solid rgba(251,247,238,.12)}
+.footer-flag-bar{display:flex;height:12px;width:100%}
+.footer-flag-bar span{display:block;height:100%}
+.footer-flag-bar span:nth-child(1),.footer-flag-bar span:nth-child(3){flex:2 1 0;background:var(--carmine)}
+.footer-flag-bar span:nth-child(2){flex:1 1 0;background:var(--linen)}
+.josta-strip{height:22px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='22' viewBox='0 0 64 22'><rect width='64' height='22' fill='%239E1B32'/><line x1='0' y1='3' x2='64' y2='3' stroke='%23FBF7EE' stroke-width='0.6'/><line x1='0' y1='19' x2='64' y2='19' stroke='%23FBF7EE' stroke-width='0.6'/><g fill='none' stroke='%23FBF7EE' stroke-width='1.1' stroke-linejoin='miter'><path d='M32 6.5L37.5 11L32 15.5L26.5 11Z'/></g><g fill='%23FBF7EE'><circle cx='32' cy='11' r='1.1'/><rect x='7' y='10.25' width='1.5' height='1.5' transform='rotate(45 7.75 11)'/><rect x='56' y='10.25' width='1.5' height='1.5' transform='rotate(45 56.75 11)'/><rect x='18' y='10.5' width='1' height='1'/><rect x='46' y='10.5' width='1' height='1'/></g></svg>");background-repeat:repeat-x;background-size:64px 22px}
+
+
+/* ── CANONICAL CONTACT SECTION (homepage parity) ── */
+.section.contact{background:var(--bark);color:var(--sand);padding:var(--space-20) var(--space-8)}
+.section.contact .section-inner{max-width:1100px;margin:0 auto}
+.section.contact .section-label{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-light);margin-bottom:var(--space-3)}
+.section.contact .section-title{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:var(--space-4);color:var(--cream);font-family:var(--font-display);line-height:1.15}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:start}
+.contact-intro{color:rgba(var(--sand-rgb),.7);font-size:1.02rem;margin-bottom:var(--space-8);line-height:1.7}
+.contact-methods{display:flex;flex-direction:column;gap:var(--space-3)}
+.contact-method{display:grid;grid-template-columns:40px 1fr;gap:var(--space-3);align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:var(--space-4) var(--space-5);text-decoration:none;transition:all .25s}
+.contact-method:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15)}
+.cm-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:rgba(196,145,59,.12);border-radius:8px}
+.cm-icon svg{width:20px;height:20px;color:var(--amber-light);flex-shrink:0}
+.cm-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--amber-light);font-weight:600}
+.cm-value{font-size:1rem;color:var(--cream);margin-top:.1rem}
+.contact-qr{display:flex;align-items:center;gap:var(--space-5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:var(--space-4) var(--space-5);margin-top:var(--space-3)}
+.contact-qr img{width:120px;height:120px;flex-shrink:0;background:#fff;padding:8px;border-radius:8px}
+.contact-qr span{font-size:.85rem;color:rgba(var(--sand-rgb),.5);line-height:1.5}
+.contact-right{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:var(--space-8)}
+.contact-right h3{font-family:var(--font-display);font-size:1.2rem;color:var(--cream);margin-bottom:var(--space-3)}
+.contact-right p{color:rgba(var(--sand-rgb),.6);font-size:.88rem;line-height:1.7}
+.booking-links{margin-top:var(--space-5);display:flex;flex-direction:column;gap:.6rem}
+.booking-link{display:flex;align-items:center;gap:var(--space-3);padding:.85rem 1.1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:8px;color:var(--cream);font-size:.92rem;text-decoration:none;transition:all .22s}
+.booking-link:hover{background:rgba(255,255,255,.12);color:var(--cream)}
+.booking-link svg{width:18px;height:18px;color:var(--amber-light);flex-shrink:0}
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;gap:var(--space-8)}
+  .contact-qr{flex-direction:column;text-align:center}
+  .contact-qr img{width:100px;height:100px}
+  .section.contact{padding:var(--space-12) var(--space-5)}
+}
+
+
+/* ── CONTACT-TO-FOOTER GAP FIX ── */
+html, body{margin:0}
+.section.contact{margin:0}
+.section.contact + footer{margin-top:0 !important}
+
+/* ── ACCESSIBILITY ── */
+.skip-link{
+  position:absolute;top:-100%;left:1rem;z-index:9999;
+  background:var(--bark);color:var(--white);
+  padding:var(--space-3) var(--space-6);border-radius:0 0 8px 8px;
+  font-weight:600;font-size:.9rem;
+  text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:0}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Barefoot Baltic &mdash; Startseite">
+      <img src="/images/logo-wide-color.png" alt="Barefoot Baltic" width="207" height="56">
+      <span class="nav-logo-stamp" aria-hidden="true">
+        <span class="nav-logo-stamp-top">Est. Riga</span>
+        <span class="nav-logo-stamp-bot">Lettland</span>
+      </span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menü umschalten" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/#excursions">Ausflüge</a></li>
+      <li><a href="/#fleet">Unsere Fahrzeuge</a></li>
+      <li><a href="/#about">Über Daiga</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact" class="nav-cta">Kontakt</a></li>
+      <li class="nav-lang-switcher-item"><!--
+  Language switcher.
+  Rendered into nav.html for every page that uses the shared partial.
+  Inline-copied into privacy-policy.html, thank-you.html and 404.html
+  layouts (those bypass the shared nav by design — see G5/G6/G7 notes).
+
+  The picker reads the deployed locales list from a build-time JSON blob
+  (`["/"]`) and computes per-locale URLs from
+  window.location at runtime, so the partial does not need to know which
+  page it's on. Same partial, same behaviour, every page.
+
+  Current locale is highlighted via `de`.
+  No-JS users still get a working `<details>` dropdown — the JS layer
+  just enhances the URL-stripping.
+-->
+<div class="lang-switcher" data-current-locale="de">
+  <details class="lang-switcher-details">
+    <summary class="lang-switcher-summary" aria-label="Sprache wählen">
+      <span class="lang-switcher-globe" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18"/>
+          <path d="M12 3a13 13 0 0 1 0 18a13 13 0 0 1 0-18"/>
+        </svg>
+      </span>
+      <span class="lang-switcher-current">Deutsch</span>
+      <span class="lang-switcher-chevron" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </span>
+    </summary>
+    <ul class="lang-switcher-list" role="list">
+            <li><a href="https://barefootbaltic.com/" data-target-subpath="/" data-target-domain="barefootbaltic.com" hreflang="en-us"><span class="lang-switcher-list-native">English (US)</span><span class="lang-switcher-list-en">English (US)</span></a></li>
+      <li><a href="https://barefootbaltic.co.uk/" data-target-subpath="/" data-target-domain="barefootbaltic.co.uk" hreflang="en-gb"><span class="lang-switcher-list-native">English (UK)</span><span class="lang-switcher-list-en">English (UK)</span></a></li>
+      <li><a href="https://barefootbaltic.in/" data-target-subpath="/" data-target-domain="barefootbaltic.in" hreflang="en-in"><span class="lang-switcher-list-native">English (India)</span><span class="lang-switcher-list-en">English (India)</span></a></li>
+      <li><a href="https://barefootbaltic.lv/" data-target-subpath="/" data-target-domain="barefootbaltic.lv" hreflang="lv"><span class="lang-switcher-list-native">Latviešu</span><span class="lang-switcher-list-en">Latvian</span></a></li>
+      <li><a href="/" data-target-subpath="/" aria-current="true" hreflang="de"><span class="lang-switcher-list-native">Deutsch</span></a></li>
+      <li><a href="https://barefootbaltic.lt/" data-target-subpath="/" data-target-domain="barefootbaltic.lt" hreflang="lt"><span class="lang-switcher-list-native">Lietuvių</span><span class="lang-switcher-list-en">Lithuanian</span></a></li>
+      <li><a href="https://barefootbaltic.com/et/" data-target-subpath="/et/" data-target-domain="barefootbaltic.com" hreflang="et"><span class="lang-switcher-list-native">Eesti</span><span class="lang-switcher-list-en">Estonian</span></a></li>
+      <li><a href="https://barefootbaltic.pl/" data-target-subpath="/" data-target-domain="barefootbaltic.pl" hreflang="pl"><span class="lang-switcher-list-native">Polski</span><span class="lang-switcher-list-en">Polish</span></a></li>
+      <li><a href="https://barefootbaltic.fr/" data-target-subpath="/" data-target-domain="barefootbaltic.fr" hreflang="fr"><span class="lang-switcher-list-native">Français</span><span class="lang-switcher-list-en">French</span></a></li>
+      <li><a href="https://barefootbaltic.es/" data-target-subpath="/" data-target-domain="barefootbaltic.es" hreflang="es"><span class="lang-switcher-list-native">Español</span><span class="lang-switcher-list-en">Spanish</span></a></li>
+      <li><a href="https://barefootbaltic.it/" data-target-subpath="/" data-target-domain="barefootbaltic.it" hreflang="it"><span class="lang-switcher-list-native">Italiano</span><span class="lang-switcher-list-en">Italian</span></a></li>
+      <li><a href="https://barefootbaltic.pt/" data-target-subpath="/" data-target-domain="barefootbaltic.pt" hreflang="pt"><span class="lang-switcher-list-native">Português</span><span class="lang-switcher-list-en">Portuguese</span></a></li>
+      <li><a href="https://barefootbaltic.se/" data-target-subpath="/" data-target-domain="barefootbaltic.se" hreflang="sv"><span class="lang-switcher-list-native">Svenska</span><span class="lang-switcher-list-en">Swedish</span></a></li>
+    </ul>
+  </details>
+</div>
+
+<script>
+(function () {
+  // Cross-locale URL rewriter for the language switcher.
+  //
+  // Each <a data-target-subpath="…"> link has its href rewritten at
+  // load time so it points to the equivalent page in the target locale.
+  //
+  // Two cases:
+  //   1. Same-domain switch (e.g. /de/foo → /foo on .com): rewrite the
+  //      path portion only, keep the host. The link's existing href is
+  //      already path-only (/, /de/, /ru/...), so JS overwrites just the
+  //      path tail.
+  //   2. Cross-domain switch (e.g. /de/foo → barefootbaltic.lv/foo):
+  //      the link carries data-target-domain. JS builds an absolute URL.
+  //
+  // LOCALE_PREFIXES is the set of same-domain locale subpaths injected at
+  // build time. We strip a matching prefix from window.location.pathname
+  // to compute the "locale-agnostic" page path, then re-add the target
+  // locale's prefix to build the destination.
+  var LOCALE_PREFIXES = ["/"];
+
+  function localeAgnosticPath() {
+    var p = window.location.pathname || "/";
+    for (var i = 0; i < LOCALE_PREFIXES.length; i++) {
+      var prefix = LOCALE_PREFIXES[i];
+      if (!prefix || prefix === "/") continue;
+      if (p === prefix || p === prefix.replace(/\/$/, "")) return "/";
+      if (p.indexOf(prefix) === 0) {
+        return p.slice(prefix.length - 1) || "/";
+      }
+    }
+    return p;
+  }
+
+  // Canonical apex host — the only domain where the geo-router lives.
+  // When a switcher link targets the canonical AND the visitor isn't
+  // already there, we append ?nogeo=1 so the apex Worker recognises the
+  // explicit user choice on this first visit and drops the
+  // bb-locale-chosen=1 cookie. See cloudflare-worker-apex.js for the
+  // receiving end of this hand-off.
+  var APEX_CANONICAL_HOST = "barefootbaltic.com";
+
+  function appendNoGeoParam(searchStr) {
+    if (/[?&]nogeo=1\b/.test(searchStr)) return searchStr;
+    return (searchStr ? searchStr + "&" : "?") + "nogeo=1";
+  }
+
+  function rewriteLinks() {
+    var links = document.querySelectorAll(".lang-switcher [data-target-subpath]");
+    var rest = localeAgnosticPath();
+    var baseSearch = window.location.search || "";
+    var hash = window.location.hash || "";
+    var hereHost = (window.location.hostname || "").toLowerCase();
+    var isOnApex = (
+      hereHost === APEX_CANONICAL_HOST ||
+      hereHost === "www." + APEX_CANONICAL_HOST
+    );
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      // Skip the current-locale link — it stays pointing at the current
+      // page (no rewrite needed; aria-current="true" marks it).
+      if (a.getAttribute("aria-current") === "true") continue;
+      var sub = a.getAttribute("data-target-subpath") || "/";
+      var dom = a.getAttribute("data-target-domain") || "";
+      var pathPart;
+      if (sub === "/") {
+        pathPart = rest;
+      } else {
+        pathPart = sub.replace(/\/$/, "") + (rest === "/" ? "/" : rest);
+      }
+      // Cross-domain hand-off: when navigating to the canonical .com
+      // FROM another ccTLD (e.g. .lv → .com), append ?nogeo=1 so the
+      // apex geo-router honours the choice and sets the bb-locale-chosen
+      // cookie. Same-domain switches (e.g. .com → .com/ru/) don't need it
+      // — the apex Worker's LOCALE_PATH_PREFIXES bypass handles them.
+      var search = baseSearch;
+      if (dom === APEX_CANONICAL_HOST && !isOnApex) {
+        search = appendNoGeoParam(search);
+      }
+      var href = (dom ? "https://" + dom : "") + pathPart + search + hash;
+      a.setAttribute("href", href);
+
+      // Mark "user has explicitly chosen a locale" so the in-page soft
+      // banner on .com doesn't re-prompt and the apex geo-router knows
+      // (via cookie / ?nogeo=1) on the very next .com visit.
+      a.addEventListener("click", function () {
+        try {
+          if (window.localStorage) localStorage.setItem("bb-locale-chosen", "1");
+        } catch (e) {}
+        // Same-domain cookie set: the apex Worker also honours a
+        // bb-locale-chosen=1 cookie. Setting it on the source domain
+        // here covers the case where the user later navigates BACK to
+        // this same domain through a non-switcher path (e.g. typing
+        // the URL); cookies are per-domain so this complements (not
+        // replaces) the apex Worker's own Set-Cookie via ?nogeo=1.
+        try {
+          document.cookie =
+            "bb-locale-chosen=1; Path=/; Max-Age=31536000; Secure; SameSite=Lax";
+        } catch (e) {}
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", rewriteLinks);
+  } else {
+    rewriteLinks();
+  }
+})();
+</script>
+
+<style>
+/* Language switcher styling. Uses the existing site palette via the
+   same :root CSS vars present in every page. Designed to drop into the
+   nav-links bar on desktop and into the hamburger drawer on mobile. */
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.75rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.lang-switcher-details {
+  position: relative;
+}
+.lang-switcher-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+  color: inherit;
+}
+.lang-switcher-summary::-webkit-details-marker { display: none; }
+.lang-switcher-summary:hover,
+.lang-switcher-details[open] .lang-switcher-summary {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.lang-switcher-globe { display: inline-flex; }
+.lang-switcher-current { font-weight: 500; white-space: nowrap; }
+.lang-switcher-chevron {
+  display: inline-flex;
+  transition: transform 0.15s ease;
+}
+.lang-switcher-details[open] .lang-switcher-chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 180px;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+.lang-switcher-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+}
+.lang-switcher-list a:hover,
+.lang-switcher-list a:focus {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.lang-switcher-list a[aria-current="true"] {
+  font-weight: 600;
+  cursor: default;
+}
+.lang-switcher-list-native { color: inherit; }
+.lang-switcher-list-en {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.85em;
+  margin-left: 0.6rem;
+}
+/* Mobile breakpoint matches the nav's hamburger collapse — Lesson 16. */
+@media (max-width: 1100px) {
+  .lang-switcher { margin-left: 0; width: 100%; }
+  .lang-switcher-summary { width: 100%; justify-content: flex-start; padding: 0.7rem 1rem; }
+  .lang-switcher-list { position: static; box-shadow: none; border: none; padding-left: 1rem; }
+}
+</style>
+</li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<div class="policy">
+  <h1>Datenschutzerklärung</h1>
+  <p class="updated">Zuletzt aktualisiert: 25. April 2026</p>
+
+  <p>Barefoot Baltic („wir&rdquo;, „uns&rdquo;, „unser&rdquo;) ist eine Geschäftsbezeichnung von <strong>Ronda Sprints Solutions SIA</strong> (Registriernummer 40203595104), einer in Lettland registrierten Gesellschaft mit Sitz in Brīvības gatve 418-27, Rīga, LV-1024. Wir betreiben die Website barefootbaltic.com. Diese Datenschutzerklärung erläutert, wie wir personenbezogene Daten erheben, verwenden und schützen, wenn Sie unsere Website besuchen oder unsere Dienstleistungen nutzen.</p>
+  <p>Wir verpflichten uns, Ihre Privatsphäre zu schützen und die Datenschutz-Grundverordnung der EU (DSGVO) sowie die geltenden lettischen Datenschutzgesetze einzuhalten.</p>
+
+  <h2>1. Wer wir sind</h2>
+  <p>Barefoot Baltic ist eine Geschäftsbezeichnung von Ronda Sprints Solutions SIA, einem in Lettland registrierten Anbieter geführter Touren und Tagesausflüge. Wir sind beim lettischen Verbraucherschutzzentrum (PTAC) als zugelassener Tourismusdienstleister registriert. Für datenschutzbezogene Anfragen erreichen Sie uns wie folgt:</p>
+  <p><strong>Rechtsträger:</strong> Ronda Sprints Solutions SIA<br>
+  <strong>Registriernummer:</strong> 40203595104<br>
+  <strong>Anschrift:</strong> Brīvības gatve 418-27, Rīga, LV-1024, Lettland<br>
+  <strong>E-Mail:</strong> <a href="mailto:daiga@rondasprints.com">daiga@rondasprints.com</a><br>
+  <strong>Telefon / WhatsApp:</strong> +371 26 440 152</p>
+
+  <h2>2. Welche Daten wir erheben</h2>
+  <p>Wir erheben gegebenenfalls die folgenden Arten personenbezogener Daten:</p>
+  <ul>
+    <li><strong>Kontaktdaten:</strong> Ihren Namen, Ihre E-Mail-Adresse und Ihre Telefonnummer, wenn Sie uns über WhatsApp, per E-Mail oder über eine Buchungsplattform kontaktieren.</li>
+    <li><strong>Buchungsdaten:</strong> Angaben zu Ihrer Tourbuchung, einschließlich Termin, Gruppengröße und etwaiger Sonderwünsche, die Sie uns mitteilen.</li>
+    <li><strong>Nutzungsdaten der Website:</strong> anonymisierte Informationen wie besuchte Seiten, Verweildauer, Browsertyp und Geräteart, die über Analyse-Cookies erhoben werden (nur mit Ihrer Einwilligung).</li>
+  </ul>
+  <p>Wir erheben keine besonderen Kategorien personenbezogener Daten wie Gesundheitsdaten, religiöse Überzeugungen oder Finanzdaten, die über das für die Bearbeitung einer Buchung Notwendige hinausgehen.</p>
+
+  <h2>3. Wie wir Ihre Daten verwenden</h2>
+  <p>Wir verwenden die erhobenen Daten für die folgenden Zwecke:</p>
+  <ul>
+    <li>um auf Ihre Anfragen zu antworten und mit Ihnen über Touren und Buchungen zu kommunizieren;</li>
+    <li>um die von Ihnen gebuchten Touren und Ausflüge zu organisieren und durchzuführen;</li>
+    <li>um unsere Website und Dienstleistungen anhand anonymisierter Nutzungsmuster zu verbessern;</li>
+    <li>um Sie über neue Touren oder Dienstleistungen zu informieren — jedoch nur, wenn Sie uns dazu ausdrücklich Ihre Einwilligung erteilt haben.</li>
+  </ul>
+  <p>Wir werden Ihre personenbezogenen Daten niemals zu Marketingzwecken an Dritte verkaufen, vermieten oder weitergeben.</p>
+
+  <h2>4. Rechtsgrundlagen der Verarbeitung</h2>
+  <p>Nach der DSGVO verarbeiten wir Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:</p>
+  <ul>
+    <li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): wenn Sie uns kontaktieren, sich für Updates anmelden oder Analyse-Cookies akzeptieren.</li>
+    <li><strong>Vertragserfüllung</strong> (Art. 6 Abs. 1 lit. b DSGVO): wenn wir Ihre Daten benötigen, um eine Tourbuchung durchzuführen.</li>
+    <li><strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): zur Verbesserung unserer Website und Dienstleistungen, sofern Ihre Datenschutzrechte nicht überwiegen.</li>
+  </ul>
+
+  <h2>5. Cookies</h2>
+  <p>Unsere Website verwendet Cookies — kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Wir nutzen folgende Arten:</p>
+  <ul>
+    <li><strong>Notwendige Cookies:</strong> diese sind erforderlich, damit die Website ordnungsgemäß funktioniert (z. B. um Ihre Cookie-Einstellungen zu speichern). Sie können nicht deaktiviert werden.</li>
+    <li><strong>Analyse-Cookies:</strong> diese helfen uns zu verstehen, wie Besucher unsere Website nutzen, indem sie anonymisierte Daten erheben. Sie werden nur aktiviert, wenn Sie über unser Cookie-Banner Ihre Einwilligung erteilen.</li>
+  </ul>
+  <p>Wir verwenden keine Werbe-Cookies, Tracking-Cookies oder Marketing-Cookies von Drittanbietern.</p>
+  <p>Sie können Ihre Cookie-Einstellungen jederzeit ändern, indem Sie die Cookies in Ihrem Browser löschen und die Seite erneut aufrufen — das Banner wird dann wieder angezeigt.</p>
+
+  <h2>6. Drittanbieterdienste</h2>
+  <p>Wenn Sie eine Tour über eine Drittanbieter-Plattform wie GetYourGuide oder Viator buchen, gelten für Ihre Buchung deren jeweilige Datenschutzbestimmungen. Wir empfehlen, diese direkt zu prüfen:</p>
+  <ul>
+    <li><a href="https://www.getyourguide.com/privacy_policy" target="_blank" rel="noopener">Datenschutzerklärung von GetYourGuide</a></li>
+    <li><a href="https://www.viator.com/support/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Viator</a></li>
+  </ul>
+  <p>Wenn Sie uns über WhatsApp kontaktieren, gelten für Ihre Nachrichten die <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Datenschutzbestimmungen von WhatsApp</a>.</p>
+
+  <h2>7. Speicherdauer</h2>
+  <p>Wir speichern Ihre personenbezogenen Daten nur so lange, wie es zur Erfüllung der in dieser Erklärung beschriebenen Zwecke erforderlich ist. Konkret:</p>
+  <ul>
+    <li><strong>Buchungsdaten:</strong> bis zu 2 Jahre nach Ihrer Tour für Nachbetreuung, Aufzeichnungen und Einhaltung gesetzlicher Pflichten.</li>
+    <li><strong>Anfragen:</strong> bis zu 1 Jahr, sofern keine Buchung zustande kommt.</li>
+    <li><strong>Analysedaten:</strong> anonymisiert und aggregiert; es werden keine personenbezogenen Daten gespeichert.</li>
+  </ul>
+
+  <h2>8. Ihre Rechte</h2>
+  <p>Nach der DSGVO haben Sie hinsichtlich Ihrer personenbezogenen Daten die folgenden Rechte:</p>
+  <ul>
+    <li><strong>Auskunft</strong> (Art. 15 DSGVO): Sie können eine Kopie der über Sie gespeicherten personenbezogenen Daten anfordern.</li>
+    <li><strong>Berichtigung</strong> (Art. 16 DSGVO): Sie können die Korrektur unrichtiger Daten verlangen.</li>
+    <li><strong>Löschung</strong> (Art. 17 DSGVO): Sie können die Löschung Ihrer Daten verlangen („Recht auf Vergessenwerden&rdquo;).</li>
+    <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO): Sie können verlangen, dass wir die Verarbeitung Ihrer Daten einschränken.</li>
+    <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO): Sie können Ihre Daten in einem strukturierten, maschinenlesbaren Format anfordern.</li>
+    <li><strong>Widerspruch</strong> (Art. 21 DSGVO): Sie können der Verarbeitung Ihrer Daten zu bestimmten Zwecken widersprechen.</li>
+    <li><strong>Widerruf der Einwilligung</strong> (Art. 7 Abs. 3 DSGVO): Sie können eine erteilte Einwilligung jederzeit widerrufen, ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird.</li>
+  </ul>
+  <p>Um eines dieser Rechte auszuüben, wenden Sie sich bitte an <a href="mailto:daiga@rondasprints.com">daiga@rondasprints.com</a>. Wir werden innerhalb von 30 Tagen antworten.</p>
+
+  <h2>9. Datensicherheit</h2>
+  <p>Wir treffen angemessene Maßnahmen, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Veränderung oder Zerstörung zu schützen. Unsere Website nutzt HTTPS-Verschlüsselung für alle Daten, die zwischen Ihrem Browser und unserem Server übertragen werden.</p>
+
+  <h2>10. Datenschutz für Kinder</h2>
+  <p>Unsere Website richtet sich nicht an Kinder unter 16 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Sollten Sie der Meinung sein, dass wir versehentlich Daten eines Kindes erhoben haben, kontaktieren Sie uns bitte — wir werden diese unverzüglich löschen.</p>
+
+  <h2>11. Änderungen dieser Erklärung</h2>
+  <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten „Zuletzt aktualisiert&rdquo;-Datum veröffentlicht. Wir empfehlen Ihnen, diese Seite regelmäßig zu prüfen.</p>
+
+  <h2>12. Aufsichtsbehörde</h2>
+  <p>Wenn Sie mit der Art und Weise, wie wir Ihre personenbezogenen Daten verarbeiten, nicht zufrieden sind, haben Sie das Recht, eine Beschwerde bei der lettischen Datenschutzbehörde (<em>Datu valsts inspekcija</em>) einzureichen — der federführenden Aufsichtsbehörde für Ronda Sprints Solutions SIA, da das Unternehmen in Lettland eingetragen ist:</p>
+  <p>Website: <a href="https://www.dvi.gov.lv" target="_blank" rel="noopener">www.dvi.gov.lv</a><br>
+  E-Mail: info@dvi.gov.lv</p>
+  <p>Als Bürger eines anderen EU-Mitgliedstaates können Sie eine Beschwerde alternativ bei der Aufsichtsbehörde Ihres gewöhnlichen Aufenthalts oder Arbeitsplatzes einreichen (Art. 77 DSGVO). In Deutschland ist dies die jeweilige Landesdatenschutzbehörde Ihres Bundeslandes.</p>
+
+  <h2>13. Kontakt</h2>
+  <p>Bei Fragen zu dieser Datenschutzerklärung oder zum Umgang mit Ihren Daten wenden Sie sich bitte an uns:</p>
+  <p><strong>Barefoot Baltic</strong> (Ronda Sprints Solutions SIA)<br>
+  Reg.-Nr. 40203595104<br>
+  Brīvības gatve 418-27, Rīga, LV-1024, Lettland<br>
+  E-Mail: <a href="mailto:daiga@rondasprints.com">daiga@rondasprints.com</a><br>
+  WhatsApp: <a href="https://wa.me/37126440152">+371 26 440 152</a></p>
+</div>
+
+
+
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label">Lassen Sie uns reden</p>
+        <h2 class="section-title" style="color:var(--cream)">Ich freue mich auf Ihre Nachricht</h2>
+        <p class="contact-intro">
+          Ob Sie gerade erst beginnen, Ihren Besuch in Lettland zu planen, oder schon konkrete Termine im Kopf haben &mdash; am einfachsten buchen Sie, indem Sie sich direkt bei mir melden. Eine WhatsApp-Nachricht, ein Anruf oder eine E-Mail, wie es Ihnen am liebsten ist. Ich melde mich zügig zurück, und gemeinsam finden wir den perfekten Tag für Ihren Ausflug. Keine Formulare, keine automatischen Antworten, nur ich.
+        </p>
+        <div class="contact-methods">
+          <a href="https://wa.me/37126440152" class="contact-method" target="_blank" rel="noopener">
+            <div class="cm-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <div><div class="cm-label">WhatsApp</div><div class="cm-value">+371 2644 0152</div></div>
+          </a>
+          <a href="tel:+37126440152" class="contact-method">
+            <div class="cm-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="cm-label">Telefon</div><div class="cm-value">+371 2644 0152</div></div>
+          </a>
+          <a href="mailto:daiga@rondasprints.com" class="contact-method">
+            <div class="cm-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="cm-label">E-Mail</div><div class="cm-value">daiga@rondasprints.com</div></div>
+          </a>
+          <div class="contact-qr">
+            <img src="/images/qr-whatsapp.png" alt="Scannen, um einen WhatsApp-Chat mit Barefoot Baltic zu öffnen" width="292" height="292">
+            <span>Scannen für WhatsApp</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h3>Sie finden mich auch hier</h3>
+        <p>Ich verstehe, dass manche Reisende lieber über eine Plattform buchen, der sie bereits vertrauen &mdash; das ist völlig in Ordnung. Sie können gern über GetYourGuide oder Viator buchen. Wissen Sie nur: Mein Direktpreis ist immer der beste.</p>
+        <div class="booking-links">
+          <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            GetYourGuide
+          </a>
+          <a href="https://www.viator.com/tours/Riga/From-Riga-Guided-Day-Tour-to-Rundale-Palace-and-Bauska-Castle/d4480-5626283P3" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Viator
+          </a>
+          <a href="https://www.instagram.com/barefoot_baltic/" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram @barefoot_baltic
+          </a>
+          <a href="https://www.youtube.com/@Barefoot_Baltic" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            YouTube @Barefoot_Baltic
+          </a>
+          <a href="https://www.tiktok.com/@barefoot_baltic" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+            TikTok @barefoot_baltic
+          </a>
+          <a href="https://x.com/barefoot_baltic" target="_blank" rel="noopener" class="booking-link">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X @barefoot_baltic
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p class="footer-stamp">Izcelsme · Rīga · Latvija</p>
+    <p class="footer-stamp-lv">Hergestellt in Lettland, mit Liebe zum Boden, auf dem wir gehen</p>
+    <p>© 2026 Barefoot Baltic · Ronda Sprints Solutions SIA · Reg. 40203595104 · Riga, Lettland</p>
+    <p><a href="/de/privacy-policy.html">Datenschutzerklärung</a></p>
+    <p class="footer-attribution">Die Farben und kleinen Zeichen überall auf dieser Seite nehmen Anleihe bei Lettlands traditionellen Volkstrachten: Karminrot von der Flagge und dem Lielvārde-Gürtel, Indigo von den alten Wolltüchern, Waldgrün von den Vidzeme-Karos, Flachsgold vom ungefärbten Leinen und dem Bernstein der Küste. Wir mischen sie frei über die Regionen hinweg, statt jede einzelne getreu zu bewahren. Der kleine achtzackige Stern neben jedem Abschnitt ist ein <em>auseklis</em>, der lettische Morgenstern &mdash; ein Symbol für Morgendämmerung, Schutz und Glück.</p>
+  </div>
+  <div class="footer-flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="josta-strip" role="presentation" aria-hidden="true"></div>
+</footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const spans = hamburger.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  });
+}
+</script>
+</body>
+</html>

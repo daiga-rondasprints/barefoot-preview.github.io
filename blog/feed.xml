@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Barefoot Baltic — Blog</title>
+    <link>https://barefootbaltic.com/blog/</link>
+    <atom:link href="https://barefootbaltic.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Long-form guides to Riga, Latvia, and Baltic day trips by Daiga Taurīte, licensed Latvian tour guide.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+    <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    <generator>scripts/build_blog_feed.py</generator>
+    <image><url>https://barefootbaltic.com/images/logo-wide-color.png</url><title>Barefoot Baltic — Blog</title><link>https://barefootbaltic.com/blog/</link></image>
+    <item>
+      <title>Cēsis Day Trip from Riga: A Latvian Guide's Hour-by-Hour Itinerary</title>
+      <link>https://barefootbaltic.com/blog/cesis-day-trip-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/cesis-day-trip-from-riga.html</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's hour-by-hour Cēsis day trip from Riga — the 9:30 train, the academy's Chinese room, the candle-lantern castle, Pasēdnīca lunch.</description>
+    </item>
+    <item>
+      <title>Sigulda Day Trip from Riga: A Complete Hour-by-Hour Itinerary</title>
+      <link>https://barefootbaltic.com/blog/sigulda-day-trip-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/sigulda-day-trip-from-riga.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A Latvian guide walks you through the DIY Sigulda day from Riga — train times, the one-way cable car move that saves €14, and an honest cost breakdown.</description>
+    </item>
+    <item>
+      <title>Sigulda in Winter: A Local Guide's Honest Take</title>
+      <link>https://barefootbaltic.com/blog/sigulda-in-winter.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/sigulda-in-winter.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Sigulda in winter from a licensed Latvian guide: cable car schedule, castle hours, Mr. Biskvits cafe, and which path to skip in deep cold.</description>
+    </item>
+    <item>
+      <title>Things to Do in Cēsis, Latvia: A Local Guide's Honest List</title>
+      <link>https://barefootbaltic.com/blog/things-to-do-in-cesis.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/things-to-do-in-cesis.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A Latvian guide's ten-stop list for Cēsis — the candle-lantern castle (lantern included), Cēsu Maize bakery, lunch at Pasēdnīca on Raunas iela.</description>
+    </item>
+    <item>
+      <title>Things to Do in Sigulda, Latvia: A Local Guide's Honest List</title>
+      <link>https://barefootbaltic.com/blog/things-to-do-in-sigulda.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/things-to-do-in-sigulda.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A Latvian guide's 14-stop list for Sigulda — Turaida Castle, the Soviet cable car, the Hill of Dainas, the Olympic bobsleigh, where to eat.</description>
+    </item>
+    <item>
+      <title>The Cat House (Kaķu nams), Riga: The Building, the Cats, and the Story</title>
+      <link>https://barefootbaltic.com/blog/cat-house-riga-meistaru.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/cat-house-riga-meistaru.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the Cat House on Meistaru iela actually is, the merchant-and-the-Guild story behind the bronze cats on the roof, and the architectural details most travellers walk past. Honest local's guide from Daiga.</description>
+    </item>
+    <item>
+      <title>Dainu Kalns Sculpture Field Guide: All 26 Stones at the Hill of Dainas, Turaida</title>
+      <link>https://barefootbaltic.com/blog/dainu-kalns-sculpture-field-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/dainu-kalns-sculpture-field-guide.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What every sculpture at Dainu Kalns means, the daina each one carries, and how to walk the hill in the right order. The complete English-language guide to Indulis Ranka's 26 granite sculptures at Turaida.</description>
+    </item>
+    <item>
+      <title>The Freedom Monument (Brīvības piemineklis), Riga: Milda, the Three Stars, and What It Means to Latvians</title>
+      <link>https://barefootbaltic.com/blog/freedom-monument-riga-milda.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/freedom-monument-riga-milda.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the Freedom Monument actually is, who Milda is, the three gold stars, and why this 1935 column survived the Soviet occupation. From Daiga, a licensed Latvian guide.</description>
+    </item>
+    <item>
+      <title>The House of the Blackheads (Melngalvju nams), Riga: The Most Photographed Building in the City</title>
+      <link>https://barefootbaltic.com/blog/house-of-blackheads-melngalvju-nams.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/house-of-blackheads-melngalvju-nams.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the House of the Blackheads actually is, who the Brotherhood of Blackheads were, why it was rebuilt from 1948 ruins, and what's inside the museum. From Daiga, a licensed Latvian guide.</description>
+    </item>
+    <item>
+      <title>Konventa Sēta (Convent Yard), Riga: The Medieval Courtyard Behind Kalēju iela</title>
+      <link>https://barefootbaltic.com/blog/konventa-seta-convent-yard-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/konventa-seta-convent-yard-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Konventa Sēta is a quiet medieval cluster of 16th-to-18th-century buildings on 13th-century foundations, between Kalēju and Skārņu iela in Riga’s Old Town. The dove on the keystone, the inner courtyard, the porcelain museum. From Daiga, a Riga local.</description>
+    </item>
+    <item>
+      <title>Krišjānis Barons: The Man Who Saved 217,996 Latvian Folk Songs</title>
+      <link>https://barefootbaltic.com/blog/krisjanis-barons-father-of-dainas.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/krisjanis-barons-father-of-dainas.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Who Krišjānis Barons was, why his cabinet of 217,996 hand-written cards is on the UNESCO Memory of the World register, and why every Latvian schoolchild knows his face. A standalone biography from a Latvian guide.</description>
+    </item>
+    <item>
+      <title>Kristaps Porziņģis: From Liepāja to the NBA, and Why Latvia Watched Every Game</title>
+      <link>https://barefootbaltic.com/blog/kristaps-porzingis-liepaja-to-nba.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/kristaps-porzingis-liepaja-to-nba.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Kristaps Porziņģis was born in Liepāja in 1995, drafted 4th by the Knicks in 2015, and won the NBA Championship with the Boston Celtics in 2024. The story of Latvia's most famous athlete and the small Baltic country that watched every game.</description>
+    </item>
+    <item>
+      <title>Latvia's Other Independence Day: A May 4 in Riga</title>
+      <link>https://barefootbaltic.com/blog/latvia-restoration-day-may-4-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/latvia-restoration-day-may-4-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>May 4 is Latvia's Restoration of Independence Day — the second of two independence days, the one with daffodils, free trams, and a folk procession to the Freedom Monument. Notes from this year's celebration in Riga.</description>
+    </item>
+    <item>
+      <title>The Powder Tower (Pulvertornis) and Latvian War Museum, Riga: The Free Museum That Explains Latvia</title>
+      <link>https://barefootbaltic.com/blog/powder-tower-war-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/powder-tower-war-museum-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the Powder Tower actually is, the cannonballs still in the wall, and why the free Latvian War Museum inside is worth two hours of any first-timer’s day in Riga. Honest local's guide.</description>
+    </item>
+    <item>
+      <title>Riga Castle (Rīgas pils): The President's Residence and What You Can Actually Visit</title>
+      <link>https://barefootbaltic.com/blog/riga-castle-rigas-pils.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-castle-rigas-pils.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What Riga Castle actually is, why the President lives in a 14th-century Livonian Order fortress, the National History Museum inside it, and how to see the riverfront elevation. Honest local's guide.</description>
+    </item>
+    <item>
+      <title>Riga Cathedral (Doma baznīca): Honest Local's Guide to Latvia's Oldest Church</title>
+      <link>https://barefootbaltic.com/blog/riga-cathedral-doma-baznica.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-cathedral-doma-baznica.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What Riga Cathedral actually is, why there's no dome on it, the 6,718-pipe Walcker organ, where to sit for the recital, and how to spend half an hour or half a day inside. Written by Daiga, a licensed Riga guide.</description>
+    </item>
+    <item>
+      <title>St James's Cathedral (Sv. Jēkaba katedrāle), Riga: The Catholic Cathedral Next to Parliament</title>
+      <link>https://barefootbaltic.com/blog/st-james-cathedral-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/st-james-cathedral-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What St James's actually is, why it’s the Catholic cathedral of Latvia (and the only one in Riga to keep its red-and-white baroque portal), the ‘ringing rooster’ legend, and how it sits beside the Saeima. From Daiga, a licensed Riga guide.</description>
+    </item>
+    <item>
+      <title>St Peter's Church (Sv. Pētera baznīca), Riga: The Tower, the View, and Why It's Twice Been Rebuilt</title>
+      <link>https://barefootbaltic.com/blog/st-peters-church-tower-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/st-peters-church-tower-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Why St Peter's tower is the panorama of Riga, what to know before you climb, the 1721 lightning and the 1941 artillery, and what the interior actually looks like. Honest local's guide.</description>
+    </item>
+    <item>
+      <title>The Swedish Gate (Zviedru vārti), Riga: The Last Surviving City Gate</title>
+      <link>https://barefootbaltic.com/blog/swedish-gate-zviedru-varti.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/swedish-gate-zviedru-varti.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the Swedish Gate actually is, why it was cut through the city wall in 1698, and how to walk Torņa iela — the best-preserved medieval street in Riga — from a licensed local guide.</description>
+    </item>
+    <item>
+      <title>The Three Brothers (Trīs brāļi): Riga's Oldest Houses, Three Centuries on One Street</title>
+      <link>https://barefootbaltic.com/blog/three-brothers-oldest-houses-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/three-brothers-oldest-houses-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>What the Three Brothers actually are, why number 17 is the oldest stone dwelling house in Riga, the 1646 date carved on number 19, and how to read the lane in five minutes. From Daiga, a licensed Latvian guide.</description>
+    </item>
+    <item>
+      <title>Vērmanes dārzs (Vērmane Garden), Riga: The Oldest Public Park, Where Locals Actually Sit</title>
+      <link>https://barefootbaltic.com/blog/vermanes-darzs-merkela-park-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/vermanes-darzs-merkela-park-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Vērmanes dārzs is Riga's oldest public park (1817), at the eastern edge of the Old Town between Tērbatas and Merķeļa iela. The fountain, the cherry trees, and the place locals go in spring. From Daiga, a Riga local.</description>
+    </item>
+    <item>
+      <title>Dainu Kalns at Turaida: A Sculpture Garden Carved Under Soviet Rule</title>
+      <link>https://barefootbaltic.com/blog/dainu-kalns-folk-song-hill-turaida.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/dainu-kalns-folk-song-hill-turaida.html</guid>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>How Indulis Ranka and Anna Jurkāne built the Hill of Dainas at Turaida between 1980 and 1985 — a folk-song memorial in granite that helped seed Latvia's Singing Revolution.</description>
+    </item>
+    <item>
+      <title>The Rose of Turaida: A Real 1620 Latvian Murder Case</title>
+      <link>https://barefootbaltic.com/blog/legend-of-rose-of-turaida.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/legend-of-rose-of-turaida.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Maija — the Rose of Turaida — was murdered on 6 August 1620. The 1620 court protocol, a sandstone cave, a linden tree planted by the bridegroom that's still alive.</description>
+    </item>
+    <item>
+      <title>What’s On in Latvia: A Local’s Rolling List of Events We’re Spotting Around Town</title>
+      <link>https://barefootbaltic.com/blog/whats-on-in-latvia.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/whats-on-in-latvia.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A rolling, hand-curated list of upcoming Latvian events spotted on posters around Riga, Sigulda, Jūrmala, Cēsis and beyond — concerts, midsummer festivals, garden days, palace concerts, and more.</description>
+    </item>
+    <item>
+      <title>Pirts, Suitsusaun, Savusauna: Baltic Sauna Cultures Compared</title>
+      <link>https://barefootbaltic.com/blog/baltic-nordic-sauna-cultures-compared.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/baltic-nordic-sauna-cultures-compared.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Pirts, suitsusaun, savusauna, badstu — a Latvian guide compares Baltic and Nordic sauna traditions, the löyly, and how to use each one without offending the locals.</description>
+    </item>
+    <item>
+      <title>A Brief History of Latvia, Told by the People Who Lived It</title>
+      <link>https://barefootbaltic.com/blog/brief-history-of-latvia-first-person.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/brief-history-of-latvia-first-person.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Eight hundred years of Latvian history through the voices of the people who lived each chapter — pagan, peasant, soldier, exile, citizen. From the crusader knights to the European Union.</description>
+    </item>
+    <item>
+      <title>Castle of Light: Riga's National Library, A Visitor's Guide</title>
+      <link>https://barefootbaltic.com/blog/castle-of-light-latvian-national-library.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/castle-of-light-latvian-national-library.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Riga's Gaismas pils — the Castle of Light. The Glass Mountain folktale, Gunārs Birkerts's design, the 2014 human chain, and why Latvians love it as much as visitors do.</description>
+    </item>
+    <item>
+      <title>The Hill of Crosses: A Day Trip from Riga to Šiauliai</title>
+      <link>https://barefootbaltic.com/blog/hill-of-crosses-lithuania-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/hill-of-crosses-lithuania-from-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>The Hill of Crosses near Šiauliai, Lithuania — a Catholic pilgrimage site the Soviets bulldozed three times and never destroyed. How to visit, when, and what it means.</description>
+    </item>
+    <item>
+      <title>Jūrmala: Latvia's Baltic Seaside, A Local's Honest Guide</title>
+      <link>https://barefootbaltic.com/blog/jurmala-seaside-resort-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/jurmala-seaside-resort-from-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>33 km of white quartz sand, the shallowest swimmable Baltic Sea, wooden Art Nouveau villas, sulphur spas dating to 1838 — a Latvian's guide to Jūrmala from Riga.</description>
+    </item>
+    <item>
+      <title>Orthodox Churches in Latvia: A Visitor's Guide to Riga's Four</title>
+      <link>https://barefootbaltic.com/blog/orthodox-churches-latvia.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/orthodox-churches-latvia.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Riga's four Orthodox churches — Nativity Cathedral, Holy Trinity Pārdaugava, St Alexander Nevsky, Grebenshchikov — what to see, etiquette, and the history behind the gold domes.</description>
+    </item>
+    <item>
+      <title>Religion in the Baltics: How Three Countries Believe Differently</title>
+      <link>https://barefootbaltic.com/blog/religion-estonia-latvia-lithuania-compared.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/religion-estonia-latvia-lithuania-compared.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Estonia is the world's most secular country, Latvia is split between Lutheran and Catholic, Lithuania is overwhelmingly Catholic. One border, three religions, three histories.</description>
+    </item>
+    <item>
+      <title>Riga's TV Tower: The Tallest Free-Standing Building in the EU</title>
+      <link>https://barefootbaltic.com/blog/riga-tv-tower-tallest-eu.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-tv-tower-tallest-eu.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>At 368.5 m, Riga's TV Tower is the tallest free-standing structure in the European Union — taller than the Eiffel Tower. The history, the design, and how to visit.</description>
+    </item>
+    <item>
+      <title>The Suwałki Gap: Driving NATO's Most-Watched Corridor</title>
+      <link>https://barefootbaltic.com/blog/suwalki-gap-baltic-perspective.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/suwalki-gap-baltic-perspective.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>The Suwałki Gap — the 80 km Polish corridor between Belarus and Russian Kaliningrad that links the Baltic states to the rest of Europe. A Latvian's view from the road.</description>
+    </item>
+    <item>
+      <title>Why Latvians Eat Pork Not Beef: A Forest, A Pig, A Kitchen</title>
+      <link>https://barefootbaltic.com/blog/why-latvian-cuisine-is-pork-not-beef.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/why-latvian-cuisine-is-pork-not-beef.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Why pork — not beef — became Latvia's national meat. A thousand years of forest, smoke and bacon, plus the modern dishes (karbonāde, pelmeņi) you should try.</description>
+    </item>
+    <item>
+      <title>Brīvdabas: A Day at Latvia's Open-Air Museum, Riga</title>
+      <link>https://barefootbaltic.com/blog/why-visit-ethnographic-open-air-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/why-visit-ethnographic-open-air-museum-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>118 historical Latvian buildings on 87 hectares of pine forest, 10 km outside Riga. Why a quiet morning at Brīvdabas tells you more about Latvia than the Old Town.</description>
+    </item>
+    <item>
+      <title>Riga's Museum of the Occupation: Why It's Essential</title>
+      <link>https://barefootbaltic.com/blog/why-visit-occupation-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/why-visit-occupation-museum-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Soviet 1940, Nazi 1941, Soviet 1944–1991. The Museum of the Occupation of Latvia tells eight hundred years of Riga's story in one afternoon. Why visit, what to see.</description>
+    </item>
+    <item>
+      <title>Inside Rundāle Palace: A Room-by-Room Visual Guide</title>
+      <link>https://barefootbaltic.com/blog/inside-rundale-palace-rooms-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/inside-rundale-palace-rooms-guide.html</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Every room of Latvia's grandest baroque palace, illustrated with 286 original photos: Gold Hall, White Hall, Duke's enfilade, Duchess's wing.</description>
+    </item>
+    <item>
+      <title>Day Trips from Riga: An Honest Answer (2026)</title>
+      <link>https://barefootbaltic.com/blog/day-trips-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/day-trips-from-riga.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's honest comparison of the three best day trips from Riga: Rundāle, Sigulda, Ķemeri — prices, times, and who each is wrong for.</description>
+    </item>
+    <item>
+      <title>Is Ķemeri Bog Worth It? An Honest Answer</title>
+      <link>https://barefootbaltic.com/blog/is-kemeri-bog-worth-it.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/is-kemeri-bog-worth-it.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Yes, with caveats. A licensed Latvian guide on what the Great Ķemeri Bog actually is, when to go, how to get there, and who should skip it.</description>
+    </item>
+    <item>
+      <title>Is Rundāle Palace Worth Visiting? An Honest Answer</title>
+      <link>https://barefootbaltic.com/blog/is-rundale-palace-worth-visiting.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/is-rundale-palace-worth-visiting.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Yes, on a weekday and if you understand it's a country palace, not Versailles. A licensed Latvian guide on what Rundāle is, when to visit, and who should skip it.</description>
+    </item>
+    <item>
+      <title>Is Sigulda Worth Visiting? An Honest Answer</title>
+      <link>https://barefootbaltic.com/blog/is-sigulda-worth-visiting.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/is-sigulda-worth-visiting.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Yes — the best all-round day trip from Riga. A licensed Latvian guide on Sigulda, the Gauja Valley, the three castles, when to go, and how to get there.</description>
+    </item>
+    <item>
+      <title>Ķemeri Bog in Autumn: An Honest Answer</title>
+      <link>https://barefootbaltic.com/blog/kemeri-bog-in-autumn.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/kemeri-bog-in-autumn.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Arguably the second-best window of the year. A licensed Latvian guide on Ķemeri in September and October, peak colour, and whether DIY is worth it.</description>
+    </item>
+    <item>
+      <title>Latvian Food: An Honest Guide from a Riga Local</title>
+      <link>https://barefootbaltic.com/blog/latvian-food-honest-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/latvian-food-honest-guide.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's honest guide to the food: rye bread, smoked everything, the pink summer soup, pickle juice, and where to eat in Riga.</description>
+    </item>
+    <item>
+      <title>Your First 48 Hours in Riga: An Honest Itinerary</title>
+      <link>https://barefootbaltic.com/blog/planning-first-48-hours-in-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/planning-first-48-hours-in-riga.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's honest 48-hour Riga itinerary: what to actually see, what to skip, where to eat, and the practical answers most travellers want.</description>
+    </item>
+    <item>
+      <title>Riga in Winter: An Honest Local's Take</title>
+      <link>https://barefootbaltic.com/blog/riga-in-winter.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-in-winter.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's honest guide to Riga in winter: Christmas markets, weather, what to wear, costs, and which day trips still run in the cold months.</description>
+    </item>
+    <item>
+      <title>Riga Old Town: A Local's Guide to Vecrīga</title>
+      <link>https://barefootbaltic.com/blog/riga-old-town-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-old-town-guide.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's deep guide to Riga Old Town (Vecrīga): what to see, what to skip, three walking routes, where to eat, safety, and seasons.</description>
+    </item>
+    <item>
+      <title>Riga vs Tallinn vs Vilnius: An Honest Comparison</title>
+      <link>https://barefootbaltic.com/blog/riga-vs-tallinn-vs-vilnius.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/riga-vs-tallinn-vs-vilnius.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>A licensed Latvian guide's honest comparison of Riga, Tallinn, and Vilnius. Which Baltic capital to pick, which does what best, and who each is wrong for.</description>
+    </item>
+    <item>
+      <title>Can You Do Sigulda AND Cēsis in One Day?</title>
+      <link>https://barefootbaltic.com/blog/sigulda-and-cesis-in-one-day.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/blog/sigulda-and-cesis-in-one-day.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Yes, with trade-offs. A licensed Latvian guide on combining Sigulda and Cēsis in one day from Riga: timeline, three castles, and DIY-vs-tour.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,119 @@
+/*
+ * tokens.css — Barefoot Baltic design tokens (single source of truth)
+ *
+ * This file is the canonical home for every design token used across
+ * the site: palette, spacing, and typography. At build time,
+ * `scripts/lib/css_tokens_builder.py` parses this file and rewrites
+ * the matching `--*` declarations inside each layout's `:root { ... }`
+ * block so they carry these values.
+ *
+ * To change a site-wide token:
+ *   1. Edit the value here.
+ *   2. Run `python scripts/build.py`.
+ *   3. Commit both this file AND the rebuilt layout/page files.
+ *
+ * Layout-specific sizing tokens (e.g. `--nav-h`, `--bar-h`) stay in
+ * the individual layout files — they are layout-specific, not global.
+ * `scripts/audit_css_tokens.py` enforces that the layouts do not
+ * drift from the values below.
+ *
+ * Latvian heritage palette reference (for non-obvious tokens):
+ *   carmine    — Pantone 201 C; flag and Lielvārdes josta.
+ *   indigo     — dark blue wool of archaeological Baltic costume
+ *                (7th–13th c.) and Eastern Vidzeme jacket.
+ *   linen      — undyed flax, the base cloth of every costume.
+ *   peat       — bog earth, for dark grounds and headings.
+ *   bronze     — archaeological jewellery metal, for hairlines.
+ *   moss       — Bauņi forest green; Vidzeme skirt plaid.
+ *   amber      — muted honey of undyed linseed oil; Vend/Liv glass beads.
+ *
+ * Spacing scale: 8pt grid in rem units (16px base).
+ *   --space-1 = 4px, --space-2 = 8px, --space-3 = 12px, ... --space-24 = 96px.
+ *   Use these tokens wherever possible. Semantic intent:
+ *     1/2  — gaps inside compact UI (chip padding, icon gutters)
+ *     3/4  — text-block internal rhythm (paragraph spacing, list gap)
+ *     5/6  — card interior padding, section-header margins
+ *     8/10 — between-block spacing, small section padding
+ *     12/16 — section vertical padding
+ *     20/24 — hero vertical padding, major section separation
+ *
+ * Typography: three font stacks.
+ *   --font-body    — Source Sans 3, for all body prose and UI chrome.
+ *   --font-display — Source Sans 3 (bold via h1-h4 weight 700), unified with body for brand consistency.
+ *   --font-mono    — system monospace, for IBANs, reference codes, code.
+ */
+:root {
+  /* ── Neutral ground ────────────────────────────────────────── */
+  --sand: #f5f0e8;
+  --sand-dark: #e8e0d0;
+  --bark: #3a2f28;
+  --bark-light: #5c4a3e;
+  --cream: #fffcf5;
+  --white: #ffffff;
+
+  /* ── Earth & foliage ───────────────────────────────────────── */
+  --moss: #4A5D3A;
+  --moss-light: #5E7648;
+  --moss-pale: #E3E9D9;
+  --amber: #B8862E;
+  --amber-light: #D4A547;
+  --clay: #b8705a;
+
+  /* ── Latvian folk-costume heritage tokens ─────────────────── */
+  --carmine: #9E1B32;
+  --carmine-dark: #7A1426;
+  --indigo: #253961;
+  --indigo-dark: #1A2A48;
+  --linen: #FBF7EE;
+  --peat: #2B1F1A;
+  --bronze: #8C6D2E;
+
+  /* ── UI ─────────────────────────────────────────────────────── */
+  --focus: #3b82f6;
+
+  /* ── Brand-affordance accents (third-party-mandated colours) ── */
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1da851;
+  --gold-stamp: #d9a84a;
+
+  /* ── Composable colour channels (for rgba() with adjustable alpha) ── */
+  --sand-rgb: 245, 240, 232;
+
+  /* ── Spacing scale (8pt grid, rem-based) ──────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Typography ───────────────────────────────────────────── */
+  --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-display: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --line-height-body: 1.65;
+
+  /*
+   * ── Responsive breakpoints (documentation-only) ─────────────
+   * CSS custom properties are not usable inside `@media` query
+   * conditions (a CSS-spec limitation, not a browser bug). We keep
+   * the canonical values here as plain numbers so new templates can
+   * pick the right bucket. The actual @media rules in each layout
+   * must still hard-code the value:
+   *   --bp-sm   480px   small-mobile / large-mobile cutoff
+   *   --bp-md   768px   tablet portrait cutoff
+   *   --bp-lg  1024px   small-desktop cutoff
+   *   --bp-nav 1100px   nav collapse cutoff (above-nav vs hamburger)
+   * Existing layouts still use ad-hoc values (520/600/640/720/780/
+   * 880/900) for component-specific breakpoints; consolidating those
+   * is deferred to a follow-up refactor.
+   */
+}
+

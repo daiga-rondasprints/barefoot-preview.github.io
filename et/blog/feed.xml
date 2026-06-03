@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Barefoot Baltic — Blogi</title>
+    <link>https://barefootbaltic.com/et/blog/</link>
+    <atom:link href="https://barefootbaltic.com/et/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Põhjalikud reisigiidid Riiale, Lätile ja Balti riikide ühepäevareisidele autorilt Daiga Taurītelt, litsentseeritud Läti giidilt.</description>
+    <language>et</language>
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+    <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    <generator>scripts/build_blog_feed.py</generator>
+    <image><url>https://barefootbaltic.com/images/logo-wide-color.png</url><title>Barefoot Baltic — Blogi</title><link>https://barefootbaltic.com/et/blog/</link></image>
+    <item>
+      <title>Päevareis Cēsisesse Riiast: läti giidi marsruut tundide kaupa</title>
+      <link>https://barefootbaltic.com/et/blog/cesis-day-trip-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/cesis-day-trip-from-riga.html</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud läti giidi päevareis Cēsisesse Riiast tundide kaupa — 9.30 rong, akadeemia hiina tuba, küünlalaternaga loss, lõuna Pasēdnīcas.</description>
+    </item>
+    <item>
+      <title>Sigulda päevareis Riiast: täielik tunnipõhine marsruut</title>
+      <link>https://barefootbaltic.com/et/blog/sigulda-day-trip-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/sigulda-day-trip-from-riga.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Läti giid juhatab teid omal käel läbi Sigulda päeva Riiast — rongiajad, ühe suuna köisteesõit, mis säästab 14 €, ja aus kulude arvestus.</description>
+    </item>
+    <item>
+      <title>Sigulda talvel: Läti giidi aus hinnang</title>
+      <link>https://barefootbaltic.com/et/blog/sigulda-in-winter.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/sigulda-in-winter.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Sigulda talvel litsentseeritud Läti giidi pilgu läbi: köistee sõidugraafik, lossi lahtiolekuajad, Mr. Biskvitsi kohvik ja milline rada külma ilmaga vahele jätta.</description>
+    </item>
+    <item>
+      <title>Mida teha Cēsises, Lätis: kohaliku giidi aus nimekiri</title>
+      <link>https://barefootbaltic.com/et/blog/things-to-do-in-cesis.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/things-to-do-in-cesis.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Läti giidi kümne peatuse nimekiri Cēsise jaoks — küünlalaternaga loss (latern hinna sees), Cēsu Maize pagariäri, lõuna Pasēdnīcas Raunas iela ääres.</description>
+    </item>
+    <item>
+      <title>Mida teha Siguldas, Lätis: kohaliku giidi aus nimekiri</title>
+      <link>https://barefootbaltic.com/et/blog/things-to-do-in-sigulda.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/things-to-do-in-sigulda.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Läti giidi 14-peatuseline nimekiri Sigulda jaoks — Turaida loss, nõukogudeaegne köistee, Dainu mägi, olümpiakelgurada ja kus süüa.</description>
+    </item>
+    <item>
+      <title>Kassimaja (Kaķu nams), Riia: hoone, kassid ja nende taga peituv lugu</title>
+      <link>https://barefootbaltic.com/et/blog/cat-house-riga-meistaru.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/cat-house-riga-meistaru.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Kassimaja Meistaru ielal tegelikult on, kaupmehe ja gildi lugu pronksist kasside taga ning arhitektuurilised detailid, millest enamik reisijaid lihtsalt mööda kõnnib. Daiga aus kohaliku giidi pilk.</description>
+    </item>
+    <item>
+      <title>Dainu Kalnsi skulptuurijuhend: Kõik 26 kivi Turaida Dainude mäel</title>
+      <link>https://barefootbaltic.com/et/blog/dainu-kalns-sculpture-field-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/dainu-kalns-sculpture-field-guide.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taur&amp;#299;te</dc:creator>
+      <description>Mida tähendab iga skulptuur Dainu Kalnsis, millist dainat see kannab ja kuidas mäge õiges järjekorras läbida. Täielik välijuhend Indulis Ranka 26 graniitskulptuuri kohta Turaidas.</description>
+    </item>
+    <item>
+      <title>Vabadusmonument (Brīvības piemineklis), Riia: Milda, kolm tähte ja mida see lätlastele tähendab</title>
+      <link>https://barefootbaltic.com/et/blog/freedom-monument-riga-milda.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/freedom-monument-riga-milda.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis on Vabadusmonument tegelikult, kes on Milda, kolm kuldset tähte ja miks see 1935. aasta sammas elas üle nõukogude okupatsiooni. Daiga jutustab, litsentseeritud Läti giid.</description>
+    </item>
+    <item>
+      <title>Mustpeade maja (Melngalvju nams), Riia: linna enim fotografeeritud hoone</title>
+      <link>https://barefootbaltic.com/et/blog/house-of-blackheads-melngalvju-nams.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/house-of-blackheads-melngalvju-nams.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis on Mustpeade maja tegelikult, kes olid Mustpeade vennaskonna liikmed, miks ehitati see varemetest uuesti üles ja mida leiab seest muuseumist. Daiga jutustab – litsentseeritud Läti giid.</description>
+    </item>
+    <item>
+      <title>Konventa Sēta (Kloostrihoov), Riia: Keskaegne hoov Kalēju iela taga</title>
+      <link>https://barefootbaltic.com/et/blog/konventa-seta-convent-yard-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/konventa-seta-convent-yard-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Konventa S&amp;#275;ta on vaikne keskaegne hooviansambel 16.–18. sajandi hoonetest 13. sajandi vundamentidel, Kalēju ja Skārņu iela vahel Riia vanalinnas. Tuvi võtmekivil, sisehoov, portselanimuuseum. Daiga &amp;ndash; kohaliku Riia giidi &amp;mdash; juhend.</description>
+    </item>
+    <item>
+      <title>Krišjānis Barons: mees, kes päästis 217 996 Läti rahvalaulu</title>
+      <link>https://barefootbaltic.com/et/blog/krisjanis-barons-father-of-dainas.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/krisjanis-barons-father-of-dainas.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taur&amp;#299;te</dc:creator>
+      <description>Kes oli Krišjānis Barons, miks tema 217 996 käsitsi kirjutatud kaardiga kapp on UNESCO maailmamälu registris ja miks iga Läti kooliõpilane tema nägu tunneb. Iseseisev elulugu Läti giidilt.</description>
+    </item>
+    <item>
+      <title>Kristaps Porziņģis: Liepājast NBAsse ja miks Läti vaatas iga mängu</title>
+      <link>https://barefootbaltic.com/et/blog/kristaps-porzingis-liepaja-to-nba.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/kristaps-porzingis-liepaja-to-nba.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taur&amp;#299;te</dc:creator>
+      <description>Kristaps Porziņģis sündis Liepājas 1995. aastal, valiti 2015. aastal Knicksi poolt neljandaks ning võitis 2024. aastal Boston Celticsiga NBA meistritiitli. Läti kuulsaima sportlase lugu ning väikesest Balti riigist, mis vaatas iga mängu.</description>
+    </item>
+    <item>
+      <title>Läti teine iseseisvuspäev: 4. mai Riias</title>
+      <link>https://barefootbaltic.com/et/blog/latvia-restoration-day-may-4-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/latvia-restoration-day-may-4-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taur&amp;#299;te</dc:creator>
+      <description>4. mai on Läti iseseisvuse taastamise päev — teine kahest iseseisvuspäevast, nartsisside, tasuta trammide ja rahvarõivais rongkäiguga Vabadussamba juurde. Tähelepanekud selle aasta tähistamiselt Riias.</description>
+    </item>
+    <item>
+      <title>Pulvertorn (Pulvertornis) ja Läti Sõjamuuseum Riias: tasuta muuseum, mis avab Läti loo</title>
+      <link>https://barefootbaltic.com/et/blog/powder-tower-war-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/powder-tower-war-museum-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Pulvertorn tegelikult on, kahurikuulid ikka veel seinas ning miks sealsamas asuv tasuta Läti Sõjamuuseum on üks parima ülesehitusega peatusi Riias. Kohaliku aus juhis.</description>
+    </item>
+    <item>
+      <title>Riia loss (Rīgas pils): presidendi residents ja see, mida saab tegelikult külastada</title>
+      <link>https://barefootbaltic.com/et/blog/riga-castle-rigas-pils.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-castle-rigas-pils.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Riia loss tegelikult on, miks president elab 14. sajandi Liivi ordu kindluses, mis on selle sees asuv Rahvusajaloomuuseum ja kuidas näha jõeäärset fassaadi. Kohaliku aus juhend.</description>
+    </item>
+    <item>
+      <title>Riia Toomkirik (Doma baznīca): kohaliku elaniku aus teejuht Läti vanima kiriku juurde</title>
+      <link>https://barefootbaltic.com/et/blog/riga-cathedral-doma-baznica.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-cathedral-doma-baznica.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Riia Toomkirik tegelikult on, miks sellel ei ole kuplit, 6718 viluga Walckeri orel, kus retsitaali ajal istuda ning kuidas veeta sees pool tundi või pool päeva. Kirjutas Daiga, litsentseeritud Riia giid.</description>
+    </item>
+    <item>
+      <title>Püha Jaakobi katedraal (Sv. Jēkaba katedrāle), Riia: parlamendi kõrval asuv katoliku katedraal</title>
+      <link>https://barefootbaltic.com/et/blog/st-james-cathedral-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/st-james-cathedral-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Püha Jaakobi katedraal tegelikult on, miks see on Läti katoliku katedraal (ja ainus Riias, kus on säilinud punane-valge barokne portaal), &amp;lsquo;laulev kukk&amp;rsquo; legend ning kuidas see asub Saeima kõrval. Daiga, litsentseeritud Riia giidi käest.</description>
+    </item>
+    <item>
+      <title>Püha Peetri kirik (Sv. Pētera baznīca), Riia: torn, vaade ja miks see on kaks korda taastatud</title>
+      <link>https://barefootbaltic.com/et/blog/st-peters-church-tower-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/st-peters-church-tower-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Miks Püha Peetri torn pakub Riia parimat panoraami, mida teada enne ronimist, 1721. aasta välgulöök ja 1941. aasta suurtükituli ning milline on kirik tegelikult seestpoolt. Kohaliku giidi aus juhend.</description>
+    </item>
+    <item>
+      <title>Rootsi värav (Zviedru vārti), Riia: ainus säilinud linnavärav</title>
+      <link>https://barefootbaltic.com/et/blog/swedish-gate-zviedru-varti.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/swedish-gate-zviedru-varti.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mis Rootsi värav tegelikult on, miks see 1698. aastal läbi linnamüüri lõigati, ja kuidas kõndida mööda Torņa ielat &amp;mdash; üht Riia paremini säilinud keskaegset tänavat &amp;mdash; litsentseeritud kohaliku giidi saatel.</description>
+    </item>
+    <item>
+      <title>Kolm venda (Trīs brāļi): Riia vanimad majad, kolm sajandit ühel tänaval</title>
+      <link>https://barefootbaltic.com/et/blog/three-brothers-oldest-houses-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/three-brothers-oldest-houses-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Mida Kolm venda tegelikult endast kujutavad, miks nr 17 on Riia vanim kivist elamaja, nr 19 fassaadile raiutud 1646. aasta kuupäev ja kuidas tänavat viie minutiga mõista. Litsentseeritud Läti giid Daiga jutustab.</description>
+    </item>
+    <item>
+      <title>Vērmanes dārzs, Riia: vanim avalik park, kus kohalikud tõesti istuvad</title>
+      <link>https://barefootbaltic.com/et/blog/vermanes-darzs-merkela-park-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/vermanes-darzs-merkela-park-riga.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Vērmanes d&amp;#257;rzs on Riia vanim avalik park (1817), vanalinna idapiiril T&amp;#275;rbatas ja Merķeļa iela vahel. Purskkaev, kirsiõied ja koht, kuhu kohalikud kevadel lähevad. Daigalt, Riia kohalikult.</description>
+    </item>
+    <item>
+      <title>Dainu kalns Turaidas: skulptuuriaed, mis rajati Nõukogude võimu all</title>
+      <link>https://barefootbaltic.com/et/blog/dainu-kalns-folk-song-hill-turaida.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/dainu-kalns-folk-song-hill-turaida.html</guid>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taur&amp;#299;te</dc:creator>
+      <description>Kuidas Indulis Ranka ja Anna Jurkāne ehitasid Dainu kalnsi Turaidas aastatel 1980–1985 — graniidist rahvalaulude mälestuspark, mis aitas külvata seemned Läti Laulvale revolutsioonile.</description>
+    </item>
+    <item>
+      <title>Turaida roos: tõeline 1620. aasta Läti mõrvajuhtum</title>
+      <link>https://barefootbaltic.com/et/blog/legend-of-rose-of-turaida.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/legend-of-rose-of-turaida.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Maija — Turaida roos — mõrvati 6. augustil 1620. 1620. aasta kohtuprotsess, liivakivikoobas, peigmehe istutatud pärnapuu, mis on ikka elus, ja haud, mida noorpaarid endiselt laulatuspäeval külastavad.</description>
+    </item>
+    <item>
+      <title>Mis toimub Lätis: kohalik ürituste kalender</title>
+      <link>https://barefootbaltic.com/et/blog/whats-on-in-latvia.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/whats-on-in-latvia.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Kuraatorite koostatud jooksev nimekiri tulevastest Läti üritustest, mida oleme märganud plakatitel Riias, Siguldas, Jūrmalas, Cēsises ja mujal &amp;mdash; kontserdid, festivalid, lossiõhtud ja muu.</description>
+    </item>
+    <item>
+      <title>Pirts, suitsusaun, savusauna, badstu: Balti saunatraditsioone võrreldud</title>
+      <link>https://barefootbaltic.com/et/blog/baltic-nordic-sauna-cultures-compared.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/baltic-nordic-sauna-cultures-compared.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Pirts, suitsusaun, savusauna, badstu — Läti giid võrdleb Balti ja Põhja-Euroopa saunatraditsioone, löyly't ja seda, kuidas kõiki nautida kohalikke solvamata.</description>
+    </item>
+    <item>
+      <title>Läti lühiajalugu, mida räägivad seda elanud inimesed</title>
+      <link>https://barefootbaltic.com/et/blog/brief-history-of-latvia-first-person.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/brief-history-of-latvia-first-person.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Kaheksasada aastat Läti ajalugu läbi neid elanud inimeste häälte &amp;mdash; pagan, talupoeg, sõdur, pagulane, kodanik. Ristisõdijate rüütlitest Euroopa Liiduni.</description>
+    </item>
+    <item>
+      <title>Valguse loss: Riia rahvusraamatukogu külastusjuhend</title>
+      <link>https://barefootbaltic.com/et/blog/castle-of-light-latvian-national-library.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/castle-of-light-latvian-national-library.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Riia Gaismas pils — Valguse loss. Klaasimäe muinasjutt, Gunārs Birkertsi kujundus, 2014. aasta inimkett ja miks lätlased armastavad seda sama palju kui külastajad.</description>
+    </item>
+    <item>
+      <title>Ristimägi: päevareis Riiast Šiauliaisse</title>
+      <link>https://barefootbaltic.com/et/blog/hill-of-crosses-lithuania-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/hill-of-crosses-lithuania-from-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Ristimägi Šiauliai lähedal Leedus — katoliku palverännupaik, mille nõukogude võim buldooserdas kolm korda, kuid hävitada ei suutnud. Kuidas, millal ja miks seda külastada.</description>
+    </item>
+    <item>
+      <title>Jūrmala: Läti Läänemere rannik — kohaliku aus teejuht</title>
+      <link>https://barefootbaltic.com/et/blog/jurmala-seaside-resort-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/jurmala-seaside-resort-from-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>33 km valget kvartsliiva randa, Läänemere kõige madalam ujutav vesi, juugendstiilis puitvillad, väävlispaad alates 1838. aastast — lätlase teejuht Jūrmalasse Riiast.</description>
+    </item>
+    <item>
+      <title>Õigeusu kirikud Lätis: külastusjuhend Riia nelja kiriku kohta</title>
+      <link>https://barefootbaltic.com/et/blog/orthodox-churches-latvia.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/orthodox-churches-latvia.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Riia neli õigeusu kirikut — Kristuse Sündimise katedraal, Pārdaugava Püha Kolmainu katedraal, Aleksander Nevski kirik, Grebenštšikovi palvemaja — mida vaadata, käitumisreeglid ja kuldsete kuplite ajalugu.</description>
+    </item>
+    <item>
+      <title>Religioon Baltikumis: kuidas kolm riiki usuvad erinevalt</title>
+      <link>https://barefootbaltic.com/et/blog/religion-estonia-latvia-lithuania-compared.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/religion-estonia-latvia-lithuania-compared.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Eesti on üks maailma kõige ilmalikumaid riike, Läti on jaotunud luterlaste, katoliiklaste ja õigeusklike vahel, Leedu on valdavalt katoliiklik. Üks piir, kolm religiooni, kolm ajalugu.</description>
+    </item>
+    <item>
+      <title>Riia TV-torn: EL-i kõrgeim vabalt seisev hoone</title>
+      <link>https://barefootbaltic.com/et/blog/riga-tv-tower-tallest-eu.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-tv-tower-tallest-eu.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>368,5 meetri kõrgune Riia TV-torn on Euroopa Liidu kõrgeim vabalt seisev rajatis — kõrgem kui Eiffeli torn. Ajalugu, arhitektuur ja külastusjuhend.</description>
+    </item>
+    <item>
+      <title>Suwalki koridor: sõit läbi NATO kõige jälgituma käigu</title>
+      <link>https://barefootbaltic.com/et/blog/suwalki-gap-baltic-perspective.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/suwalki-gap-baltic-perspective.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Suwałki koridor — 80 km pikkune Poola maariba Valgevene ja Vene Kaliningradi oblasti vahel, mis ühendab Balti riigid ülejäänud Euroopaga. Ühe lätlase vaade maanteelt.</description>
+    </item>
+    <item>
+      <title>Miks lätlased söövad sealiha, mitte veiseliha: mets, siga ja köök</title>
+      <link>https://barefootbaltic.com/et/blog/why-latvian-cuisine-is-pork-not-beef.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/why-latvian-cuisine-is-pork-not-beef.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Miks sealiha — mitte veiseliha — sai Läti rahvuslihaks. Tuhat aastat metsa, suitsu ja peekonit, pluss kaasaegsed road (karbonāde, pelmeņi), mida tasub proovida.</description>
+    </item>
+    <item>
+      <title>Brīvdabas: päev Läti vabaõhumuuseumis Riia lähedal</title>
+      <link>https://barefootbaltic.com/et/blog/why-visit-ethnographic-open-air-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/why-visit-ethnographic-open-air-museum-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>118 ajaloolist Läti hoonet 87 hektaril männimetsas, 10 km Riiast. Miks vaikne hommik Brīvdabases räägib Lätist rohkem kui vanalinn.</description>
+    </item>
+    <item>
+      <title>Riia Okupatsioonimuuseum: miks seda külastada</title>
+      <link>https://barefootbaltic.com/et/blog/why-visit-occupation-museum-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/why-visit-occupation-museum-riga.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Nõukogude 1940, natside 1941, Nõukogude 1944–1991. Läti Okupatsioonimuuseum jutustab Läti kaheksasaja-aastase loo ühe pärastlõunaga. Miks külastada, mida vaadata.</description>
+    </item>
+    <item>
+      <title>Rundāle palee seest: ruumide kaupa visuaalne teejuht</title>
+      <link>https://barefootbaltic.com/et/blog/inside-rundale-palace-rooms-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/inside-rundale-palace-rooms-guide.html</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Kõik ruumid Läti suurimas barokk-palees, illustreeritud 286 originaalfotoga: Kuldne saal, Valge saal, hertsogi tiiva enfilaad, hertsoginna tiib.</description>
+    </item>
+    <item>
+      <title>Päevaekskursioonid Riiast: Aus vastus (2026)</title>
+      <link>https://barefootbaltic.com/et/blog/day-trips-from-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/day-trips-from-riga.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi aus võrdlus Riia kolme parima päevaekskursiooni vahel: Rundāle, Sigulda, Ķemeri &amp;mdash; hinnad, ajad ja kellele need ei sobi.</description>
+    </item>
+    <item>
+      <title>Kas Ķemeri rabasse tasub minna? Aus vastus</title>
+      <link>https://barefootbaltic.com/et/blog/is-kemeri-bog-worth-it.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/is-kemeri-bog-worth-it.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Jah, mööndustega. Litsentseeritud Läti giid selgitab, mis Suur Ķemeri raba tegelikult on, millal minna, kuidas sinna pääseda ja kellel tasub vahele jätta.</description>
+    </item>
+    <item>
+      <title>Kas Rundāle palee on külastamist väärt? Aus vastus</title>
+      <link>https://barefootbaltic.com/et/blog/is-rundale-palace-worth-visiting.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/is-rundale-palace-worth-visiting.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Jah, argipäeval ja kui mõistate, et tegemist on maapaleega, mitte Versailles'iga. Litsentseeritud Läti giid selgitab, mis Rundāle on, millal külastada ja kellel tasub vahele jätta.</description>
+    </item>
+    <item>
+      <title>Kas Sigulda on külastamist väärt? Aus vastus</title>
+      <link>https://barefootbaltic.com/et/blog/is-sigulda-worth-visiting.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/is-sigulda-worth-visiting.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Jah — parim kõikehõlmav päevareis Riiast. Litsentseeritud Läti giid Siguldast, Gauja orust, kolmest lossist, millal minna ja kuidas kohale jõuda.</description>
+    </item>
+    <item>
+      <title>Ķemeri raba sügisel: aus vastus</title>
+      <link>https://barefootbaltic.com/et/blog/kemeri-bog-in-autumn.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/kemeri-bog-in-autumn.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Vaieldamatult aasta teine parim aken. Litsentseeritud Läti giid Ķemerist septembris ja oktoobris, värvikulminatsioonist ja kas tasub omal käel minna.</description>
+    </item>
+    <item>
+      <title>Läti toit: kohaliku riialase aus teejuht</title>
+      <link>https://barefootbaltic.com/et/blog/latvian-food-honest-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/latvian-food-honest-guide.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi aus teejuht Läti toidu kohta: rukkileib, suitsutoidud, roosa suvesupp, hapukurgisoolvesi ja kust Riias tegelikult süüa.</description>
+    </item>
+    <item>
+      <title>Teie esimesed 48 tundi Riias: aus marsruut</title>
+      <link>https://barefootbaltic.com/et/blog/planning-first-48-hours-in-riga.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/planning-first-48-hours-in-riga.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi aus 48-tunnine Riia marsruut: mida tegelikult vaadata, mida vahele jätta, kus süüa ja praktilised vastused, mida enamik reisijaid soovib.</description>
+    </item>
+    <item>
+      <title>Riia talvel: Läti giidi aus hinnang</title>
+      <link>https://barefootbaltic.com/et/blog/riga-in-winter.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-in-winter.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi aus juhend Riia talve kohta: jõuluturud, ilm, mida selga panna, hinnad ja millised päevaekskursioonid külmadel kuudel toimuvad.</description>
+    </item>
+    <item>
+      <title>Riia vanalinn: kohaliku teejuht Vecrīgasse</title>
+      <link>https://barefootbaltic.com/et/blog/riga-old-town-guide.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-old-town-guide.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi põhjalik teejuht Riia vanalinna (Vecrīga) kohta: mida näha, mida vahele jätta, kolm jalutusringe, kust süüa, turvalisus ja aastaajad.</description>
+    </item>
+    <item>
+      <title>Riia vs Tallinn vs Vilnius: aus võrdlus</title>
+      <link>https://barefootbaltic.com/et/blog/riga-vs-tallinn-vs-vilnius.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/riga-vs-tallinn-vs-vilnius.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Litsentseeritud Läti giidi aus võrdlus Riia, Tallinna ja Vilniuse vahel. Millise Balti pealinna valida, kumb teeb mida kõige paremini ja kellele kumbki ei sobi.</description>
+    </item>
+    <item>
+      <title>Kas saab Siguldat JA Cēsist ühe päevaga läbi teha?</title>
+      <link>https://barefootbaltic.com/et/blog/sigulda-and-cesis-in-one-day.html</link>
+      <guid isPermaLink="true">https://barefootbaltic.com/et/blog/sigulda-and-cesis-in-one-day.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Daiga Taurīte</dc:creator>
+      <description>Jah, kuid kompromissidega. Litsentseeritud Läti giid Sigulda ja Cēsise ühendamisest üheks päevaks Riiast: ajakava, kolm lossi ning iseseisvalt vs giidiga.</description>
+    </item>
+  </channel>
+</rss>

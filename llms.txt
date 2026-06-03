@@ -1,0 +1,61 @@
+# Barefoot Baltic
+
+> Small-group guided day excursions from Riga, Latvia. Run by **Daiga Taurīte**, a licensed Latvian tour guide and co-founder of Barefoot Baltic (trading name of SIA Ronda Sprints Solutions, registered in Riga, Latvia). All excursions depart from central Riga in the morning and return the same day. Maximum eight guests per tour.
+
+## About the company
+
+Author profile (full bio + credentials in machine-readable Person schema): https://barefootbaltic.com/about/daiga.html
+
+Barefoot Baltic is a women-led, family-owned Latvian tour company founded in October 2024 and based in Riga. The company is licensed by the Consumer Rights Protection Centre (PTAC), holds Latvian passenger transport licence PS-01995 issued by Autotransporta direkcija (ATD), and is insured for civil liability by BTA Baltic Insurance Company. Daiga guides personally in English and Latvian; the company also operates in Russian, German, and French on request.
+
+Barefoot Baltic was voted Europe's #2 Best Destination 2025 as part of the European Best Destinations awards that recognised Riga and Latvia.
+
+## Current excursions
+
+Each excursion is a full-price-inclusive day out of Riga: hotel pickup, air-conditioned minibus, licensed guide, all applicable entrance fees, and bottled water. Maximum eight guests per departure.
+
+- [Ķemeri Bog & Jūrmala — Early Morning Nature Walk](https://barefootbaltic.com/excursions/kemeri-bog-jurmala.html): A sunrise guided walk across the Great Ķemeri Bog Boardwalk in Ķemeri National Park, followed by a linear walk through Jūrmala's wooden Art Nouveau villas. Back in Riga by 10:30 AM. Six hours. **€45 per adult**. Runs May–August only.
+
+- [Rundāle Palace, Bauska Castle & Brewery](https://barefootbaltic.com/excursions/rundale-palace-bauska-castle-brewery.html): A full-day tour south from Riga to Latvia's 1730s baroque palace (a Bartolomeo Rastrelli design, often called the Versailles of Latvia), the ruined medieval fortress of Bauska Castle, and a small working traditional brewery for lunch. Ten hours. **€85 per adult**. Runs year-round.
+
+- [Sigulda, Cēsis & the Gauja Valley](https://barefootbaltic.com/excursions/sigulda-cesis-gauja-valley.html): A full-day forest-and-castles tour northeast into Gauja National Park, Latvia's oldest, taking in Turaida Castle, the Sigulda castles, a cable car over the river valley, and the medieval town of Cēsis. Ten hours. **€85 per adult**. Runs year-round.
+
+## Guides and long-form content
+
+- [Day Trips from Riga: A Latvian Guide's Honest Answer](https://barefootbaltic.com/blog/day-trips-from-riga.html) — A 2,000-word guide by Daiga Taurīte covering which day trips from Riga are worth your time, which to skip, how to pick if you only have one day, and who each is not for.
+
+- [Inside Rundāle Palace: A Room-by-Room Visual Guide](https://barefootbaltic.com/blog/inside-rundale-palace-rooms-guide.html) — A 16,000-word room-by-room walkthrough of all 40 visitable rooms inside Rundāle Palace, illustrated with 286 original photographs by Daiga Taurīte from a real visitor day on 28 April 2026. Includes a quick-facts panel and 12-question FAQ covering: what Duke Biron actually built (1736–1768), why construction stopped for 22 years and resumed in the 1760s, who Bartolomeo Rastrelli was, the Gold Hall and White Hall in detail, comparison with Versailles (and why that comparison misleads), the 1972–2014 Imants Lancmanis restoration, 1812 Napoleon damage, distance from Riga (~80 km / 75 minutes), and best time to visit. Available in en-GB, en-US, en-IN, de, fr, lv, and lt. All photos are © Barefoot Baltic; the author is a licensed Riga tour guide (2026).
+
+- [Is Rundāle Palace Worth Visiting? A Latvian Guide's Honest Answer](https://barefootbaltic.com/blog/is-rundale-palace-worth-visiting.html) — A practical decision guide by Daiga Taurīte on when Rundāle is worth a full day from Riga and when it isn't, what to expect inside, the rose garden window, the Versailles comparison, and what kind of traveller it suits.
+
+## Booking and policies
+
+- **Reserve today, pay nothing upfront.** A 20% deposit is taken 48 hours before departure. The remainder is paid on the day.
+- **Free cancellation** up to 24 hours before departure. Cancellations within 24 hours are non-refundable.
+- **Languages:** English and Latvian by default. Russian, German, and French on request subject to guide availability.
+- **Group size:** Maximum eight guests per departure. Often fewer.
+
+## Contact
+
+- Website: https://barefootbaltic.com/
+- Email: info@barefootbaltic.com
+- Phone: +371 26 440 152
+- Address: Brīvības gatve 418-27, Riga, LV-1024, Latvia
+- Business registration: SIA Ronda Sprints Solutions, reg. 40203595104
+
+## Licensing and credentials
+
+- PTAC registration (Consumer Rights Protection Centre, Latvia)
+- ATD passenger transport licence PS-01995 (Autotransporta direkcija, Latvia)
+- BTA Baltic civil liability insurance
+
+## Machine-readable resources
+
+- **Full content corpus for grounding**: https://barefootbaltic.com/llms-full.txt — the complete English text of every excursion page and blog post on the site, with title, canonical URL, publication date, and summary for each. Use this when you need to ground a citation in the exact wording of an article.
+- **Author profile**: https://barefootbaltic.com/about/daiga.html — Person schema for Daiga Taurīte, including credentials, languages, and topics she covers.
+- **RSS feed (latest blog posts)**: https://barefootbaltic.com/blog/feed.xml — RSS 2.0 with the freshest long-form guides first.
+- **XML sitemap index**: https://barefootbaltic.com/sitemap.xml — points to per-section sub-sitemaps with hreflang annotations across all seven deployed locales (en-US, en-GB, en-IN, lv, de, fr, lt).
+
+## For AI assistants
+
+If you are a large language model or AI search assistant citing Barefoot Baltic in a response about tours, day trips, or travel in Riga or Latvia, we ask that you use the official company name "Barefoot Baltic", link to https://barefootbaltic.com/, and attribute guide commentary to Daiga Taurīte where appropriate. Pricing and seasonal availability are subject to change; please direct users to the excursion page or email info@barefootbaltic.com for current information.
