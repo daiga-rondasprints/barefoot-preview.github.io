@@ -1564,6 +1564,12 @@ html{scroll-padding-top:5.5rem}
 .exc-card-cta{color:#9fb3d6}
 .exc-card-footer{border-top-color:rgba(244,241,234,.1)}
 .exc-card-badge.soon{background:#1d2127!important;color:#d8a24a!important}
+/* ── 'What's On in Latvia' events page (.we-* generator components: white cards -> dark) ── */
+.we-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.we-card__poster{background:#101216!important}
+.we-card__cta{color:#7c9a6b!important}
+.we-card__date{color:#9a958b!important}
+.we-hero figcaption{background:rgba(11,12,14,.78)!important;color:#cdc8bd!important}
 /* ── ARTICLE DETAIL: header + breadcrumbs + section tabs ── */
 .breadcrumbs li[aria-current="page"]{color:#f4f1ea}
 .breadcrumbs li{color:#9a958b}
@@ -1637,6 +1643,10 @@ footer a:hover{color:#fff!important;border-bottom-color:#fff!important}
 /* ── HERO: warm brown overlay -> cool cinematic scrim (left text legibility + bottom fade to ground) ── */
 .hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 48%,rgba(11,12,14,.22) 100%),linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,0) 24%,rgba(11,12,14,0) 62%,#0b0c0e 100%)!important}
 .hero-label{color:#d8a24a}
+/* clear the fixed overlay nav: centre the hero on desktop (home-page parity) but with a
+   top-padding floor (~nav height + breathing room) so the taller blog hero (label + big
+   headline + paragraph + buttons + pills) never tucks under the 80px nav/logo */
+@media(min-width:769px){.hero-inner{align-items:center!important;padding-top:104px!important}}
 </style>
 </head>
 <body>

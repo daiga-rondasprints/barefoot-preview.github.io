@@ -7,8 +7,126 @@
 <link rel="canonical" href="https://barefootbaltic.com/blog/riga-old-town-guide.html">
 <title>Redirecting — Barefoot Baltic</title>
 <script>window.location.replace('https://barefootbaltic.com/blog/riga-old-town-guide.html');</script>
+<style id="bb-blog-dark">
+
+/* ===== .com BLOG — dark cinematic theme, calibrated palette (blue/red/white). ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.12);--peat:#f4f1ea;--indigo:#9fb3d6;--carmine:#c0294a;--carmine-dark:#a0213c}
+body{background:#0b0c0e;color:#f4f1ea}
+/* ── NAV shared: light links -> white, indigo CTA, dark hamburger, logo toggle ── */
+.nav .nav-links a{color:#f4f1ea}
+.nav .nav-links a:hover{color:#fff}
+.nav-cta{background:#253961!important;color:#fff!important}
+.nav-cta:hover{background:#1a2a48!important;color:#fff!important}
+.nav-links a[aria-current="page"]{color:#fff!important}
+.hamburger span{background:#f4f1ea}
+/* geo locale-suggestion banner close button (UA-default light) -> dark */
+#langSuggest button{background:rgba(244,241,234,.1)!important;color:#f4f1ea!important;border:0!important}
+.nav .logo-scrolled{display:none}
+.nav.scrolled .logo-top{display:none}
+.nav.scrolled .logo-scrolled{display:block}
+html{scroll-padding-top:5.5rem}
+/* mobile dropdown panel (base collapses at <=1100px, light --cream) -> dark */
+@media(max-width:1100px){.nav .nav-links{background:#101216!important;border-bottom-color:rgba(244,241,234,.12)!important;box-shadow:0 8px 22px rgba(0,0,0,.5)!important}}
+/* ── language switcher dropdown -> dark ── */
+.lang-switcher-list{background:#16191e!important;border-color:rgba(244,241,234,.16)!important}
+.lang-switcher-list a{color:#cdc8bd!important}
+.lang-switcher-list a:hover,.lang-switcher-list a:focus{background:#1d2127!important;color:#fff!important}
+.lang-switcher-list a[aria-current="true"]{color:#fff!important}
+.lang-switcher-summary{color:#f4f1ea}
+.lang-switcher-list-en{color:#9a958b!important}
+/* ── ARTICLE GRID section (inline style="background:var(--sand)") -> dark ── */
+#articles{background:#0b0c0e!important}
+.section-label{color:#7c9a6b}
+/* ── EXC-CARD post cards: white -> #16191e (home parity) ── */
+.exc-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.exc-card:hover{border-color:#c0294a!important;box-shadow:0 10px 30px rgba(0,0,0,.55)!important}
+.exc-card-body h3{color:#f4f1ea}
+.exc-card-body p{color:#cdc8bd}
+.exc-card-meta{color:#9fb3d6}
+.exc-card-price{color:#cdc8bd!important}
+.exc-card-price span{color:#9a958b}
+.exc-card-cta{color:#9fb3d6}
+.exc-card-footer{border-top-color:rgba(244,241,234,.1)}
+.exc-card-badge.soon{background:#1d2127!important;color:#d8a24a!important}
+/* ── 'What's On in Latvia' events page (.we-* generator components: white cards -> dark) ── */
+.we-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.we-card__poster{background:#101216!important}
+.we-card__cta{color:#7c9a6b!important}
+.we-card__date{color:#9a958b!important}
+.we-hero figcaption{background:rgba(11,12,14,.78)!important;color:#cdc8bd!important}
+/* ── ARTICLE DETAIL: header + breadcrumbs + section tabs ── */
+.breadcrumbs li[aria-current="page"]{color:#f4f1ea}
+.breadcrumbs li{color:#9a958b}
+.breadcrumbs a{color:#7c9a6b!important}
+.breadcrumbs a:hover{color:#c0294a!important}
+.breadcrumbs .sep{color:#9a958b}
+.article-hero{background:#101216!important;border-bottom-color:rgba(244,241,234,.12)!important}
+.article-hero h1{color:#f4f1ea}
+.article-kicker{color:#d8a24a!important}
+.article-byline{color:#cdc8bd!important}
+.article-byline strong{color:#f4f1ea!important}
+.section-tabs{background:rgba(11,12,14,.94)!important;border-color:rgba(244,241,234,.12)!important}
+.section-tab{color:#cdc8bd!important;border-color:rgba(244,241,234,.16)!important}
+.section-tab:hover,.section-tab.active,.section-tab[aria-current="true"]{color:#fff!important;border-color:#c0294a!important;background:#1d2127!important}
+/* ── ARTICLE BODY prose ── */
+.article-body p,.article-body li,.article-body h2,.article-body h3{color:#f4f1ea}
+.article-body p:first-of-type{color:#f4f1ea}
+.article-body strong{color:#f4f1ea}
+.article-body a{color:#7c9a6b!important}
+.article-body a:hover{color:#c0294a!important}
+.article-body em{color:#7c9a6b!important}
+.article-body hr{background:rgba(244,241,234,.12)}
+/* prose tables */
+.article-body table{background:#16191e!important;border-color:rgba(244,241,234,.12)!important;box-shadow:0 1px 3px rgba(0,0,0,.4)!important}
+.article-body thead tr{background:#19241b!important;color:#f4f1ea!important}
+.article-body th{color:#f4f1ea!important}
+.article-body td{border-top-color:rgba(244,241,234,.12)!important;color:#cdc8bd!important}
+.article-body td strong{color:#f4f1ea!important}
+.article-body tbody tr:nth-child(odd){background:#1d2127!important}
+.article-body tbody tr:hover{background:rgba(124,154,107,.12)!important}
+/* pull-quote */
+.pull-quote{background:#16191e!important;border-left-color:#c0294a!important}
+.pull-quote p{color:#f4f1ea!important}
+.pull-quote cite{color:#7c9a6b!important}
+/* figures */
+.article-figure figcaption,.rundale-gallery__caption{color:#9a958b!important}
+/* ── FAQ ── */
+.faq-section h2{color:#f4f1ea}
+.faq-item,.faq-item:first-child{border-color:rgba(244,241,234,.12)}
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#7c9a6b}
+.faq-a p{color:#cdc8bd}
+.faq-a p strong{color:#f4f1ea}
+/* ── FURTHER READING (Keep Exploring Latvia): linen cards -> dark, green price badge ── */
+.further-reading-label{color:#7c9a6b}
+.further-link{background:#16191e!important;border-color:rgba(244,241,234,.12)!important;color:#f4f1ea!important}
+.further-link:hover{background:#1d2127!important;border-color:#c0294a!important;color:#fff!important}
+.further-link-icon{color:#7c9a6b!important}
+.further-link-badge{background:#19241b!important;color:#9cc089!important;border-color:rgba(124,154,107,.3)!important}
+/* ── CONTACT (shared dark band; --bark/--peat bg would invert -> re-ground) ── */
+.section.contact{background:#101216!important}
+.section.contact .section-title{color:#f4f1ea!important}
+.section.contact .section-label{color:#d8a24a!important}
+.contact-method{background:rgba(244,241,234,.05)!important;border-color:rgba(244,241,234,.1)!important}
+.contact-method:hover{background:rgba(244,241,234,.09)!important;border-color:rgba(244,241,234,.18)!important}
+.contact-right{background:rgba(244,241,234,.04)!important;border-color:rgba(244,241,234,.1)!important}
+.contact-right h3{color:#f4f1ea!important}
+/* ── COOKIE banner (dual-use dark card) -> cool ground ── */
+.cookie-banner{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+.cookie-inner p{color:#cdc8bd!important}
+.cookie-inner a{color:#d8a24a!important}
+/* ── FOOTER (--peat bg would invert -> re-ground) ── */
+footer{background:#0b0c0e!important;color:#cdc8bd!important}
+footer a{color:#cdc8bd!important;border-bottom-color:rgba(244,241,234,.22)!important}
+footer a:hover{color:#fff!important;border-bottom-color:#fff!important}
+.skip-link{background:#c0294a!important;color:#fff!important}
+/* ── NAV (article detail): solid-light sticky bar -> solid dark sticky bar (no hero to overlay) ── */
+.nav{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+.nav.scrolled{background:rgba(11,12,14,.98)!important}
+</style>
 </head>
 <body>
 <p>This page has moved. <a href="https://barefootbaltic.com/blog/riga-old-town-guide.html">Click here</a> if you are not redirected.</p>
+<script id="bb-blog-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
 </body>
 </html>
