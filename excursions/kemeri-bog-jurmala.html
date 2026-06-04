@@ -5856,7 +5856,7 @@ const lbPhotos = [
 
   // ── Hero: pick 3 random images from the heroPool and write them into the 3 hero slots ──
   try {
-    const heroPicks = shuffle(heroPool).slice(0, 3);
+    const heroPicks = [] /* portrait-only hero pool disabled — landscape static slides drive the hero */;
     document.querySelectorAll('.hero-slide').forEach((slide, i) => {
       const pick = heroPicks[i];
       if (!pick) return;
