@@ -2403,11 +2403,10 @@ footer a{color:#cdc8bd}
 .bb-rev-collapsible.expanded .bb-rev-collapse{display:block}
 </style>
 <style id="bb-detail-layout">
-/* ===== Showcase stack (operator 2026-06-04): full-bleed photo gallery above a
-   horizontal booking band, then highlights + prose. "Images sell tours." ===== */
-/* the 100vw gallery is 1 scrollbar-width wider than the content box; clip the x
-   overflow (clip, not hidden — keeps the page's scroll behaviour + sticky intact) */
-body{overflow-x:clip}
+/* ===== Showcase stack (operator 2026-06-04): a large photo gallery above a
+   horizontal booking band, then highlights + prose. "Images sell tours." The
+   gallery matches the booking band's width (both fill the content column) rather
+   than going edge-to-edge, so the sections line up. ===== */
 .content-grid{display:grid!important;grid-template-columns:1fr!important;grid-template-areas:"gallery" "sidebar" "preview" "main"!important;gap:var(--space-5)!important;align-items:start}
 .content-grid > .gallery-grid{grid-area:gallery!important}
 .content-grid > .content-sidebar{grid-area:sidebar!important}
@@ -2415,8 +2414,8 @@ body{overflow-x:clip}
 .content-grid > .content-main{grid-area:main!important}
 /* readable, centred text column under the full-width media */
 .content-grid > .content-preview,.content-grid > .content-main{max-width:880px;margin-left:auto;margin-right:auto;width:100%}
-/* ── FULL-BLEED GALLERY: break the wrap, edge-to-edge cinematic 1+4 mosaic ── */
-.content-grid > .gallery-grid{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);display:grid!important;grid-template-columns:repeat(4,1fr)!important;grid-auto-rows:1fr;gap:6px!important;height:clamp(320px,46vh,540px);margin-bottom:var(--space-3);border-radius:0!important;background:#0b0c0e;-webkit-mask-image:none!important;mask-image:none!important;max-width:100vw}
+/* ── GALLERY: content-width cinematic 1+4 mosaic (matches the booking band below) ── */
+.content-grid > .gallery-grid{width:100%;display:grid!important;grid-template-columns:repeat(4,1fr)!important;grid-auto-rows:1fr;gap:6px!important;height:clamp(380px,56vh,640px);margin:0 0 var(--space-3);border-radius:14px;overflow:hidden;background:#0b0c0e;-webkit-mask-image:none!important;mask-image:none!important}
 .content-grid > .gallery-grid .g-img{height:100%!important;width:100%!important;margin:0!important;border-radius:0!important;min-width:0}
 .content-grid > .gallery-grid .g-img:first-child{grid-column:1 / 3;grid-row:1 / 3}
 .content-grid > .gallery-grid .g-img img{width:100%!important;height:100%!important;object-fit:cover!important;display:block}
