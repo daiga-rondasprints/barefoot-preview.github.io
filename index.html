@@ -2624,6 +2624,49 @@ footer a:hover{color:#fff}
 @media(max-width:768px){#excursions .exc-card{min-height:68vh;padding:clamp(1.5rem,6vw,2.5rem);align-items:flex-start;text-align:left}#excursions .exc-card:nth-child(even){align-items:flex-start;text-align:left}#excursions .exc-card-footer,#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-start}#excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94),rgba(11,12,14,.5) 45%,transparent)}}
 </style>
 <style id="bb-hero-opt">@media(min-width:769px){.hero-inner{align-items:center}}</style>
+<style id="bb-dark-theme">
+/* ===== Stage 1 — full cinematic dark theme (colour only; additive). ===== */
+:root{
+  --bark:#f4f1ea;                       /* was #3a2f28 -> primary ink */
+  --bark-light:#cdc8bd;                 /* was #5c4a3e -> secondary ink */
+  --sand-dark:rgba(244,241,234,.14);    /* was #e8e0d0 -> hairlines */
+}
+body{background:#0b0c0e}
+/* light sections -> dark grounds (inline section bg => !important) */
+#about{background:#101216 !important}
+#excursions{background:#0b0c0e !important}
+.reviews{background:#0b0c0e}
+.tour-videos{background:#101216}
+#field-notes{background:#0b0c0e !important}
+.trust{background:#101216}
+#faq,.faq-section{background:#0b0c0e !important}
+/* already-dark warm sections -> re-ground cool for one coherent palette */
+.skip-link{background:#c0294a}
+.promise{background:#101216}
+.contact{background:#101216}
+.cookie-banner{background:#16191e}
+footer{background:#070809}
+footer a{color:#cdc8bd}
+/* hero scrim: warm brown -> cool filmic, text side kept darkest */
+.hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 42%,rgba(11,12,14,.15) 100%),linear-gradient(0deg,rgba(11,12,14,.55),transparent 40%)}
+/* card / surface bodies: white|sand -> dark surface */
+.exc-card,.trust-card,.review-card,.tour-video-card{background:#16191e}
+.trust-detail{background:#14171c}
+.trust-icon{background:#f4f1ea}          /* light chip so PTAC/BTA/ATD logos stay legible */
+.carousel-nav-btn{background:#16191e;color:#c0294a}
+.carousel-nav-btn:hover:not(:disabled){background:#c0294a;border-color:#c0294a;color:#fff}
+.carousel-nav-btn:disabled{color:#6f6a61}
+/* accent legibility on near-black */
+.section-label{color:#7c9a6b}
+.trust-fleet-tag{color:#8aa676}
+.trust-card a,.review-source a{color:#7c9a6b}
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#c0294a}
+.faq-q:hover,.faq-a p em{color:#7c9a6b}
+/* about signature is hardcoded #3a2f28 (dark) -> light so it doesn't vanish */
+.about-signature svg path{stroke:#cdc8bd !important}
+.about-signature svg circle{fill:#cdc8bd !important;stroke:#cdc8bd !important}
+</style>
 </head>
 <body>
 
