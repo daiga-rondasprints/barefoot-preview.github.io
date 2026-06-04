@@ -2973,9 +2973,17 @@ footer a{color:#cdc8bd}
 .about-signature svg circle{fill:#cdc8bd !important;stroke:#cdc8bd !important}
 </style>
 <style id="bb-nav-red">
-/* Stage 3 — stronger overlay-nav scrim so the red wordmark + white menu read
-   over any hero frame. Scrolled state keeps its own near-solid dark bar. */
+/* Stage 3 — overlay-nav polish. */
+/* stronger top scrim so the wordmark + white menu read over any hero frame */
 .nav{background:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%)}
+/* logo: white over the hero, red once the nav goes solid on scroll */
+.nav .logo-scrolled{display:none}
+.nav.scrolled .logo-top{display:none}
+.nav.scrolled .logo-scrolled{display:block}
+/* breathing room: reclaim menu width so the wordmark + menu stop touching */
+.nav-inner{gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{font-size:.92rem}
 </style>
 </head>
 <body>
@@ -2989,7 +2997,8 @@ footer a{color:#cdc8bd}
 <nav class="nav" id="nav" aria-label="Galvenā navigācija">
   <div class="nav-inner">
     <a href="/lv/" class="nav-logo" aria-label="Barefoot Baltic &mdash; sākums">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:56px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:56px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="" aria-hidden="true" class="logo-dark logo-scrolled" style="height:56px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Atvērt izvēlni" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
