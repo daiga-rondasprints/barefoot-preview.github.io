@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════════
+  OFF-PROD DIRECTION STUDY — impeccable `overdrive`, cinematic-operator
+  Variant 1 of 3. Not deployed. Real Barefoot Baltic copy + photography.
+  Reviews are verbatim (Hard Rule #3). Repetitive lists (reviews/field
+  notes/FAQ) carry a representative subset; production keeps ALL of it
+  via the same progressive-disclosure pattern shown here.
+  Design intent: dark filmic hero, scroll choreography, carmine accent.
+  Deliberately avoids the AI-made tells (no serif italics, no tracked
+  per-section eyebrows, no glassmorphism, no colored glow on dark, no
+  side-stripe borders).
+  ════════════════════════════════════════════════════════════════════
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barefoot Baltic — Guided Day Excursions from Riga</title>
+<meta name="description" content="Small-group guided day excursions from Riga with Daiga, a licensed local guide. Sigulda and the Gauja valley, Rundāle Palace, the Ķemeri bog walk at sunrise, and the Riga cruise-port day. Book direct for the best price.">
+<meta name="theme-color" content="#0b0c0e">
+<meta property="og:title" content="Barefoot Baltic — Guided Day Excursions from Riga">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Dark cinematic grounds */
+  --bg:#0b0c0e;
+  --bg-2:#101216;
+  --surface:#16191e;
+  --surface-2:#1d2127;
+  --line:rgba(244,241,234,.12);
+  --line-strong:rgba(244,241,234,.22);
+  /* Ink */
+  --ink:#f4f1ea;
+  --ink-soft:#cdc8bd;
+  --ink-mute:#9a958b;
+  /* Accent — flag carmine, single sharp accent */
+  --carmine:#c0294a;
+  --carmine-deep:#9e1b32;
+  --amber:#d8a24a;        /* tiny details only, never a glow */
+  --moss:#7c9a6b;
+  /* Type */
+  --serif:"Source Serif 4",Georgia,serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  /* Motion */
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:clamp(1rem,.96rem + .25vw,1.12rem);
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden;padding-bottom:60px;
+}
+@media(max-width:560px){body{padding-bottom:96px}}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.06;
+  letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0 0 1rem}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+.skip{position:absolute;left:-999px;top:0;background:var(--carmine);color:#fff;
+  padding:.7rem 1.1rem;z-index:200;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+/* ───────────────── NAV ───────────────── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.1rem clamp(1.1rem,4vw,2.5rem);
+  transition:background .4s var(--ease),border-color .4s var(--ease);
+  border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(8,9,11,.96);
+  border-bottom-color:var(--line);padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{width:auto}
+.brand-wordmark{height:34px;display:block}
+.brand-monogram{height:34px;display:none}
+.nav.scrolled .brand-wordmark{display:none}
+.nav.scrolled .brand-monogram{display:block}
+@media(max-width:520px){.brand-wordmark{height:28px}.brand-monogram{height:28px}}
+.nav-links{display:flex;gap:1.6rem;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;font-weight:500;
+  letter-spacing:.01em;transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{text-decoration:none;background:var(--carmine);color:#fff;font-weight:600;
+  font-size:.9rem;padding:.72rem 1.2rem;border-radius:999px;transition:background .25s,transform .25s}
+.nav-cta:hover{background:var(--carmine-deep);transform:translateY(-1px)}
+.nav-right{display:flex;align-items:center;gap:1.4rem}
+.nav-account{text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:600;padding:.62rem 1rem;
+  border:1px solid var(--line-strong);border-radius:999px;transition:border-color .25s,color .25s}
+.nav-account:hover{border-color:var(--ink-soft);color:var(--ink)}
+/* locale dropdown */
+.lang-switcher{position:relative}
+.lang-toggle{display:inline-flex;align-items:center;gap:.45rem;background:transparent;border:0;cursor:pointer;
+  color:var(--ink-soft);font-family:var(--sans);font-size:.9rem;font-weight:500;padding:.4rem .2rem}
+.lang-toggle:hover{color:var(--ink)}
+.lang-globe{flex:none}.lang-chevron{transition:transform .25s}
+.lang-switcher.open .lang-chevron{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + .6rem);right:0;min-width:180px;background:#16191e;
+  border:1px solid var(--line-strong);border-radius:10px;padding:.4rem;display:none;flex-direction:column;
+  box-shadow:0 18px 40px rgba(0,0,0,.5);z-index:120;max-height:70vh;overflow:auto}
+.lang-switcher.open .lang-menu{display:flex}
+.lang-option{text-decoration:none;color:var(--ink-soft);font-size:.88rem;padding:.55rem .7rem;border-radius:6px;transition:background .2s,color .2s}
+.lang-option:hover{background:var(--surface-2);color:var(--ink)}
+.lang-option[aria-current="true"]{color:var(--amber);font-weight:600}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:transparent;border:0;cursor:pointer;padding:.4rem}
+.nav-burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+@media(max-width:1040px){
+  .nav-burger{display:flex}
+  .nav-right{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:flex-start;gap:1rem;
+    background:rgba(8,9,11,.98);border-bottom:1px solid var(--line);padding:1.4rem clamp(1.1rem,4vw,2.5rem) 1.8rem;
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .3s var(--ease),opacity .3s}
+  .nav-right.open{transform:none;opacity:1;pointer-events:auto}
+  .nav-links{flex-direction:column;gap:.9rem;width:100%}
+  .nav-links a{font-size:1.05rem}
+  .lang-menu{position:static;box-shadow:none;border:0;padding:.2rem 0 0;max-height:none}
+  .lang-switcher.open .lang-menu{display:flex}
+}
+
+/* ───────────────── HERO ───────────────── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-slide{position:absolute;inset:0;opacity:0;background-size:cover;background-position:center;
+  animation:heroCycle 32s infinite;will-change:opacity,transform}
+.hero-slide:nth-child(1){background-image:url('/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg');animation-delay:0s}
+.hero-slide:nth-child(2){background-image:url('/images/riga-old-town-cobblestone-street-restaurants-latvia.jpg');animation-delay:8s}
+.hero-slide:nth-child(3){background-image:url('/images/exc-kemeri/jurmala-beach-sunset-latvia.jpg');animation-delay:16s}
+.hero-slide:nth-child(4){background-image:url('/images/riga-roland-statue-house-of-blackheads-latvia.jpg');animation-delay:24s}
+@keyframes heroCycle{
+  0%{opacity:0;transform:scale(1.12)}
+  3%{opacity:1}
+  22%{opacity:1}
+  27%{opacity:0}
+  100%{opacity:0;transform:scale(1.02)}
+}
+.hero-scrim{position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,.15) 28%,rgba(11,12,14,.2) 55%,rgba(11,12,14,.92) 100%),
+    radial-gradient(120% 90% at 18% 80%,rgba(11,12,14,.55),transparent 60%)}
+.hero-inner{padding-bottom:clamp(3rem,8vh,7rem);padding-top:9rem;max-width:760px}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.4rem}
+.hero-kicker::before{content:"";width:34px;height:1px;background:var(--carmine);display:inline-block}
+.hero h1{font-size:clamp(2.6rem,2rem + 5vw,5.4rem);font-weight:700;line-height:1.0;
+  letter-spacing:-.035em;margin-bottom:1.4rem}
+.hero h1 .accent{color:var(--ink);display:block;font-weight:400;font-size:.92em;
+  color:var(--ink-soft)}
+.hero-sub{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);color:var(--ink-soft);
+  max-width:46ch;margin-bottom:2rem}
+.hero-sig{font-family:var(--serif);font-style:normal;font-size:1.1rem;color:var(--amber);
+  margin-bottom:2.2rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;
+  font-size:1rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .25s var(--ease),background .25s,border-color .25s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--carmine);color:#fff}
+.btn-primary:hover{background:var(--carmine-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line-strong)}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:.86rem;color:var(--ink-mute)}
+.hero-trust span{display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap}
+.hero-trust svg{width:15px;height:15px;color:var(--moss)}
+.scroll-cue{position:absolute;left:50%;bottom:4.4rem;transform:translateX(-50%);z-index:2;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);
+  display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.scroll-cue::after{content:"";width:1px;height:34px;background:linear-gradient(var(--ink-mute),transparent);
+  animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(.2);transform-origin:top;opacity:0}40%{opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* Title-sequence reveal */
+.js .hero-inner > *{opacity:0;transform:translateY(26px);animation:rise .9s var(--ease-out) forwards}
+.js .hero-inner > *:nth-child(1){animation-delay:.15s}
+.js .hero-inner > *:nth-child(2){animation-delay:.3s}
+.js .hero-inner > *:nth-child(3){animation-delay:.45s}
+.js .hero-inner > *:nth-child(4){animation-delay:.6s}
+.js .hero-inner > *:nth-child(5){animation-delay:.72s}
+.js .hero-inner > *:nth-child(6){animation-delay:.84s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ───────────────── PROMISE ───────────────── */
+.promise{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--carmine-deep);color:#fff;
+  text-align:center;padding:.7rem clamp(1rem,4vw,2.5rem);font-size:clamp(.8rem,.72rem + .35vw,1rem);
+  font-weight:500;line-height:1.4;border-top:1px solid rgba(255,255,255,.16);box-shadow:0 -10px 26px rgba(0,0,0,.4)}
+@media(max-width:560px){.promise{padding:.55rem 1rem;font-size:.8rem;line-height:1.35}}
+.promise strong{font-weight:700}
+
+/* ───────────────── SECTION SHELL ───────────────── */
+.section{padding:clamp(4rem,9vh,8rem) 0}
+.section-head{max-width:720px;margin-bottom:clamp(2.4rem,5vh,4rem)}
+.section-head h2{font-size:clamp(2rem,1.5rem + 2.4vw,3.4rem);margin-bottom:1rem}
+.section-head p{color:var(--ink-soft);font-size:1.08rem;max-width:60ch}
+.eyebrow-num{font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.04em;
+  color:var(--amber);margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+
+/* ───────────────── ABOUT / DAIGA ───────────────── */
+.about{background:var(--bg-2)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.about-photo{position:relative;overflow:hidden;aspect-ratio:4/5;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 11%,#000 89%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 11%,#000 89%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 11%,#000 89%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 11%,#000 89%,transparent 100%);
+  mask-composite:intersect}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+/* feathered fade on all four edges replaces the boxed hairline frame */
+.about-text h2{font-size:clamp(2rem,1.6rem + 2vw,3rem);margin-bottom:1.4rem}
+.about-text p{color:var(--ink-soft);font-size:1.12rem}
+.about-contact{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.about-c{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink-soft);
+  font-size:.95rem;font-weight:600;padding:.62rem 1.1rem;border:1px solid var(--line-strong);border-radius:999px;
+  transition:border-color .25s,color .25s,background .25s}
+.about-c svg{width:17px;height:17px;flex:none}
+.about-c:hover{border-color:var(--ink-soft);color:var(--ink)}
+.about-c-wa{border-color:rgba(124,154,107,.5);color:var(--moss)}
+.about-c-wa:hover{background:var(--moss);border-color:var(--moss);color:#0b0c0e}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}.about-photo{max-width:360px}}
+
+/* ───────────────── EXCURSIONS (cinematic feature rows) ───────────────── */
+.exc{position:relative;min-height:80vh;display:flex;align-items:center;
+  overflow:hidden;isolation:isolate;margin:clamp(1.4rem,4vh,3rem) 0}
+.exc-bg{position:absolute;inset:0;z-index:-2;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 11%,#000 89%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 11%,#000 89%,transparent 100%)}
+.exc-bg img{width:100%;height:100%;object-fit:cover}
+.exc-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(11,12,14,.92) 0%,rgba(11,12,14,.72) 42%,rgba(11,12,14,.32) 100%)}
+.exc.flip .exc-bg::after{background:linear-gradient(270deg,rgba(11,12,14,.92) 0%,rgba(11,12,14,.72) 42%,rgba(11,12,14,.32) 100%)}
+.exc-card{max-width:540px}
+.exc.flip .exc-card{margin-left:auto;text-align:right}
+.exc-tag{font-size:.8rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:1rem}
+.exc h3{font-size:clamp(1.9rem,1.5rem + 2vw,3rem);margin-bottom:.6rem}
+.exc-meta{color:var(--ink-mute);font-size:.92rem;margin-bottom:1.1rem}
+.exc p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:1.6rem}
+.exc-foot{display:flex;align-items:baseline;gap:1.4rem}
+.exc.flip .exc-foot{justify-content:flex-end}
+.exc-price{font-family:var(--serif);font-size:1.7rem;font-weight:600}
+.exc-price small{font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--ink-mute);
+  letter-spacing:.02em}
+.exc-link{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--ink);
+  font-weight:600;border-bottom:2px solid var(--carmine);padding-bottom:.2rem;transition:gap .25s}
+.exc-link:hover{gap:.85rem}
+.exc-link svg{width:18px;height:18px}
+@media(max-width:760px){
+  .exc{min-height:auto;padding:4rem 0}
+  .exc.flip .exc-card{text-align:left;margin-left:0}
+  .exc.flip .exc-foot{justify-content:flex-start}
+  .exc-bg::after,.exc.flip .exc-bg::after{background:linear-gradient(180deg,rgba(11,12,14,.6),rgba(11,12,14,.92))}
+}
+
+/* ───────────────── REVIEWS ───────────────── */
+.reviews{background:var(--bg-2);border-top:1px solid var(--line)}
+.reviews-wall{column-count:3;column-gap:1.2rem}
+.review{break-inside:avoid;-webkit-column-break-inside:avoid;display:inline-block;width:100%;background:var(--surface);
+  border:1px solid var(--line);border-radius:6px;padding:1.5rem;margin-bottom:1.2rem}
+.review .stars{color:var(--amber);letter-spacing:.12em;font-size:.92rem;margin-bottom:.8rem}
+.review-text{color:var(--ink-soft);font-size:.96rem;line-height:1.6;margin-bottom:1.1rem}
+.review-by{display:flex;align-items:center;gap:.75rem}
+.review-av{width:38px;height:38px;border-radius:50%;background:var(--surface-2);
+  display:grid;place-items:center;font-family:var(--serif);font-weight:600;color:var(--amber);flex:none}
+.review-by strong{display:block;font-size:.9rem}
+.review-by span{display:block;font-size:.8rem;color:var(--ink-mute)}
+.review-src{font-size:.76rem;color:var(--ink-mute);margin-top:.85rem}
+@media(max-width:920px){.reviews-wall{column-count:2}}
+@media(max-width:600px){.reviews-wall{column-count:1}}
+.review-src a{color:var(--moss)}
+
+/* ───────────────── VIDEOS ───────────────── */
+.videos{border-top:1px solid var(--line)}
+.videos-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;max-width:none}
+.video-controls{display:none}
+.vid-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .25s,transform .15s var(--ease)}
+.vid-btn:hover{border-color:var(--ink-soft)}.vid-btn:active{transform:scale(.92)}.vid-btn:disabled{opacity:.35;cursor:default}
+.vid-btn svg{width:20px;height:20px}
+.video-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.video-rail::-webkit-scrollbar{display:none}
+.video{min-width:0}
+@media(max-width:900px){.video-rail{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.video-rail{grid-template-columns:1fr}}
+.video-thumb{position:relative;border:0;padding:0;background:none;cursor:pointer;width:100%;
+  border-radius:6px;overflow:hidden;aspect-ratio:16/9;display:block}
+.video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.video-thumb:hover img{transform:scale(1.05)}
+.video-thumb::after{content:"";position:absolute;inset:0;background:rgba(11,12,14,.18);transition:background .3s}
+.video-thumb:hover::after{background:rgba(11,12,14,.05)}
+.video-play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;
+  background:var(--carmine);display:grid;place-items:center;z-index:2;transition:transform .3s var(--ease)}
+.video-thumb:hover .video-play{transform:scale(1.1)}
+.video-play svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+.video h3{font-size:1.15rem;margin:1rem 0 .4rem}
+.video p{color:var(--ink-mute);font-size:.94rem}
+
+/* ───────────────── FIELD NOTES ───────────────── */
+.notes{background:var(--bg-2);border-top:1px solid var(--line)}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;
+  text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .3s var(--ease),border-color .3s}
+.note:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.note-img{aspect-ratio:1200/630;overflow:hidden}
+.note-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.note:hover .note-img img{transform:scale(1.05)}
+.note-body{padding:1.3rem 1.4rem 1.5rem}
+.note-tag{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:.7rem}
+.note h3{font-size:1.1rem;line-height:1.25;margin-bottom:.5rem}
+.note p{color:var(--ink-mute);font-size:.9rem;margin:0}
+.notes-more{margin-top:2.4rem;text-align:center}
+.notes-more a{text-decoration:none;color:var(--ink);font-weight:600;border-bottom:2px solid var(--carmine);padding-bottom:.2rem}
+
+/* ───────────────── TRUST ───────────────── */
+.trust{border-top:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-bottom:2.4rem}
+.trust-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.8rem}
+.trust-card .logo{height:46px;margin-bottom:1.2rem;background:#fff;border-radius:4px;padding:.4rem .6rem;
+  display:inline-flex;align-items:center}
+.trust-card .logo img{height:100%;width:auto}
+.trust-card h3{font-size:1.2rem;margin-bottom:.7rem}
+.trust-card p{color:var(--ink-soft);font-size:.94rem;margin-bottom:.6rem}
+.trust-card a{color:var(--moss);font-size:.9rem;font-weight:600;text-decoration:none}
+.fleet{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.fleet-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.fleet-card img{width:100%;height:240px;object-fit:cover;object-position:center}
+.fleet-card .fc-body{padding:1.4rem 1.5rem 1.6rem}
+.fleet-card .fc-tag{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.fleet-card h4{font-size:1.15rem;margin-bottom:.6rem}
+.fleet-card p{color:var(--ink-soft);font-size:.92rem;margin:0}
+@media(max-width:680px){.fleet{grid-template-columns:1fr}}
+
+/* ───────────────── CONTACT ───────────────── */
+.contact{background:var(--bg-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem)}
+.contact-intro{color:var(--ink-soft);font-size:1.08rem;margin-bottom:2rem;max-width:52ch}
+.cmethods{display:flex;flex-direction:column;gap:.8rem}
+.cmethod{display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;
+  background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1rem 1.2rem;
+  transition:border-color .25s,transform .25s}
+.cmethod:hover{border-color:var(--line-strong);transform:translateX(4px)}
+.cmethod .ci{width:40px;height:40px;border-radius:8px;background:var(--surface-2);display:grid;place-items:center;flex:none}
+.cmethod .ci svg{width:20px;height:20px;stroke:var(--moss);fill:none}
+.cmethod .cl{font-size:.78rem;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.06em}
+.cmethod .cv{font-weight:600}
+.contact-right h3{font-size:1.3rem;margin-bottom:.8rem}
+.contact-right p{color:var(--ink-soft);font-size:.98rem;margin-bottom:1.4rem}
+.social{display:flex;flex-direction:column;gap:.6rem}
+.social a{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink-soft);
+  font-size:.94rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--line);transition:color .25s}
+.social a:hover{color:var(--ink)}
+.social svg{width:18px;height:18px;flex:none}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+/* ───────────────── FAQ ───────────────── */
+.faq{border-top:1px solid var(--line)}
+.faq-list{max-width:820px;margin:0 auto}
+details.faq-item{border-bottom:1px solid var(--line)}
+details.faq-item summary{list-style:none;cursor:pointer;padding:1.4rem 0;display:flex;
+  align-items:center;justify-content:space-between;gap:1rem;font-family:var(--serif);
+  font-size:1.18rem;font-weight:600;color:var(--ink)}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary .chev{flex:none;width:22px;height:22px;transition:transform .3s var(--ease);color:var(--carmine)}
+details.faq-item[open] summary .chev{transform:rotate(180deg)}
+details.faq-item .faq-a{color:var(--ink-soft);font-size:1rem;padding:0 0 1.5rem;max-width:70ch}
+details.faq-item .faq-a strong{color:var(--ink)}
+
+/* ───────────────── FOOTER ───────────────── */
+footer{background:#070809;border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;text-align:center}
+.foot-stamp{font-family:var(--serif);color:var(--amber);letter-spacing:.1em;margin-bottom:.4rem}
+footer p{color:var(--ink-mute);font-size:.86rem;max-width:70ch;margin:0 auto .8rem}
+footer a{color:var(--moss)}
+.flag-bar{display:flex;justify-content:center;gap:0;margin-top:1.6rem}
+.flag-bar span{width:60px;height:5px}
+.flag-bar span:nth-child(1),.flag-bar span:nth-child(3){background:var(--carmine-deep)}
+.flag-bar span:nth-child(2){background:var(--ink)}
+
+/* ───────────────── SCROLL REVEAL (defaults visible) ───────────────── */
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ───────────────── REDUCED MOTION ───────────────── */
+@media (prefers-reduced-motion:reduce){
+  .hero-slide{animation:none;opacity:0}
+  .hero-slide:nth-child(1){opacity:1;transform:none}
+  .scroll-cue::after{animation:none}
+  .js .hero-inner > *{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  *{scroll-behavior:auto!important}
+}
+</style>
+<style>.exc-filter{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.05rem 0}.exc-filter-inner{display:flex;align-items:center;gap:.6rem 1rem;flex-wrap:wrap}.exc-filter-lbl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}.exc-filter-chips{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}.exc-fchip{appearance:none;cursor:pointer;font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);background:transparent;border:1px solid var(--line-strong);border-radius:999px;padding:.36rem .85rem;transition:.16s}.exc-fchip:hover{border-color:var(--ink-mute);color:var(--ink)}.exc-fchip.on{background:var(--carmine);border-color:var(--carmine);color:#fff}.exc-fchip.off{opacity:.32;cursor:default}.exc-fchip .ct{opacity:.55;margin-left:.3rem;font-variant-numeric:tabular-nums}.exc-filter-count{margin-left:auto;font-family:var(--serif);font-size:.95rem;color:var(--ink-soft);white-space:nowrap}.exc-filter-clear{appearance:none;border:0;background:transparent;color:var(--ink-mute);cursor:pointer;font-family:var(--sans);font-size:.82rem;text-decoration:underline;text-underline-offset:3px}.exc-filter-clear[hidden]{display:none}#excursions article.exc.exc-hidden{display:none}@media(max-width:640px){.exc-filter-count{margin-left:0;width:100%}}</style><style>.about-photo{-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27ink%27%3E%3CfeTurbulence%20type%3D%27turbulence%27%20baseFrequency%3D%270.026%27%20numOctaves%3D%272%27%20seed%3D%274%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2720%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Crect%20x%3D%2714%27%20y%3D%2714%27%20width%3D%27572%27%20height%3D%27732%27%20rx%3D%2712%27%20fill%3D%27%23fff%27%20filter%3D%27url%28%23ink%29%27%2F%3E%3C%2Fsvg%3E") center/100% 100% no-repeat !important;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27ink%27%3E%3CfeTurbulence%20type%3D%27turbulence%27%20baseFrequency%3D%270.026%27%20numOctaves%3D%272%27%20seed%3D%274%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2720%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Crect%20x%3D%2714%27%20y%3D%2714%27%20width%3D%27572%27%20height%3D%27732%27%20rx%3D%2712%27%20fill%3D%27%23fff%27%20filter%3D%27url%28%23ink%29%27%2F%3E%3C%2Fsvg%3E") center/100% 100% no-repeat !important}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <a class="brand" href="/" aria-label="Barefoot Baltic, home">
+    <img class="brand-wordmark" src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" width="245" height="30">
+    <img class="brand-monogram" src="/images/brand/barefoot-baltic-monogram-white.svg" alt="" width="24" height="34" aria-hidden="true">
+  </a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-right" id="nav-links">
+    <ul class="nav-links">
+      <li><a href="#excursions">Excursions</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#fleet">Our Fleet</a></li>
+      <li><a href="#about">About Daiga</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Get in Touch</a>
+    <a class="nav-account" href="/account.html">My Account</a>
+    <div class="lang-switcher" data-current-locale="en-us">
+      <button class="lang-toggle" id="langToggle" aria-expanded="false" aria-haspopup="true" aria-label="Choose language">
+        <svg class="lang-globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13 13 0 0 1 0 18a13 13 0 0 1 0-18"/></svg>
+        <span class="lang-current">English (US)</span>
+        <svg class="lang-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <a href="https://barefootbaltic.com/" hreflang="en-us" class="lang-option" data-locale="en-us" aria-current="true">English (US)</a>
+        <a href="https://barefootbaltic.co.uk/" hreflang="en-gb" class="lang-option" data-locale="en-gb">English (UK)</a>
+        <a href="https://barefootbaltic.in/" hreflang="en-in" class="lang-option" data-locale="en-in">English (India)</a>
+        <a href="https://barefootbaltic.lv/" hreflang="lv" class="lang-option" data-locale="lv">Latviešu</a>
+        <a href="https://barefootbaltic.de/" hreflang="de" class="lang-option" data-locale="de">Deutsch</a>
+        <a href="https://barefootbaltic.fr/" hreflang="fr" class="lang-option" data-locale="fr">Français</a>
+        <a href="https://barefootbaltic.es/" hreflang="es" class="lang-option" data-locale="es">Español</a>
+        <a href="https://barefootbaltic.lt/" hreflang="lt" class="lang-option" data-locale="lt">Lietuvių</a>
+        <a href="https://barefootbaltic.pl/" hreflang="pl" class="lang-option" data-locale="pl">Polski</a>
+        <a href="https://barefootbaltic.com/it/" hreflang="it" class="lang-option" data-locale="it">Italiano</a>
+        <a href="https://barefootbaltic.com/pt/" hreflang="pt" class="lang-option" data-locale="pt">Português</a>
+        <a href="https://barefootbaltic.com/sv/" hreflang="sv" class="lang-option" data-locale="sv">Svenska</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="hero-kicker">Guided day excursions from Riga</span>
+    <h1>Welcome to Latvia,<span class="accent">an antidote to overtourism</span></h1>
+    <p class="hero-sub">Small groups, morning departures, evening returns. A full day together in my favourite corners of the country, with a licensed local guide who lives here.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#excursions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        See my excursions
+      </a>
+      <a class="btn btn-ghost" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call me
+      </a>
+    </div>
+    <div class="hero-trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Reserve today, nothing upfront</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Pay in person, on the day</span>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
+</header>
+
+<!-- PROMISE -->
+<div class="promise"><strong>Pay nothing today.</strong> Reserve your place now, and pay in person on the day you travel.</div>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="/images/daiga-barefoot-baltic-india-portrait.webp" alt="Daiga, your guide at Barefoot Baltic" width="1505" height="2000" loading="lazy">
+    </div>
+    <div class="about-text reveal">
+      <h2>Hello. I'm Daiga.</h2>
+      <p>Thanks for stopping by, and thank you for considering my beautiful country for your holiday. I run Barefoot Baltic from Riga together with a small team.</p>
+      <p>Have a look around. If any of our excursions piques your interest, just message me.</p>
+      <div class="about-contact">
+        <a class="about-c about-c-wa" href="https://wa.me/37126440152" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.683 1.157 2.683.771 3.167.723.484-.045 1.562-.638 1.783-1.255.22-.617.22-1.146.155-1.255-.066-.11-.244-.174-.51-.297z"/></svg>
+          WhatsApp
+        </a>
+        <a class="about-c" href="tel:+37126440152">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +371 2644 0152
+        </a>
+        <a class="about-c" href="mailto:daiga@rondasprints.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          daiga@rondasprints.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCURSIONS -->
+<section id="excursions" aria-label="Trips and journeys">
+<div class="exc-filter"><div class="wrap exc-filter-inner"><span class="exc-filter-lbl">Filter</span><div class="exc-filter-chips" id="excChips"></div><span class="exc-filter-count" id="excCount"></span><button class="exc-filter-clear" id="excClear" hidden>Clear all</button></div></div>
+
+  <article class="exc reveal" data-type="day" data-theme="nature heritage" data-price="p-day" data-duration="daytrip" data-country="lv">
+    <div class="exc-bg" aria-hidden="true"><img src="/images/exc-sigulda/sigulda-medieval-castle-guests-posing-latvia.jpg" alt="" loading="lazy"></div>
+    <div class="wrap"><div class="exc-card">
+      <p class="exc-tag">Medieval</p>
+      <h3>Sigulda, Cēsis &amp; the Gauja Valley</h3>
+      <p class="exc-meta">Full-day excursion · Northeast from Riga · ~10 hours</p>
+      <p>A memorable day trip. Three medieval castles, the Gauja Valley, a bread-maker visit, food and drinks tasting in the van. A women-led tour with live commentary.</p>
+      <div class="exc-foot">
+        <span class="exc-price">€94 <small>per adult</small></span>
+        <a class="exc-link" href="/excursions/sigulda-cesis-gauja-valley.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="exc flip reveal" data-type="day" data-theme="heritage nature" data-price="p-day" data-duration="daytrip" data-country="lv">
+    <div class="exc-bg" aria-hidden="true"><img src="/images/exc-rundale/rundale-palace-baroque-rose-gardens-latvia.jpg" alt="" loading="lazy"></div>
+    <div class="wrap"><div class="exc-card">
+      <p class="exc-tag">Grandeur</p>
+      <h3>Rundāle Palace, Bauska Castle &amp; Ķemeri Bog</h3>
+      <p class="exc-meta">Full-day excursion · South from Riga · ~10 hours</p>
+      <p>Ten hours from Riga to Rundāle Palace, Bauska Castle, and the Great Ķemeri Bog. Live commentary, plus a curated Latvian tasting on the van. Drinks, snacks and sweets, each with its story.</p>
+      <div class="exc-foot">
+        <span class="exc-price">€94 <small>per adult</small></span>
+        <a class="exc-link" href="/excursions/rundale-palace-bauska-castle-brewery.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="exc reveal" data-type="day" data-theme="nature adventure" data-price="p-day" data-duration="daytrip" data-country="lv">
+    <div class="exc-bg" aria-hidden="true"><img src="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg" alt="" loading="lazy"></div>
+    <div class="wrap"><div class="exc-card">
+      <p class="exc-tag">Wild Latvia</p>
+      <h3>Ķemeri Bog Off-Boardwalk Hike, Lake Picnic &amp; Optional Swim</h3>
+      <p class="exc-meta">Off-boardwalk bog hike · West from Riga · ~4 hours</p>
+      <p>A guided hike off the boardwalk into a 10,000-year-old raised bog, older than the Pyramids, with a picnic and optional swim at a bog lake, then refreshments at the van as we debrief. Four hours from Riga, with golden-hour slots at sunrise and sunset.</p>
+      <div class="exc-foot">
+        <span class="exc-price">€45 <small>per adult</small></span>
+        <a class="exc-link" href="/excursions/kemeri-bog-jurmala.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="exc flip reveal" data-type="day" data-theme="city heritage" data-price="p-day" data-duration="daytrip" data-country="lv">
+    <div class="exc-bg" aria-hidden="true"><img src="/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="" loading="lazy"></div>
+    <div class="wrap"><div class="exc-card">
+      <p class="exc-tag">For cruise passengers</p>
+      <h3>Riga Shore Excursion from the Cruise Port</h3>
+      <p class="exc-meta">Cruise-port pickup · Inside Riga · 6 hours, flexible to your ship</p>
+      <p>A licensed local Riga guide picks six places out of a hundred and tells you stories about the rest in the van. Furthest-first routing, 90-minute port buffer, women-led, all-inclusive of entry fees and taxes. No souvenir-shop stops.</p>
+      <div class="exc-foot">
+        <span class="exc-price">€80 <small>per adult, all-in</small></span>
+        <a class="exc-link" href="/excursions/riga-shore-excursion-from-cruise-port.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div></div>
+  </article>
+
+
+<article class="exc reveal" data-type="multi" data-theme="heritage nature city" data-price="p-mid" data-duration="week" data-country="lv"><div class="exc-bg" aria-hidden="true"><img src="/images/riga-old-town-aerial-daugava-river-latvia.webp" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">22+ TripAdvisor &amp; UNESCO</p><h3>Latvia, in depth · 8 days</h3><p class="exc-meta">~700 km · ~35h guiding</p><p>Riga, Rundāle, Sigulda, the coast and Liepāja (ECoC 2027) and Kuldīga over eight days.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/latvia-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc flip reveal" data-type="multi" data-theme="heritage city nature" data-price="p-mid" data-duration="week" data-country="ee lv lt"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1724235425392-fe352694d4c8?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">25+ TripAdvisor &amp; UNESCO</p><h3>Estonia, Latvia &amp; Lithuania · 9 days</h3><p class="exc-meta">~900 km · ~35h guiding</p><p>Estonia, Latvia and Lithuania across nine days, three old towns, the Gauja Valley and the Hill of Crosses.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/baltic-trio-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc reveal" data-type="multi" data-theme="heritage city nature" data-price="p-high" data-duration="fortnight" data-country="fi ee lv lt pl"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1553422734-fd8dd260a116?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">30+ TripAdvisor &amp; UNESCO</p><h3>Finland, Estonia, Latvia, Lithuania &amp; Poland · 14 days</h3><p class="exc-meta">~1,600 km · ~55h guiding</p><p>Five countries on one Schengen visa, Helsinki to Warsaw, with a Tallink ferry crossing.</p><div class="exc-foot"><span class="exc-price">from &euro;1170 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/northern-europe-grand-tour-14-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc flip reveal" data-type="multi" data-theme="city heritage nature" data-price="p-mid" data-duration="week" data-country="gb fr"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">20+ TripAdvisor &amp; UNESCO</p><h3>UK &amp; France · 9 days</h3><p class="exc-meta">~750 km · ~35h guiding</p><p>Westminster, the Cotswolds and Versailles gardens, crossing the Channel by ferry or tunnel.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/london-to-paris-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc reveal" data-type="multi" data-theme="city heritage nature" data-price="p-high" data-duration="fortnight" data-country="fr ch it"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">30+ TripAdvisor &amp; UNESCO</p><h3>France, Switzerland &amp; Italy · 14 days</h3><p class="exc-meta">~2,000 km · ~60h guiding</p><p>France, Switzerland and Italy over a fortnight, Paris to Pompeii, with Alpine and Lake Como stops.</p><div class="exc-foot"><span class="exc-price">from &euro;1190 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/paris-to-naples-14-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc flip reveal" data-type="multi" data-theme="city heritage nature" data-price="p-mid" data-duration="week" data-country="fr ch it"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">23+ TripAdvisor &amp; UNESCO</p><h3>France, Switzerland &amp; Italy · 9 days</h3><p class="exc-meta">~1,600 km · ~35h guiding</p><p>Paris to Venice through Switzerland, Mt Titlis and the Lake Como villages, ending on St Mark&#x27;s Square.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/paris-to-venice-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc reveal" data-type="multi" data-theme="city heritage food" data-price="p-mid" data-duration="week" data-country="es pt"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1722863380905-539ae092fc5f?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">23+ TripAdvisor &amp; UNESCO</p><h3>Spain &amp; Portugal · 9 days</h3><p class="exc-meta">~1,250 km · ~35h guiding</p><p>Spain and Portugal in nine days, Barri Gòtic to Sintra, with a jamón tasting and optional fado.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/barcelona-madrid-lisbon-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc flip reveal" data-type="multi" data-theme="nature heritage city" data-price="p-mid" data-duration="week" data-country="it si hr"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1587632478908-2a887673ea3f?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">18+ TripAdvisor &amp; UNESCO</p><h3>Italy, Slovenia &amp; Croatia · 9 days</h3><p class="exc-meta">~1,300 km · ~35h guiding</p><p>The Adriatic across three countries, Lake Bled and Plitvice to Diocletian&#x27;s Palace in Split.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/venice-slovenia-croatia-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+<article class="exc reveal" data-type="multi" data-theme="city heritage nature" data-price="p-mid" data-duration="week" data-country="nl be fr"><div class="exc-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="" loading="lazy"></div><div class="wrap"><div class="exc-card"><p class="exc-tag">20+ TripAdvisor &amp; UNESCO</p><h3>Netherlands, Belgium &amp; France · 9 days</h3><p class="exc-meta">~800 km · ~35h guiding</p><p>The Lowlands to Paris, Amsterdam&#x27;s canals and Bruges and the Brussels Grand Place over nine days.</p><div class="exc-foot"><span class="exc-price">from &euro;730 <small>per person</small></span><a class="exc-link" href="/en-in/excursions/amsterdam-bruges-paris-7-days.html">Explore this tour <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div></div></article>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow-num">★★★★★ &nbsp;Verified guest reviews</p>
+      <h2>Real reviews from real travellers</h2>
+      <p>Every word verbatim, in the language it was left in. All verified bookings.</p>
+    </div>
+    <div class="reviews-wall">
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"It was a wonderful trip, special thanks to Daiga and her team that went all out to make this trip a memorable one. Not a single boring moment I had during the journey. An enriching trip that perfectly blended exploration, culture, and learning together."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">T</span><span><strong>Timothy</strong><span>United Kingdom · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"The trip went smoothly and enjoyably."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">T</span><span><strong>Tharun</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"I had such a lovely day on this tour and honestly didn't expect to learn so much about Latvia along the way. Daiga was a fantastic guide — very knowledgeable, but also warm and easy to talk to, which made the whole experience feel relaxed and personal. The visits to Rundāle Palace and Bauska Castle were beautiful, but what really made the difference was how Daiga brought the history to life with stories and context throughout the day. It never felt like a &quot;lecture&quot; — more like travelling with someone who genuinely loves sharing their country. The brewery stop at the end was a perfect way to finish the day — a really nice touch and a fun, memorable ending. Overall, it was a great mix of learning and enjoying the day out. I would absolutely recommend Daiga's tours and will remember this day very fondly."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">J</span><span><strong>Josephine</strong><span>United Kingdom · March 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"The trip was excellent."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">V</span><span><strong>Vijay</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"What a fantastic day trip! Daiga, our guide, was warm, organized, and incredibly knowledgeable. She brought Rundāle Palace and Bauska Castle to life with captivating stories about their history. The group was fantastic, and the lunch at Mežskungs was honestly a highlight of the trip. I would definitely recommend this tour again."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">G</span><span><strong>GetYourGuide traveler</strong><span>United States · February 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"My trip was so good and amazing, I loved it!"</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">S</span><span><strong>Sanjay</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text" lang="hu">"Jól összeállított, rugalmasan lebonyolitott program, figyelmes, lelkes és felkészült túravezetőkkel. Nagy élmény volt, érdemes élni e lehetőséggel, ha az ország szépségei, kultúrája és történelme kapcsán mélyebb ismeretekre vágyunk."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">G</span><span><strong>GetYourGuide traveler</strong><span>Hungary · May 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"The trip was really good."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">S</span><span><strong>Sheldon Femi</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text" lang="ru">"Могу сказать много чего о туре. Просто превосходный! Несмотря на не очень хорошую погоду, сломанную ногу у Дайги, они сделали всё что было возможно, чтобы мы ничего не пропустили. Я ехала с моими друзьями из Италии и могу сказать, несмотря на маленькие знания английского языка, всё было понятно. В Рундале вас ждал очень гид Олаф, который не только был профессионал своего дела, но и отличный актёр. В Бауске - другой гид, так как Дайна не могла из-за ноги. Надеемся она поправится скоро. А еще и пивоваренный завод- как было интересно. Обедали неподалёку от Бауски. Всё прошло на ура. Вернулись на место встречи с уставшими ногами и головой, но с полным сердцем..."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">G</span><span><strong>GetYourGuide traveler</strong><span>Italy · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"The trip was really wonderful and excellent. It was fun and worth my money."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">R</span><span><strong>Ranjith</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text" lang="de">"Sehr freundliche und gut organisierte Tour mit Daiga. Rundāle Palace und Bauska Castle waren toll, und die Brauerei-Führung nach dem Mittagessen war ein super Extra. Starke historische Einordnung, auch im Winter."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">S</span><span><strong>Srini</strong><span>United Kingdom · February 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"What a great day! It was a full day, which was just what we wanted. We really liked all the activities. Our guide, Daiga, was extremely knowledgeable. As a Latvian, Daiga has an excellent knowledge base about the history, culture, current events, flora and fauna — everything — about Latvia, and readily shared information. She also shared her experiences about growing up in Latvia, which made the tour far more meaningful for us. Additionally, we appreciated that Daiga was solicitous about our welfare throughout the day. We had an additional guide at Cēsis who was also quite informative. The lunch spot was well chosen; the food was good and inexpensive. This tour allowed us to see sites we would otherwise have been unable to see, and we highly recommend it!"</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">M</span><span><strong>Margaretta</strong><span>United States · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"It was spectacular and memorable. Daiga gave me so much wonderful information, and is a very warm and fun lady. As a solo traveller, I was made to feel welcome. Frederick was an excellent driver and took loads of pics which Daiga shared with me. Olav, who was our guide for Rundāle Palace, was both entertaining and knowledgeable on our tour of this magnificent palace. The brewery tour was excellent — Zaiga led us through the beer making process from start to finish. After the tour we got to taste the beers and I was very generously given a bottle of my favourite beer. As a tour, this is a wonderful alternative to several other tours who visit the palaces and the Hill of Crosses. It was a pleasure to meet Elena who is in training to be a Ukrainian-speaking guide for this amazing company. Thank you for a truly special day."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">J</span><span><strong>Joan</strong><span>United States · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"Absolutely incredible! The Ķemeri Bog boardwalk felt like stepping into another world — early morning mist over the pools, birds singing, and the wooden path winding through surreal landscapes. Our guide was knowledgeable and kept a great pace. Then Jūrmala's sandy beaches and charming wooden architecture were the perfect contrast. Loved dipping my feet in the Baltic Sea! The whole trip was well-organized, peaceful, and refreshing. Only thing that could improve? Slightly longer stop for coffee in Jūrmala. But honestly — 5 stars, highly recommend!"</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">R</span><span><strong>Ranjith</strong><span>Latvia · April 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text" lang="it">"Daiga ed il suo gruppo sono davvero straordinari: simpatici, entusiasti e preparati! L'intero viaggio è stato un susseguirsi di scoperte emozionanti, ma andiamo con ordine: il palazzo di Rundāle è un gioiello incastonato nella pianura Lettone, la nostra guida ha magistralmente spiegato ogni sala, ricca di stucchi ed affreschi, soffermandosi sui dettagli e rispondendo ad ogni domanda. Il pranzo si è svolto in un locale tipico poco distante, dove ho potuto assaporare diverse specialità locali. Il castello di Bauska, situato alla confluenza dei fiumi Mūsa e Nemunēlis, è un classico esempio di maniero Livoniano, anch'esso ricco di storia e fascino. Prima di rientrare a Riga ci siamo fermati al birrificio Bauskas, dove oltre alla visita dello stabilimento, abbiamo potuto assaggiare le deliziose birre prodotte in loco. Sono davvero soddisfatto di questo tour, auguro a Daiga ed ai membri del suo staff tutto il meglio! Continuate così! Meriterebbero 10 stelle!"</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">M</span><span><strong>Mattia Cuni</strong><span>Italy · March 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"My husband and I recently booked a day trip with Daiga and we thoroughly enjoyed every minute of it. We were picked up from our hotel at the mentioned time and the drive to Lithuania was very smooth. Daiga is quite knowledgeable and indulged us in the history of the place in detail. After driving for 2 hrs, we stopped for lunch. Since we are both vegetarians and were concerned about finding good vegetarian options, our guide ensured she took us to a nice sit-down vegetarian place where the food was awesome. Daiga is very friendly and knowledgeable and she knows in and out of the place. My husband, who loves to tour breweries, was fascinated to tour the beer factory and learn about the whole beer brewing process — and even get to taste it! After the tour, we were driven back to Riga and throughout the ride, Daiga gave us company by showing us the local history and educating us about the local culture. Highly recommend this to everyone! Could give more stars if I could."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">R</span><span><strong>Roopa</strong><span>United States · March 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+      <figure class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="review-text">"I had a day that I will always value. Daiga and her company/team are thoughtful and generous and I learned so much about Latvia and what makes this country special and set apart. Every stop was fantastic. Thank you for a wonderful and memorable day."</p>
+        <figcaption class="review-by"><span class="review-av" aria-hidden="true">A</span><span><strong>Andrea</strong><span>Australia · March 2026</span></span></figcaption>
+        <p class="review-src">Verified booking on <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section videos" id="videos">
+  <div class="wrap">
+    <div class="section-head videos-head reveal">
+      <div>
+        <h2>On the road with us</h2>
+        <p>Unedited dashcam from recent day tours, so you know the drives are real, not stock footage.</p>
+      </div>
+      <div class="video-controls">
+        <button class="vid-btn" id="vidPrev" type="button" aria-label="Previous clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="vid-btn" id="vidNext" type="button" aria-label="More clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    <div class="video-rail" role="list" aria-label="Dashcam videos from recent tours">
+      <article class="video reveal">
+        <button class="video-thumb" type="button" data-yt="vT_JN5qb20s" aria-label="Play video: Riga to Sigulda morning drive">
+          <img src="https://i.ytimg.com/vi/vT_JN5qb20s/hqdefault.jpg" alt="Dashcam still from the morning drive between Riga and Sigulda." loading="lazy" width="480" height="360">
+          <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Riga to Sigulda, into the Gauja Valley</h3>
+        <p>Morning POV from Riga, peeling off the highway and into the forested approach to Sigulda.</p>
+      </article>
+      <article class="video reveal">
+        <button class="video-thumb" type="button" data-yt="uqOqz4hsN0Y" aria-label="Play video: Riga to Rundāle Palace morning drive">
+          <img src="https://i.ytimg.com/vi/uqOqz4hsN0Y/hqdefault.jpg" alt="Dashcam still from the drive between Riga and Rundāle Palace." loading="lazy" width="480" height="360">
+          <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>On the road to Rundāle Palace</h3>
+        <p>Heading south through Bauska on the morning run to Rundāle Palace.</p>
+      </article>
+      <article class="video reveal">
+        <button class="video-thumb" type="button" data-yt="Pda-VWd9IJg" aria-label="Play video: Turaida Castle to Cēsis back-roads drive">
+          <img src="https://i.ytimg.com/vi/Pda-VWd9IJg/hqdefault.jpg" alt="Dashcam still from the back-road drive between Turaida and Cēsis." loading="lazy" width="480" height="360">
+          <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Turaida Castle to Cēsis old town</h3>
+        <p>Back roads through Inciems on the way from Turaida Castle to Cēsis old town.</p>
+      </article>
+      <article class="video reveal">
+        <button class="video-thumb" type="button" data-yt="KDOQB43KumE" aria-label="Play video: Cēsis to Riga evening drive home">
+          <img src="https://i.ytimg.com/vi/KDOQB43KumE/hqdefault.jpg" alt="Dashcam still from the evening drive back to Riga from Cēsis." loading="lazy" width="480" height="360">
+          <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Evening drive home from Cēsis</h3>
+        <p>End of the day, winding home through Vidzeme as the light goes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD NOTES -->
+<section class="section notes" id="notes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Writing from Riga, by Daiga</h2>
+      <p>Honest answers to the questions guests ask me most often. No AI puff, no guest posts, just firsthand writing from a licensed Latvian guide who lives here. 46 pieces so far.</p>
+    </div>
+    <div class="notes-grid">
+      <a class="note reveal" href="/blog/baltic-nordic-sauna-cultures-compared.html">
+        <div class="note-img"><img src="/images/og/baltic-sauna-og-1200x630.jpg" alt="Wood-clad Baltic sauna interior with a stone-filled heater and a birch vasta on the bench." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Essay · 15 min</p><h3>Pirts, Suitsusaun, Savusauna, Badstu: A Latvian's Field Guide to Baltic and Nordic Sauna Cultures</h3><p>How to use each one without offending the locals.</p></div>
+      </a>
+      <a class="note reveal" href="/blog/brief-history-of-latvia-first-person.html">
+        <div class="note-img"><img src="/images/og/latvia-flag-og-1200x630.jpg" alt="The Latvian flag, carmine red with a white band, against a blue sky." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Essay · 11 min</p><h3>A Brief History of Latvia, Told by the People Who Lived It</h3><p>Eight hundred years through the voices of the people who lived each chapter.</p></div>
+      </a>
+      <a class="note reveal" href="/blog/castle-of-light-latvian-national-library.html">
+        <div class="note-img"><img src="/images/blog-national-library/latvian-national-library-castle-of-light-og-1200x630.jpg" alt="The Castle of Light, the Latvian National Library in Riga, against a clear sky." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Guide · 18 min</p><h3>The Castle of Light: Why Riga's National Library Belongs on Every Traveller's List</h3><p>The Glass Mountain folktale, the design, and the 2014 human chain.</p></div>
+      </a>
+      <a class="note reveal" href="/blog/cat-house-riga-meistaru.html">
+        <div class="note-img"><img src="/images/blog-cat-house/cat-house-meistaru-iela-corner-turret-riga-latvia.jpg" alt="The Cat House on Meistaru iela in Riga Old Town, with its yellow Art Nouveau facade and the bronze cat on the corner turret." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Old Town · 11 min</p><h3>The Cat House (Kaķu nams), Riga</h3><p>The merchant-and-the-Guild story behind the bronze cats on the roof.</p></div>
+      </a>
+      <a class="note reveal" href="/blog/dainu-kalns-folk-song-hill-turaida.html">
+        <div class="note-img"><img src="/images/blog-dainu-kalns/dainu-kalns-og-1200x630.jpg" alt="Granite sculpture at Dainu kalns, the Hill of Dainas, Turaida." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Long read · 18 min</p><h3>Dainu Kalns at Turaida: A Sculpture Garden Carved Under Soviet Rule</h3><p>A folk-song memorial in granite that helped seed the Singing Revolution.</p></div>
+      </a>
+      <a class="note reveal" href="/blog/latvian-food-honest-guide.html">
+        <div class="note-img"><img src="/images/og/latvia-flag-og-1200x630.jpg" alt="Latvian table with rye bread and seasonal dishes." loading="lazy" width="1200" height="630"></div>
+        <div class="note-body"><p class="note-tag">Guide · 14 min</p><h3>Latvian Food: An Honest Guide from a Riga Local</h3><p>What to eat, what to skip, and why we eat so much rye and pork.</p></div>
+      </a>
+    </div>
+    <p class="notes-more"><a href="/blog/">See all 46 posts on the blog →</a></p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section trust" id="trust">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Your peace of mind matters</h2>
+      <p>Barefoot Baltic is a fully registered and authorised Latvian tour operator. We carry all the insurance, licensing, and government registrations required to operate professionally and keep you safe.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <span class="logo"><img src="/images/logo-ptac.png" alt="PTAC, Consumer Rights Protection Centre"></span>
+        <h3>Registered Tour Operator</h3>
+        <p>Registered with Latvia's <strong>Consumer Rights Protection Centre (PTAC)</strong> as an authorised tourism services provider. Your advance payments are protected by a tour operator bond insurance policy (BTA Policy LV25-35-10000024-5).</p>
+        <a href="https://www.ptac.gov.lv" target="_blank" rel="noopener">Verify at ptac.gov.lv →</a>
+      </div>
+      <div class="trust-card reveal">
+        <span class="logo"><img src="/images/logo-bta.png" alt="BTA Baltic Insurance Company"></span>
+        <h3>Fully Insured for Your Safety</h3>
+        <p>Comprehensive <strong>civil liability insurance</strong> with coverage up to <strong>€1,000,000</strong> per period. Our insurer is AAS "BTA Baltic Insurance Company" (Vienna Insurance Group), one of the leading insurers in the Baltic states.</p>
+      </div>
+      <div class="trust-card reveal">
+        <span class="logo"><img src="/images/logo-atd.png" alt="ATD, Autotransporta direkcija"></span>
+        <h3>Licensed Passenger Transport</h3>
+        <p>Granted <strong>Special Permit (Licence) No. PS-01995</strong> for commercial passenger transport by bus, valid 26.11.2025 to 25.11.2035. An EU Community Licence, authorising us across all EU and EEA member states.</p>
+      </div>
+    </div>
+    <div class="fleet" id="fleet">
+      <div class="fleet-card reveal">
+        <img src="/images/barefoot-baltic-fiat-ducato-9-seater-interior-latvia.jpg" alt="Interior of our 2026 Fiat Ducato 9-seater, comfortable seating for up to 8 passengers." loading="lazy" width="1600" height="900">
+        <div class="fc-body"><p class="fc-tag">Boutique groups · up to 8</p><h4>The 9-Seater, 2026 Fiat Ducato</h4><p>Bought brand new, used exclusively for Barefoot Baltic excursions. Premium high-back seating, panoramic windows, plenty of room to stretch out.</p></div>
+      </div>
+      <div class="fleet-card reveal">
+        <img src="/images/barefoot-baltic-minibus-tour-vehicle-latvia.jpg" alt="Our 2025 Ford Transit minibus, used for small-group day excursions from Riga." loading="lazy" width="1600" height="900">
+        <div class="fc-body"><p class="fc-tag">Small groups · up to 15</p><h4>The 16-Seater, 2025 Ford Transit</h4><p>A modern, air-conditioned minibus, cleaned between every tour and held to the same standards as our smaller vehicle.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <h2 style="font-size:clamp(2rem,1.6rem + 2vw,3rem);margin-bottom:1.2rem">I'd love to hear from you</h2>
+      <p class="contact-intro">Whether you're just beginning to plan your visit or you already have dates in mind, the easiest way to book is to reach out directly. A WhatsApp message, a phone call, or an email, whatever suits you. No forms, no automated replies, just me.</p>
+      <div class="cmethods">
+        <a class="cmethod" href="https://wa.me/37126440152" target="_blank" rel="noopener">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" style="fill:var(--moss)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.683 1.157 2.683.771 3.167.723.484-.045 1.562-.638 1.783-1.255.22-.617.22-1.146.155-1.255-.066-.11-.244-.174-.51-.297z"/></svg></span>
+          <span><span class="cl">WhatsApp</span><span class="cv">+371 2644 0152</span></span>
+        </a>
+        <a class="cmethod" href="tel:+37126440152">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+          <span><span class="cl">Phone</span><span class="cv">+371 2644 0152</span></span>
+        </a>
+        <a class="cmethod" href="mailto:daiga@rondasprints.com">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span><span class="cl">Email</span><span class="cv">daiga@rondasprints.com</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right reveal">
+      <h3>You can also find me on</h3>
+      <p>I understand some travellers prefer booking through a platform they already trust, and that's perfectly fine. Just know that my direct price is always the best one.</p>
+      <div class="social">
+        <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>GetYourGuide</a>
+        <a href="https://www.viator.com/tours/Riga/From-Riga-Guided-Day-Tour-to-Rundale-Palace-and-Bauska-Castle/d4480-5626283P3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Viator</a>
+        <a href="https://www.instagram.com/barefoot_baltic/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram @barefoot_baltic</a>
+        <a href="https://www.youtube.com/@Barefoot_Baltic" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>YouTube @Barefoot_Baltic</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <h2>Questions I get about Riga and Latvia</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary><span>What are the best day trips from Riga?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Honestly, the three I run: <strong>Rundāle Palace</strong> with Bauska Castle and a working brewery to the south, <strong>Sigulda and Cēsis</strong> through the Gauja valley to the northeast, and the <strong>Ķemeri bog walk at sunrise</strong> with a slow pass through Jūrmala's wooden villas on the way home. Rundāle is the big set-piece day. Sigulda is the forest-and-castles day. Ķemeri is the one you tell people about when you get home.</p></div></details>
+      <details class="faq-item"><summary><span>How many days do you need in Riga?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Three full days is the sweet spot. One day for the Old Town and the Art Nouveau district on foot, one day for a proper excursion out of the city, and one day with no plan at all. Two days is enough if you're efficient. Four gets you a second day trip without feeling rushed.</p></div></details>
+      <details class="faq-item"><summary><span>Is Riga worth visiting?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Yes, and I'd say that even if I didn't live here. The Old Town is a proper medieval survivor with the UNESCO listing to prove it. The Art Nouveau district has the densest concentration of that style of any city in Europe. The food scene has quietly become very good in the last five years. What you won't get is big queues, big crowds, or big prices. Riga was voted Europe's second-best destination in 2025 and most people still couldn't find it on a map. That tells you something.</p></div></details>
+      <details class="faq-item"><summary><span>Is Latvia safe for tourists?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Very. Latvia is in the EU, in NATO, and the US State Department puts it at Level 1, the lowest advisory level, the same as France or Germany. The usual city-traveller sense applies, especially around the bus station and a couple of Old Town bars that run stag-weekend traps.</p></div></details>
+      <details class="faq-item"><summary><span>What's the best time of year to visit Latvia?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Late May through early September if you want weather on your side. Long days, warm evenings, Jūrmala's beach season, everything open. June has the most generous light, the sun is up before five and down after ten. August is my personal favourite, slightly quieter than July and the light is softer. December is the other strong season, which surprises people. Riga's Christmas market was voted third in Europe this year, and the hotel prices are a fraction of Vienna or Prague. April and October are the value months if you don't mind a coat. Avoid late January through early March if cold weather upsets you. It's beautiful. It's also genuinely cold, and the daylight is short.</p></div></details>
+      <details class="faq-item"><summary><span>Can you visit Latvia without a car?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Yes, and it's actually how I'd recommend most people do it if they're based in Riga for a few days. The airport bus into town is €2 and runs every ten minutes. Within Riga you can walk everywhere that matters in the Old Town and the Art Nouveau district. For day trips without a car, the Jūrmala train is a delight (€1.50, thirty minutes), Sigulda has a direct train, and Rundāle is doable by public bus via Bauska if you're patient. For the Ķemeri bog at dawn, Cape Kolka, Kuldīga, or rural Latgale, you want either a rental car or a small-group tour. My excursions are built for people who'd rather skip the logistics and just be in the place.</p></div></details>
+      <details class="faq-item"><summary><span>Is the Ķemeri bog walk worth it?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Only at sunrise, and then yes, it's probably the best free thing to do in Latvia. About three kilometres of flat wooden planking across a 10,000-year-old raised bog, with small black pools, carnivorous sundew plants, and a viewing tower. Go at midday in August and it's hot, full, and you'll wonder what the fuss is about. I run this tour at 4:30 AM for a reason.</p></div></details>
+      <details class="faq-item"><summary><span>Rundāle Palace or Sigulda, which day trip should I pick?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Different days, different people. Rundāle is the big baroque set-piece, the one your Instagram friends will recognise: rose gardens, the white ballroom, painted ceilings, and a short drive to Bauska Castle and a proper working brewery for lunch. If you like a day with big rooms, big history, and a glass of beer at the end, pick Rundāle. Sigulda is the forest day. The Gauja valley, two castles (one medieval ruin, one 19th-century neo-Gothic), a cable car over the river, and the little town of Cēsis, which I happen to think is the prettiest in Latvia. If you like walking, trees, and the kind of day where nobody hurries you, pick Sigulda. If you have two days, do both in that order and thank me after.</p></div></details>
+      <details class="faq-item"><summary><span>Do people speak English in Latvia?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>In Riga, yes, everywhere you'll need it. Anyone under forty grew up with English. Anyone over sixty is more likely to have Russian as their second language. Out in the countryside it thins out quickly, which is one of the reasons people book guides for day trips.</p></div></details>
+      <details class="faq-item"><summary><span>What should I bring on a day trip out of Riga?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>Layers, always. Latvian weather has a sense of humour and will give you all four seasons in an afternoon, especially in spring and autumn. Proper walking shoes if we're going somewhere with a boardwalk or castle ruins (trainers are fine, heels are not). A light waterproof even in summer. A warm layer even in August. Sunglasses. The light here is stronger than people expect at our latitude. And a bottle of water, though I always carry spare ones in the van. Don't bother with snacks. I feed you.</p></div></details>
+      <details class="faq-item"><summary><span>How is Latvia different from Lithuania and Estonia?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>People lump us together and we all find it a little funny. Very roughly: Estonia is the tech-forward, Finland-adjacent one with the best-preserved old town (Tallinn). Lithuania is the Catholic, warm-blooded one with the biggest population and the most dramatic history. Latvia is the middle one. Protestant by heritage, quieter in temperament, and the only one with a real Art Nouveau capital. The languages are not mutually intelligible. Latvian and Lithuanian are ancient sister languages (the closest living relatives of Sanskrit, actually), and Estonian is Finno-Ugric, a completely different family. We all take our forests seriously and drink quite a lot of beer. Start with one and come back for the others.</p></div></details>
+      <details class="faq-item"><summary><span>Who are your tours <em>not</em> for?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="faq-a"><p>People who want a packed itinerary and a new stop every twenty minutes. People who prefer a big coach with a microphone and a group of fifty strangers. People who want luxury-spa-level comfort. My van is comfortable but it's a van, not a limousine. If any of that sounds like a deal-breaker, there are plenty of good coach operators in Riga and I'll happily recommend one.</p></div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Barefoot Baltic · Ronda Sprints Solutions SIA · Reg. 40203595104 · Riga, Latvia · <a href="/privacy-policy.html">Privacy Policy</a></p>
+  <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+</footer>
+
+<script>
+// Nav solid-on-scroll
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40);}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+})();
+// Locale dropdown
+(function(){var sw=document.querySelector('.lang-switcher'),tg=document.getElementById('langToggle');if(!sw||!tg)return;
+  function close(){sw.classList.remove('open');tg.setAttribute('aria-expanded','false');}
+  tg.addEventListener('click',function(e){e.stopPropagation();var o=sw.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',function(e){if(!sw.contains(e.target))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
+// Mobile menu
+(function(){var b=document.getElementById('navBurger'),r=document.getElementById('nav-links');if(!b||!r)return;
+  b.addEventListener('click',function(){var o=r.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+// Scroll reveal (defaults visible without JS; this only fires when JS present)
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+// Click-to-play videos (youtube-nocookie, no payload until clicked)
+(function(){
+  document.querySelectorAll('.video-thumb').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var id=btn.getAttribute('data-yt');if(!id)return;
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.title=btn.getAttribute('aria-label')||'Video';f.loading='lazy';
+      f.setAttribute('allow','accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture');
+      f.setAttribute('allowfullscreen','');
+      f.style.cssText='width:100%;aspect-ratio:16/9;border:0;border-radius:6px;display:block';
+      btn.replaceWith(f);
+    });
+  });
+})();
+// Video rail arrows
+(function(){
+  var rail=document.querySelector('.video-rail'),p=document.getElementById('vidPrev'),n=document.getElementById('vidNext');
+  if(!rail||!n)return;
+  function step(){var c=rail.firstElementChild;if(!c)return 360;var g=parseFloat(getComputedStyle(rail).columnGap||getComputedStyle(rail).gap||0)||0;return Math.round(c.getBoundingClientRect().width+g);}
+  function upd(){var max=rail.scrollWidth-rail.clientWidth;p.disabled=rail.scrollLeft<=4;n.disabled=rail.scrollLeft>=max-4;}
+  p.addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:'smooth'});});
+  n.addEventListener('click',function(){rail.scrollBy({left:step(),behavior:'smooth'});});
+  rail.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+})();
+</script>
+
+<style id="edge-feather-pass">
+/* ===== Edge-feather: dissolve rectangles into the ground =====
+   Whole-card feather (panel + any image dissolve together). Borders removed.
+   18px fixed feather < every card's text padding, so copy never fades. */
+.review,.trust-card,.fleet-card,.note,.cmp,.faq-item,.guide,.qf{
+  border:0 !important;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);
+  mask-composite:intersect;
+}
+.note:hover,.cmp:hover{border-color:transparent !important}
+/* keep crisp on purpose: white logo chips, full-bleed colour bands, form inputs */
+.trust-card .logo,.trust-card .logo img{-webkit-mask-image:none !important;mask-image:none !important}
+/* contact tiles: tighter 10px feather (their padding is only 16px) so text stays clear */
+.cmethod{border:0 !important;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 10px,#000 calc(100% - 10px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 10px,#000 calc(100% - 10px),transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 10px,#000 calc(100% - 10px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 10px,#000 calc(100% - 10px),transparent 100%);
+  mask-composite:intersect}
+/* Media-only tiles: a touch more feather, no text to protect. */
+.video-thumb,.gallery a{
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24px,#000 calc(100% - 24px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 24px,#000 calc(100% - 24px),transparent 100%),linear-gradient(to bottom,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);
+  mask-composite:intersect;
+}
+@media (prefers-reduced-motion:reduce){.review,.trust-card,.fleet-card,.note,.video-thumb,.gallery a{}}
+</style>
+<!-- COOKIE / PRIVACY CONSENT -->
+<style id="cookie-consent-styles">
+.cookie-banner{position:fixed;left:clamp(1rem,4vw,2rem);right:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 64px);
+  z-index:200;max-width:440px;background:#16191e;border:1px solid var(--line-strong);border-radius:12px;
+  padding:1.25rem 1.35rem;box-shadow:0 24px 60px rgba(0,0,0,.55);
+  transform:translateY(12px);opacity:0;visibility:hidden;transition:transform .35s var(--ease-out),opacity .35s,visibility .35s}
+.cookie-banner.show{transform:none;opacity:1;visibility:visible}
+.cookie-banner p{margin:0 0 1rem;font-size:.88rem;line-height:1.6;color:var(--ink-soft)}
+.cookie-banner a{color:var(--moss);text-decoration:underline;text-underline-offset:2px}
+.cookie-btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.cookie-btn{font-family:var(--sans);font-size:.86rem;font-weight:600;cursor:pointer;border-radius:999px;
+  padding:.6rem 1.25rem;border:1px solid transparent;transition:background .2s,border-color .2s,color .2s}
+.cookie-btn.accept{background:var(--carmine);color:#fff}
+.cookie-btn.accept:hover{background:var(--carmine-deep)}
+.cookie-btn.decline{background:transparent;color:var(--ink-soft);border-color:var(--line-strong)}
+.cookie-btn.decline:hover{border-color:var(--ink-soft);color:var(--ink)}
+@media(max-width:560px){
+  .cookie-banner{left:.8rem;right:.8rem;max-width:none;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);padding:1.1rem}
+  .cookie-btn{flex:1 1 auto;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.cookie-banner{transition:opacity .2s}}
+</style>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+  <div class="cookie-inner">
+    <p>This website uses cookies to improve your experience. We only use essential cookies for basic site functionality and analytics to understand how visitors use the site. No advertising or tracking cookies are used. Read our <a href="/privacy-policy.html">Privacy Policy</a> for details.</p>
+    <div class="cookie-btns">
+      <button class="cookie-btn accept" type="button" onclick="acceptCookies()">Accept</button>
+      <button class="cookie-btn decline" type="button" onclick="declineCookies()">Essential only</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function getCookie(n){return document.cookie.split('; ').reduce(function(a,c){var p=c.split('=');return p[0]===n?decodeURIComponent(p[1]):a;},'');}
+  function setCookie(n,v,days){var d=new Date();d.setTime(d.getTime()+days*864e5);document.cookie=n+'='+encodeURIComponent(v)+'; expires='+d.toUTCString()+'; path=/; SameSite=Lax';}
+  var banner=document.getElementById('cookieBanner');
+  window.acceptCookies=function(){setCookie('cookie_consent','accepted',365);if(banner)banner.classList.remove('show');};
+  window.declineCookies=function(){setCookie('cookie_consent','essential',365);if(banner)banner.classList.remove('show');};
+  if(banner && !getCookie('cookie_consent')){
+    setTimeout(function(){banner.classList.add('show');},1200);
+  }
+})();
+</script>
+<script>
+(function(){
+  var COUNTRY={lv:'Latvia',ee:'Estonia',lt:'Lithuania',fi:'Finland',pl:'Poland',gb:'United Kingdom',
+    fr:'France',ch:'Switzerland',it:'Italy',si:'Slovenia',hr:'Croatia',es:'Spain',pt:'Portugal',nl:'Netherlands',be:'Belgium'};
+  var LABEL={
+    type:{day:'Day excursion',multi:'Multi-day road trip'},
+    country:COUNTRY,
+    duration:{daytrip:'Day trip',week:'8-9 days',fortnight:'14 days'},
+    price:{'p-day':'Under €100','p-mid':'€700-999','p-high':'€1000+'},
+    theme:{nature:'Nature',heritage:'Heritage',city:'City',adventure:'Adventure',food:'Food'}
+  };
+  var FORDER=['type','country','duration','price','theme'];
+  var tiles=[].slice.call(document.querySelectorAll('#excursions article.exc'));
+  if(!tiles.length)return;
+  function tvals(t,k){return (t.dataset[k]||'').split(' ').filter(Boolean);}
+  var sel={};FORDER.forEach(function(k){sel[k]=new Set();});
+  var touched=false;
+  function matches(t,ignore){
+    for(var i=0;i<FORDER.length;i++){var k=FORDER[i];if(k===ignore)continue;var s=sel[k];if(!s.size)continue;
+      var v=tvals(t,k),hit=false;for(var j=0;j<v.length;j++){if(s.has(v[j])){hit=true;break;}}if(!hit)return false;}
+    return true;}
+  function order(k){
+    var present={};tiles.forEach(function(t){tvals(t,k).forEach(function(v){present[v]=(present[v]||0)+1;});});
+    var keys=Object.keys(present);
+    if(k==='country')return keys.sort(function(a,b){return present[b]-present[a]||(COUNTRY[a]||a).localeCompare(COUNTRY[b]||b);});
+    var pref=Object.keys(LABEL[k]||{});return keys.sort(function(a,b){return pref.indexOf(a)-pref.indexOf(b);});
+  }
+  var chips=document.getElementById('excChips'),count=document.getElementById('excCount'),clr=document.getElementById('excClear');
+  function render(){
+    chips.innerHTML='';
+    FORDER.forEach(function(k){
+      var vals=order(k);
+      if(vals.length<2)return;                       // ADAPTIVE: hide single-value facets
+      vals.forEach(function(v){
+        var c=tiles.filter(function(t){return tvals(t,k).indexOf(v)>=0&&matches(t,k);}).length;
+        var b=document.createElement('button');b.className='exc-fchip'+(sel[k].has(v)?' on':'');
+        b.innerHTML=((LABEL[k]&&LABEL[k][v])||v)+'<span class="ct">'+c+'</span>';
+        if(c===0&&!sel[k].has(v)){b.disabled=true;b.classList.add('off');}
+        b.onclick=function(){sel[k].has(v)?sel[k].delete(v):sel[k].add(v);touched=true;render();};
+        chips.appendChild(b);});
+    });
+    var shown=0;tiles.forEach(function(t){
+      var vis=matches(t,null);
+      t.classList.toggle('exc-hidden',!vis);
+      if(vis&&touched)t.classList.add('in');         // REVEAL FIX: don't leave a shown tile at opacity:0
+      if(vis)shown++;});
+    count.textContent=shown+(shown===1?' trip':' trips');
+    clr.hidden=!FORDER.some(function(k){return sel[k].size;});
+  }
+  clr.onclick=function(){FORDER.forEach(function(k){sel[k].clear();});touched=true;render();};
+  render();
+})();
+</script>
+</body>
+</html>

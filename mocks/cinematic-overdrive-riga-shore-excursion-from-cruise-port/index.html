@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════════
+  OFF-PROD DIRECTION STUDY — excursion detail page in the cinematic
+  `overdrive` language (matches _mockups/cinematic-overdrive/ homepage).
+  Riga Shore Excursion from the Cruise Port. Not deployed.
+  Real Barefoot Baltic content + photography. Price confirmed against the
+  live page (€80 / adult; children under 12 reduced rate, quoted on
+  booking — no fixed child figure published, so none is shown here).
+  This product is sold direct, not on GetYourGuide/Viator, so there is
+  NO three-way OTA price table — the live page compares against
+  cruise-line and booking-desk listings, and that framing is kept.
+  Reviews verbatim (Hard Rule #3): the three Tripadvisor reviews are the
+  page's own, reproduced word for word. The video reel is omitted because
+  no shore-excursion clips have been shot yet (live page shows a
+  placeholder); the gap is logged, not faked. FAQ is the full live set.
+  Booking widget is a working demo (live total); production wires the
+  real multi-step Bókun reserve flow.
+  No side-stripes, no colored-glow-on-dark, no glassmorphism, no serif
+  italics, no per-section eyebrows. Substantial sticky booking rail.
+  ════════════════════════════════════════════════════════════════════
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riga Shore Excursion from the Cruise Port — Barefoot Baltic</title>
+<meta name="description" content="A curated six-hour Riga shore excursion for cruise passengers. Met by name at the terminal, a licensed women-led Riga guide, furthest-first routing and a 90-minute port buffer so you are always heading back toward your ship. Book direct from €80.">
+<meta property="og:title" content="Riga Shore Excursion from the Cruise Port — Barefoot Baltic">
+<meta property="og:description" content="A curated six-hour day ashore for cruise passengers. Met by name at the terminal, licensed women-led guide, furthest-first routing, 90-minute port buffer. From €80.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/riga-old-town-aerial-daugava-river-latvia.jpg">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0c0e;--bg-2:#101216;--surface:#16191e;--surface-2:#1d2127;
+  --line:rgba(244,241,234,.12);--line-strong:rgba(244,241,234,.22);
+  --ink:#f4f1ea;--ink-soft:#cdc8bd;--ink-mute:#9a958b;
+  --carmine:#c0294a;--carmine-deep:#9e1b32;--amber:#d8a24a;--moss:#7c9a6b;
+  --serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:clamp(1rem,.96rem + .25vw,1.1rem);line-height:1.7;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0 0 1rem}a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+.skip{position:absolute;left:-999px;top:0;background:var(--carmine);color:#fff;padding:.7rem 1.1rem;z-index:300}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;font-size:1rem;
+  padding:.85rem 1.5rem;border-radius:999px;cursor:pointer;border:1px solid transparent;font-family:var(--sans);
+  transition:background .25s,transform .15s var(--ease),border-color .25s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--carmine);color:#fff}.btn-primary:hover{background:var(--carmine-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--ink-soft);border-color:var(--line)}.btn-outline:hover{border-color:var(--ink-soft);color:var(--ink)}
+.btn:active{transform:scale(.97)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.1rem,4vw,2.5rem);transition:background .4s var(--ease),border-color .4s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(8,9,11,.96);border-bottom-color:var(--line)}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.18rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.55rem}
+.brand .dot{width:9px;height:9px;background:var(--carmine);border-radius:50%}
+.nav-links{display:flex;gap:1.5rem;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;font-weight:500;transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{text-decoration:none;background:var(--carmine);color:#fff;font-weight:600;font-size:.9rem;padding:.72rem 1.2rem;border-radius:999px}
+.nav-cta:hover{background:var(--carmine-deep)}
+@media(max-width:900px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2;background:url('/images/riga-old-town-aerial-daugava-river-latvia.jpg') center/cover no-repeat;
+  animation:kb 26s var(--ease) forwards;will-change:transform}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,12,14,.5) 0%,rgba(11,12,14,.1) 30%,rgba(11,12,14,.35) 60%,rgba(11,12,14,.94) 100%)}
+.hero-inner{padding:10rem 0 clamp(2.5rem,6vh,5rem);max-width:760px}
+.crumb{font-size:.85rem;color:var(--ink-mute);margin-bottom:1.4rem}
+.crumb a{color:var(--ink-mute);text-decoration:none}.crumb a:hover{color:var(--ink-soft)}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.2rem}
+.hero-kicker::before{content:"";width:30px;height:1px;background:var(--carmine)}
+.hero h1{font-size:clamp(2.4rem,1.8rem + 4vw,4.6rem);font-weight:700;line-height:1.0;letter-spacing:-.035em;margin-bottom:1.2rem}
+.hero-sub{font-size:clamp(1.05rem,1rem + .4vw,1.25rem);color:var(--ink-soft);max-width:52ch;margin-bottom:1.8rem}
+.hero-creds{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-bottom:1.8rem}
+.hero-cred{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--ink-soft)}
+.hero-cred svg{width:20px;height:20px;color:var(--amber);flex:none}
+.hero-cred em{font-style:normal;color:var(--ink-mute);font-size:.78rem;display:block}
+.js .hero-inner > *{opacity:0;transform:translateY(22px);animation:rise .85s var(--ease-out) forwards}
+.js .hero-inner > *:nth-child(1){animation-delay:.1s}.js .hero-inner > *:nth-child(2){animation-delay:.22s}
+.js .hero-inner > *:nth-child(3){animation-delay:.34s}.js .hero-inner > *:nth-child(4){animation-delay:.46s}
+.js .hero-inner > *:nth-child(5){animation-delay:.58s}.js .hero-inner > *:nth-child(6){animation-delay:.7s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* TRUST BAR */
+.trustbar{background:var(--carmine-deep);color:#fff}
+.trustbar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;padding:.9rem clamp(1.1rem,4vw,2.5rem);font-size:.88rem}
+.trustbar span{display:inline-flex;align-items:center;gap:.5rem}
+.trustbar svg{width:15px;height:15px;color:#fff;opacity:.9}
+.trustbar .key{font-weight:700}
+
+/* QUICK FACTS */
+.qf-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:clamp(2rem,5vh,3.5rem) 0}
+.qf{background:var(--surface);padding:1.2rem 1.3rem;display:flex;align-items:center;gap:.85rem}
+.qf svg{width:22px;height:22px;color:var(--amber);flex:none}
+.qf b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-mute);font-weight:600;margin-bottom:.15rem}
+.qf span{font-size:.92rem;font-weight:500}
+
+/* DETAIL LAYOUT */
+.detail{display:grid;grid-template-columns:1fr 370px;gap:clamp(2rem,5vw,4.5rem);align-items:start;
+  padding:clamp(2.5rem,6vh,4.5rem) 0}
+.detail-main > h2{font-size:clamp(1.7rem,1.4rem + 1.4vw,2.4rem);margin:clamp(2.5rem,5vh,3.5rem) 0 1.2rem}
+.detail-main > h2:first-of-type{margin-top:0}
+.detail-main > p{color:var(--ink-soft);max-width:64ch}
+@media(max-width:920px){.detail{grid-template-columns:1fr}.book-wrap{position:static;order:-1}}
+
+/* HIGHLIGHTS */
+.highlights{display:flex;flex-direction:column;gap:.9rem;margin-top:.5rem}
+.hl{display:flex;gap:.85rem;color:var(--ink-soft);line-height:1.55;font-size:1rem}
+.hl svg{width:20px;height:20px;color:var(--carmine);flex:none;margin-top:3px}.hl strong{color:var(--ink)}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:140px;gap:.6rem;margin:clamp(2rem,4vh,2.6rem) 0}
+.gallery a{display:block;border-radius:6px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gallery a:hover img{transform:scale(1.06)}
+.gallery a:first-child{grid-column:1;grid-row:1/3}
+@media(max-width:560px){.gallery{grid-template-columns:1fr 1fr}.gallery a:first-child{grid-column:1/3;grid-row:auto;aspect-ratio:16/9}}
+
+/* FOLD */
+.fold{margin:1.2rem 0 0}.fold > p{color:var(--ink-soft);max-width:64ch}
+.fold > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;color:var(--carmine);
+  font-weight:600;font-size:.95rem;padding:.3rem 0}
+.fold > summary::-webkit-details-marker{display:none}
+.fold > summary .chev{width:15px;height:15px;transition:transform .25s}.fold[open] > summary .chev{transform:rotate(180deg)}
+.fold .more-lbl{display:inline}.fold[open] .more-lbl{display:none}.fold .less-lbl{display:none}.fold[open] .less-lbl{display:inline}
+
+/* TIMELINE (1px spine, no side-stripe) */
+.timeline{margin:1.4rem 0 0}
+.t-stop{display:grid;grid-template-columns:4.4rem 1fr;gap:1.2rem}
+.t-time{font-family:var(--serif);font-weight:600;color:var(--amber);font-size:.98rem;text-align:right;padding-top:.1rem;white-space:nowrap}
+.t-content{border-left:1px solid var(--line);padding:0 0 2rem 1.5rem;position:relative}
+.t-content::before{content:"";position:absolute;left:-6px;top:.45rem;width:11px;height:11px;border-radius:50%;
+  background:var(--carmine);box-shadow:0 0 0 4px var(--bg)}
+.t-stop:last-child .t-content{border-left-color:transparent;padding-bottom:0}
+.t-content h4{font-size:1.1rem;margin-bottom:.35rem}.t-content p{margin:0;color:var(--ink-soft);font-size:.92rem}
+
+/* INCLUDED */
+.inc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,2.5rem);margin-top:.5rem}
+.inc h3{font-size:1.15rem;margin-bottom:1rem}
+.inc-item{display:flex;gap:.65rem;font-size:.94rem;color:var(--ink-soft);margin-bottom:.8rem;line-height:1.5}
+.inc-item svg{width:18px;height:18px;flex:none;margin-top:2px}
+.inc .yes svg{color:var(--moss)}.inc .no svg{color:var(--ink-mute)}.inc strong{color:var(--ink)}
+@media(max-width:560px){.inc{grid-template-columns:1fr;gap:1.5rem}}
+
+/* BOOKING RAIL */
+.book-wrap{position:sticky;top:90px}
+.book-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.8rem 1.6rem;overflow:hidden}
+.book-card .accent{height:3px;margin:-1.8rem -1.6rem 1.4rem;background:var(--carmine)}
+.bc-from{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--amber);font-weight:600;margin-bottom:.3rem}
+.bc-price{font-family:var(--serif);font-size:2.2rem;font-weight:600;line-height:1;margin-bottom:1.3rem}
+.bc-price small{font-family:var(--sans);font-size:.8rem;font-weight:400;color:var(--ink-mute)}
+.bk-field{display:block;margin-bottom:1rem}
+.bk-field span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-mute);font-weight:600;margin-bottom:.35rem}
+.bk-field input{width:100%;font-family:var(--sans);font-size:1rem;padding:.65rem .7rem;border:1px solid var(--line);
+  border-radius:7px;background:var(--bg);color:var(--ink);color-scheme:dark}
+.bk-step{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0}
+.bk-step .lbl{font-size:.94rem;font-weight:500}.bk-step .lbl em{font-style:normal;color:var(--ink-mute);font-size:.76rem;display:block}
+.bk-pm{display:flex;align-items:center;gap:.7rem}
+.bk-pm button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);
+  font-size:1.1rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.bk-pm button:hover{border-color:var(--carmine);color:var(--carmine)}
+.bk-pm b{min-width:1.3rem;text-align:center;font-weight:600}
+.bk-note{font-size:.82rem;color:var(--ink-mute);line-height:1.5;margin:.2rem 0 1rem}
+.bk-summary{border-top:1px solid var(--line);margin-top:.9rem;padding-top:1rem;margin-bottom:1.2rem}
+.bk-line{display:flex;justify-content:space-between;font-size:.92rem;color:var(--ink-soft);margin-bottom:.5rem}
+.bk-line b{color:var(--ink)}.bk-line.today{font-size:1.02rem;color:var(--moss);font-weight:600}.bk-line.today b{color:var(--moss)}
+.bc-btn{width:100%;justify-content:center;font-size:1.05rem;padding:.9rem}
+.bk-reassure{font-size:.78rem;color:var(--ink-mute);line-height:1.55;margin:.9rem 0 0}
+.bc-msg{display:block;text-align:center;margin-top:.8rem;font-size:.9rem;color:var(--moss);text-decoration:none;font-weight:600}
+.bc-msg:hover{text-decoration:underline}
+.bk-extra{border-top:1px solid var(--line);margin-top:1.2rem;padding-top:1.2rem}
+.bk-save{display:flex;gap:.55rem;align-items:flex-start;font-size:.92rem;font-weight:600;color:var(--moss);margin:0 0 1rem}
+.bk-save svg{width:17px;height:17px;flex:none;margin-top:2px}
+.bk-badges{display:flex;flex-direction:column;gap:.6rem}
+.bk-badges span{display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:var(--ink-mute)}
+.bk-badges svg{width:15px;height:15px;flex:none;color:var(--moss)}
+.bk-done{text-align:center;padding:1.5rem 0}
+.bk-check{width:54px;height:54px;border-radius:50%;background:var(--moss);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.bk-done h4{font-size:1.3rem;margin-bottom:.5rem}.bk-done p{font-size:.92rem;color:var(--ink-soft)}
+
+/* WIDE BAND (route, practical) */
+.band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2{font-size:clamp(1.7rem,1.4rem + 1.4vw,2.4rem);margin-bottom:1rem}
+.routemap p{color:var(--ink-soft);max-width:64ch;font-size:.95rem}
+.routemap iframe{width:100%;height:400px;border:0;border-radius:8px;margin-top:1.2rem;filter:saturate(.9) brightness(.92)}
+.practical{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,5vw,3.5rem);margin-top:clamp(3rem,6vh,4.5rem);align-items:start}
+.gtk{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;margin-top:.5rem}
+.gtk-item h4{font-size:1.02rem;margin-bottom:.4rem}.gtk-item p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.55}
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.8rem}
+.guide-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.guide-top img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.guide-top .sub{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--amber);font-weight:600}
+.guide h3{font-size:1.3rem}.guide h4{font-size:1rem;margin:1.1rem 0 .3rem}.guide p{font-size:.92rem;color:var(--ink-soft);margin:0}
+@media(max-width:760px){.practical{grid-template-columns:1fr}.gtk{grid-template-columns:1fr}}
+
+/* WHY DIRECT */
+.compare{border-top:1px solid var(--line)}
+.compare h2{text-align:center;font-size:clamp(1.8rem,1.4rem + 1.8vw,2.6rem);margin-bottom:.5rem}
+.compare-sub{text-align:center;color:var(--ink-soft);margin-bottom:clamp(2rem,5vh,3rem);max-width:60ch;margin-left:auto;margin-right:auto}
+.compare-grid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:1.2rem;align-items:center;max-width:880px;margin:0 auto}
+.cmp{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.9rem 1.4rem;text-align:center}
+.cmp h3{font-size:1.05rem;margin-bottom:.7rem;color:var(--ink-mute);font-weight:500}
+.cmp-price{font-family:var(--serif);font-size:2.2rem;font-weight:600}
+.cmp-child{font-size:.88rem;color:var(--ink-mute);margin-bottom:1.1rem}
+.cmp .btn{width:100%;justify-content:center;font-size:.9rem}
+.cmp-direct{background:var(--surface-2);border:2px solid var(--carmine);position:relative;padding-top:2.3rem;transform:scale(1.04)}
+.cmp-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--carmine);color:#fff;
+  font-size:.74rem;font-weight:600;letter-spacing:.03em;padding:.35rem .9rem;border-radius:999px;white-space:nowrap}
+.cmp-direct h3{color:var(--ink)}.cmp-direct .cmp-price{font-size:2.7rem}
+.cmp-save{font-size:.78rem;color:var(--moss);font-weight:600;margin-bottom:1.1rem}
+.compare-note{text-align:center;color:var(--ink-mute);font-size:.9rem;margin-top:clamp(1.5rem,4vh,2.2rem)}
+@media(max-width:720px){.compare-grid{grid-template-columns:1fr;max-width:400px}.cmp-direct{transform:none}}
+.trust-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2.2rem;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.trust-strip span{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--ink-soft)}
+.trust-strip svg{width:18px;height:18px;color:var(--moss)}
+
+/* REVIEWS */
+.reviews{background:var(--bg-2);border-top:1px solid var(--line)}
+.rev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.2rem;margin-bottom:clamp(2rem,4vh,2.6rem)}
+.rev-stars{color:var(--amber);letter-spacing:.15em;font-size:1.15rem}
+.rev-rating{font-family:var(--serif);font-size:1.5rem;font-weight:600}.rev-count{color:var(--ink-mute);font-size:.9rem}
+.rev-grid{column-count:2;column-gap:1.4rem}
+@media(max-width:680px){.rev-grid{column-count:1}}
+.rev{break-inside:avoid;-webkit-column-break-inside:avoid;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.6rem;margin-bottom:1.4rem}
+.rev .s{color:var(--amber);letter-spacing:.12em;font-size:.95rem;margin-bottom:.8rem}
+.rev-q{font-size:1rem;line-height:1.62;color:var(--ink-soft);margin-bottom:1.2rem}
+.rev-by{display:flex;align-items:center;gap:.7rem}
+.rev-av{width:40px;height:40px;border-radius:50%;background:var(--surface-2);color:var(--amber);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;flex:none}
+.rev-by strong{display:block;font-size:.94rem}.rev-by span{font-size:.8rem;color:var(--ink-mute)}.rev-src{font-size:.78rem;color:var(--ink-mute);margin-top:.8rem}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq h2{text-align:center;font-size:clamp(1.8rem,1.4rem + 1.8vw,2.6rem);margin-bottom:clamp(2rem,4vh,2.6rem)}
+.faq-list{max-width:820px;margin:0 auto}
+details.q{border-bottom:1px solid var(--line)}
+details.q summary{list-style:none;cursor:pointer;padding:1.3rem 0;display:flex;justify-content:space-between;gap:1rem;
+  font-family:var(--serif);font-size:1.12rem;font-weight:600}
+details.q summary::-webkit-details-marker{display:none}
+details.q .chev{flex:none;width:21px;height:21px;color:var(--carmine);transition:transform .3s}
+details.q[open] .chev{transform:rotate(180deg)}
+details.q .a{color:var(--ink-soft);padding-bottom:1.4rem;max-width:72ch;font-size:.97rem}
+details.q .a strong{color:var(--ink)}
+.faq-more{text-align:center;margin-top:1.8rem;font-size:.88rem;color:var(--ink-mute)}
+
+/* RESERVE */
+.reserve{background:var(--carmine);color:#fff;text-align:center}
+.reserve .wrap{padding:clamp(4rem,9vh,7rem) 1.5rem;max-width:640px}
+.reserve h2{color:#fff;font-size:clamp(2rem,1.5rem + 2.4vw,3rem);margin-bottom:1rem}
+.reserve p{color:rgba(255,255,255,.92);font-size:1.1rem;max-width:50ch;margin:0 auto 1.8rem}
+.reserve .btn{background:#fff;color:var(--carmine-deep);font-size:1.05rem;padding:.95rem 1.9rem}
+.reserve .btn:hover{background:#f4f1ea;transform:translateY(-2px)}
+.reserve-note{margin-top:1.1rem;font-size:.88rem;color:rgba(255,255,255,.82)}
+
+footer{background:#070809;border-top:1px solid var(--line);padding:3rem 0;text-align:center}
+footer .stamp{font-family:var(--serif);color:var(--amber);letter-spacing:.1em;margin-bottom:.5rem}
+footer p{color:var(--ink-mute);font-size:.85rem;max-width:70ch;margin:0 auto .8rem}footer a{color:var(--moss)}
+.flag-bar{display:flex;justify-content:center;margin-top:1.4rem}
+.flag-bar span{width:54px;height:5px}.flag-bar span:nth-child(1),.flag-bar span:nth-child(3){background:var(--carmine-deep)}.flag-bar span:nth-child(2){background:var(--ink)}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-img{animation:none;transform:none}
+  .js .hero-inner > *{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .gallery img{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <a class="brand" href="/"><span class="dot" aria-hidden="true"></span>Barefoot&nbsp;Baltic</a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#itinerary">Itinerary</a></li>
+    <li><a href="#included">Included</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a class="nav-cta" href="#book">Reserve</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-img" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="crumb"><a href="/">Home</a> / <a href="/#excursions">Excursions</a> / Riga Shore Excursion from the Cruise Port</p>
+    <span class="hero-kicker">Cruise day ashore · Riga</span>
+    <h1>Riga shore excursion from the cruise port</h1>
+    <p class="hero-sub">A curated six-hour day ashore for cruise passengers. Met by name at the terminal, a licensed women-led Riga guide, and a day planned backwards from your sailing time so you are always heading back toward the ship.</p>
+    <div class="hero-creds">
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>PTAC &amp; ATD registered</strong><em>Latvia's tour-operator licences</em></span></div>
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><strong>90-minute port buffer</strong><em>Built into every itinerary</em></span></div>
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span><strong>Licensed Riga guide</strong><em>Women-led, on every tour</em></span></div>
+    </div>
+    <a href="#book" class="btn btn-ghost">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</header>
+
+<div class="trustbar"><div class="wrap">
+  <span class="key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Reserve today, nothing to pay right now</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Planned backwards from your sailing time</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg> Free cancellation up to 24 hours</span>
+</div></div>
+
+<div class="wrap"><div class="qf-strip">
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Duration</b><span>About 6 hours ashore</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><div><b>Group size</b><span>Up to 8 guests</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Pickup</b><span>Riga cruise terminal</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg><div><b>Languages</b><span>English &amp; Latvian</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><div><b>Confirmation</b><span>Instant, free cancellation</span></div></div>
+</div></div>
+
+<div class="wrap"><div class="detail">
+  <div class="detail-main" id="overview">
+
+    <h2 class="reveal">Highlights</h2>
+    <div class="highlights reveal">
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Met by name at the cruise terminal</strong>, so you step off the gangway straight into the day without hunting through a crowd for a meeting point.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Alberta iela Art Nouveau quarter</strong>, the most concentrated collection of Art Nouveau architecture in Europe, with the stories behind the dragons, masks and sphinxes.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>The Freedom Monument and the Esplanade</strong>, Latvia's most important national symbol, with the Orthodox cathedral and the National Opera on the way.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Riga Old Town on foot</strong>, Dome Square and the cathedral, the House of Blackheads, St Peter's Church, the Three Brothers and the Powder Tower.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Furthest-first routing</strong>, so every leg of the day brings you closer to the ship, with a 90-minute port buffer before all-aboard.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Private, for your group only</strong>, with a guide who earns nothing from souvenir-shop commissions and never pads the day with selling.</span></div>
+    </div>
+
+    <div class="gallery reveal">
+      <a href="/images/riga-old-town-aerial-daugava-river-latvia.jpg" target="_blank" rel="noopener"><img src="/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="Aerial view of Riga Old Town and the Daugava river" loading="lazy"></a>
+      <a href="/images/riga-art-nouveau-alberta-iela-facades-latvia.jpg" target="_blank" rel="noopener"><img src="/images/riga-art-nouveau-alberta-iela-facades-latvia.jpg" alt="Ornate Art Nouveau facades on Alberta iela, Riga" loading="lazy"></a>
+      <a href="/images/riga-central-market-pavilions-latvia.jpg" target="_blank" rel="noopener"><img src="/images/riga-central-market-pavilions-latvia.jpg" alt="The five pavilions of Riga Central Market" loading="lazy"></a>
+      <a href="/images/riga-house-of-blackheads-town-hall-square-latvia.jpg" target="_blank" rel="noopener"><img src="/images/riga-house-of-blackheads-town-hall-square-latvia.jpg" alt="The House of Blackheads on Town Hall Square, Riga" loading="lazy"></a>
+      <a href="/images/riga-st-peters-church-spire-rooftops-latvia.jpg" target="_blank" rel="noopener"><img src="/images/riga-st-peters-church-spire-rooftops-latvia.jpg" alt="View over Riga rooftops from St Peter's Church spire" loading="lazy"></a>
+    </div>
+
+    <h2 class="reveal">A six-hour day built for the cruise-ship clock</h2>
+    <p class="reveal">When your ship docks in Riga you have one shot at the city, and the clock is the enemy. This excursion exists to solve exactly that. Every choice in the day, from the order of the stops to the 90-minute buffer before sailing, is built around the one promise that matters most to a cruise passenger. You will be back on board in good time, relaxed and unhurried.</p>
+    <details class="fold reveal">
+      <summary><span class="more-lbl">Read the full day</span><span class="less-lbl">Show less</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <p>You will be met by name at the cruise terminal by your guide, a licensed Riga specialist who lives in the city. There is no hunting for a meeting point, no app, no laminated sign in a crowd. From there the day unfolds at a humane pace, furthest stop first so the drive is always toward the ship, never away from it.</p>
+      <p>This is a private tour for your group only, with a guide who earns nothing from shop commissions and has no reason to pad the day with selling. What you get is Riga itself, explained by someone who knows it intimately and wants you to love it as much as she does.</p>
+    </details>
+
+    <h2 id="itinerary" class="reveal">Your six hours, step by step</h2>
+    <div class="timeline reveal">
+      <div class="t-stop"><div class="t-time">1</div><div class="t-content"><h4>Pickup at the Riga Passenger Terminal</h4><p>Your guide meets you by name on the quay, steps from where you disembark. There is no taxi to find and no tram to puzzle out. We confirm your must-sees and your sailing time, then set off.</p></div></div>
+      <div class="t-stop"><div class="t-time">2</div><div class="t-content"><h4>Drive to the farthest stop, the Art Nouveau quarter</h4><p>We start at the far end of the city so every leg after this brings you closer to the ship. Alberta iela, the most concentrated collection of Art Nouveau architecture in Europe, with the stories behind the dragons, masks and sphinxes on the facades.</p></div></div>
+      <div class="t-stop"><div class="t-time">3</div><div class="t-content"><h4>Loop back via the Freedom Monument and the Esplanade</h4><p>The Freedom Monument, Latvia's most important national symbol, and a walk through the Esplanade park. We pass the Orthodox cathedral and the National Opera on the way.</p></div></div>
+      <div class="t-stop"><div class="t-time">4</div><div class="t-content"><h4>Riga Old Town, Dome Square, Cathedral, House of Blackheads</h4><p>Into the medieval core on foot. Dome Square and the cathedral, the House of Blackheads, the cobbled lanes, and the stories of the Hanseatic merchants who built the city.</p></div></div>
+      <div class="t-stop"><div class="t-time">5</div><div class="t-content"><h4>St Peter's Church, Three Brothers, Powder Tower</h4><p>The landmarks that make Riga's skyline, plus a quieter corner most tours skip. Time for photos, a coffee, or a quick browse before we head back.</p></div></div>
+      <div class="t-stop"><div class="t-time">6</div><div class="t-content"><h4>Drop-off at the cruise terminal</h4><p>Back at the ship 90 minutes before sailing time, with a comfortable buffer before all-aboard and no last-minute sprint up the gangway.</p></div></div>
+    </div>
+
+    <h2 id="included" class="reveal">What's included</h2>
+    <div class="inc reveal">
+      <div class="yes">
+        <h3>Included</h3>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Private licensed Riga guide for about 6 hours</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Hotel-style meet by name at the cruise terminal</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Air-conditioned vehicle for the drive legs</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>All driving, fuel and parking within the city</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>A day planned around your ship's sailing time</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Furthest-first routing with a 90-minute port buffer</span></div>
+      </div>
+      <div class="no">
+        <h3>Not included</h3>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Gratuities (appreciated, never expected)</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Food and drinks (your guide points out the good spots)</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Entry tickets to interiors if you choose to go in</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Hotel or accommodation (this is a day ashore)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY BOOKING RAIL -->
+  <aside class="book-wrap" id="book">
+    <div class="book-card">
+      <div class="accent" aria-hidden="true"></div>
+      <div class="bk-form" id="bkForm">
+        <p class="bc-from">Book direct with Barefoot Baltic</p>
+        <div class="bc-price">&euro;80 <small>/ adult</small></div>
+        <label class="bk-field"><span>Date ashore</span><input type="date" id="bkDate"></label>
+        <div class="bk-step"><span class="lbl">Adults</span><div class="bk-pm"><button type="button" data-step="a" data-d="-1" aria-label="One fewer adult">&minus;</button><b id="bkA">2</b><button type="button" data-step="a" data-d="1" aria-label="One more adult">+</button></div></div>
+        <p class="bk-note">Children under 12 travel at a reduced rate. Tell us their ages when you book and we will quote it.</p>
+        <div class="bk-summary">
+          <div class="bk-line"><span>Tour total</span><b id="bkTotal">&euro;160</b></div>
+          <div class="bk-line"><span>Pay on the day</span><b id="bkDep">&euro;160</b></div>
+          <div class="bk-line today"><span>To pay today</span><b>&euro;0</b></div>
+        </div>
+        <button class="btn btn-primary bc-btn" id="bkReserve">Reserve your spot</button>
+        <p class="bk-reassure">Nothing to pay today. Reserve your place now and pay in person on the day your ship is in, cash or card.</p>
+        <a class="bc-msg" href="https://wa.me/37126440152" target="_blank" rel="noopener">or message Daiga on WhatsApp</a>
+        <div class="bk-extra">
+          <p class="bk-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Best-price guarantee. About 43% less than the cruise-line booking desk.</p>
+          <div class="bk-badges">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Registered tour operator (PTAC)</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed passenger transport (ATD)</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 90-minute port buffer on every itinerary</span>
+          </div>
+        </div>
+      </div>
+      <div class="bk-done" id="bkDone" hidden>
+        <div class="bk-check" aria-hidden="true">&check;</div>
+        <h4>Day held</h4>
+        <p>Your day ashore is reserved. I will message you to confirm your ship, your sailing time and the meeting point. There is nothing to pay until we meet in person on the day.</p>
+      </div>
+    </div>
+  </aside>
+
+</div></div>
+<!-- WIDE BAND: route, practical -->
+<section class="section band" style="padding:clamp(3.5rem,7vh,6rem) 0">
+  <div class="wrap">
+    <div class="routemap reveal">
+      <h2>The route, on the map</h2>
+      <p>The loop we usually run, furthest stop first so the drive is always back toward your ship. The exact order flexes with your sailing time and the day's traffic.</p>
+      <iframe src="https://www.google.com/maps?q=Riga+Old+Town,+Latvia&output=embed" title="Map of Riga Old Town" loading="lazy"></iframe>
+    </div>
+    <div class="practical">
+      <div class="reveal">
+        <h2>Good to know</h2>
+        <div class="gtk">
+          <div class="gtk-item"><h4>What we need at booking</h4><p>Your ship name and sailing time so we can plan the day backwards from all-aboard. The earlier you book, the better we can tailor it.</p></div>
+          <div class="gtk-item"><h4>What to wear and pack</h4><p>Comfortable walking shoes for cobblestones, a layer for the Baltic breeze, and your ship card and ID. Riga Old Town is walkable but the stones are uneven.</p></div>
+          <div class="gtk-item"><h4>Accessibility and fitness</h4><p>A gentle day with short walks between stops. Tell us about any mobility needs and we adapt the route. Most of the walking is flat, on cobblestones.</p></div>
+          <div class="gtk-item"><h4>If your ship is delayed or skips Riga</h4><p>Free cancellation up to 24 hours before. If your ship skips Riga for weather or itinerary changes, you get a full refund, no questions.</p></div>
+          <div class="gtk-item"><h4>Weather</h4><p>We run rain or shine. Riga is lovely in the rain and we adjust the indoor-outdoor balance to keep you comfortable whatever the Baltic sky does.</p></div>
+          <div class="gtk-item"><h4>Payment on the day</h4><p>Reserve with no payment today. You pay the full price in person on the day, cash or card.</p></div>
+        </div>
+      </div>
+      <div class="guide reveal">
+        <div class="guide-top">
+          <img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga, your guide" width="64" height="64" loading="lazy">
+          <div><h3>From your guide</h3><p class="sub">Daiga, licensed Riga guide</p></div>
+        </div>
+        <h4>How the day works</h4>
+        <p>Your guide is a licensed Riga specialist who lives in the city. The whole day is planned backwards from your sailing time, so you never have to watch the clock. That is the guide's job, not yours.</p>
+        <h4>For cruise lines and port agents</h4>
+        <p>We work directly with cruise lines and port agents on group shore excursions. Get in touch for trade rates and bespoke itineraries for your passengers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BOOK DIRECT -->
+<section class="section compare" style="padding:clamp(4rem,8vh,6rem) 0">
+  <div class="wrap">
+    <h2 class="reveal">Book this shore excursion</h2>
+    <p class="compare-sub reveal">Same Riga, same licensed local guide, same Old Town. The price is the only difference when you book direct.</p>
+    <div class="compare-grid reveal">
+      <div class="cmp"><h3>Cruise-line booking desk</h3><div class="cmp-price">&euro;140</div><div class="cmp-child">Typical shore-excursion listing</div><span class="btn btn-outline" aria-disabled="true" style="opacity:.6;pointer-events:none">On the ship's desk</span></div>
+      <div class="cmp cmp-direct"><span class="cmp-badge">Best price · save ~43%</span><h3>Book direct with Daiga</h3><div class="cmp-price">&euro;80</div><div class="cmp-child">All-inclusive, per adult</div><div class="cmp-save">You save about &euro;60 per adult</div><a class="btn btn-primary" href="#book">Book direct, best price</a></div>
+      <div class="cmp"><h3>Other cruise-port operators</h3><div class="cmp-price">&euro;130 to 180</div><div class="cmp-child">Comparable 6-hour private group</div><span class="btn btn-outline" aria-disabled="true" style="opacity:.6;pointer-events:none">Various</span></div>
+    </div>
+    <p class="compare-note reveal">A better price when you book direct, with no cruise-line desk commission and no platform fee.</p>
+    <div class="trust-strip reveal">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed and insured (PTAC tour operator, ATD passenger transport)</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Best-price guarantee, cheaper than cruise-line and booking-desk listings</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Free cancellation up to 24 hours before pickup</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS: the live riga-shore page carries no customer reviews yet (the review block renders empty), so NONE are shown here. No reviews are invented (Hard Rule #3 / #4). When real cruise-shore reviews exist, drop them in verbatim using the 2-col masonry from the other excursion pages. -->
+
+<!-- FAQ -->
+<section class="section faq" id="faq" style="padding:clamp(4rem,8vh,6rem) 0">
+  <div class="wrap">
+    <h2 class="reveal">Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="q"><summary>Will I definitely make it back to my ship on time?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Yes, this is the entire design principle of the tour. We plan the day backwards from your sailing time and build in a 90-minute buffer before all-aboard. Furthest-first routing means every stop brings you closer to the ship. In years of shore excursions we have never returned a guest late.</p></div></details>
+      <details class="q"><summary>What if my ship is delayed or skips Riga entirely?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>If your ship arrives late we adjust the plan on the fly to fit the hours you have. If your cruise line cancels the Riga call for weather or itinerary reasons, you get a full refund with no questions asked. The risk is entirely ours, not yours.</p></div></details>
+      <details class="q"><summary>How big is the group?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>This is a private tour for your party only, up to 8 guests. There is no big coach and no waiting for a crowd to reassemble at every stop. It stays your group and your guide, at your own pace.</p></div></details>
+      <details class="q"><summary>How much walking is involved?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>A comfortable amount, with the vehicle covering the longer legs. Riga Old Town is explored on foot over flat but cobbled streets. Tell us about any mobility needs and we tailor the pace and route.</p></div></details>
+      <details class="q"><summary>Is this suitable for first-time visitors to Riga?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Perfectly. It is built as a complete first look at the city, covering the headline sights and the stories behind them, plus a few quieter corners. You leave with a real sense of Riga, not just a checklist of photos.</p></div></details>
+      <details class="q"><summary>Can you tailor the day to what we want to see?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Absolutely. Tell us your must-sees when you book and we build them in. Whether it is Art Nouveau, the food markets, Soviet history or just the prettiest streets, the day is yours.</p></div></details>
+      <details class="q"><summary>Why book direct instead of through the cruise line?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Cruise-line shore excursions put you on a coach with up to fifty strangers and a fixed route. Booking direct gets you a private, licensed local guide, a flexible plan, a smaller group, and usually a better price. The only catch is that you manage your own timing, which is exactly what our 90-minute buffer is designed to protect.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE -->
+<section class="reserve">
+  <div class="wrap">
+    <h2>Your day ashore, planned around your sailing time</h2>
+    <p>Tell me your ship and your sailing time, and I will build the day around it and hold your seats with nothing to pay today. You see Riga properly and you are back on board with time to spare.</p>
+    <a class="btn" href="#book">Reserve your spot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <p class="reserve-note">&euro;80 per adult · Children under 12 at a reduced rate · Free cancellation up to 24 hours</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="stamp">Izcelsme · Rīga · Latvija</p>
+  <p>© 2026 Barefoot Baltic · Ronda Sprints Solutions SIA · Reg. 40203595104 · Riga, Latvia · <a href="/privacy-policy.html">Privacy Policy</a></p>
+  <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+</footer>
+
+<script>
+// Nav solid-on-scroll
+(function(){var nav=document.getElementById('nav');function s(){nav.classList.toggle('scrolled',window.scrollY>40);}s();window.addEventListener('scroll',s,{passive:true});})();
+// Reveal (defaults visible without JS)
+(function(){var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.1});
+  els.forEach(function(e){io.observe(e);});})();
+// Booking widget (working demo; production wires the real multi-step flow)
+(function(){
+  var A=2,AD=80,MAX=8;
+  var aEl=document.getElementById('bkA'),tEl=document.getElementById('bkTotal'),dEl=document.getElementById('bkDep');
+  function render(){aEl.textContent=A;var total=A*AD;tEl.textContent='€'+total;if(dEl)dEl.textContent='€'+total;}
+  document.querySelectorAll('.bk-pm button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var d=parseInt(b.getAttribute('data-d'),10);
+      A=Math.min(MAX,Math.max(1,A+d));
+      render();
+    });
+  });
+  var rsv=document.getElementById('bkReserve');
+  if(rsv)rsv.addEventListener('click',function(){document.getElementById('bkForm').hidden=true;document.getElementById('bkDone').hidden=false;});
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════════════════════
+  OFF-PROD DIRECTION STUDY — excursion detail page in the cinematic
+  `overdrive` language (matches _mockups/cinematic-overdrive/ homepage).
+  Ķemeri Bog Off-Boardwalk Hike from Riga, with lake picnic & optional
+  swim. Not deployed. Real Barefoot Baltic content + photography.
+  Prices confirmed against the live page: €45 adult / €35 child (ages
+  3 to 14) direct, €75 GetYourGuide and Viator. Live booking card labels
+  this "Save 34%"; the euro figures (€75 vs €45) are a €30 / ~40% saving,
+  so the saving is stated in euros here to stay arithmetically honest.
+  Reviews verbatim (Hard Rule #3): the page's own GetYourGuide reviews,
+  reproduced word for word; a representative subset is shown and the true
+  count ("Based on 7 reviews") is kept. The live filename still says
+  "jurmala" from an earlier incarnation; the CURRENT live tour is the
+  off-boardwalk hike with a lake picnic and optional swim and does NOT
+  include Jūrmala, so Jūrmala is not in this mockup. FAQ is a
+  representative subset; the live page carries the full set in the HTML.
+  Booking widget is a working demo; production wires the real bkGoStep3.
+  No side-stripes, no colored-glow-on-dark, no glassmorphism, no serif
+  italics, no per-section eyebrows. Substantial sticky booking rail.
+  ════════════════════════════════════════════════════════════════════
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ķemeri Bog Off-Boardwalk Hike from Riga — Barefoot Baltic</title>
+<meta name="description" content="A small-group off-boardwalk hike across the Great Ķemeri Bog, one of the best-preserved raised bogs in the Baltics. Bogshoes provided, a picnic at a bog lake, an optional swim, and sunrise, mid-day or sunset departures. Book direct with Daiga from €45.">
+<meta property="og:title" content="Ķemeri Bog Off-Boardwalk Hike from Riga — Barefoot Baltic">
+<meta property="og:description" content="Step off the boardwalk and onto the open raised bog in bogshoes, with a lake picnic and an optional swim. Sunrise, mid-day or sunset. Book direct from €45.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0c0e;--bg-2:#101216;--surface:#16191e;--surface-2:#1d2127;
+  --line:rgba(244,241,234,.12);--line-strong:rgba(244,241,234,.22);
+  --ink:#f4f1ea;--ink-soft:#cdc8bd;--ink-mute:#9a958b;
+  --carmine:#c0294a;--carmine-deep:#9e1b32;--amber:#d8a24a;--moss:#7c9a6b;
+  --serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:clamp(1rem,.96rem + .25vw,1.1rem);line-height:1.7;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0 0 1rem}a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+.skip{position:absolute;left:-999px;top:0;background:var(--carmine);color:#fff;padding:.7rem 1.1rem;z-index:300}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;font-size:1rem;
+  padding:.85rem 1.5rem;border-radius:999px;cursor:pointer;border:1px solid transparent;font-family:var(--sans);
+  transition:background .25s,transform .15s var(--ease),border-color .25s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--carmine);color:#fff}.btn-primary:hover{background:var(--carmine-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--ink-soft);border-color:var(--line)}.btn-outline:hover{border-color:var(--ink-soft);color:var(--ink)}
+.btn:active{transform:scale(.97)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.1rem,4vw,2.5rem);transition:background .4s var(--ease),border-color .4s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(8,9,11,.96);border-bottom-color:var(--line)}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.18rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.55rem}
+.brand .dot{width:9px;height:9px;background:var(--carmine);border-radius:50%}
+.nav-links{display:flex;gap:1.5rem;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;font-weight:500;transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{text-decoration:none;background:var(--carmine);color:#fff;font-weight:600;font-size:.9rem;padding:.72rem 1.2rem;border-radius:999px}
+.nav-cta:hover{background:var(--carmine-deep)}
+@media(max-width:900px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2;background:url('/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg') center/cover no-repeat;
+  animation:kb 26s var(--ease) forwards;will-change:transform}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,12,14,.5) 0%,rgba(11,12,14,.1) 30%,rgba(11,12,14,.35) 60%,rgba(11,12,14,.94) 100%)}
+.hero-inner{padding:10rem 0 clamp(2.5rem,6vh,5rem);max-width:760px}
+.crumb{font-size:.85rem;color:var(--ink-mute);margin-bottom:1.4rem}
+.crumb a{color:var(--ink-mute);text-decoration:none}.crumb a:hover{color:var(--ink-soft)}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.2rem}
+.hero-kicker::before{content:"";width:30px;height:1px;background:var(--carmine)}
+.hero h1{font-size:clamp(2.4rem,1.8rem + 4vw,4.6rem);font-weight:700;line-height:1.0;letter-spacing:-.035em;margin-bottom:1.2rem}
+.hero-sub{font-size:clamp(1.05rem,1rem + .4vw,1.25rem);color:var(--ink-soft);max-width:54ch;margin-bottom:1.8rem}
+.hero-creds{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-bottom:1.8rem}
+.hero-cred{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--ink-soft)}
+.hero-cred svg{width:20px;height:20px;color:var(--amber);flex:none}
+.hero-cred em{font-style:normal;color:var(--ink-mute);font-size:.78rem;display:block}
+.js .hero-inner > *{opacity:0;transform:translateY(22px);animation:rise .85s var(--ease-out) forwards}
+.js .hero-inner > *:nth-child(1){animation-delay:.1s}.js .hero-inner > *:nth-child(2){animation-delay:.22s}
+.js .hero-inner > *:nth-child(3){animation-delay:.34s}.js .hero-inner > *:nth-child(4){animation-delay:.46s}
+.js .hero-inner > *:nth-child(5){animation-delay:.58s}.js .hero-inner > *:nth-child(6){animation-delay:.7s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* TRUST BAR */
+.trustbar{background:var(--carmine-deep);color:#fff}
+.trustbar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;padding:.9rem clamp(1.1rem,4vw,2.5rem);font-size:.88rem}
+.trustbar span{display:inline-flex;align-items:center;gap:.5rem}
+.trustbar svg{width:15px;height:15px;color:#fff;opacity:.9}
+.trustbar .key{font-weight:700}
+
+/* QUICK FACTS */
+.qf-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:clamp(2rem,5vh,3.5rem) 0}
+.qf{background:var(--surface);padding:1.2rem 1.3rem;display:flex;align-items:center;gap:.85rem}
+.qf svg{width:22px;height:22px;color:var(--amber);flex:none}
+.qf b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-mute);font-weight:600;margin-bottom:.15rem}
+.qf span{font-size:.92rem;font-weight:500}
+
+/* DETAIL LAYOUT */
+.detail{display:grid;grid-template-columns:1fr 370px;gap:clamp(2rem,5vw,4.5rem);align-items:start;
+  padding:clamp(2.5rem,6vh,4.5rem) 0}
+.detail-main > h2{font-size:clamp(1.7rem,1.4rem + 1.4vw,2.4rem);margin:clamp(2.5rem,5vh,3.5rem) 0 1.2rem}
+.detail-main > h2:first-of-type{margin-top:0}
+.detail-main > p{color:var(--ink-soft);max-width:64ch}
+@media(max-width:920px){.detail{grid-template-columns:1fr}.book-wrap{position:static;order:-1}}
+
+/* HIGHLIGHTS */
+.highlights{display:flex;flex-direction:column;gap:.9rem;margin-top:.5rem}
+.hl{display:flex;gap:.85rem;color:var(--ink-soft);line-height:1.55;font-size:1rem}
+.hl svg{width:20px;height:20px;color:var(--carmine);flex:none;margin-top:3px}.hl strong{color:var(--ink)}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:140px;gap:.6rem;margin:clamp(2rem,4vh,2.6rem) 0}
+.gallery a{display:block;border-radius:6px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gallery a:hover img{transform:scale(1.06)}
+.gallery a:first-child{grid-column:1;grid-row:1/3}
+@media(max-width:560px){.gallery{grid-template-columns:1fr 1fr}.gallery a:first-child{grid-column:1/3;grid-row:auto;aspect-ratio:16/9}}
+
+/* FOLD */
+.fold{margin:1.2rem 0 0}.fold > p{color:var(--ink-soft);max-width:64ch}
+.fold > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;color:var(--carmine);
+  font-weight:600;font-size:.95rem;padding:.3rem 0}
+.fold > summary::-webkit-details-marker{display:none}
+.fold > summary .chev{width:15px;height:15px;transition:transform .25s}.fold[open] > summary .chev{transform:rotate(180deg)}
+.fold .more-lbl{display:inline}.fold[open] .more-lbl{display:none}.fold .less-lbl{display:none}.fold[open] .less-lbl{display:inline}
+
+/* TIMELINE (1px spine, no side-stripe) */
+.timeline{margin:1.4rem 0 0}
+.t-stop{display:grid;grid-template-columns:4.4rem 1fr;gap:1.2rem}
+.t-time{font-family:var(--serif);font-weight:600;color:var(--amber);font-size:.98rem;text-align:right;padding-top:.1rem;white-space:nowrap}
+.t-content{border-left:1px solid var(--line);padding:0 0 2rem 1.5rem;position:relative}
+.t-content::before{content:"";position:absolute;left:-6px;top:.45rem;width:11px;height:11px;border-radius:50%;
+  background:var(--carmine);box-shadow:0 0 0 4px var(--bg)}
+.t-stop:last-child .t-content{border-left-color:transparent;padding-bottom:0}
+.t-content h4{font-size:1.1rem;margin-bottom:.35rem}.t-content p{margin:0;color:var(--ink-soft);font-size:.92rem}
+
+/* INCLUDED */
+.inc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,2.5rem);margin-top:.5rem}
+.inc h3{font-size:1.15rem;margin-bottom:1rem}
+.inc-item{display:flex;gap:.65rem;font-size:.94rem;color:var(--ink-soft);margin-bottom:.8rem;line-height:1.5}
+.inc-item svg{width:18px;height:18px;flex:none;margin-top:2px}
+.inc .yes svg{color:var(--moss)}.inc .no svg{color:var(--ink-mute)}.inc strong{color:var(--ink)}
+@media(max-width:560px){.inc{grid-template-columns:1fr;gap:1.5rem}}
+
+/* BOOKING RAIL */
+.book-wrap{position:sticky;top:90px}
+.book-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.8rem 1.6rem;overflow:hidden}
+.book-card .accent{height:3px;margin:-1.8rem -1.6rem 1.4rem;background:var(--carmine)}
+.bc-from{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--amber);font-weight:600;margin-bottom:.3rem}
+.bc-price{font-family:var(--serif);font-size:2.2rem;font-weight:600;line-height:1;margin-bottom:1.3rem}
+.bc-price small{font-family:var(--sans);font-size:.8rem;font-weight:400;color:var(--ink-mute)}
+.bk-field{display:block;margin-bottom:1rem}
+.bk-field span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-mute);font-weight:600;margin-bottom:.35rem}
+.bk-field input{width:100%;font-family:var(--sans);font-size:1rem;padding:.65rem .7rem;border:1px solid var(--line);
+  border-radius:7px;background:var(--bg);color:var(--ink);color-scheme:dark}
+.bk-step{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0}
+.bk-step .lbl{font-size:.94rem;font-weight:500}.bk-step .lbl em{font-style:normal;color:var(--ink-mute);font-size:.76rem;display:block}
+.bk-pm{display:flex;align-items:center;gap:.7rem}
+.bk-pm button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);
+  font-size:1.1rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.bk-pm button:hover{border-color:var(--carmine);color:var(--carmine)}
+.bk-pm b{min-width:1.3rem;text-align:center;font-weight:600}
+.bk-note{font-size:.82rem;color:var(--ink-mute);line-height:1.5;margin:.2rem 0 1rem}
+.bk-summary{border-top:1px solid var(--line);margin-top:.9rem;padding-top:1rem;margin-bottom:1.2rem}
+.bk-line{display:flex;justify-content:space-between;font-size:.92rem;color:var(--ink-soft);margin-bottom:.5rem}
+.bk-line b{color:var(--ink)}.bk-line.today{font-size:1.02rem;color:var(--moss);font-weight:600}.bk-line.today b{color:var(--moss)}
+.bc-btn{width:100%;justify-content:center;font-size:1.05rem;padding:.9rem}
+.bk-reassure{font-size:.78rem;color:var(--ink-mute);line-height:1.55;margin:.9rem 0 0}
+.bc-msg{display:block;text-align:center;margin-top:.8rem;font-size:.9rem;color:var(--moss);text-decoration:none;font-weight:600}
+.bc-msg:hover{text-decoration:underline}
+.bk-extra{border-top:1px solid var(--line);margin-top:1.2rem;padding-top:1.2rem}
+.bk-save{display:flex;gap:.55rem;align-items:flex-start;font-size:.92rem;font-weight:600;color:var(--moss);margin:0 0 1rem}
+.bk-save svg{width:17px;height:17px;flex:none;margin-top:2px}
+.bk-badges{display:flex;flex-direction:column;gap:.6rem}
+.bk-badges span{display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:var(--ink-mute)}
+.bk-badges svg{width:15px;height:15px;flex:none;color:var(--moss)}
+.bk-done{text-align:center;padding:1.5rem 0}
+.bk-check{width:54px;height:54px;border-radius:50%;background:var(--moss);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.bk-done h4{font-size:1.3rem;margin-bottom:.5rem}.bk-done p{font-size:.92rem;color:var(--ink-soft)}
+
+/* WIDE BAND (route, reel, practical) */
+.band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2{font-size:clamp(1.7rem,1.4rem + 1.4vw,2.4rem);margin-bottom:1rem}
+.routemap p{color:var(--ink-soft);max-width:64ch;font-size:.95rem}
+.routemap iframe{width:100%;height:400px;border:0;border-radius:8px;margin-top:1.2rem;filter:saturate(.9) brightness(.92)}
+.reel{margin-top:clamp(3rem,6vh,4.5rem)}
+.reel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.reel-controls{display:flex;gap:.6rem}
+.reel-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .25s,transform .15s var(--ease)}
+.reel-btn:hover{border-color:var(--ink-soft)}.reel-btn:active{transform:scale(.92)}.reel-btn:disabled{opacity:.35;cursor:default}
+.reel-btn svg{width:20px;height:20px}
+.reel-track{display:flex;gap:1rem;overflow-x:auto;overflow-y:hidden;padding-bottom:.5rem;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.reel-track::-webkit-scrollbar{display:none}
+.reel-card{flex:none;width:260px;aspect-ratio:9/14;border-radius:8px;overflow:hidden;position:relative;cursor:pointer;
+  scroll-snap-align:start;background:var(--surface-2)}
+.reel-card img{width:100%;height:100%;object-fit:cover}
+.reel-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(11,12,14,.2);transition:background .3s}
+.reel-card:hover .reel-play{background:rgba(11,12,14,.05)}.reel-card.playing .reel-play{display:none}
+.reel-play svg{width:54px;height:54px;color:#fff}
+.reel-cap{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .8rem;color:#fff;font-size:.9rem;
+  background:linear-gradient(transparent,rgba(11,12,14,.85))}
+.practical{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,5vw,3.5rem);margin-top:clamp(3rem,6vh,4.5rem);align-items:start}
+.gtk{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;margin-top:.5rem}
+.gtk-item h4{font-size:1.02rem;margin-bottom:.4rem}.gtk-item p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.55}
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.8rem}
+.guide-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.guide-top img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.guide-top .sub{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--amber);font-weight:600}
+.guide h3{font-size:1.3rem}.guide h4{font-size:1rem;margin:1.1rem 0 .3rem}.guide p{font-size:.92rem;color:var(--ink-soft);margin:0}
+@media(max-width:760px){.practical{grid-template-columns:1fr}.gtk{grid-template-columns:1fr}}
+
+/* PRICE COMPARE */
+.compare{border-top:1px solid var(--line)}
+.compare h2{text-align:center;font-size:clamp(1.8rem,1.4rem + 1.8vw,2.6rem);margin-bottom:.5rem}
+.compare-sub{text-align:center;color:var(--ink-soft);margin-bottom:clamp(2rem,5vh,3rem)}
+.compare-grid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:1.2rem;align-items:center;max-width:880px;margin:0 auto}
+.cmp{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.9rem 1.4rem;text-align:center}
+.cmp h3{font-size:1.05rem;margin-bottom:.7rem;color:var(--ink-mute);font-weight:500}
+.cmp-price{font-family:var(--serif);font-size:2.2rem;font-weight:600}
+.cmp-child{font-size:.88rem;color:var(--ink-mute);margin-bottom:1.1rem}
+.cmp .btn{width:100%;justify-content:center;font-size:.9rem}
+.cmp-direct{background:var(--surface-2);border:2px solid var(--carmine);position:relative;padding-top:2.3rem;transform:scale(1.04)}
+.cmp-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--carmine);color:#fff;
+  font-size:.74rem;font-weight:600;letter-spacing:.03em;padding:.35rem .9rem;border-radius:999px;white-space:nowrap}
+.cmp-direct h3{color:var(--ink)}.cmp-direct .cmp-price{font-size:2.7rem}
+.cmp-save{font-size:.78rem;color:var(--moss);font-weight:600;margin-bottom:1.1rem}
+.compare-note{text-align:center;color:var(--ink-mute);font-size:.9rem;margin-top:clamp(1.5rem,4vh,2.2rem)}
+.trust-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2.2rem;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.trust-strip span{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--ink-soft)}
+.trust-strip svg{width:18px;height:18px;color:var(--moss)}
+@media(max-width:720px){.compare-grid{grid-template-columns:1fr;max-width:400px}.cmp-direct{transform:none}}
+
+/* REVIEWS */
+.reviews{background:var(--bg-2);border-top:1px solid var(--line)}
+.rev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.2rem;margin-bottom:clamp(2rem,4vh,2.6rem)}
+.rev-stars{color:var(--amber);letter-spacing:.15em;font-size:1.15rem}
+.rev-rating{font-family:var(--serif);font-size:1.5rem;font-weight:600}.rev-count{color:var(--ink-mute);font-size:.9rem}
+.rev-grid{column-count:2;column-gap:1.4rem}
+@media(max-width:680px){.rev-grid{column-count:1}}
+.rev{break-inside:avoid;-webkit-column-break-inside:avoid;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.6rem;margin-bottom:1.4rem}
+.rev .s{color:var(--amber);letter-spacing:.12em;font-size:.95rem;margin-bottom:.8rem}
+.rev-q{font-size:1rem;line-height:1.62;color:var(--ink-soft);margin-bottom:1.2rem}
+.rev-by{display:flex;align-items:center;gap:.7rem}
+.rev-av{width:40px;height:40px;border-radius:50%;background:var(--surface-2);color:var(--amber);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;flex:none}
+.rev-by strong{display:block;font-size:.94rem}.rev-by span{font-size:.8rem;color:var(--ink-mute)}.rev-src{font-size:.78rem;color:var(--ink-mute);margin-top:.8rem}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq h2{text-align:center;font-size:clamp(1.8rem,1.4rem + 1.8vw,2.6rem);margin-bottom:clamp(2rem,4vh,2.6rem)}
+.faq-list{max-width:820px;margin:0 auto}
+details.q{border-bottom:1px solid var(--line)}
+details.q summary{list-style:none;cursor:pointer;padding:1.3rem 0;display:flex;justify-content:space-between;gap:1rem;
+  font-family:var(--serif);font-size:1.12rem;font-weight:600}
+details.q summary::-webkit-details-marker{display:none}
+details.q .chev{flex:none;width:21px;height:21px;color:var(--carmine);transition:transform .3s}
+details.q[open] .chev{transform:rotate(180deg)}
+details.q .a{color:var(--ink-soft);padding-bottom:1.4rem;max-width:72ch;font-size:.97rem}
+details.q .a strong{color:var(--ink)}
+.faq-more{text-align:center;margin-top:1.8rem;font-size:.88rem;color:var(--ink-mute)}
+
+/* RESERVE */
+.reserve{background:var(--carmine);color:#fff;text-align:center}
+.reserve .wrap{padding:clamp(4rem,9vh,7rem) 1.5rem;max-width:640px}
+.reserve h2{color:#fff;font-size:clamp(2rem,1.5rem + 2.4vw,3rem);margin-bottom:1rem}
+.reserve p{color:rgba(255,255,255,.92);font-size:1.1rem;max-width:52ch;margin:0 auto 1.8rem}
+.reserve .btn{background:#fff;color:var(--carmine-deep);font-size:1.05rem;padding:.95rem 1.9rem}
+.reserve .btn:hover{background:#f4f1ea;transform:translateY(-2px)}
+.reserve-note{margin-top:1.1rem;font-size:.88rem;color:rgba(255,255,255,.82)}
+
+footer{background:#070809;border-top:1px solid var(--line);padding:3rem 0;text-align:center}
+footer .stamp{font-family:var(--serif);color:var(--amber);letter-spacing:.1em;margin-bottom:.5rem}
+footer p{color:var(--ink-mute);font-size:.85rem;max-width:70ch;margin:0 auto .8rem}footer a{color:var(--moss)}
+.flag-bar{display:flex;justify-content:center;margin-top:1.4rem}
+.flag-bar span{width:54px;height:5px}.flag-bar span:nth-child(1),.flag-bar span:nth-child(3){background:var(--carmine-deep)}.flag-bar span:nth-child(2){background:var(--ink)}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-img{animation:none;transform:none}
+  .js .hero-inner > *{opacity:1;transform:none;animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .gallery img,.reel-play{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <a class="brand" href="/"><span class="dot" aria-hidden="true"></span>Barefoot&nbsp;Baltic</a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#itinerary">Itinerary</a></li>
+    <li><a href="#included">Included</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a class="nav-cta" href="#book">Reserve</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-img" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="crumb"><a href="/">Home</a> / <a href="/#excursions">Excursions</a> / Ķemeri Bog Off-Boardwalk Hike</p>
+    <span class="hero-kicker">Off-boardwalk · West of Riga</span>
+    <h1>Ķemeri bog off-boardwalk hike</h1>
+    <p class="hero-sub">Step off the boardwalk and onto the open raised bog itself, in bogshoes that let you walk where you would otherwise sink. A lake picnic, an optional swim, and a women-led team. Choose sunrise, mid-day or sunset.</p>
+    <div class="hero-creds">
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span><strong>Great Ķemeri Bog</strong><em>Off-boardwalk, in bogshoes</em></span></div>
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M3 9l9-5 9 5"/></svg><span><strong>Bog-lake picnic</strong><em>Optional swim, life vests</em></span></div>
+      <div class="hero-cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span><strong>Sunrise or sunset</strong><em>Golden hour over the pools</em></span></div>
+    </div>
+    <a href="#book" class="btn btn-ghost">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</header>
+
+<div class="trustbar"><div class="wrap">
+  <span class="key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Reserve today, nothing to pay right now</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Pay in person, on the day</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg> Free cancellation up to 24 hours</span>
+</div></div>
+
+<div class="wrap"><div class="qf-strip">
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Duration</b><span>About 4 hours</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><div><b>Group size</b><span>Up to 6</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Meeting point</b><span>Central Riga</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg><div><b>Departures</b><span>Sunrise, mid-day, sunset</span></div></div>
+  <div class="qf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div><b>Season</b><span>May to September</span></div></div>
+</div></div>
+
+<div class="wrap"><div class="detail">
+  <div class="detail-main" id="overview">
+
+    <h2 class="reveal">Highlights</h2>
+    <div class="highlights reveal">
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>A guided <strong>off-boardwalk hike</strong> across the open raised bog, one of the largest and best-preserved in the Baltics, on a floating mat of living sphagnum moss.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>A <strong>picnic at a small bog lake</strong> in the middle of the mire, with an <strong>optional swim</strong> in the antiseptic, mineral-rich water, life vests provided.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Bogshoes and rubber shoes</strong> for every guest, sized to the shoe size you give us at booking, so the open bog is walkable rather than a wade.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>The full story as you walk, the <strong>ecology, the carnivorous sundew, the Tsarist spa era</strong>, and how the bog minerals still turn up in Latvian cosmetics.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>A choice of <strong>three departures</strong>, sunrise, mid-day or sunset, with the golden-hour slots best for the light over the pools.</span></div>
+      <div class="hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Hotel pickup in central Riga, a small group, women-led, and refreshments at the van at the end.</span></div>
+    </div>
+
+    <div class="gallery reveal">
+      <a href="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg" alt="A small group out on the open Ķemeri bog in bogshoes at sunset" loading="lazy"></picture></a>
+      <a href="/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg" alt="Guests striding across the open raised bog in bogshoes" loading="lazy"></picture></a>
+      <a href="/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg" alt="Sunset clouds reflected across the open Ķemeri bog pools" loading="lazy"></picture></a>
+      <a href="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" alt="A guest in bogshoes beside a pink-lit bog pool" loading="lazy"></picture></a>
+      <a href="/images/exc-kemeri/kemeri-sundew-latvia.jpg" target="_blank" rel="noopener"><picture><source srcset="/images/exc-kemeri/kemeri-sundew-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-sundew-latvia.jpg" alt="Close-up of carnivorous sundew plants in the Ķemeri bog" loading="lazy"></picture></a>
+    </div>
+
+    <h2 class="reveal">What to expect</h2>
+    <p class="reveal">This is the half-day I send people on when they want a real ecosystem under their feet rather than a theme-park version. We step off the boardwalk and onto the open raised bog itself, in bogshoes that let you walk where you would otherwise sink.</p>
+    <details class="fold reveal">
+      <summary><span class="more-lbl">Read the full half-day</span><span class="less-lbl">Show less</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <p>The Great Ķemeri Bog has been growing upward for around ten thousand years, older than the Pyramids, fed only by rainwater and building at about a millimetre a year. The peat beneath your feet runs metres deep. On top sits a flat, treeless expanse of soft sphagnum moss, dwarf pines that may be 200 or 300 years old and still no taller than a Christmas tree, and dozens of dark pools that mirror the sky.</p>
+      <p>We start with a short warm-up on the wooden boardwalk while your guide points out the sundew, the wild rosemary and the dwarf pine, and runs through the safety brief. Then we step onto the open mire. The surface is a floating mat of living moss resting on dark water. With rubber shoes and bogshoes that spread your weight, you walk across it. The ground flexes under each step. It is, almost literally, walking on water. Roughly halfway we reach a small bog lake and stop for a picnic, and anyone who would like a quick dip in the antiseptic, mineral-rich water can take one, with a life vest and guided entry.</p>
+      <p>The same minerals under this bog built Latvia's spa industry and still turn up in its natural cosmetics, and your guide tells that story, and the ecology behind it, as you walk. We are honest that the entry and exit onto the open bog are physically demanding over uneven moss, and that the bog is a wild place, so we send a short waiver to read in advance. The day runs May to September, when the bog is at its best and the boardwalk is not iced over. At the van afterwards we serve tea, coffee and something sweet while you dry off, then drive you back to Riga.</p>
+    </details>
+
+    <h2 id="itinerary" class="reveal">Your half-day, step by step</h2>
+    <div class="timeline reveal">
+      <div class="t-stop"><div class="t-time">1</div><div class="t-content"><h4>Hotel pickup in central Riga</h4><p>We collect you at the start of your chosen slot, early morning for the sunrise hike, mid-day for the gentlest mosquito conditions, or late evening for sunset over the pools. The exact time is confirmed the evening before and depends on the season.</p></div></div>
+      <div class="t-stop"><div class="t-time">2</div><div class="t-content"><h4>Drive west to Ķemeri National Park</h4><p>About 50 quiet minutes on the road. Your guide uses the drive to set up the day, what a raised bog actually is, why Latvia's peatlands matter on a planetary scale, and what to look for once we are out on the moss.</p></div></div>
+      <div class="t-stop"><div class="t-time">3</div><div class="t-content"><h4>Boardwalk warm-up, then off the boards</h4><p>A short warm-up on the wooden boardwalk, the safety brief and waiver, then we step onto the open bog in rubber shoes and bogshoes. The entrance is the physically demanding part, uneven and springy. Once you are on the open mire it flattens out and the walking becomes easy.</p></div></div>
+      <div class="t-stop"><div class="t-time">4</div><div class="t-content"><h4>Lake picnic and optional swim</h4><p>Roughly halfway we reach a small bog lake and stop for a brief picnic on the moss. Anyone who would like a quick swim in the antiseptic, mineral-rich water can, with a life vest for every swimmer and guided entry. Three or four minutes is plenty, around 14 to 18 degrees in summer.</p></div></div>
+      <div class="t-stop"><div class="t-time">5</div><div class="t-content"><h4>Hike back out</h4><p>Back the way we came, with the light shifting as we walk. On the sunrise and sunset slots we plan the route so the most photogenic stretch lines up with the best light. About two and a half hours on the bog from car park to car park, at a relaxed pace.</p></div></div>
+      <div class="t-stop"><div class="t-time">6</div><div class="t-content"><h4>Refreshments at the van, then back to Riga</h4><p>Tea, coffee, biscuits, a Latvian pastry, crisps and chocolate at the van while your guide answers any last questions and you warm up and dry off. Then we drive you back to your hotel. Four hours door to door.</p></div></div>
+    </div>
+
+    <h2 id="included" class="reveal">What's included</h2>
+    <div class="inc reveal">
+      <div class="yes">
+        <h3>Included</h3>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Hotel pickup and drop-off in central Riga</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Air-conditioned minibus for the four-hour activity</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Local nature-enthusiast guide (English and Latvian, Russian, German or French on request)</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Bogshoes</strong> for every guest, sized to your booking</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Rubber shoes</strong> for every guest who requests them, sized to your booking</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Life vests</strong> for any guest who opts into the bog-lake swim</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Refreshments at the van, plus mosquito repellent and all park access fees</span></div>
+      </div>
+      <div class="no">
+        <h3>Not included</h3>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Swimwear and a towel, bring your own if you would like to swim</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Lunch or a heavier meal, we serve light refreshments, not a full meal</span></div>
+        <div class="inc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Gratuities (kind, never expected)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY BOOKING RAIL -->
+  <aside class="book-wrap" id="book">
+    <div class="book-card">
+      <div class="accent" aria-hidden="true"></div>
+      <div class="bk-form" id="bkForm">
+        <p class="bc-from">Book direct with Daiga</p>
+        <div class="bc-price">&euro;45 <small>/ adult · &euro;35 / child</small></div>
+        <label class="bk-field"><span>Date</span><input type="date" id="bkDate"></label>
+        <div class="bk-step"><span class="lbl">Adults</span><div class="bk-pm"><button type="button" data-step="a" data-d="-1" aria-label="One fewer adult">&minus;</button><b id="bkA">2</b><button type="button" data-step="a" data-d="1" aria-label="One more adult">+</button></div></div>
+        <div class="bk-step"><span class="lbl">Children <em>ages 3 to 14</em></span><div class="bk-pm"><button type="button" data-step="k" data-d="-1" aria-label="One fewer child">&minus;</button><b id="bkK">0</b><button type="button" data-step="k" data-d="1" aria-label="One more child">+</button></div></div>
+        <p class="bk-note">When you book, tell us your time slot, the shoe size for anyone who would like rubber shoes, and whether you would like the optional swim.</p>
+        <div class="bk-summary">
+          <div class="bk-line"><span>Tour total</span><b id="bkTotal">&euro;90</b></div>
+          <div class="bk-line"><span>Pay on the day</span><b id="bkDep">&euro;90</b></div>
+          <div class="bk-line today"><span>To pay today</span><b>&euro;0</b></div>
+        </div>
+        <button class="btn btn-primary bc-btn" id="bkReserve">Reserve your spot</button>
+        <p class="bk-reassure">Nothing to pay today. Reserve your place now and pay in person on the day, cash or card.</p>
+        <a class="bc-msg" href="https://wa.me/37126440152" target="_blank" rel="noopener">or message Daiga on WhatsApp</a>
+        <div class="bk-extra">
+          <p class="bk-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Best price. &euro;30 less per adult than GetYourGuide and Viator.</p>
+          <div class="bk-badges">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Registered tour operator (PTAC)</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> &euro;1M civil liability insurance</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed passenger transport (ATD)</span>
+          </div>
+        </div>
+      </div>
+      <div class="bk-done" id="bkDone" hidden>
+        <div class="bk-check" aria-hidden="true">&check;</div>
+        <h4>Place held</h4>
+        <p>Your seats are reserved. I will message you to confirm your time slot, your shoe sizes and whether you would like the swim. There is nothing to pay until we meet in person on the day.</p>
+      </div>
+    </div>
+  </aside>
+
+</div></div>
+<!-- WIDE BAND: route, reel, practical -->
+<section class="section band" style="padding:clamp(3.5rem,7vh,6rem) 0">
+  <div class="wrap">
+    <div class="routemap reveal">
+      <h2>The route, on the map</h2>
+      <p>Riga west to Ķemeri National Park and back, a day deliberately focused on the bog. About 100 km round trip, roughly 50 minutes each way, and around two and a half hours out on the mire.</p>
+      <iframe src="https://www.google.com/maps?q=Kemeri+National+Park,+Latvia&output=embed" title="Map of Ķemeri National Park" loading="lazy"></iframe>
+    </div>
+    <div class="reel reveal">
+      <div class="reel-head">
+        <h2>A few clips from our recent tours</h2>
+        <div class="reel-controls">
+          <button class="reel-btn" id="reelPrev" type="button" aria-label="Previous clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="reel-btn" id="reelNext" type="button" aria-label="More clips"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="reel-track" role="region" aria-label="Tour clips, scroll horizontally" tabindex="0">
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia-poster.jpg" alt="Stepping off the boardwalk into the open mire" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">Stepping off the boardwalk into the open mire</span></div>
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia-poster.jpg" alt="Bogshoes on the spongy moss" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">Bogshoes on the spongy moss</span></div>
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia-poster.jpg" alt="Your guide out on the open mire" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">Your guide out on the open mire</span></div>
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia-poster.jpg" alt="The optional bog-lake swim, life vests provided" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">The optional bog-lake swim</span></div>
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-sunset-mire-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-sunset-mire-latvia-poster.jpg" alt="Sunset over the raised bog" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">Sunset over the raised bog</span></div>
+        <div class="reel-card" data-mp4="/images/exc-kemeri/kemeri-bog-group-on-mire-latvia.mp4"><img src="/images/exc-kemeri/kemeri-bog-group-on-mire-latvia-poster.jpg" alt="A small group on the open mire" loading="lazy"><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span><span class="reel-cap">A small group on the open mire</span></div>
+      </div>
+    </div>
+    <div class="practical">
+      <div class="reveal">
+        <h2>Good to know</h2>
+        <div class="gtk">
+          <div class="gtk-item"><h4>Choosing your slot</h4><p>Early morning for the sunrise hike, the most photogenic and quietest. Mid-day for the gentlest mosquito conditions. Late evening for sunset over the pools. The golden-hour slots tend to fill first.</p></div>
+          <div class="gtk-item"><h4>What to wear</h4><p>Closed-toe shoes you do not mind getting damp, our rubber shoes go over them. Layers even in summer, dawn at the bog is cool and the air is damp. Swimwear and a towel if you plan to swim.</p></div>
+          <div class="gtk-item"><h4>Accessibility</h4><p>The boardwalk warm-up is flat and suits most mobility levels. The open-bog hike is gentle in the middle but demanding at the entrance and exit over uneven moss. Tell us your needs in advance and we plan with the group in mind.</p></div>
+          <div class="gtk-item"><h4>Cancellation</h4><p>Free cancellation up to 24 hours before for a full refund. If we cancel for thunderstorms or heavy rain that would make the bog unsafe, you get a full refund or a free reschedule, your choice.</p></div>
+        </div>
+      </div>
+      <div class="guide reveal">
+        <div class="guide-top">
+          <img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga, your guide" width="64" height="64" loading="lazy">
+          <div><h3>From your guide</h3><p class="sub">Daiga, guide &amp; founder</p></div>
+        </div>
+        <h4>Who this half-day is for</h4>
+        <p>Soft adventurers who want a real ecosystem under their feet rather than a theme-park version. Photographers chasing the golden hour over the mirror pools. Anyone who has read about peatland conservation and wants to actually see what an intact bog looks like. You should be steady on uneven ground.</p>
+        <h4>How it feels</h4>
+        <p>Your guide is a local nature enthusiast who knows the bog topology by heart, where the firm tussocks are, when the cranes are calling, where the sundew is biggest. They tell you the ecology and the history as you walk, then go quiet for the lake picnic and let the place do the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE COMPARISON -->
+<section class="section compare" style="padding:clamp(4rem,8vh,6rem) 0">
+  <div class="wrap">
+    <h2 class="reveal">Book this excursion</h2>
+    <p class="compare-sub reveal">Same guide, same minibus, same kit, same itinerary. The price is the only difference.</p>
+    <div class="compare-grid reveal">
+      <div class="cmp"><h3>GetYourGuide</h3><div class="cmp-price">&euro;75</div><div class="cmp-child">Child &euro;55</div><a class="btn btn-outline" href="https://www.getyourguide.com/" target="_blank" rel="noopener">Book on GYG</a></div>
+      <div class="cmp cmp-direct"><span class="cmp-badge">Best price · save 40%</span><h3>Book direct with Daiga</h3><div class="cmp-price">&euro;45</div><div class="cmp-child">Child &euro;35</div><div class="cmp-save">You save &euro;30 per adult</div><a class="btn btn-primary" href="#book">Book direct, best price</a></div>
+      <div class="cmp"><h3>Viator</h3><div class="cmp-price">&euro;75</div><div class="cmp-child">Child &euro;55</div><a class="btn btn-outline" href="https://www.viator.com/" target="_blank" rel="noopener">Book on Viator</a></div>
+    </div>
+    <p class="compare-note reveal">Booking platforms charge 20 to 30% commission. Book directly and that saving is yours, plus WhatsApp access to your guide before the trip.</p>
+    <div class="trust-strip reveal">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Registered tour operator (PTAC)</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> &euro;1M civil liability insurance</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed passenger transport (ATD)</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews" style="padding:clamp(4rem,8vh,6rem) 0">
+  <div class="wrap">
+    <div class="rev-head reveal"><span class="rev-stars">★★★★★</span><span class="rev-rating">5.0 / 5</span><span class="rev-count">Based on 7 reviews from GetYourGuide</span></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="s">★★★★★</div><p class="rev-q">Absolutely incredible! The Ķemeri Bog boardwalk felt like stepping into another world&mdash;early morning mist over the pools, birds singing, and the wooden path winding through surreal landscapes. Our guide was knowledgeable and kept a great pace. Then Jūrmala&rsquo;s sandy beaches and charming wooden architecture were the perfect contrast. Loved dipping my feet in the Baltic Sea! The whole trip was well-organized, peaceful, and refreshing. Only thing that could improve? Slightly longer stop for coffee in Jūrmala. But honestly&mdash;5 stars, highly recommend!</p><div class="rev-by"><div class="rev-av" aria-hidden="true">R</div><div><strong>Ranjith</strong><span>Latvia · 29 April 2026</span></div></div><p class="rev-src">GetYourGuide · verified booking</p></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p class="rev-q">The trip went smoothly and enjoyably.</p><div class="rev-by"><div class="rev-av" aria-hidden="true">T</div><div><strong>Tharun</strong><span>Latvia · 29 April 2026</span></div></div><p class="rev-src">GetYourGuide · verified booking</p></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p class="rev-q">The trip was excellent.</p><div class="rev-by"><div class="rev-av" aria-hidden="true">V</div><div><strong>Vijay</strong><span>Latvia · 29 April 2026</span></div></div><p class="rev-src">GetYourGuide · verified booking</p></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p class="rev-q">My trip was so good and amazing, I loved it!</p><div class="rev-by"><div class="rev-av" aria-hidden="true">S</div><div><strong>Sanjay</strong><span>Latvia · 29 April 2026</span></div></div><p class="rev-src">GetYourGuide · verified booking</p></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p class="rev-q">The trip was really good.</p><div class="rev-by"><div class="rev-av" aria-hidden="true">S</div><div><strong>Sheldon Femi</strong><span>Latvia · 29 April 2026</span></div></div><p class="rev-src">GetYourGuide · verified booking</p></div>
+    </div>
+  </div>
+</section>
+<!-- FAQ -->
+<section class="section faq" id="faq" style="padding:clamp(4rem,8vh,6rem) 0">
+  <div class="wrap">
+    <h2 class="reveal">Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="q"><summary>What does the off-boardwalk hike actually involve?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>We start with a short warm-up on the boardwalk so your guide can introduce the ecosystem, the sphagnum, the sundew, the wild rosemary and the dwarf pine. Then we step off into the open raised bog. You wear our rubber shoes, sized to your booking, plus bogshoes that spread your weight across the moss, and walk a guided loop to a small bog lake. We pause for a brief picnic, anyone who would like a quick swim can, and then we hike back. Around two and a half hours on the bog, four hours from Riga and back.</p></div></details>
+      <details class="q"><summary>Is the bog hike physically demanding? Is it dangerous?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>It is a soft adventure rather than a serious expedition, but real risk is real risk. The hardest sections are the very start and the very end, getting onto and off the open bog over uneven, springy moss. In the middle the walking is gentle. The bog is a wild place with deep peat and dark pools, so we ask everyone to listen to the guide, follow the route they walk and stay close. By joining you accept the inherent risk, and we send a short waiver to read in advance.</p></div></details>
+      <details class="q"><summary>What time slot is best?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Three slots. Early morning is the sunrise hike, the most photogenic and the quietest. Mid-day has the gentlest mosquito conditions and is the easiest to wake up for. Late evening is the sunset hike, equally photogenic but with more mosquitoes, and we provide repellent. The golden-hour slots tend to fill first. You pick when you book.</p></div></details>
+      <details class="q"><summary>Tell me about the optional swim. Is the water cold?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>The swim is genuinely optional, a quick dip rather than a session, three or four minutes is plenty. The bog lake is small, dark with tannins and naturally antiseptic from the bog acids, the same family of waters that built Latvia's spa industry. We provide a life vest for every swimmer and the entry and exit are guided. The water sits around 14 to 18 degrees in summer. If cold open water is not your thing, give it a miss, nobody is pressured.</p></div></details>
+      <details class="q"><summary>What is the difference between bogshoes and rubber shoes?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Rubber shoes are knee-high waterproof boots that go over your socks and keep your feet dry on the wet moss. Bogshoes are wide, lightweight frames, the same idea as snowshoes, that strap on top and spread your weight so you do not sink into the soft sphagnum. You wear both. We need your shoe size when you book so we can guarantee a fit on the rubber shoes.</p></div></details>
+      <details class="q"><summary>Is this suitable for children?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Children aged 3 to 14 are welcome at <strong>&euro;35</strong>. The off-boardwalk hike is more demanding than a normal walk and is not suitable for very young children, so tell us your children's ages and shoe sizes when you book and the guide will plan the pace with the group in mind. The lake swim is a parental judgement call, and life vests are provided for swimmers of all ages.</p></div></details>
+      <details class="q"><summary>Are mosquitoes a problem on this tour?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Sometimes, yes, especially on the late evening slot when the bog is at its buggiest. We provide a generic over-the-counter repellent for any guest who would like one, used at your own risk, and long sleeves and trousers help a lot. The mid-day slot has the fewest mosquitoes. If you have sensitive skin, bring your own preferred repellent.</p></div></details>
+      <details class="q"><summary>Why is it cheaper to book directly?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="a"><p>Booking platforms like GetYourGuide and Viator charge commission, typically 20 to 30%. When you book directly with us there is no middleman, so you pay <strong>&euro;45</strong> instead of around <strong>&euro;75</strong> for the same hike, same guide and same kit. You also get WhatsApp access to your guide before the trip.</p></div></details>
+    </div>
+    <p class="faq-more">This is a representative set. The live page carries the full FAQ (around 24 questions), all in the page HTML so search engines index every one.</p>
+  </div>
+</section>
+
+<!-- RESERVE -->
+<section class="reserve">
+  <div class="wrap">
+    <h2>Walk on water, ten thousand years in the making</h2>
+    <p>Tell me your dates and whether you would like sunrise, mid-day or sunset, and I will hold your seats with nothing to pay today. Bogshoes and a guide who knows every firm tussock, a lake to picnic by, and a quick swim if you fancy it.</p>
+    <a class="btn" href="#book">Reserve your spot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <p class="reserve-note">&euro;45 per adult · &euro;35 per child (ages 3 to 14) · Free cancellation up to 24 hours</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="stamp">Izcelsme · Rīga · Latvija</p>
+  <p>© 2026 Barefoot Baltic · Ronda Sprints Solutions SIA · Reg. 40203595104 · Riga, Latvia · <a href="/privacy-policy.html">Privacy Policy</a></p>
+  <div class="flag-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+</footer>
+
+<script>
+// Nav solid-on-scroll
+(function(){var nav=document.getElementById('nav');function s(){nav.classList.toggle('scrolled',window.scrollY>40);}s();window.addEventListener('scroll',s,{passive:true});})();
+// Reveal (defaults visible without JS)
+(function(){var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.1});
+  els.forEach(function(e){io.observe(e);});})();
+// Booking widget (working demo; production wires the real multi-step flow)
+(function(){
+  var A=2,K=0,AD=45,CH=35,MAX=6;
+  var aEl=document.getElementById('bkA'),kEl=document.getElementById('bkK'),tEl=document.getElementById('bkTotal'),dEl=document.getElementById('bkDep');
+  function render(){aEl.textContent=A;kEl.textContent=K;var total=A*AD+K*CH;tEl.textContent='€'+total;dEl.textContent='€'+total;}
+  document.querySelectorAll('.bk-pm button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var s=b.getAttribute('data-step'),d=parseInt(b.getAttribute('data-d'),10);
+      if(s==='a'){A=Math.max(1,A+d);}else{K=Math.max(0,K+d);}
+      if(A+K>MAX){if(s==='a')A-=d;else K-=d;}
+      render();
+    });
+  });
+  var rsv=document.getElementById('bkReserve');
+  if(rsv)rsv.addEventListener('click',function(){document.getElementById('bkForm').hidden=true;document.getElementById('bkDone').hidden=false;});
+  render();
+})();
+// Video reel click-to-play
+document.querySelectorAll('.reel-card[data-mp4]').forEach(function(c){
+  c.addEventListener('click',function(){
+    if(c.querySelector('video'))return;
+    var v=document.createElement('video');v.src=c.getAttribute('data-mp4');v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');
+    c.appendChild(v);c.classList.add('playing');
+  });
+});
+// Reel arrows
+(function(){
+  var rail=document.querySelector('.reel-track'),p=document.getElementById('reelPrev'),n=document.getElementById('reelNext');
+  if(!rail||!n)return;
+  function step(){var c=rail.firstElementChild;if(!c)return 280;var g=parseFloat(getComputedStyle(rail).columnGap||getComputedStyle(rail).gap||0)||0;return Math.round(c.getBoundingClientRect().width+g);}
+  function upd(){var max=rail.scrollWidth-rail.clientWidth;p.disabled=rail.scrollLeft<=4;n.disabled=rail.scrollLeft>=max-4;}
+  p.addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:'smooth'});});
+  n.addEventListener('click',function(){rail.scrollBy({left:step(),behavior:'smooth'});});
+  rail.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>

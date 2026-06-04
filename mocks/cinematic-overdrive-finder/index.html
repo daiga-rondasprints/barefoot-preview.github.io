@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip Finder — Barefoot Baltic (overdrive mockup)</title>
+<!-- OFF-PROD MOCKUP. Adaptive tour finder generated from _mockups/tours.json by _build_finder.py.
+     Cards are server-rendered for SEO; the chip bar is adaptive client-side (a facet shows only
+     when it has >=2 values in scope). The Preview-as toggle stands in for the per-locale mode. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g0:#0b0c0e;--g1:#101216;--g2:#16191e;--ink:#f4f1ea;--ink-soft:#c9c5bd;--ink-mute:#8b8780;
+--line:#2a2e35;--carmine:#c0294a;--amber:#d8a24a;--moss:#7c9a6b;
+--serif:'Source Serif 4',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--g0);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+.fh{padding:clamp(2.5rem,7vh,4.5rem) 0 1.5rem;text-align:center}
+.fh .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem}
+.fh h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.4vw,3rem);line-height:1.05;letter-spacing:-.01em}
+.fh p{color:var(--ink-soft);margin-top:.7rem;font-size:1.02rem}
+.demo-note{display:inline-flex;gap:.5rem;align-items:center;margin-top:1rem;font-size:.76rem;color:var(--ink-mute);
+border:1px dashed var(--line);border-radius:999px;padding:.35rem .8rem}
+/* sticky filter bar */
+.fbar{position:sticky;top:0;z-index:20;background:rgba(11,12,14,.82);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);padding:.9rem 0}
+.fbar-row{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;align-items:center}
+.seg{display:inline-flex;background:var(--g2);border:1px solid var(--line);border-radius:999px;padding:.22rem}
+.seg button{appearance:none;border:0;background:transparent;color:var(--ink-soft);font-family:var(--sans);
+font-size:.82rem;font-weight:600;padding:.4rem .95rem;border-radius:999px;cursor:pointer;transition:.2s}
+.seg button.on{background:var(--amber);color:#1a1205}
+.seg button:not(.on):hover{color:var(--ink)}
+.fgroups{display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;align-items:center;flex:1;min-width:240px}
+.fgroup{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.fgroup>.lbl{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-mute);margin-right:.15rem}
+.chip{appearance:none;font-family:var(--sans);cursor:pointer;font-size:.8rem;color:var(--ink-soft);
+background:transparent;border:1px solid var(--line);border-radius:999px;padding:.32rem .7rem;transition:.16s;white-space:nowrap}
+.chip:hover{border-color:var(--ink-mute);color:var(--ink)}
+.chip.on{background:var(--carmine);border-color:var(--carmine);color:#fff}
+.chip .ct{opacity:.6;margin-left:.3rem;font-variant-numeric:tabular-nums}
+.chip.on .ct{opacity:.8}
+.fmeta{display:flex;gap:1rem;align-items:center;margin-left:auto}
+.fcount{font-family:var(--serif);font-size:.95rem;color:var(--ink-soft);white-space:nowrap}
+.fclear{appearance:none;border:0;background:transparent;color:var(--ink-mute);font-family:var(--sans);
+font-size:.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.fclear:hover{color:var(--ink)}.fclear[hidden]{display:none}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;padding:2rem 0 4rem}
+.tcard{display:flex;flex-direction:column;background:var(--g1);border:1px solid var(--line);border-radius:14px;
+overflow:hidden;text-decoration:none;color:inherit;transition:transform .25s,border-color .25s,box-shadow .25s}
+.tcard:hover{transform:translateY(-4px);border-color:#3a3f48;box-shadow:0 18px 40px -22px #000}
+.tcard.hide{display:none}
+.tcard-media{position:relative;aspect-ratio:8/5;overflow:hidden;background:var(--g2)}
+.tcard-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.tcard:hover .tcard-media img{transform:scale(1.05)}
+.tcard-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,12,14,.6),transparent 42%)}
+.tcard-dur{position:absolute;left:.7rem;bottom:.6rem;z-index:2;font-size:.72rem;font-weight:600;color:var(--ink);
+background:rgba(11,12,14,.55);border:1px solid rgba(244,241,234,.18);backdrop-filter:blur(4px);padding:.22rem .55rem;border-radius:999px}
+.tcard-body{padding:1.05rem 1.1rem 1.15rem;display:flex;flex-direction:column;flex:1}
+.tcard-eyebrow{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--ink-mute);margin-bottom:.5rem}
+.tcard-flags{font-size:.92rem;letter-spacing:.02em}
+.tcard-type{text-transform:uppercase;letter-spacing:.1em;font-size:.66rem}
+.tcard-body h3{font-family:var(--serif);font-weight:600;font-size:1.16rem;line-height:1.18;margin-bottom:.4rem}
+.tcard-body p{font-size:.86rem;color:var(--ink-soft);line-height:1.5;flex:1}
+.tcard-foot{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem}
+.tcard-price{font-family:var(--serif);font-size:1rem;color:var(--ink)}
+.tcard-cta{display:inline-flex;align-items:center;gap:.3rem;font-size:.82rem;font-weight:600;color:var(--amber)}
+.tcard-cta svg{width:15px;height:15px;transition:transform .2s}
+.tcard:hover .tcard-cta svg{transform:translateX(3px)}
+.tcard-diy{background:linear-gradient(160deg,#1a1014,#101216);border-color:#3a2630;justify-content:center}
+.tcard-diy .tcard-type{color:var(--carmine)}
+.tcard-diy h3{color:var(--ink)}
+.empty{grid-column:1/-1;text-align:center;color:var(--ink-mute);padding:3rem 0;font-family:var(--serif);font-size:1.1rem}
+.empty[hidden]{display:none}
+@media(max-width:640px){.grid{grid-template-columns:1fr 1fr;gap:.9rem}.tcard-body{padding:.8rem}
+.tcard-body h3{font-size:1rem}.tcard-body p{display:none}.fmeta{margin-left:0;width:100%}}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="fh"><div class="wrap"><div class="eyebrow">Barefoot Baltic</div><h1>Find your Barefoot day</h1><p>A handful of days we run ourselves, around Riga and across Europe.</p><div class="demo-note">Preview switch is a demo control — production sets this from the locale</div></div></header>
+<div class="fbar"><div class="wrap"><div class="fbar-row"><div class="seg" role="tablist" aria-label="Preview as"><button class="on" data-mode="standard">Standard locale</button><button data-mode="india">India</button></div><div class="fgroups" id="fgroups"></div><div class="fmeta"><span class="fcount" id="fcount"></span><button class="fclear" id="fclear" hidden>Clear all</button></div></div></div></div>
+<main class="wrap"><div class="grid" id="grid">
+<a class="tcard" href="/excursions/sigulda-cesis-gauja-valley.html" data-id="sigulda" data-type="day" data-countries="lv" data-themes="nature heritage" data-duration="daytrip" data-price="p-day" data-showin="all"><div class="tcard-media"><img src="/images/exc-sigulda/sigulda-medieval-castle-guests-posing-latvia.webp" alt="Sigulda, Cēsis &amp; the Gauja Valley" loading="lazy" width="800" height="500"><span class="tcard-dur">Full day · ~10h</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇱🇻</span><span class="tcard-type">Day excursion</span></div><h3>Sigulda, Cēsis &amp; the Gauja Valley</h3><p>Three medieval castles and the Gauja Valley, with a bread-maker visit and a tasting in the van.</p><div class="tcard-foot"><span class="tcard-price">from &euro;94</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/excursions/rundale-palace-bauska-castle-brewery.html" data-id="rundale" data-type="day" data-countries="lv" data-themes="heritage nature" data-duration="daytrip" data-price="p-day" data-showin="all"><div class="tcard-media"><img src="/images/exc-rundale/rundale-palace-baroque-rose-gardens-latvia.webp" alt="Rundāle Palace, Bauska Castle &amp; Ķemeri Bog" loading="lazy" width="800" height="500"><span class="tcard-dur">Full day · ~10h</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇱🇻</span><span class="tcard-type">Day excursion</span></div><h3>Rundāle Palace, Bauska Castle &amp; Ķemeri Bog</h3><p>A baroque palace, a medieval castle and the Great Ķemeri Bog in one day south of Riga.</p><div class="tcard-foot"><span class="tcard-price">from &euro;94</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/excursions/kemeri-bog-jurmala.html" data-id="kemeri" data-type="day" data-countries="lv" data-themes="nature adventure" data-duration="daytrip" data-price="p-day" data-showin="all"><div class="tcard-media"><img src="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.webp" alt="Ķemeri Bog off-boardwalk hike + lake picnic" loading="lazy" width="800" height="500"><span class="tcard-dur">Half day · ~4h</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇱🇻</span><span class="tcard-type">Day excursion</span></div><h3>Ķemeri Bog off-boardwalk hike + lake picnic</h3><p>A guided hike off the boardwalk into a 10,000-year-old raised bog, with a lake picnic and optional swim.</p><div class="tcard-foot"><span class="tcard-price">from &euro;45</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/excursions/riga-shore-excursion-from-cruise-port.html" data-id="riga-shore" data-type="day" data-countries="lv" data-themes="city heritage" data-duration="daytrip" data-price="p-day" data-showin="all"><div class="tcard-media"><img src="/images/riga-old-town-aerial-daugava-river-latvia.webp" alt="Riga shore excursion from the cruise port" loading="lazy" width="800" height="500"><span class="tcard-dur">Cruise shore · ~6h</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇱🇻</span><span class="tcard-type">Day excursion</span></div><h3>Riga shore excursion from the cruise port</h3><p>A curated six-hour shore day, women-led, six of Riga&#x27;s hundred places, planned around your sailing time.</p><div class="tcard-foot"><span class="tcard-price">from &euro;80</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/latvia-7-days.html" data-id="latvia-8day" data-type="multi" data-countries="lv" data-themes="heritage nature city" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="/images/riga-old-town-aerial-daugava-river-latvia.webp" alt="Latvia, in depth" loading="lazy" width="800" height="500"><span class="tcard-dur">8 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇱🇻</span><span class="tcard-type">Multi-day road trip</span></div><h3>Latvia, in depth</h3><p>Riga, Rundāle, Sigulda, the coast and Liepāja (ECoC 2027) and Kuldīga over eight days.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/baltic-trio-7-days.html" data-id="baltic-trio" data-type="multi" data-countries="ee lv lt" data-themes="heritage city nature" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1724235425392-fe352694d4c8?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Tallinn → Vilnius" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇪🇪🇱🇻🇱🇹</span><span class="tcard-type">Multi-day road trip</span></div><h3>Tallinn → Vilnius</h3><p>Estonia, Latvia and Lithuania across nine days, three old towns, the Gauja Valley and the Hill of Crosses.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/northern-europe-grand-tour-14-days.html" data-id="northern-europe" data-type="multi" data-countries="fi ee lv lt pl" data-themes="heritage city nature" data-duration="fortnight" data-price="p-high" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1553422734-fd8dd260a116?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Helsinki → Warsaw" loading="lazy" width="800" height="500"><span class="tcard-dur">14 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇫🇮🇪🇪🇱🇻🇱🇹🇵🇱</span><span class="tcard-type">Multi-day road trip</span></div><h3>Helsinki → Warsaw</h3><p>Five countries on one Schengen visa, Helsinki to Warsaw, with a Tallink ferry crossing.</p><div class="tcard-foot"><span class="tcard-price">from &euro;1170</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/london-to-paris-7-days.html" data-id="london-paris" data-type="multi" data-countries="gb fr" data-themes="city heritage nature" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="London → Paris" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇬🇧🇫🇷</span><span class="tcard-type">Multi-day road trip</span></div><h3>London → Paris</h3><p>Westminster, the Cotswolds and Versailles gardens, crossing the Channel by ferry or tunnel.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/paris-to-naples-14-days.html" data-id="paris-naples" data-type="multi" data-countries="fr ch it" data-themes="city heritage nature" data-duration="fortnight" data-price="p-high" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Paris → Naples" loading="lazy" width="800" height="500"><span class="tcard-dur">14 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇫🇷🇨🇭🇮🇹</span><span class="tcard-type">Multi-day road trip</span></div><h3>Paris → Naples</h3><p>France, Switzerland and Italy over a fortnight, Paris to Pompeii, with Alpine and Lake Como stops.</p><div class="tcard-foot"><span class="tcard-price">from &euro;1190</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/paris-to-venice-7-days.html" data-id="paris-venice" data-type="multi" data-countries="fr ch it" data-themes="city heritage nature" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Paris → Venice" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇫🇷🇨🇭🇮🇹</span><span class="tcard-type">Multi-day road trip</span></div><h3>Paris → Venice</h3><p>Paris to Venice through Switzerland, Mt Titlis and the Lake Como villages, ending on St Mark&#x27;s Square.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/barcelona-madrid-lisbon-7-days.html" data-id="barcelona-lisbon" data-type="multi" data-countries="es pt" data-themes="city heritage food" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1722863380905-539ae092fc5f?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Barcelona → Lisbon" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇪🇸🇵🇹</span><span class="tcard-type">Multi-day road trip</span></div><h3>Barcelona → Lisbon</h3><p>Spain and Portugal in nine days, Barri Gòtic to Sintra, with a jamón tasting and optional fado.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/venice-slovenia-croatia-7-days.html" data-id="venice-split" data-type="multi" data-countries="it si hr" data-themes="nature heritage city" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1587632478908-2a887673ea3f?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Venice → Split" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇮🇹🇸🇮🇭🇷</span><span class="tcard-type">Multi-day road trip</span></div><h3>Venice → Split</h3><p>The Adriatic across three countries, Lake Bled and Plitvice to Diocletian&#x27;s Palace in Split.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard" href="/en-in/excursions/amsterdam-bruges-paris-7-days.html" data-id="amsterdam-paris" data-type="multi" data-countries="nl be fr" data-themes="city heritage nature" data-duration="week" data-price="p-mid" data-showin="en-in"><div class="tcard-media"><img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&amp;h=800&amp;fit=crop&amp;fm=webp&amp;q=80" alt="Amsterdam → Paris" loading="lazy" width="800" height="500"><span class="tcard-dur">9 days</span></div><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-flags">🇳🇱🇧🇪🇫🇷</span><span class="tcard-type">Multi-day road trip</span></div><h3>Amsterdam → Paris</h3><p>The Lowlands to Paris, Amsterdam&#x27;s canals and Bruges and the Brussels Grand Place over nine days.</p><div class="tcard-foot"><span class="tcard-price">from &euro;730</span><span class="tcard-cta">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<a class="tcard tcard-diy" href="#enquire" data-diy="1"><div class="tcard-body"><div class="tcard-eyebrow"><span class="tcard-type">Custom</span></div><h3>Design your own day with Daiga</h3><p>Tell us your dates and what you would like to see. We build the day around you, with nothing to pay until we meet in person.</p><div class="tcard-foot"><span class="tcard-cta">Start planning<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div></a>
+<p class="empty" id="empty" hidden>No days match those filters yet. Try fewer, or design your own above.</p></div></main>
+<script>window.__FINDER__={"tours":[{"id":"sigulda","type":"day","countries":["lv"],"durationBucket":"daytrip","durationLabel":"Full day · ~10h","themes":["nature","heritage"],"priceFrom":94,"priceBucket":"p-day","showIn":"all","url":"/excursions/sigulda-cesis-gauja-valley.html","image":"/images/exc-sigulda/sigulda-medieval-castle-guests-posing-latvia.webp","title":"Sigulda, Cēsis & the Gauja Valley","blurb":"Three medieval castles and the Gauja Valley, with a bread-maker visit and a tasting in the van."},{"id":"rundale","type":"day","countries":["lv"],"durationBucket":"daytrip","durationLabel":"Full day · ~10h","themes":["heritage","nature"],"priceFrom":94,"priceBucket":"p-day","showIn":"all","url":"/excursions/rundale-palace-bauska-castle-brewery.html","image":"/images/exc-rundale/rundale-palace-baroque-rose-gardens-latvia.webp","title":"Rundāle Palace, Bauska Castle & Ķemeri Bog","blurb":"A baroque palace, a medieval castle and the Great Ķemeri Bog in one day south of Riga."},{"id":"kemeri","type":"day","countries":["lv"],"durationBucket":"daytrip","durationLabel":"Half day · ~4h","themes":["nature","adventure"],"priceFrom":45,"priceBucket":"p-day","showIn":"all","url":"/excursions/kemeri-bog-jurmala.html","image":"/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.webp","title":"Ķemeri Bog off-boardwalk hike + lake picnic","blurb":"A guided hike off the boardwalk into a 10,000-year-old raised bog, with a lake picnic and optional swim."},{"id":"riga-shore","type":"day","countries":["lv"],"durationBucket":"daytrip","durationLabel":"Cruise shore · ~6h","themes":["city","heritage"],"priceFrom":80,"priceBucket":"p-day","showIn":"all","url":"/excursions/riga-shore-excursion-from-cruise-port.html","image":"/images/riga-old-town-aerial-daugava-river-latvia.webp","title":"Riga shore excursion from the cruise port","blurb":"A curated six-hour shore day, women-led, six of Riga's hundred places, planned around your sailing time."},{"id":"latvia-8day","type":"multi","countries":["lv"],"durationBucket":"week","durationLabel":"8 days","themes":["heritage","nature","city"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/latvia-7-days.html","image":"/images/riga-old-town-aerial-daugava-river-latvia.webp","title":"Latvia, in depth","blurb":"Riga, Rundāle, Sigulda, the coast and Liepāja (ECoC 2027) and Kuldīga over eight days."},{"id":"baltic-trio","type":"multi","countries":["ee","lv","lt"],"durationBucket":"week","durationLabel":"9 days","themes":["heritage","city","nature"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/baltic-trio-7-days.html","image":"https://images.unsplash.com/photo-1724235425392-fe352694d4c8?w=800&h=800&fit=crop&fm=webp&q=80","title":"Tallinn → Vilnius","blurb":"Estonia, Latvia and Lithuania across nine days, three old towns, the Gauja Valley and the Hill of Crosses."},{"id":"northern-europe","type":"multi","countries":["fi","ee","lv","lt","pl"],"durationBucket":"fortnight","durationLabel":"14 days","themes":["heritage","city","nature"],"priceFrom":1170,"priceBucket":"p-high","showIn":["en-in"],"url":"/en-in/excursions/northern-europe-grand-tour-14-days.html","image":"https://images.unsplash.com/photo-1553422734-fd8dd260a116?w=800&h=800&fit=crop&fm=webp&q=80","title":"Helsinki → Warsaw","blurb":"Five countries on one Schengen visa, Helsinki to Warsaw, with a Tallink ferry crossing."},{"id":"london-paris","type":"multi","countries":["gb","fr"],"durationBucket":"week","durationLabel":"9 days","themes":["city","heritage","nature"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/london-to-paris-7-days.html","image":"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=800&fit=crop&fm=webp&q=80","title":"London → Paris","blurb":"Westminster, the Cotswolds and Versailles gardens, crossing the Channel by ferry or tunnel."},{"id":"paris-naples","type":"multi","countries":["fr","ch","it"],"durationBucket":"fortnight","durationLabel":"14 days","themes":["city","heritage","nature"],"priceFrom":1190,"priceBucket":"p-high","showIn":["en-in"],"url":"/en-in/excursions/paris-to-naples-14-days.html","image":"https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&h=800&fit=crop&fm=webp&q=80","title":"Paris → Naples","blurb":"France, Switzerland and Italy over a fortnight, Paris to Pompeii, with Alpine and Lake Como stops."},{"id":"paris-venice","type":"multi","countries":["fr","ch","it"],"durationBucket":"week","durationLabel":"9 days","themes":["city","heritage","nature"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/paris-to-venice-7-days.html","image":"https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&h=800&fit=crop&fm=webp&q=80","title":"Paris → Venice","blurb":"Paris to Venice through Switzerland, Mt Titlis and the Lake Como villages, ending on St Mark's Square."},{"id":"barcelona-lisbon","type":"multi","countries":["es","pt"],"durationBucket":"week","durationLabel":"9 days","themes":["city","heritage","food"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/barcelona-madrid-lisbon-7-days.html","image":"https://images.unsplash.com/photo-1722863380905-539ae092fc5f?w=800&h=800&fit=crop&fm=webp&q=80","title":"Barcelona → Lisbon","blurb":"Spain and Portugal in nine days, Barri Gòtic to Sintra, with a jamón tasting and optional fado."},{"id":"venice-split","type":"multi","countries":["it","si","hr"],"durationBucket":"week","durationLabel":"9 days","themes":["nature","heritage","city"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/venice-slovenia-croatia-7-days.html","image":"https://images.unsplash.com/photo-1587632478908-2a887673ea3f?w=800&h=800&fit=crop&fm=webp&q=80","title":"Venice → Split","blurb":"The Adriatic across three countries, Lake Bled and Plitvice to Diocletian's Palace in Split."},{"id":"amsterdam-paris","type":"multi","countries":["nl","be","fr"],"durationBucket":"week","durationLabel":"9 days","themes":["city","heritage","nature"],"priceFrom":730,"priceBucket":"p-mid","showIn":["en-in"],"url":"/en-in/excursions/amsterdam-bruges-paris-7-days.html","image":"https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&h=800&fit=crop&fm=webp&q=80","title":"Amsterdam → Paris","blurb":"The Lowlands to Paris, Amsterdam's canals and Bruges and the Brussels Grand Place over nine days."}],"facets":{"type":[{"id":"day","label":"Day excursion"},{"id":"multi","label":"Multi-day road trip"}],"theme":[{"id":"nature","label":"Nature"},{"id":"heritage","label":"Heritage"},{"id":"city","label":"City"},{"id":"adventure","label":"Adventure"},{"id":"food","label":"Food"}],"duration":[{"id":"daytrip","label":"Day trip"},{"id":"week","label":"8-9 days"},{"id":"fortnight","label":"14 days"}],"price":[{"id":"p-day","label":"Under €100"},{"id":"p-mid","label":"€700-999"},{"id":"p-high","label":"€1000+"}]},"countries":{"lv":{"name":"Latvia","flag":"🇱🇻"},"ee":{"name":"Estonia","flag":"🇪🇪"},"lt":{"name":"Lithuania","flag":"🇱🇹"},"fi":{"name":"Finland","flag":"🇫🇮"},"pl":{"name":"Poland","flag":"🇵🇱"},"gb":{"name":"United Kingdom","flag":"🇬🇧"},"fr":{"name":"France","flag":"🇫🇷"},"ch":{"name":"Switzerland","flag":"🇨🇭"},"it":{"name":"Italy","flag":"🇮🇹"},"si":{"name":"Slovenia","flag":"🇸🇮"},"hr":{"name":"Croatia","flag":"🇭🇷"},"es":{"name":"Spain","flag":"🇪🇸"},"pt":{"name":"Portugal","flag":"🇵🇹"},"nl":{"name":"Netherlands","flag":"🇳🇱"},"be":{"name":"Belgium","flag":"🇧🇪"}}};</script>
+<script>
+(function(){
+  var D=window.__FINDER__, T=D.tours, F=D.facets, C=D.countries;
+  var FACET_KEYS=['type','country','duration','price','theme'];
+  var FACET_LABEL={type:'Type',country:'Country',duration:'Duration',price:'Price',theme:'Theme'};
+  // value catalogues
+  function valuesOf(t,key){
+    if(key==='country') return t.countries;
+    if(key==='theme') return t.themes;
+    if(key==='type') return [t.type];
+    if(key==='duration') return [t.durationBucket];
+    if(key==='price') return [t.priceBucket];
+    return [];
+  }
+  function valueLabel(key,id){
+    if(key==='country') return (C[id]?C[id].flag+' '+C[id].name:id);
+    var list=F[key]||[]; for(var i=0;i<list.length;i++){if(list[i].id===id)return list[i].label;} return id;
+  }
+  // ordered value ids for a facet, as they appear in F (country ordered by frequency)
+  function facetOrder(key,scope){
+    if(key==='country'){
+      var freq={}; scope.forEach(function(t){t.countries.forEach(function(c){freq[c]=(freq[c]||0)+1;});});
+      return Object.keys(freq).sort(function(a,b){return freq[b]-freq[a]||a.localeCompare(b);});
+    }
+    return (F[key]||[]).map(function(o){return o.id;});
+  }
+  var state={mode:'standard',sel:{type:new Set(),country:new Set(),duration:new Set(),price:new Set(),theme:new Set()}};
+  function inScope(t){return state.mode==='india' ? (t.showIn==='all'||t.showIn.indexOf('en-in')>=0) : (t.showIn==='all');}
+  function scopeTours(){return T.filter(inScope);}
+  // a tour matches the active selection, optionally ignoring one facet (for counts)
+  function matches(t,ignore){
+    for(var k=0;k<FACET_KEYS.length;k++){var key=FACET_KEYS[k];
+      if(key===ignore) continue;
+      var sel=state.sel[key]; if(!sel.size) continue;
+      var vals=valuesOf(t,key),hit=false;
+      for(var i=0;i<vals.length;i++){if(sel.has(vals[i])){hit=true;break;}}
+      if(!hit) return false;
+    }
+    return true;
+  }
+  function countFor(key,val,scope){
+    var n=0; for(var i=0;i<scope.length;i++){var t=scope[i];
+      if(valuesOf(t,key).indexOf(val)>=0 && matches(t,key)) n++;} return n;
+  }
+  function renderChips(){
+    var scope=scopeTours(), box=document.getElementById('fgroups'); box.innerHTML='';
+    FACET_KEYS.forEach(function(key){
+      var order=facetOrder(key,scope).filter(function(v){
+        // value present in scope
+        return scope.some(function(t){return valuesOf(t,key).indexOf(v)>=0;});
+      });
+      if(order.length<2) return; // ADAPTIVE: hide single-value facets
+      var g=document.createElement('div'); g.className='fgroup';
+      g.innerHTML='<span class="lbl">'+FACET_LABEL[key]+'</span>';
+      order.forEach(function(v){
+        var c=countFor(key,v,scope);
+        var b=document.createElement('button'); b.className='chip'+(state.sel[key].has(v)?' on':'');
+        b.innerHTML=valueLabel(key,v)+'<span class="ct">'+c+'</span>';
+        if(c===0 && !state.sel[key].has(v)){b.disabled=true;b.style.opacity=.35;b.style.cursor='default';}
+        b.onclick=function(){var s=state.sel[key]; s.has(v)?s.delete(v):s.add(v); render();};
+        g.appendChild(b);
+      });
+      box.appendChild(g);
+    });
+  }
+  function renderCards(){
+    var scope=scopeTours(), shown=0;
+    document.querySelectorAll('.tcard').forEach(function(el){
+      if(el.dataset.diy){el.classList.remove('hide');return;}
+      var t=T.filter(function(x){return x.id===el.dataset.id;})[0];
+      var vis = inScope(t) && matches(t,null);
+      el.classList.toggle('hide',!vis); if(vis) shown++;
+    });
+    document.getElementById('fcount').textContent='Showing '+shown+(shown===1?' experience':' experiences');
+    document.getElementById('empty').hidden = shown>0;
+    var any=FACET_KEYS.some(function(k){return state.sel[k].size;});
+    document.getElementById('fclear').hidden=!any;
+  }
+  function render(){renderChips();renderCards();}
+  // mode toggle
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('.seg button').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on'); state.mode=b.dataset.mode;
+      FACET_KEYS.forEach(function(k){state.sel[k].clear();}); render();
+    };
+  });
+  document.getElementById('fclear').onclick=function(){FACET_KEYS.forEach(function(k){state.sel[k].clear();});render();};
+  render();
+})();
+</script>
+</body>
+</html>
