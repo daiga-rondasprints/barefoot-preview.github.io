@@ -2362,8 +2362,8 @@ html{scroll-padding-top:5.5rem}
 .page-hero{height:66vh;min-height:460px}
 .page-hero .hero-slide img{background:#0b0c0e!important}
 .page-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,14,.6) 0%,rgba(11,12,14,.08) 26%,rgba(11,12,14,.18) 52%,rgba(11,12,14,.93) 100%)}
-.page-hero>*:not(.hero-slides){position:relative;z-index:2}
-.page-hero h1{color:#f4f1ea;text-shadow:0 2px 20px rgba(0,0,0,.55)}
+.page-hero-content,.hero-creds,.photo-credit{z-index:3}
+.page-hero h1{color:#f4f1ea;text-shadow:0 2px 20px rgba(0,0,0,.55);font-size:clamp(1.7rem,3.4vw,2.35rem)}
 .page-hero .hero-sub{color:rgba(244,241,234,.92);text-shadow:0 1px 14px rgba(0,0,0,.5)}
 /* ── BOOKING CARD ── */
 .booking-card{background:#16191e;border-color:rgba(244,241,234,.14);box-shadow:0 14px 44px rgba(0,0,0,.55)}
@@ -2441,6 +2441,23 @@ footer a{color:#cdc8bd}
 [class*="-extras"]{background:#1d2127!important;border-color:rgba(244,241,234,.14)!important}
 #main-content p a,#main-content li a,.specialist-insight a,.photo-credits-section a{color:#8aa676!important}
 .itin-body h3,.itin-body h4{color:#f4f1ea!important}
+/* ===== calibration fixes (operator 2026-06-04) ===== */
+/* layout: long content spans full width below the booking row -> kills the empty
+   void on the right (operator wants the sidebar static, no sticky pinning) */
+.content-grid{grid-template-areas:"preview sidebar" "main main"}
+.content-preview{grid-area:preview;min-width:0}
+.content-sidebar{grid-area:sidebar;align-self:start}
+.content-main{grid-area:main;min-width:0;max-width:880px}
+/* itinerary (.dayplan-fold) + prose (.prose-fold) folds: toggle moves to the END when open (not stuck mid-list) */
+.prose-fold[open],.dayplan-fold[open]{display:flex;flex-direction:column}
+.prose-fold[open]>summary,.dayplan-fold[open]>summary{order:99;margin-top:.7rem}
+/* reviews: open the rails into a masonry wall (no horizontal scroller) */
+.reviews-rail{display:block!important;column-count:2;column-gap:1.3rem;overflow:visible!important;scroll-snap-type:none;-webkit-mask-image:none!important;mask-image:none!important;padding-left:0!important;padding-right:0!important}
+@media(min-width:980px){.top-reviews .reviews-rail{column-count:3}}
+@media(max-width:680px){.reviews-rail{column-count:1}}
+.reviews-rail .review-card{flex:none!important;width:100%!important;max-width:none!important;min-width:0!important;display:inline-block;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 1.3rem!important;vertical-align:top;scroll-snap-align:none;height:auto!important}
+.reviews-rail .review-text{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
+.reviews-rail .review-card-toggle{display:none!important}
 </style>
 </head>
 <body>
@@ -6471,5 +6488,6 @@ document.querySelector('.gallery-grid').addEventListener('click', function(e) {
   <a class="mobile-cta-btn" href="#reserve-now">Reserve</a>
 </aside>
 <script id="bb-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
+<script id="bb-detail-reviews">(function(){var top=document.querySelector(".top-reviews .reviews-rail");if(!top)return;var DS=/Ranjith|Tharun|Vijay|Sanjay/;var seen={};function key(c){var t=c.querySelector(".review-text");return (t?t.textContent:c.textContent).replace(/\s+/g," ").trim().slice(0,60);}function proc(rail,move){[].slice.call(rail.querySelectorAll(".review-card")).forEach(function(c){if(DS.test(c.textContent)){c.remove();return;}var k=key(c);if(seen[k]){c.remove();return;}seen[k]=1;if(move)top.appendChild(c);});}proc(top,false);var inl=document.querySelector(".reviews-inline");if(inl){var ir=inl.querySelector(".reviews-rail");if(ir)proc(ir,true);inl.style.display="none";}var h=document.querySelector(".top-reviews-h3");if(h&&/highlighted/i.test(h.textContent))h.textContent="Reviews from other travellers";})();</script>
 </body>
 </html>
