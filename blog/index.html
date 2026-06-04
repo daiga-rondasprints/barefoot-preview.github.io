@@ -1529,7 +1529,11 @@ footer a:hover{color:#fff}
 :root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.12);--peat:#f4f1ea;--indigo:#9fb3d6;--carmine:#c0294a;--carmine-dark:#a0213c}
 body{background:#0b0c0e;color:#f4f1ea}
 /* ── NAV shared: light links -> white, indigo CTA, dark hamburger, logo toggle ── */
-.nav .nav-links a{color:#f4f1ea}
+/* nav layout = homepage parity: full-width bar (logo flush-left, menu pushed right
+   via space-between + the inter-group gap clamp), tight 1rem menu-item gap, .92rem links */
+.nav-inner{max-width:none!important;gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{color:#f4f1ea;font-size:.92rem}
 .nav .nav-links a:hover{color:#fff}
 .nav-cta{background:#253961!important;color:#fff!important}
 .nav-cta:hover{background:#1a2a48!important;color:#fff!important}
@@ -1639,7 +1643,6 @@ footer a:hover{color:#fff!important;border-bottom-color:#fff!important}
 /* ── NAV (landing): solid-light sticky -> fixed transparent overlay over the hero ── */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(11,12,14,.74) 0%,rgba(11,12,14,.34) 52%,rgba(11,12,14,0) 100%)!important;border-bottom:0!important;transition:background .4s ease}
 .nav.scrolled{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
-.nav-inner{max-width:1100px}
 /* ── HERO: warm brown overlay -> cool cinematic scrim (left text legibility + bottom fade to ground) ── */
 .hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 48%,rgba(11,12,14,.22) 100%),linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,0) 24%,rgba(11,12,14,0) 62%,#0b0c0e 100%)!important}
 .hero-label{color:#d8a24a}
