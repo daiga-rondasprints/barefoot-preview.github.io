@@ -2253,6 +2253,114 @@ h1,h2,h3,h4{color:var(--bark)}
 }
 /* BB_SIDEBAR_FIX_END */
 </style>
+<style id="bb-detail-dark">
+/* ===== Excursion detail — dark cinematic theme, seamless with home. ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.14);--peat:#f4f1ea;--indigo:#9fb3d6}
+body{background:#0b0c0e;color:#f4f1ea}
+/* ── NAV: solid-light sticky -> fixed transparent overlay (home match) ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%)!important;border-bottom:0!important;transition:background .4s ease}
+.nav.scrolled{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+.nav-inner{max-width:none;gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{color:#f4f1ea;font-size:.92rem}
+.nav .nav-links a:hover{color:#fff}
+.nav-cta{background:var(--carmine)!important;color:#fff!important}
+.nav-cta:hover{background:var(--carmine-dark)!important;color:#fff!important}
+.nav-links a[aria-current="page"]{color:#fff!important;border-bottom-color:var(--carmine)!important}
+.hamburger span{background:#f4f1ea}
+.nav .logo-scrolled{display:none}
+.nav.scrolled .logo-top{display:none}
+.nav.scrolled .logo-scrolled{display:block}
+html{scroll-padding-top:5.5rem}
+/* ── BREADCRUMBS over the hero ── */
+.breadcrumbs{position:absolute;z-index:50;left:50%;transform:translateX(-50%);top:62px;width:100%}
+.breadcrumbs li,.breadcrumbs .sep{color:rgba(244,241,234,.72)}
+.breadcrumbs a{color:#d8a24a}
+.breadcrumbs a:hover{color:#fff}
+/* ── PAGE HERO: cinematic scrim + dark slide letterbox + legible title ── */
+.page-hero{height:66vh;min-height:460px}
+.page-hero .hero-slide img{background:#0b0c0e!important}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,14,.6) 0%,rgba(11,12,14,.08) 26%,rgba(11,12,14,.18) 52%,rgba(11,12,14,.93) 100%)}
+.page-hero>*:not(.hero-slides){position:relative;z-index:2}
+.page-hero h1{color:#f4f1ea;text-shadow:0 2px 20px rgba(0,0,0,.55)}
+.page-hero .hero-sub{color:rgba(244,241,234,.92);text-shadow:0 1px 14px rgba(0,0,0,.5)}
+/* ── BOOKING CARD ── */
+.booking-card{background:#16191e;border-color:rgba(244,241,234,.14);box-shadow:0 14px 44px rgba(0,0,0,.55)}
+.booking-card-header,.bk-step-header{background:#19241b!important;border-bottom-color:rgba(244,241,234,.12)!important}
+.price-label{color:#9cc089!important}
+.booking-card-header .price,.bk-price-big{color:#fff!important}
+.bk-price-cross,.price-cross{color:#9a958b!important}
+.booking-card-header .price-child{color:#cdc8bd}
+.btn-reserve{color:#f4f1ea!important;border-color:rgba(244,241,234,.3)!important}
+.btn-reserve:hover{border-color:#7c9a6b!important;color:#7c9a6b!important}
+.booking-card-details{border-top-color:rgba(244,241,234,.12);color:#cdc8bd}
+.booking-card-compare{color:#cdc8bd}
+.booking-card-compare a,.booking-card-details li svg{color:#8aa676}
+/* zero-pay strip + cta box + related reading: light flax islands -> dark */
+.bk-zero-strip{background:#1d2127!important;border-bottom-color:rgba(244,241,234,.14)!important}
+.bk-zero-strip-main{color:#f4f1ea!important}
+.bk-zero-step{color:#cdc8bd!important}
+.cta-box{background:#16191e!important;border-color:rgba(244,241,234,.14)!important;border-left-color:var(--carmine)!important}
+.cta-box h3{color:#f4f1ea}
+.cta-box p{color:#cdc8bd}
+.related-reading{background:#101216!important}
+/* ── ENQUIRY FORM / EMAIL REVEAL / SUCCESS — inline white bgs -> dark ── */
+#daiga-enquiry-form-reveal,#daiga-email-reveal,#daiga-enq-success-card{background:#16191e!important;border-color:rgba(244,241,234,.16)!important;color:#f4f1ea!important}
+#daiga-enquiry-form-reveal input,#daiga-enquiry-form-reveal textarea{background:#0f1115!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+#daiga-enquiry-form-reveal input::placeholder,#daiga-enquiry-form-reveal textarea::placeholder{color:#8a857b}
+#daiga-enquiry-form-reveal label span,#daiga-email-reveal>div:first-child{color:#cdc8bd!important}
+#daiga-email-reveal a,#daiga-enq-success-card a{background:#0f1115!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+#daiga-enq-status,#daiga-enq-success-card p,#daiga-enq-success-card strong{color:#cdc8bd!important}
+/* ── GALLERY / LIGHTBOX ── */
+.gallery-more-overlay{background:rgba(11,12,14,.5)}
+.gallery-more:hover .gallery-more-overlay{background:rgba(11,12,14,.28)}
+.lightbox{background:rgba(7,8,9,.96)}
+/* ── SHARED: faq, contact, footer, cards ── */
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#c0294a}
+.faq-q:hover,.faq-a p em{color:#7c9a6b}
+.faq-a p{color:#cdc8bd}.faq-a p strong{color:#f4f1ea}
+.faq-item,.faq-item:first-child{border-color:rgba(244,241,234,.12)}
+.section-label{color:#7c9a6b}
+.contact{background:#101216!important}
+footer{background:#070809!important}
+footer a{color:#cdc8bd}
+.related-reading h3{color:#f4f1ea}
+.bf-card,.related-card{background:#16191e;border-color:rgba(244,241,234,.12)}
+/* ── more detail light islands -> dark ── */
+.skip-link{background:#c0294a}
+.lang-switcher-list,.lang-switcher-menu,.lang-menu{background:#16191e!important;border-color:rgba(244,241,234,.16)!important}
+.lang-switcher-option,.lang-option{color:#cdc8bd!important}
+.lang-switcher-option:hover,.lang-option:hover{background:#1d2127!important;color:#fff!important}
+.quick-facts{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.quick-facts *{color:#cdc8bd}
+.top-reviews{background:#0d0e11!important}
+.top-reviews .review-card,.reviews-rail .review-card,.review-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.route-map-summary{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+.itin-num{background:#1f2b1c!important;color:#9cc089!important}
+.specialist-insight{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.review-lang-tag{background:#1d2127!important;color:#cdc8bd!important}
+.related-link{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.daiga-card{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+/* ── booking widget bk-* namespace + price options ── */
+.bk-input,select.bk-input,.bk-input select,.bk-input input{background:#0f1115!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+.bk-step-pill,.bk-avail-hint,.bk-s1-zero-note,.bk-note{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.14)!important}
+.price-option{background:#1a1d22!important;border-color:rgba(244,241,234,.16)!important;color:#cdc8bd!important}
+.price-option.direct{background:#19241b!important;border-color:rgba(124,154,107,.4)!important}
+.price-main{color:#fff!important}
+.subtitle,.bk-price-save{color:#9cc089!important;background:transparent!important}
+.btn-daiga{background:#1d2127!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.2)!important}
+.btn-daiga-email{background:var(--carmine)!important;color:#fff!important;border-color:var(--carmine)!important}
+/* hardcoded-dark text -> light */
+.route-map-section-title{color:#f4f1ea!important}
+.route-map-section-sub{color:#cdc8bd!important}
+[class*="lang-switcher-list"]{color:#cdc8bd!important}
+.trust-strip-item a,a[href^="tel:"]{color:#8aa676!important}
+.photo-credits-section{background:#0d0e11!important;border-color:rgba(244,241,234,.12)!important}
+[class*="-extras"]{background:#1d2127!important;border-color:rgba(244,241,234,.14)!important}
+#main-content p a,#main-content li a,.specialist-insight a,.photo-credits-section a{color:#8aa676!important}
+.itin-body h3,.itin-body h4{color:#f4f1ea!important}
+</style>
 </head>
 <body>
 
@@ -2263,7 +2371,8 @@ h1,h2,h3,h4{color:var(--bark)}
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Barefoot Baltic — home">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:40px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:48px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-monogram-red.svg" alt="" aria-hidden="true" class="logo-dark logo-scrolled" style="height:46px;width:auto" width="976" height="1400">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -5937,5 +6046,6 @@ document.querySelector('.gallery-grid').addEventListener('click', function(e) {
   </div>
   <a class="mobile-cta-btn" href="#reserve-now">Reserve</a>
 </aside>
+<script id="bb-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
 </body>
 </html>
