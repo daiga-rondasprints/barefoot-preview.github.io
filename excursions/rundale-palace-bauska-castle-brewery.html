@@ -2412,8 +2412,12 @@ footer a{color:#cdc8bd}
 .content-grid > .content-sidebar{grid-area:sidebar!important}
 .content-grid > .content-preview{grid-area:preview!important}
 .content-grid > .content-main{grid-area:main!important}
-/* readable, centred text column under the full-width media */
-.content-grid > .content-preview,.content-grid > .content-main{max-width:880px;margin-left:auto;margin-right:auto;width:100%}
+/* text column aligns to the SAME content width as the gallery + booking band, so the
+   whole page is one consistent column (was capped at 880 → read as misaligned). */
+.content-grid > .content-preview,.content-grid > .content-main{max-width:none!important;width:100%;margin-left:0;margin-right:0}
+/* the contact footer band's inner is the bare 1100 wrap (no inner padding) while every
+   body section sits at 1100−64 = 1036; cap it to 1036 so it lines up with the column. */
+.contact .section-inner{max-width:1036px!important}
 /* ── GALLERY: content-width cinematic 1+4 mosaic (matches the booking band below) ── */
 .content-grid > .gallery-grid{width:100%;display:grid!important;grid-template-columns:repeat(4,1fr)!important;grid-auto-rows:1fr;gap:6px!important;height:clamp(380px,56vh,640px);margin:0 0 var(--space-3);border-radius:14px;overflow:hidden;background:#0b0c0e;-webkit-mask-image:none!important;mask-image:none!important}
 .content-grid > .gallery-grid .g-img{height:100%!important;width:100%!important;margin:0!important;border-radius:0!important;min-width:0}
