@@ -2707,6 +2707,23 @@ footer a{color:#cdc8bd}
 .nav .nav-links{gap:1rem}
 .nav .nav-links a{font-size:.92rem}
 </style>
+<style id="bb-reviews-wall">
+/* Reviews: open horizontal carousel -> organic masonry wall (display only). */
+.reviews-grid{display:block;overflow:visible;column-count:3;column-gap:1.4rem;-webkit-mask-image:none;mask-image:none;scroll-snap-type:none;padding:.5rem 0}
+@media(max-width:1040px){.reviews-grid{column-count:2}}
+@media(max-width:620px){.reviews-grid{column-count:1}}
+.reviews-grid .review-card{flex:none;width:100%;height:auto;display:inline-block;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 1.4rem;scroll-snap-align:none;vertical-align:top;transition:transform .25s ease,box-shadow .25s ease}
+.reviews-grid .review-text{-webkit-line-clamp:unset;display:block;overflow:visible}
+.review-card-toggle{display:none}
+.reviews .carousel-nav{display:none}
+/* gentle scatter (5-cycle so it never lines up with the 3 columns) */
+.reviews-grid .review-card:nth-child(5n+1){transform:rotate(-0.8deg)}
+.reviews-grid .review-card:nth-child(5n+2){transform:rotate(0.6deg)}
+.reviews-grid .review-card:nth-child(5n+3){transform:rotate(-0.3deg)}
+.reviews-grid .review-card:nth-child(5n+4){transform:rotate(0.9deg)}
+.reviews-grid .review-card:nth-child(5n){transform:rotate(-0.5deg)}
+.reviews-grid .review-card:hover{transform:rotate(0) scale(1.015);z-index:2;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+</style>
 </head>
 <body>
 
