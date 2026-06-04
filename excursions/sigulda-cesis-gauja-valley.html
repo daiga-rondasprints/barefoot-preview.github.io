@@ -2349,9 +2349,9 @@ body{background:#0b0c0e;color:#f4f1ea}
 .nav-cta:hover{background:#1a2a48!important;color:#fff!important}
 .nav-links a[aria-current="page"]{color:#fff!important;border-bottom-color:var(--carmine)!important}
 .hamburger span{background:#f4f1ea}
-.nav .logo-scrolled{display:none}
-.nav.scrolled .logo-top{display:none}
-.nav.scrolled .logo-scrolled{display:block}
+/* logo: the white wordmark always — no scroll-swap to the monogram (consistent header) */
+.nav .logo-scrolled{display:none!important}
+.nav.scrolled .logo-top{display:block!important}
 html{scroll-padding-top:5.5rem}
 /* ── BREADCRUMBS over the hero ── */
 .breadcrumbs{position:absolute;z-index:50;left:50%;transform:translateX(-50%);top:62px;width:100%}
@@ -2567,8 +2567,7 @@ footer a{color:#cdc8bd}
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Barefoot Baltic — home">
-      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:48px;width:auto" width="1245" height="210">
-      <img src="/images/brand/barefoot-baltic-monogram-red.svg" alt="" aria-hidden="true" class="logo-dark logo-scrolled" style="height:46px;width:auto" width="976" height="1400">
+      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:40px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
