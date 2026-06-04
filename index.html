@@ -2715,6 +2715,29 @@ footer a:hover{color:#fff}
   .faq-q{font-size:1rem;padding:var(--space-4) 0}
 }
 </style>
+
+<style id="bb-fullbleed-exc">
+/* Stage 2 — full-bleed cinematic excursion tiles (layout/colour only) */
+#excursions .exc-grid{max-width:none;gap:0}
+#excursions .exc-card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:82vh;border:0;border-radius:0;background:transparent;overflow:hidden;padding:clamp(2.5rem,7vw,6rem);box-shadow:none}
+#excursions .exc-card:hover{box-shadow:none;transform:none}
+#excursions .exc-card-img{position:absolute;inset:0;aspect-ratio:auto;width:100%;height:100%;min-height:0;border:0;z-index:0}
+#excursions .exc-card-img img{width:100%;height:100%;object-fit:cover}
+#excursions .exc-card-img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
+#excursions .exc-card-badge,#excursions .feeling,#excursions .exc-card-zero{z-index:3}
+#excursions .exc-card-body{position:relative;z-index:2;max-width:620px;color:#f4f1ea;padding:0}
+#excursions .exc-card-number{color:#d8a24a}
+#excursions .exc-card-body h3{color:#fff}
+#excursions .exc-card-meta{color:rgba(244,241,234,.85)}
+#excursions .exc-card-body p{color:rgba(244,241,234,.92);-webkit-line-clamp:3}
+#excursions .exc-card-footer{position:relative;z-index:2;padding:1.5rem 0 0;justify-content:flex-start;gap:2rem;border:0}
+#excursions .exc-card-price{color:#fff}
+#excursions .exc-card-price span{color:rgba(244,241,234,.8)}
+#excursions .exc-card:nth-child(even){align-items:flex-end;text-align:right}
+#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-end}
+#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(270deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
+@media(max-width:768px){#excursions .exc-card{min-height:68vh;padding:clamp(1.5rem,6vw,2.5rem);align-items:flex-start;text-align:left}#excursions .exc-card:nth-child(even){align-items:flex-start;text-align:left}#excursions .exc-card-footer,#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-start}#excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94),rgba(11,12,14,.5) 45%,transparent)}}
+</style>
 </head>
 <body>
 
