@@ -2338,6 +2338,12 @@ footer a{color:#cdc8bd}
 .reviews-rail .review-card{flex:none!important;width:100%!important;max-width:none!important;min-width:0!important;display:inline-block;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 1.3rem!important;vertical-align:top;scroll-snap-align:none;height:auto!important}
 .reviews-rail .review-text{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
 .reviews-rail .review-card-toggle{display:none!important}
+/* reviews: collapse to ~1.5 pages with a Show-all toggle */
+.bb-rev-collapsible{position:relative}
+.bb-rev-collapsible:not(.expanded) .reviews-rail .review-card:nth-child(n+9){display:none}
+.bb-rev-collapsible:not(.expanded)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,#0d0e11);pointer-events:none}
+.bb-reviews-toggle{display:block;margin:1.5rem auto 0;background:transparent;border:1px solid rgba(244,241,234,.32);color:#f4f1ea;font:600 .9rem/1.1 inherit;letter-spacing:.02em;padding:.72rem 1.6rem;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.bb-reviews-toggle:hover{border-color:#c0294a;color:#fff;background:rgba(192,41,74,.18)}
 </style>
 </head>
 <body>
@@ -6116,6 +6122,6 @@ document.querySelector('.gallery-grid').addEventListener('click', function(e) {
   <a class="mobile-cta-btn" href="#reserve-now">Reserve</a>
 </aside>
 <script id="bb-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
-<script id="bb-detail-reviews">(function(){var top=document.querySelector(".top-reviews .reviews-rail");if(!top)return;var DS=/Ranjith|Tharun|Vijay|Sanjay/;var seen={};function key(c){var t=c.querySelector(".review-text");return (t?t.textContent:c.textContent).replace(/\s+/g," ").trim().slice(0,60);}function proc(rail,move){[].slice.call(rail.querySelectorAll(".review-card")).forEach(function(c){if(DS.test(c.textContent)){c.remove();return;}var k=key(c);if(seen[k]){c.remove();return;}seen[k]=1;if(move)top.appendChild(c);});}proc(top,false);var inl=document.querySelector(".reviews-inline");if(inl){var ir=inl.querySelector(".reviews-rail");if(ir)proc(ir,true);inl.style.display="none";}var h=document.querySelector(".top-reviews-h3");if(h&&/highlighted/i.test(h.textContent))h.textContent="Reviews from other travellers";})();</script>
+<script id="bb-detail-reviews">(function(){var top=document.querySelector(".top-reviews .reviews-rail");if(!top)return;var DS=/Ranjith|Tharun|Vijay|Sanjay/;var seen={};function key(c){var t=c.querySelector(".review-text");return (t?t.textContent:c.textContent).replace(/\s+/g," ").trim().slice(0,60);}function proc(rail,move){[].slice.call(rail.querySelectorAll(".review-card")).forEach(function(c){if(DS.test(c.textContent)){c.remove();return;}var k=key(c);if(seen[k]){c.remove();return;}seen[k]=1;if(move)top.appendChild(c);});}proc(top,false);var inl=document.querySelector(".reviews-inline");if(inl){var ir=inl.querySelector(".reviews-rail");if(ir)proc(ir,true);inl.style.display="none";}var h=document.querySelector(".top-reviews-h3");if(h&&/highlighted/i.test(h.textContent))h.textContent="Reviews from other travellers";var wrap=document.querySelector(".top-reviews .reviews-rail-wrap");if(wrap){var nCards=top.querySelectorAll(".review-card").length;if(nCards>8){wrap.classList.add("bb-rev-collapsible");var b=document.createElement("button");b.type="button";b.className="bb-reviews-toggle";b.textContent="Show all reviews";b.setAttribute("aria-expanded","false");b.addEventListener("click",function(){var ex=wrap.classList.toggle("expanded");b.textContent=ex?"Show fewer reviews":"Show all reviews";b.setAttribute("aria-expanded",ex?"true":"false");if(!ex)wrap.scrollIntoView({block:"start"});});wrap.parentNode.insertBefore(b,wrap.nextSibling);}}})();</script>
 </body>
 </html>
