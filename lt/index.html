@@ -2907,49 +2907,6 @@ footer a:hover{color:#fff}
 }
 </style>
 <style id="bb-hero-opt">@media(min-width:769px){.hero-inner{align-items:center}}</style>
-<style id="bb-dark-theme">
-/* ===== Stage 1 — full cinematic dark theme (colour only; additive). ===== */
-:root{
-  --bark:#f4f1ea;                       /* was #3a2f28 -> primary ink */
-  --bark-light:#cdc8bd;                 /* was #5c4a3e -> secondary ink */
-  --sand-dark:rgba(244,241,234,.14);    /* was #e8e0d0 -> hairlines */
-}
-body{background:#0b0c0e}
-/* light sections -> dark grounds (inline section bg => !important) */
-#about{background:#101216 !important}
-#excursions{background:#0b0c0e !important}
-.reviews{background:#0b0c0e}
-.tour-videos{background:#101216}
-#field-notes{background:#0b0c0e !important}
-.trust{background:#101216}
-#faq,.faq-section{background:#0b0c0e !important}
-/* already-dark warm sections -> re-ground cool for one coherent palette */
-.skip-link{background:#c0294a}
-.promise{background:#101216}
-.contact{background:#101216}
-.cookie-banner{background:#16191e}
-footer{background:#070809}
-footer a{color:#cdc8bd}
-/* hero scrim: warm brown -> cool filmic, text side kept darkest */
-.hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 42%,rgba(11,12,14,.15) 100%),linear-gradient(0deg,rgba(11,12,14,.55),transparent 40%)}
-/* card / surface bodies: white|sand -> dark surface */
-.exc-card,.trust-card,.review-card,.tour-video-card{background:#16191e}
-.trust-detail{background:#14171c}
-.trust-icon{background:#f4f1ea}          /* light chip so PTAC/BTA/ATD logos stay legible */
-.carousel-nav-btn{background:#16191e;color:#c0294a}
-.carousel-nav-btn:hover:not(:disabled){background:#c0294a;border-color:#c0294a;color:#fff}
-.carousel-nav-btn:disabled{color:#6f6a61}
-/* accent legibility on near-black */
-.section-label{color:#7c9a6b}
-.trust-fleet-tag{color:#8aa676}
-.trust-card a,.review-source a{color:#7c9a6b}
-.faq-q{color:#f4f1ea}
-.faq-q svg{color:#c0294a}
-.faq-q:hover,.faq-a p em{color:#7c9a6b}
-/* about signature is hardcoded #3a2f28 (dark) -> light so it doesn't vanish */
-.about-signature svg path{stroke:#cdc8bd !important}
-.about-signature svg circle{fill:#cdc8bd !important;stroke:#cdc8bd !important}
-</style>
 <style id="bb-daiga-splash">
 /* Water-splash edge on Daiga's portrait (additive). */
 .about-photo{border:0 !important;border-radius:0 !important;background:transparent !important;overflow:visible;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;}
@@ -2984,6 +2941,50 @@ footer a{color:#cdc8bd}
 .reviews-grid .review-card:nth-child(5n+4){transform:rotate(0.9deg)}
 .reviews-grid .review-card:nth-child(5n){transform:rotate(-0.5deg)}
 .reviews-grid .review-card:hover{transform:rotate(0) scale(1.015);z-index:2;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+</style>
+<style id="bb-dark-theme">
+/* ===== Stage 1 — full cinematic dark theme (colour only; additive). ===== */
+:root{
+  --bark:#f4f1ea;                       /* was #3a2f28 -> primary ink */
+  --bark-light:#cdc8bd;                 /* was #5c4a3e -> secondary ink */
+  --sand-dark:rgba(244,241,234,.14);    /* was #e8e0d0 -> hairlines */
+  --carmine:#c0294a; --carmine-dark:#a0213c;  /* unify the ONE red across the site (was brand #9E1B32) */
+}
+body{background:#0b0c0e}
+/* light sections -> dark grounds (inline section bg => !important) */
+#about{background:#101216 !important}
+#excursions{background:#0b0c0e !important}
+.reviews{background:#0b0c0e}
+.tour-videos{background:#101216}
+#field-notes{background:#0b0c0e !important}
+.trust{background:#101216}
+#faq,.faq-section{background:#0b0c0e !important}
+/* already-dark warm sections -> re-ground cool for one coherent palette */
+.skip-link{background:#c0294a}
+.promise{background:#101216}
+.contact{background:#101216}
+.cookie-banner{background:#16191e}
+footer{background:#0b0c0e}
+footer a{color:#cdc8bd}
+/* hero scrim: warm brown -> cool filmic, text side kept darkest */
+.hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 42%,rgba(11,12,14,.15) 100%),linear-gradient(0deg,rgba(11,12,14,.55),transparent 40%)}
+/* card / surface bodies: white|sand -> dark surface */
+.exc-card,.trust-card,.review-card,.tour-video-card{background:#16191e}
+.trust-detail{background:#101216}
+.trust-icon{background:#f4f1ea}          /* light chip so PTAC/BTA/ATD logos stay legible */
+.carousel-nav-btn{background:#16191e;color:#c0294a}
+.carousel-nav-btn:hover:not(:disabled){background:#c0294a;border-color:#c0294a;color:#fff}
+.carousel-nav-btn:disabled{color:#9a958b}
+/* accent legibility on near-black */
+.section-label{color:#7c9a6b}
+.trust-fleet-tag{color:#7c9a6b}
+.trust-card a,.review-source a{color:#7c9a6b}
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#c0294a}
+.faq-q:hover,.faq-a p em{color:#7c9a6b}
+/* about signature is hardcoded #3a2f28 (dark) -> light so it doesn't vanish */
+.about-signature svg path{stroke:#cdc8bd !important}
+.about-signature svg circle{fill:#cdc8bd !important;stroke:#cdc8bd !important}
 </style>
 </head>
 <body>
