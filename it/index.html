@@ -490,121 +490,6 @@
     },
     {
       "@type": "Review",
-      "@id": "https://barefootbaltic.com/#review-ranjith-kemeri-long",
-      "author": {
-        "@type": "Person",
-        "name": "Ranjith",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "LV"
-        }
-      },
-      "datePublished": "2026-04-29",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Absolutely incredible! The Ķemeri Bog boardwalk felt like stepping into another world — early morning mist over the pools, birds singing, and the wooden path winding through surreal landscapes. Our guide was knowledgeable and kept a great pace. Then Jūrmala's sandy beaches and charming wooden architecture were the perfect contrast. Loved dipping my feet in the Baltic Sea! The whole trip was well-organized, peaceful, and refreshing. Only thing that could improve? Slightly longer stop for coffee in Jūrmala. But honestly — 5 stars, highly recommend!",
-      "publisher": {
-        "@id": "https://barefootbaltic.com/#organization"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://barefootbaltic.com/#review-ranjith-kemeri-short",
-      "author": {
-        "@type": "Person",
-        "name": "Ranjith",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "LV"
-        }
-      },
-      "datePublished": "2026-04-29",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "The trip was really wonderful and excellent. It was fun and worth my money.",
-      "publisher": {
-        "@id": "https://barefootbaltic.com/#organization"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://barefootbaltic.com/#review-tharun-kemeri",
-      "author": {
-        "@type": "Person",
-        "name": "Tharun",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "LV"
-        }
-      },
-      "datePublished": "2026-04-29",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "The trip went smoothly and enjoyably.",
-      "publisher": {
-        "@id": "https://barefootbaltic.com/#organization"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://barefootbaltic.com/#review-vijay-kemeri",
-      "author": {
-        "@type": "Person",
-        "name": "Vijay",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "LV"
-        }
-      },
-      "datePublished": "2026-04-29",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "The trip was excellent.",
-      "publisher": {
-        "@id": "https://barefootbaltic.com/#organization"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://barefootbaltic.com/#review-sanjay-kemeri",
-      "author": {
-        "@type": "Person",
-        "name": "Sanjay",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "LV"
-        }
-      },
-      "datePublished": "2026-04-29",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "My trip was so good and amazing, I loved it!",
-      "publisher": {
-        "@id": "https://barefootbaltic.com/#organization"
-      }
-    },
-    {
-      "@type": "Review",
       "@id": "https://barefootbaltic.com/#review-sheldon-femi-kemeri",
       "author": {
         "@type": "Person",
@@ -1228,17 +1113,13 @@ a:hover{color:var(--carmine)}
 img{max-width:100%;display:block}
 
 /* ── NAV ── */
-.nav{position:sticky;top:0;z-index:100;background:var(--linen);border-bottom:3px solid var(--carmine)}
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(8,9,11,.5),rgba(8,9,11,0));border-bottom:1px solid transparent;transition:background .4s ease,border-color .4s ease}.nav.scrolled{background:rgba(11,12,14,.95);border-bottom-color:rgba(244,241,234,.14)}html{scroll-padding-top:5.5rem}
 
 /* Nav text colors: white when transparent, dark when scrolled */
-.nav .nav-links a{font-size:.875rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--bark-light);text-decoration:none;transition:color .2s}
+.nav .nav-links a{font-size:1rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#f4f1ea;text-decoration:none;transition:color .2s;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 
 
-.nav-inner{
-  max-width:1100px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:var(--space-3) var(--space-8);
-}
+.nav-inner{max-width:none;margin:0;display:flex;align-items:center;justify-content:space-between;padding:1.1rem clamp(1.1rem,4vw,2.6rem)}
 .nav-logo{
   display:flex;align-items:center;gap:var(--space-4);
   text-decoration:none;
@@ -2616,6 +2497,30 @@ footer a:hover{color:#fff}
   .faq-q{font-size:1rem;padding:var(--space-4) 0}
 }
 </style>
+
+<style id="bb-fullbleed-exc">
+/* Stage 2 — full-bleed cinematic excursion tiles (layout/colour only) */
+#excursions .exc-grid{max-width:none;gap:0}
+#excursions .exc-card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:82vh;border:0;border-radius:0;background:transparent;overflow:hidden;padding:clamp(2.5rem,7vw,6rem);box-shadow:none}
+#excursions .exc-card:hover{box-shadow:none;transform:none}
+#excursions .exc-card-img{position:absolute;inset:0;aspect-ratio:auto;width:100%;height:100%;min-height:0;border:0;z-index:0}
+#excursions .exc-card-img img{width:100%;height:100%;object-fit:cover}
+#excursions .exc-card-img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
+#excursions .exc-card-badge,#excursions .feeling,#excursions .exc-card-zero{z-index:3}
+#excursions .exc-card-body{position:relative;z-index:2;max-width:620px;color:#f4f1ea;padding:0}
+#excursions .exc-card-number{color:#d8a24a}
+#excursions .exc-card-body h3{color:#fff}
+#excursions .exc-card-meta{color:rgba(244,241,234,.85)}
+#excursions .exc-card-body p{color:rgba(244,241,234,.92);-webkit-line-clamp:3}
+#excursions .exc-card-footer{position:relative;z-index:2;padding:1.5rem 0 0;justify-content:flex-start;gap:2rem;border:0}
+#excursions .exc-card-price{color:#fff}
+#excursions .exc-card-price span{color:rgba(244,241,234,.8)}
+#excursions .exc-card:nth-child(even){align-items:flex-end;text-align:right}
+#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-end}
+#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(270deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
+@media(max-width:768px){#excursions .exc-card{min-height:68vh;padding:clamp(1.5rem,6vw,2.5rem);align-items:flex-start;text-align:left}#excursions .exc-card:nth-child(even){align-items:flex-start;text-align:left}#excursions .exc-card-footer,#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-start}#excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94),rgba(11,12,14,.5) 45%,transparent)}}
+</style>
+<style id="bb-hero-opt">@media(min-width:769px){.hero-inner{align-items:center}}</style>
 </head>
 <body>
 
@@ -2628,7 +2533,7 @@ footer a:hover{color:#fff}
 <nav class="nav" id="nav" aria-label="Navigazione principale">
   <div class="nav-inner">
     <a href="/it/" class="nav-logo" aria-label="Barefoot Baltic, pagina iniziale">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:40px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark" style="height:56px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Apri/chiudi menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -3005,18 +2910,12 @@ footer a:hover{color:#fff}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="14" height="14" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           <strong>Prenota oggi, niente da pagare in anticipo</strong>
         </div>
-        <div class="hero-trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          20% di acconto 48&nbsp;ore prima della partenza
-        </div>
+        
         <div class="hero-trust-pill">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           Il resto al van il giorno stesso
         </div>
-        <div class="hero-trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
-          Cancellazione gratuita fino a 24&nbsp;ore prima
-        </div>
+        
       </div>
     </div>
   </div>
@@ -3206,66 +3105,11 @@ footer a:hover{color:#fff}
         </div>
         <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
       </div>
-      <div class="review-card fade-up">
-        <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
-        <p class="review-text">"Absolutely incredible! The Ķemeri Bog boardwalk felt like stepping into another world — early morning mist over the pools, birds singing, and the wooden path winding through surreal landscapes. Our guide was knowledgeable and kept a great pace. Then Jūrmala's sandy beaches and charming wooden architecture were the perfect contrast. Loved dipping my feet in the Baltic Sea! The whole trip was well-organized, peaceful, and refreshing. Only thing that could improve? Slightly longer stop for coffee in Jūrmala. But honestly — 5 stars, highly recommend!"</p>
-        <div class="review-author">
-          <div class="review-avatar">R</div>
-          <div class="review-meta">
-            <strong>Ranjith</strong>
-            <span>Latvia · April 2026</span>
-          </div>
-        </div>
-        <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
-      </div>
-      <div class="review-card fade-up">
-        <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
-        <p class="review-text">"The trip was really wonderful and excellent. It was fun and worth my money."</p>
-        <div class="review-author">
-          <div class="review-avatar">R</div>
-          <div class="review-meta">
-            <strong>Ranjith</strong>
-            <span>Latvia · April 2026</span>
-          </div>
-        </div>
-        <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
-      </div>
-      <div class="review-card fade-up">
-        <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
-        <p class="review-text">"The trip went smoothly and enjoyably."</p>
-        <div class="review-author">
-          <div class="review-avatar">T</div>
-          <div class="review-meta">
-            <strong>Tharun</strong>
-            <span>Latvia · April 2026</span>
-          </div>
-        </div>
-        <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
-      </div>
-      <div class="review-card fade-up">
-        <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
-        <p class="review-text">"The trip was excellent."</p>
-        <div class="review-author">
-          <div class="review-avatar">V</div>
-          <div class="review-meta">
-            <strong>Vijay</strong>
-            <span>Latvia · April 2026</span>
-          </div>
-        </div>
-        <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
-      </div>
-      <div class="review-card fade-up">
-        <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
-        <p class="review-text">"My trip was so good and amazing, I loved it!"</p>
-        <div class="review-author">
-          <div class="review-avatar">S</div>
-          <div class="review-meta">
-            <strong>Sanjay</strong>
-            <span>Latvia · April 2026</span>
-          </div>
-        </div>
-        <p class="review-source">Prenotazione verificata su <a href="https://www.getyourguide.com/bauska-l212486/from-riga-guided-day-tour-to-rundale-palace-bauska-castle-t1225869" target="_blank" rel="noopener">GetYourGuide</a></p>
-      </div>
+      
+      
+      
+      
+      
       <div class="review-card fade-up">
         <div class="review-stars" aria-hidden="true">★★★★★</div><span class="visually-hidden">5 stelle su 5</span>
         <p class="review-text">"The trip was really good."</p>
@@ -4765,5 +4609,6 @@ function declineCookies(){
 
 </script>
 
+<script id="bb-nav-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
 </body>
 </html>
