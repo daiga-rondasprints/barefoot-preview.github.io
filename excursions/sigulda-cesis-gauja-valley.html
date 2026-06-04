@@ -2523,8 +2523,17 @@ footer a{color:#cdc8bd}
 #bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{order:2;margin-left:auto;width:auto!important;flex:0 0 auto;align-self:flex-end}
 #bk-s1 > .bk-avail-hint{flex-basis:100%;order:3;margin:0}
 #bk-s1 > .bk-s1-zero-note{flex-basis:100%;order:4;margin:0}
-/* later steps (forms, payment) stay a comfortable width, not stretched edge-to-edge */
-.bk-body > .bk-step:not(#bk-s1){max-width:640px}
+/* later steps fill the band cleanly instead of a narrow column stranded on the left:
+   step-2 details + step-3 payment options go TWO-COLUMN; buttons/notes span both;
+   focused panels (OTP entry, payment instructions) keep a centred readable width. */
+.bk-body > .bk-step:not(#bk-s1){max-width:none}
+#bk-s2a{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.4rem;align-items:start}
+#bk-s2a > .bk-field{margin-bottom:0}
+#bk-s2a > *:not(.bk-field){grid-column:1 / -1}
+#bk-s2b{max-width:460px;margin-left:auto;margin-right:auto}
+#bk-s3 > .bk-price-breakdown{max-width:440px}
+#bk-s3 .bk-pay-opts{display:grid!important;grid-template-columns:1fr 1fr;gap:.8rem;align-items:start}
+#bk-s4-bank,#bk-s4-revolut,#bk-s4-stripe,#bk-s4-paylater,#bk-s-err{max-width:580px;margin-left:auto;margin-right:auto}
 /* mobile: fold the band back into a stacked card */
 @media(max-width:760px){
   .content-sidebar .booking-card{grid-template-columns:1fr;grid-template-areas:"header" "zero" "body"}
@@ -2532,6 +2541,9 @@ footer a{color:#cdc8bd}
   #bk-s1.active{display:block!important}
   #bk-s1 .bk-field{margin-bottom:var(--space-3)}
   #bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{width:100%!important;margin-left:0!important;margin-top:var(--space-2)}
+  #bk-s2a{grid-template-columns:1fr}
+  #bk-s2a > .bk-field{margin-bottom:var(--space-3)}
+  #bk-s3 .bk-pay-opts{grid-template-columns:1fr!important}
 }
 </style>
 </head>
