@@ -2668,6 +2668,19 @@ footer a:hover{color:#fff}
 .reviews-grid .review-card:nth-child(5n){transform:rotate(-0.5deg)}
 .reviews-grid .review-card:hover{transform:rotate(0) scale(1.015);z-index:2;box-shadow:0 14px 40px rgba(0,0,0,.45)}
 </style>
+<style id="bb-nav-red">
+/* Stage 3 — overlay-nav polish. */
+/* stronger top scrim so the wordmark + white menu read over any hero frame */
+.nav{background:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%)}
+/* logo: the white wordmark always — NO scroll-swap to the monogram (one consistent
+   header logo everywhere; operator flagged the wordmark<->B swap as inconsistent) */
+.nav .logo-scrolled{display:none!important}
+.nav.scrolled .logo-top{display:block!important}
+/* breathing room: reclaim menu width so the wordmark + menu stop touching */
+.nav-inner{gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{font-size:.92rem}
+</style>
 <style id="bb-dark-theme">
 /* ===== Stage 1 — full cinematic dark theme (colour only; additive). ===== */
 :root{
@@ -2711,19 +2724,9 @@ footer a{color:#cdc8bd}
 /* about signature is hardcoded #3a2f28 (dark) -> light so it doesn't vanish */
 .about-signature svg path{stroke:#cdc8bd !important}
 .about-signature svg circle{fill:#cdc8bd !important;stroke:#cdc8bd !important}
-</style>
-<style id="bb-nav-red">
-/* Stage 3 — overlay-nav polish. */
-/* stronger top scrim so the wordmark + white menu read over any hero frame */
-.nav{background:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%)}
-/* logo: the white wordmark always — NO scroll-swap to the monogram (one consistent
-   header logo everywhere; operator flagged the wordmark<->B swap as inconsistent) */
-.nav .logo-scrolled{display:none!important}
-.nav.scrolled .logo-top{display:block!important}
-/* breathing room: reclaim menu width so the wordmark + menu stop touching */
-.nav-inner{gap:clamp(1.4rem,3vw,4rem)}
-.nav .nav-links{gap:1rem}
-.nav .nav-links a{font-size:.92rem}
+/* About intro: unify the two paragraphs — the first was a larger, brighter "lead"
+   (17.6px/#f4f1ea) vs the second (16.3px/#cdc8bd); make both the same. */
+.about-text p{font-size:1.1rem !important;color:#f4f1ea !important}
 </style>
 </head>
 <body>
