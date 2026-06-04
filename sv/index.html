@@ -2499,26 +2499,48 @@ footer a:hover{color:#fff}
 </style>
 
 <style id="bb-fullbleed-exc">
-/* Stage 2 — full-bleed cinematic excursion tiles (layout/colour only) */
-#excursions .exc-grid{max-width:none;gap:0}
-#excursions .exc-card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:82vh;border:0;border-radius:0;background:transparent;overflow:hidden;padding:clamp(2.5rem,7vw,6rem);box-shadow:none}
-#excursions .exc-card:hover{box-shadow:none;transform:none}
-#excursions .exc-card-img{position:absolute;inset:0;aspect-ratio:auto;width:100%;height:100%;min-height:0;border:0;z-index:0}
-#excursions .exc-card-img img{width:100%;height:100%;object-fit:cover}
-#excursions .exc-card-img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
-#excursions .exc-card-badge,#excursions .feeling,#excursions .exc-card-zero{z-index:3}
-#excursions .exc-card-body{position:relative;z-index:2;max-width:620px;color:#f4f1ea;padding:0}
-#excursions .exc-card-number{color:#d8a24a}
-#excursions .exc-card-body h3{color:#fff}
-#excursions .exc-card-meta{color:rgba(244,241,234,.85)}
-#excursions .exc-card-body p{color:rgba(244,241,234,.92);-webkit-line-clamp:3}
-#excursions .exc-card-footer{position:relative;z-index:2;padding:1.5rem 0 0;justify-content:flex-start;gap:2rem;border:0}
-#excursions .exc-card-price{color:#fff}
-#excursions .exc-card-price span{color:rgba(244,241,234,.8)}
+/* Stage 2 — exact cinematic excursion tiles (ports _mockups/.../.exc tile). */
+/* break the 1100px section container -> true viewport full-bleed */
+#excursions.section{padding:0}
+#excursions .section-inner{max-width:none;margin:0;padding:0}
+#excursions .exc-grid{display:block;max-width:none;margin:0;gap:0;grid-template-columns:none}
+/* the tile: a full-bleed stage; text vertically centred over a directional scrim */
+#excursions .exc-card{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:80vh;margin:clamp(1.4rem,4vh,3rem) 0;border:0;border-radius:0;background:transparent;overflow:hidden;box-shadow:none;text-align:left;isolation:isolate;padding:clamp(3rem,9vh,6rem) max(clamp(1.4rem,5vw,3rem),calc((100% - 1180px)/2))}
+#excursions .exc-card:hover{box-shadow:none;transform:none;border:0}
+/* full-bleed image, top/bottom feather into the dark ground */
+#excursions .exc-card-img{position:absolute;inset:0;z-index:0;width:100%;height:100%;min-height:0;margin:0;border:0;aspect-ratio:auto;background:transparent;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%)}
+#excursions .exc-card-img img,#excursions .exc-card:hover .exc-card-img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center;transform:none}
+#excursions .exc-card-img::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,12,14,.92) 0%,rgba(11,12,14,.72) 42%,rgba(11,12,14,.32) 100%)}
+/* drop any clutter that survived the markup pass */
+#excursions .exc-card-badge,#excursions .feeling,#excursions .exc-card-zero,#excursions .exc-card-number{display:none}
+/* text column */
+#excursions .exc-card-body{position:relative;z-index:2;max-width:540px;width:100%;padding:0;display:block;color:#f4f1ea}
+#excursions .exc-card-body p.exc-card-tag{font-size:.8rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#d8a24a;margin:0 0 1rem;display:block;-webkit-line-clamp:none;max-width:none}
+#excursions .exc-card-body h3{font-family:var(--font-display);font-size:clamp(1.9rem,1.5rem + 2vw,3rem);line-height:1.08;letter-spacing:-.02em;color:#fff;margin:0 0 .6rem}
+#excursions .exc-card-meta{font-size:.92rem;font-weight:400;letter-spacing:0;color:#9a958b;margin:0 0 1.1rem}
+#excursions .exc-card-body p:not(.exc-card-tag){font-size:1.06rem;line-height:1.6;color:#cdc8bd;margin:0 0 1.6rem;max-width:48ch;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* footer = price + arrow-link (mockup .exc-foot / .exc-price / .exc-link) */
+#excursions .exc-card-footer{position:relative;z-index:2;display:flex;align-items:baseline;justify-content:flex-start;gap:1.4rem;padding:0;border:0;margin:0}
+#excursions .exc-card-price{font-family:var(--font-display);font-size:1.7rem;font-weight:600;color:#f4f1ea;letter-spacing:-.01em}
+#excursions .exc-card-price span{font-size:.8rem;font-weight:500;color:#9a958b;letter-spacing:.02em}
+#excursions .exc-card-cta{position:static;overflow:visible;isolation:auto;display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;font-weight:600;letter-spacing:0;color:#f4f1ea;background:transparent;border:0;border-bottom:2px solid #c0294a;border-radius:0;padding:0 0 .2rem;box-shadow:none;transition:gap .25s ease}
+#excursions .exc-card-cta::before{display:none}
+#excursions .exc-card-cta svg{width:18px;height:18px}
+#excursions .exc-card:hover .exc-card-cta{color:#fff;background:transparent;border-color:#c0294a;border-bottom:2px solid #c0294a;box-shadow:none;transform:none;gap:.85rem}
+/* alternating side (mockup .exc.flip on even rows) */
 #excursions .exc-card:nth-child(even){align-items:flex-end;text-align:right}
 #excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-end}
-#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(270deg,rgba(11,12,14,.92),rgba(11,12,14,.6) 36%,rgba(11,12,14,.12) 68%,transparent)}
-@media(max-width:768px){#excursions .exc-card{min-height:68vh;padding:clamp(1.5rem,6vw,2.5rem);align-items:flex-start;text-align:left}#excursions .exc-card:nth-child(even){align-items:flex-start;text-align:left}#excursions .exc-card-footer,#excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-start}#excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94),rgba(11,12,14,.5) 45%,transparent)}}
+#excursions .exc-card:nth-child(even) .exc-card-body p{margin-left:auto}
+#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(270deg,rgba(11,12,14,.92) 0%,rgba(11,12,14,.72) 42%,rgba(11,12,14,.32) 100%)}
+/* mobile: single column, bottom-anchored text, bottom scrim */
+@media(max-width:760px){
+  #excursions .exc-card{min-height:64vh;justify-content:flex-end;align-items:flex-start;text-align:left;padding:clamp(1.8rem,7vw,2.6rem)}
+  #excursions .exc-card:nth-child(even){align-items:flex-start;text-align:left}
+  #excursions .exc-card:nth-child(even) .exc-card-footer{justify-content:flex-start}
+  #excursions .exc-card:nth-child(even) .exc-card-body p{margin-left:0}
+  #excursions .exc-card-body{max-width:none}
+  #excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94) 0%,rgba(11,12,14,.55) 45%,rgba(11,12,14,.2) 100%)}
+}
 </style>
 <style id="bb-hero-opt">@media(min-width:769px){.hero-inner{align-items:center}}</style>
 <style id="bb-dark-theme">
@@ -3054,12 +3076,9 @@ footer a{color:#cdc8bd}
       <a href="/sv/excursions/sigulda-cesis-gauja-valley.html" class="exc-card fade-up">
         <div class="exc-card-img crop-sigulda">
           <picture><source srcset="/images/exc-sigulda/turaida-castle-guests-exploring-latvia.webp" type="image/webp"><img src="/images/exc-sigulda/turaida-castle-guests-exploring-latvia.jpg" alt="Två gäster hos Barefoot Baltic som ler med tända ljuslyktor i handen, redo för den ljusupplysta turen i den medeltida borgen" width="1920" height="1445" loading="lazy" decoding="async"></picture>
-          <span class="exc-card-badge now">Tillgänglig nu</span>
-          <span class="feeling">Medeltida</span>
-          <div class="exc-card-zero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>&euro;0 i förskott, boka idag</div>
         </div>
         <div class="exc-card-body">
-          <p class="exc-card-number">Utflykt 1</p>
+          <p class="exc-card-tag">Medeltida</p>
           <h3>Sigulda, Cēsis och Gaujadalen</h3>
           <div class="exc-card-meta">Heldagsutflykt &middot; Nordost om Riga &middot; ~10 timmar</div>
           <p>En minnesvärd dagstur. Tre medeltida borgar, Gaujadalen, ett besök hos en brödbakare och en provning av mat och dryck i bussen. En kvinnoledd tur med liveberättande.</p>
@@ -3074,12 +3093,9 @@ footer a{color:#cdc8bd}
       <a href="/sv/excursions/rundale-palace-bauska-castle-brewery.html" class="exc-card fade-up">
         <div class="exc-card-img crop-rundale">
           <picture><source srcset="/images/exc-rundale/rundale-palace-daiga-guide-castle-gate-latvia.webp" type="image/webp"><img src="/images/exc-rundale/rundale-palace-daiga-guide-castle-gate-latvia.jpg" alt="Daiga i traditionell lettisk folkdräkt som kikar fram genom den beslagna träporten till Rundāle slott" width="1920" height="1285" loading="lazy" decoding="async"></picture>
-          <span class="exc-card-badge now">Tillgänglig nu</span>
-          <span class="feeling">Prakt</span>
-          <div class="exc-card-zero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>&euro;0 i förskott, boka idag</div>
         </div>
         <div class="exc-card-body">
-          <p class="exc-card-number">Utflykt 2</p>
+          <p class="exc-card-tag">Prakt</p>
           <h3>Rundāle slott, Bauska borg och spången i Ķemeri myr</h3>
           <div class="exc-card-meta">Heldagsutflykt &middot; Söder om Riga &middot; ~10 timmar</div>
           <p>Tio timmars utflykt från Riga till Rundāle slott, Bauska borg och Stora Ķemeri myr. Liveberättande och en utvald lettisk provning i bussen. Drycker, tilltugg och godsaker, var och en med sin historia.</p>
@@ -3094,12 +3110,9 @@ footer a{color:#cdc8bd}
       <a href="/sv/excursions/kemeri-bog-jurmala.html" class="exc-card fade-up">
         <div class="exc-card-img crop-kemeri">
           <picture><source srcset="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg" alt="Flygvy över Stora Ķemeri myr med träspången som slingrar förbi spegelmörka gölar på våren" width="1920" height="1441" loading="lazy" decoding="async"></picture>
-          <span class="exc-card-badge now">Tillgänglig nu</span>
-          <span class="feeling">Vilda Lettland</span>
-          <div class="exc-card-zero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>&euro;0 i förskott, boka idag</div>
         </div>
         <div class="exc-card-body">
-          <p class="exc-card-number">Utflykt 3</p>
+          <p class="exc-card-tag">Vilda Lettland</p>
           <h3>Vandring i Ķemeri myr utanför spången från Riga, med picknick vid sjön och valfritt bad</h3>
           <div class="exc-card-meta">Myrvandring utanför spången &middot; Väster om Riga &middot; ~4 timmar</div>
           <p>En guidad vandring utanför spången in i en 10&nbsp;000 år gammal högmosse, äldre än pyramiderna, med picknick och valfritt bad i en myrsjö, sedan förfriskningar vid bussen medan vi pratar igenom dagen. Fyra timmar från Riga, med pass i gryningen och i skymningen.</p>
