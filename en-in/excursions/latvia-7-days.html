@@ -878,6 +878,23 @@ a:hover{color:#c0294a}
 .lightbox-overlay{background:rgba(11,12,14,.94) !important}
 .lightbox-caption{color:#cdc8bd !important}
 </style>
+<style id="bb-top-tight">
+/* ===== Top-of-page declutter (operator 2026-06-05): slim the zero-deposit strip; the
+   flights/taxes fine print + Schengen visa band + quick-facts moved to "Good to know". ===== */
+/* slim the zero-deposit hook to a tight single-line strip */
+.zero-banner-inner{padding:.72rem var(--space-8) !important;gap:var(--space-3) !important;flex-wrap:nowrap !important}
+.zero-banner-main{font-size:.92rem !important}
+@media(max-width:760px){.zero-banner-inner{flex-wrap:wrap !important;padding:.7rem var(--space-5) !important}}
+/* relocated "Good to know" cluster (near the bottom, before the contact row) */
+.bb-goodtoknow{padding:var(--space-9) 0 var(--space-7);border-top:1px solid rgba(244,241,234,.12)}
+.bb-goodtoknow-inner{max-width:1100px;margin:0 auto;padding:0 var(--space-8)}
+.bb-goodtoknow > .bb-goodtoknow-inner > h2{font-size:1.55rem;color:#f4f1ea;margin:0 0 var(--space-5)}
+.bb-goodtoknow .qf-row-tight{margin:0 0 var(--space-5) !important}
+.bb-goodtoknow .visa-band{border:1px solid rgba(124,154,107,.45) !important;border-radius:12px;margin-bottom:var(--space-4)}
+.bb-goodtoknow .visa-band-inner{max-width:none !important;padding:var(--space-4) var(--space-5) !important}
+.bb-goodtoknow .zero-banner-detail{display:block;font-size:.82rem;color:#9a958b !important}
+@media(max-width:760px){.bb-goodtoknow-inner{padding:0 var(--space-5)}}
+</style>
 </head>
 <body>
 
@@ -951,21 +968,12 @@ a:hover{color:#c0294a}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
       Book with &euro;0 deposit when you arrange your own flights and hotels. Pay the full &euro;730 in person when Daiga meets you at Riga RIX on Day 1.
     </div>
-    <div class="zero-banner-detail">Need flights or hotels? We can book those too. Those carry their own deposits. Quoted prices exclude EU VAT / India GST &mdash; taxes settled on issue of invoice.</div>
+    
   </div>
 </div>
 
 <!-- SCHENGEN VISA ASSISTANCE BAND (we help with the paperwork; consulate fee is the guest's) -->
-<div class="visa-band" role="note">
-  <div class="visa-band-inner">
-    <div class="visa-band-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 12h6M12 9v6"/></svg>
-    </div>
-    <div class="visa-band-text">
-      <strong>Schengen visa assistance.</strong> Latvia is in the Schengen area, so Indian passport holders apply for a single Schengen short-stay visa (Type C) at the Latvian consulate (via VFS Global in Delhi, Mumbai, Chennai, Bengaluru or Kolkata). We&rsquo;ll walk you through the paperwork &mdash; application form, invitation letter, day-by-day itinerary, travel-insurance guidance &mdash; at no extra cost. You pay the consulate fee directly (currently ~&euro;90).
-    </div>
-  </div>
-</div>
+
 
 <!-- ═══════════════════════════════════════════════════════
      TWO-COLUMN BODY: page-body > content-grid (main + sidebar)
@@ -973,28 +981,7 @@ a:hover{color:#c0294a}
 <div class="page-body">
 
   <!-- Tight horizontal quick-facts row -->
-  <div class="qf-row-tight" role="list" aria-label="Tour quick facts">
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <div><div class="qf-label">Duration</div><div class="qf-val">9 days &middot; 8 nights &middot; 5 guided + 2 self-guided rest days + arrival &amp; departure days</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <div><div class="qf-label">Group size</div><div class="qf-val">Min 7 &middot; max 14 per departure</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <div><div class="qf-label">Length</div><div class="qf-val">9 days</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      <div><div class="qf-label">Pricing</div><div class="qf-val">&euro;730 Land + Guiding only &middot; indicative all-in &middot; pay on arrival · + taxes (EU VAT / India GST)</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
-      <div><div class="qf-label">Operator</div><div class="qf-val">Fully insured Latvia operator &middot; Daiga &amp; her team</div></div>
-    </div>
-  </div>
+  
 
   <div class="content-grid" id="reserve-now">
 
@@ -2123,6 +2110,47 @@ a:hover{color:#c0294a}
 </div><!-- /page-body -->
 
 <!-- CONTACT (compressed) -->
+
+<!-- GOOD TO KNOW — relocated from the top band (quick facts + Schengen visa + pricing fine print) -->
+<section class="bb-goodtoknow" aria-labelledby="gtk-h">
+  <div class="bb-goodtoknow-inner">
+    <h2 id="gtk-h">Good to know</h2>
+    <div class="qf-row-tight" role="list" aria-label="Tour quick facts">
+    <div class="qf" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div><div class="qf-label">Duration</div><div class="qf-val">9 days &middot; 8 nights &middot; 5 guided + 2 self-guided rest days + arrival &amp; departure days</div></div>
+    </div>
+    <div class="qf" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div><div class="qf-label">Group size</div><div class="qf-val">Min 7 &middot; max 14 per departure</div></div>
+    </div>
+    <div class="qf" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div><div class="qf-label">Length</div><div class="qf-val">9 days</div></div>
+    </div>
+    <div class="qf" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <div><div class="qf-label">Pricing</div><div class="qf-val">&euro;730 Land + Guiding only &middot; indicative all-in &middot; pay on arrival · + taxes (EU VAT / India GST)</div></div>
+    </div>
+    <div class="qf" role="listitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
+      <div><div class="qf-label">Operator</div><div class="qf-val">Fully insured Latvia operator &middot; Daiga &amp; her team</div></div>
+    </div>
+  </div>
+    <div class="visa-band" role="note">
+  <div class="visa-band-inner">
+    <div class="visa-band-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 12h6M12 9v6"/></svg>
+    </div>
+    <div class="visa-band-text">
+      <strong>Schengen visa assistance.</strong> Latvia is in the Schengen area, so Indian passport holders apply for a single Schengen short-stay visa (Type C) at the Latvian consulate (via VFS Global in Delhi, Mumbai, Chennai, Bengaluru or Kolkata). We&rsquo;ll walk you through the paperwork &mdash; application form, invitation letter, day-by-day itinerary, travel-insurance guidance &mdash; at no extra cost. You pay the consulate fee directly (currently ~&euro;90).
+    </div>
+  </div>
+</div>
+    <div class="zero-banner-detail">Need flights or hotels? We can book those too. Those carry their own deposits. Quoted prices exclude EU VAT / India GST &mdash; taxes settled on issue of invoice.</div>
+  </div>
+</section>
+
 <section class="contact-row">
   <h3>Prefer to just talk?</h3>
   <p>Daiga (the founder) personally responds on WhatsApp and email. No call centres, no forms-into-the-void.</p>
