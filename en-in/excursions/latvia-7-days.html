@@ -895,6 +895,11 @@ a:hover{color:#c0294a}
 .bb-goodtoknow .zero-banner-detail{display:block;font-size:.82rem;color:#9a958b !important}
 @media(max-width:760px){.bb-goodtoknow-inner{padding:0 var(--space-5)}}
 </style>
+<style id="bb-faqmove">
+/* explainer folds relocated above the FAQ — keep spacing consistent with the disclosures */
+.bb-ts-fold{margin-bottom:var(--space-3)}
+.bb-faq-cluster-lead{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9a958b;margin:var(--space-6) 0 var(--space-3)}
+</style>
 </head>
 <body>
 
@@ -2702,6 +2707,48 @@ a:hover{color:#c0294a}
       bar.appendChild(mk('Expand all days',true));bar.appendChild(mk('Collapse all',false));
       first.parentNode.insertBefore(bar,first);
     }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
+})();</script>
+<script id="bb-faqmove-js">(function(){
+  function process(){
+    var main=document.querySelector('.content-main');if(!main)return;
+    if(document.querySelector('.bb-ts-fold'))return;            /* per-load idempotent */
+    var faqList=document.querySelector('.faq-list');if(!faqList)return;
+    var anchor=faqList.previousElementSibling;                  /* the "Frequently asked" h2 */
+    if(!anchor||anchor.parentNode!==main)anchor=faqList;
+    var CHEV='<svg class="disclosure-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
+    /* 1. .trip-shape (expanded prose) -> collapsed .disclosure folds, one per <h2> */
+    var ts=document.querySelector('.trip-shape');var tsFolds=[];
+    if(ts){
+      var groups=[],cur=null;
+      Array.prototype.forEach.call(ts.children,function(el){
+        if(el.tagName==='H2'){cur={title:el.textContent.trim(),nodes:[]};groups.push(cur);}
+        else if(cur){cur.nodes.push(el);}
+      });
+      groups.forEach(function(g){
+        var d=document.createElement('details');d.className='disclosure bb-ts-fold';
+        var s=document.createElement('summary');
+        var span=document.createElement('span');span.textContent=g.title;
+        s.appendChild(span);s.insertAdjacentHTML('beforeend',CHEV);
+        d.appendChild(s);
+        var body=document.createElement('div');body.className='disclosure-body';
+        g.nodes.forEach(function(n){body.appendChild(n);});
+        d.appendChild(body);tsFolds.push(d);
+      });
+      if(ts.parentNode)ts.parentNode.removeChild(ts);
+    }
+    /* 2. cluster (in reading order) + move above the FAQ */
+    var cluster=[];
+    var expect=document.querySelector('.expect-section');if(expect)cluster.push(expect);
+    tsFolds.forEach(function(d){cluster.push(d);});
+    Array.prototype.forEach.call(main.querySelectorAll(':scope > details.disclosure'),function(d){
+      if(!d.classList.contains('bb-ts-fold'))cluster.push(d);
+    });
+    if(!cluster.length)return;
+    var lead=document.createElement('p');lead.className='bb-faq-cluster-lead';lead.textContent='More about this trip';
+    main.insertBefore(lead,anchor);
+    cluster.forEach(function(b){main.insertBefore(b,anchor);});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
 })();</script>
