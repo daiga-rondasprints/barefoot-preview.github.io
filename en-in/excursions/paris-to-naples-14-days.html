@@ -780,6 +780,133 @@ footer{background:var(--bark);color:rgba(255,255,255,.85);padding-top:var(--spac
 .footer-flag-bar span:nth-child(2){background:#FBF7EE}
 .footer-flag-bar span:nth-child(3){background:#9E1B32}
 </style>
+<style id="bb-en-in-detail-dark">
+/* ===== en-in excursion DETAIL: cinematic dark + calibrated palette (additive). ===== */
+:root{
+  --bark:#f4f1ea; --bark-light:#cdc8bd; --sand-dark:rgba(244,241,234,.14);
+  --peat:#f4f1ea; --indigo:#9fb3d6; --moss-pale:#1d2127;
+  --carmine:#c0294a; --carmine-dark:#a0213c;
+}
+body{background:#0b0c0e}
+/* nav: solid linen sticky -> .com-style OVERLAY (transparent gradient -> solid on scroll) */
+.nav{position:fixed !important;inset:0 0 auto 0 !important;background-color:transparent !important;background-image:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%) !important;border-bottom:1px solid transparent !important;transition:background-color .4s ease,border-color .4s ease}
+.nav.scrolled{background-color:rgba(11,12,14,.95) !important;background-image:none !important;border-bottom-color:rgba(244,241,234,.14) !important}
+html{scroll-padding-top:5.5rem}
+.nav-inner{max-width:none !important;margin:0;display:flex;align-items:center;justify-content:space-between;gap:clamp(1.4rem,3vw,4rem);padding:1.1rem clamp(1.1rem,4vw,2.6rem)}
+.nav-logo{height:auto !important}
+.nav-logo img{height:40px !important}
+.nav .nav-links a{font-size:.92rem;color:#f4f1ea}
+.nav .nav-links a:hover{color:#c0294a}
+.nav-cta{background:#253961 !important;color:#fff !important}
+.nav-cta:hover{background:#1a2a48 !important}
+.hamburger span{background:#f4f1ea}
+@media(max-width:1100px){.nav .nav-links.open{background:#0b0c0e !important;border-bottom:1px solid rgba(244,241,234,.14)}}
+.skip-link{background:#c0294a}
+/* breadcrumbs over the hero (.com pattern) */
+.breadcrumbs{position:absolute !important;z-index:50;top:64px;left:0;right:0;background:transparent !important;border-bottom:0 !important}
+.breadcrumbs a{color:#d8a24a !important}
+.breadcrumbs li,.breadcrumbs .sep,.breadcrumbs li[aria-current]{color:rgba(244,241,234,.74) !important}
+/* HERO: cinematic .com banner — prominent photo, one calibrated scrim, clean title, hide the busy pills */
+.page-hero{background:#0b0c0e}
+.hero-img{opacity:.85 !important}
+.hero-overlay{background:linear-gradient(180deg,rgba(11,12,14,0) 0%,rgba(11,12,14,.4) 55%,rgba(11,12,14,.85) 100%) !important}
+.hero-route-title{background:transparent !important;backdrop-filter:none !important;color:rgba(244,241,234,.9) !important;padding:0 !important;border-left:0 !important;border-radius:0 !important;box-shadow:none !important;font-weight:600 !important;font-size:clamp(1rem,1.6vw,1.2rem) !important;letter-spacing:0 !important}
+.hero-feeling{display:none !important}
+.hero-pills{display:none !important}
+/* decorative flourishes -> gone (peculiar vs .com) */
+.channel-flag-band,.channel-flag-band-label{display:none !important}
+.itin-day[class*="country-"]::before{display:none !important}
+/* light sections / inline linen blocks -> dark grounds */
+[style*="background:var(--linen)"]{background:#101216 !important}
+#photo-credits{background:#101216 !important}
+.trip-shape,.schedule-section,.expect-section{background:transparent}
+footer{background:#0b0c0e}
+footer a{color:#cdc8bd}
+/* cost band + budget collapsible + cost tables */
+.cost-band{background:#101216 !important;border-bottom-color:rgba(244,241,234,.12) !important}
+.overall-budget-collapsible,.overall-budget-collapsible[open]{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.overall-budget-summary:hover,.overall-budget-collapsible[open] .overall-budget-summary{background:#1d2127 !important;border-bottom-color:rgba(244,241,234,.14) !important}
+.cost-table{background:#16191e !important}
+.cost-table thead th,.cost-table tr.cost-total td{background:#1d2127 !important;color:#f4f1ea !important;border-color:rgba(244,241,234,.12) !important}
+.cost-table td,.cost-table th{border-color:rgba(244,241,234,.12) !important}
+/* cultural blocks (desi-food / shopping) -> dark surface, keep the accent border */
+.desi-food-block{background:#16191e !important;border-color:rgba(216,162,74,.4) !important}
+.shopping-block{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+/* disclosures */
+.disclosure,.disclosure[open]{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.disclosure > summary:hover,.disclosure[open] > summary{background:#1d2127 !important;border-bottom-color:rgba(244,241,234,.14) !important}
+/* cards: itinerary days, daiga card */
+.itin-day{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.daiga-card{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.specialist-insight,.info-card,.sidebar-card,.trip-shape-card{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+/* quick-facts row */
+.qf-row-tight{border-color:rgba(244,241,234,.14) !important}
+.qf-row-tight .qf{border-color:rgba(244,241,234,.14) !important}
+/* day-photo placeholders */
+.day-photo-thumb{border-color:rgba(244,241,234,.14) !important}
+.day-photo-thumb.placeholder{background:#1d2127 !important}
+.day-photo-more{background:#1d2127 !important;color:#cdc8bd !important}
+/* === complete surface sweep (from luminance scan) === */
+/* white card surfaces -> dark */
+.choice-card,.faq-item,.france-block,.guides-block,.inc-col,.qf-row-tight{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+/* quick-facts on ONE row (parity with the .com detail) */
+@media(min-width:768px){.qf-row-tight{flex-wrap:nowrap !important}.qf-row-tight .qf{flex:1 1 0 !important;min-width:0 !important}}
+/* moss-pale badges / stats (bg via --moss-pale remap) -> ensure legible text */
+.itin-day-country,.itin-stats{color:#cdc8bd !important}
+/* form fields -> dark */
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),select,textarea{background:#101216 !important;color:#f4f1ea !important;border-color:rgba(244,241,234,.18) !important}
+input::placeholder,textarea::placeholder{color:#9a958b}
+select option{background:#101216;color:#f4f1ea}
+input[type=date]{color-scheme:dark}
+/* var(--indigo)-bg buttons (now light-blue after the remap) -> restore solid indigo */
+.bk-side-submit,.refs-cta{background:#253961 !important;color:#fff !important;border-color:#253961 !important}
+.btn-daiga{background:#1d2127 !important;color:#f4f1ea !important;border-color:rgba(244,241,234,.18) !important}
+.diwali-cta{background:#d8a24a !important;color:#0b0c0e !important;border-color:#d8a24a !important}
+.day-photo-thumb{background:#1d2127 !important}
+.visa-callout{background:#1d2127 !important;border-color:rgba(216,162,74,.35) !important}
+/* dark text on near-black -> light */
+.cs-card-tag{color:#9fb3d6 !important}
+.bk-side-foot a{color:#9fb3d6 !important}
+.itin-tab{color:#cdc8bd !important;background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.itin-tab.active,.itin-tab[aria-selected="true"]{color:#fff !important;background:#1d2127 !important}
+a[style*="var(--moss)"],[style*="color:var(--bronze)"],[style*="color:#3a1f0e"]{color:#cdc8bd !important}
+/* accents on near-black */
+.section-label,.eyebrow,.itin-day-country,.schedule-section .label{color:#7c9a6b}
+.hero-feeling{color:#fff}
+a{color:#9fb3d6}
+a:hover{color:#c0294a}
+/* === page-specific light surfaces (multi-day tours): class-based linen/white/gradient
+   grounds that the inline + token sweep misses (cs-card/ops/eyes/custom/diwali/shimmer
+   bodies, visa band, side enquiry card, zero banners, route-map cluster). === */
+.cs-card,.ops-block,.eyes-block,.custom-block,.shimmer-collapsible-body{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.diwali-block{background:#16191e !important;border-color:rgba(216,162,74,.4) !important}
+.visa-band{background:#16191e !important;border-color:rgba(124,154,107,.45) !important}
+.visa-band-text strong{color:#9cc089 !important}
+.visa-band-icon{background:#7c9a6b !important}
+.zero-banner,.bk-side-zero{background:#1d2127 !important;border-color:rgba(244,241,234,.14) !important}
+.bk-side-card{background:#16191e !important;border-color:rgba(124,154,107,.5) !important;box-shadow:0 14px 44px rgba(0,0,0,.55) !important}
+.bk-side-header{background:#19241b !important;color:#f4f1ea !important}
+.bk-side-body{background:transparent !important}
+.route-map-summary{background:#16191e !important;color:#cdc8bd !important;border-color:rgba(244,241,234,.14) !important}
+.route-map-google{background:#101216 !important}
+.route-map-section-title{color:#f4f1ea !important}
+.route-map-section-sub{color:#cdc8bd !important}
+.highlight svg,.disclosure-chev{color:#7c9a6b !important}
+/* === comparison / culture tours (baltic-trio etc.): contrast cards + country-compare
+   panels + song/pagan culture blocks + inline folk-callout gradient. Carmine emphasis
+   text -> legible rose (palette rule: carmine is never small text). === */
+.contrast-card,.sk-table-wrap,.ud-card{background:#16191e !important;border-color:rgba(244,241,234,.14) !important}
+.ud-card dt{color:#9cc089 !important}
+.contrast-side.india{background:#1d2127 !important;border-color:rgba(216,162,74,.35) !important}
+.contrast-side.baltic{background:#19241b !important;border-color:rgba(124,154,107,.4) !important}
+.contrast-side.india .contrast-label,.contrast-side.india .contrast-val small{color:#d8a24a !important}
+.contrast-side.baltic .contrast-label,.contrast-side.baltic .contrast-val small{color:#9cc089 !important}
+.sk-deva,.sk-link,.pagan-block .sk-link,.guides-block strong,.contrast-card strong,[style*="color:var(--carmine)"]{color:#e0849a !important}
+[style*="F0EAD6"],[style*="f0ead6"]{background-color:#16191e !important;background-image:none !important;border-color:rgba(124,154,107,.4) !important}
+/* referral / bring-a-friend promo cards (class name varies per tour) */
+.referral-card,.refer-card{background:#16191e !important;border-color:rgba(216,162,74,.4) !important;color:#cdc8bd !important}
+.refer-card-top span,.referral-card .refer-top span{color:#9cc089 !important}
+</style>
 </head>
 <body>
 
@@ -788,7 +915,7 @@ footer{background:var(--bark);color:rgba(255,255,255,.85);padding-top:var(--spac
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/en-in/" class="nav-logo" aria-label="Barefoot Baltic — home">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" style="height:40px;width:auto" width="1245" height="210">
+      <img src="/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" style="height:40px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -3059,5 +3186,6 @@ footer{background:var(--bark);color:rgba(255,255,255,.85);padding-top:var(--spac
 })();
 </script>
 
+<script id="bb-en-in-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
 </body>
 </html>
