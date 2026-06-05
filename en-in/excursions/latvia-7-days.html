@@ -847,6 +847,11 @@ a:hover{color:#c0294a}
 .referral-card,.refer-card{background:#16191e !important;border-color:rgba(216,162,74,.4) !important;color:#cdc8bd !important}
 .refer-card-top span,.referral-card .refer-top span{color:#9cc089 !important}
 </style>
+<style id="bb-faqmove">
+/* explainer folds relocated above the FAQ — keep spacing consistent with the disclosures */
+.bb-ts-fold{margin-bottom:var(--space-3)}
+.bb-faq-cluster-lead{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9a958b;margin:var(--space-6) 0 var(--space-3)}
+</style>
 <style id="bb-itin-photos">
 /* ===== Photo-forward itinerary (operator 2026-06-05): lead each day with enlarged
    photos, tuck the prose behind a per-day toggle + an expand/collapse-all control. ===== */
@@ -866,9 +871,9 @@ a:hover{color:#c0294a}
 .bb-day-fold.open{grid-template-rows:1fr}
 .bb-day-fold>.bb-day-fold-inner{overflow:hidden;min-height:0}
 .bb-day-fold>.bb-day-fold-inner>:first-child{margin-top:.4rem}
-.bb-day-toggle{display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;background:transparent;border:1px solid rgba(244,241,234,.22);color:#cdc8bd;font-family:inherit;font-weight:600;font-size:.85rem;letter-spacing:.02em;padding:.5rem 1.05rem;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s}
-.bb-day-toggle:hover{border-color:#d8a24a;color:#f4f1ea}
-.bb-day-toggle::after{content:"\25BE";font-size:.85em;transition:transform .25s ease}
+.bb-day-toggle{display:inline-flex;align-items:center;gap:.55rem;margin-top:.6rem;background:#16191e;border:1px solid rgba(216,162,74,.4);color:#f4f1ea;font-family:inherit;font-weight:600;font-size:.85rem;letter-spacing:.02em;padding:.55rem 1.15rem;border-radius:999px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.bb-day-toggle:hover{background:#1d2127;border-color:#d8a24a;color:#fff}
+.bb-day-toggle::after{content:"\25BE";font-size:.85em;color:#d8a24a;transition:transform .25s ease}
 .bb-day-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
 /* expand/collapse-all control */
 .bb-itin-allctrl{display:flex;gap:.55rem;justify-content:flex-end;align-items:center;margin:0 0 var(--space-4)}
@@ -879,26 +884,12 @@ a:hover{color:#c0294a}
 .lightbox-caption{color:#cdc8bd !important}
 </style>
 <style id="bb-top-tight">
-/* ===== Top-of-page declutter (operator 2026-06-05): slim the zero-deposit strip; the
-   flights/taxes fine print + Schengen visa band + quick-facts moved to "Good to know". ===== */
-/* slim the zero-deposit hook to a tight single-line strip */
+/* ===== Top-of-page declutter (operator 2026-06-05): slim the zero-deposit hook to a
+   tight single-line strip. The flights/taxes fine print + Schengen visa band +
+   quick-facts + promo blocks are removed outright (see _stage_en_in_top.py). ===== */
 .zero-banner-inner{padding:.72rem var(--space-8) !important;gap:var(--space-3) !important;flex-wrap:nowrap !important}
 .zero-banner-main{font-size:.92rem !important}
 @media(max-width:760px){.zero-banner-inner{flex-wrap:wrap !important;padding:.7rem var(--space-5) !important}}
-/* relocated "Good to know" cluster (near the bottom, before the contact row) */
-.bb-goodtoknow{padding:var(--space-9) 0 var(--space-7);border-top:1px solid rgba(244,241,234,.12)}
-.bb-goodtoknow-inner{max-width:1100px;margin:0 auto;padding:0 var(--space-8)}
-.bb-goodtoknow > .bb-goodtoknow-inner > h2{font-size:1.55rem;color:#f4f1ea;margin:0 0 var(--space-5)}
-.bb-goodtoknow .qf-row-tight{margin:0 0 var(--space-5) !important}
-.bb-goodtoknow .visa-band{border:1px solid rgba(124,154,107,.45) !important;border-radius:12px;margin-bottom:var(--space-4)}
-.bb-goodtoknow .visa-band-inner{max-width:none !important;padding:var(--space-4) var(--space-5) !important}
-.bb-goodtoknow .zero-banner-detail{display:block;font-size:.82rem;color:#9a958b !important}
-@media(max-width:760px){.bb-goodtoknow-inner{padding:0 var(--space-5)}}
-</style>
-<style id="bb-faqmove">
-/* explainer folds relocated above the FAQ — keep spacing consistent with the disclosures */
-.bb-ts-fold{margin-bottom:var(--space-3)}
-.bb-faq-cluster-lead{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9a958b;margin:var(--space-6) 0 var(--space-3)}
 </style>
 </head>
 <body>
@@ -1705,27 +1696,10 @@ a:hover{color:#c0294a}
       </div>
 
       <!-- REFERRAL DISCOUNT -->
-      <div class="diwali-block" role="region" aria-labelledby="referral-h" style="background:linear-gradient(135deg,#E3E9D9 0%,#D7E3CC 100%);border-color:var(--moss-light);">
-        <span class="diwali-tag" style="background:var(--moss);">🎁 Bring a friend</span>
-        <h3 id="referral-h" style="color:var(--peat);">10% off when you bring a friend, no cap</h3>
-        <p style="color:var(--bark);">Bring a friend on the same departure, you get <strong>10% off your own booking</strong>. Each extra friend adds another 10%, no cap. The discount is on your booking; friends pay the normal price. If someone already booked on this trip brought you in, add their name in the booking form &mdash; the discount goes to their booking.</p>
-        <p style="color:var(--bark);">How it works in practice: when you submit your enquiry, list the names of the friends you&rsquo;re bringing in the &ldquo;Anything else?&rdquo; field on the form. We hold seats for all of you on the same departure, confirm together, and apply the discount to your &euro;730 fee when you pay Daiga in person on Day 1.</p>
-        <a href="https://wa.me/37126440152?text=Hi%20Daiga%21%20I%27d%20like%20to%20book%20the%20Latvia%208-day%20tour%20and%20bring%20friends%20%28referral%20discount%29." class="diwali-cta" target="_blank" rel="noopener" style="background:var(--moss);">
-          <span>Ask Daiga about the referral discount</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+      
 
       <!-- LIEPĀJA 2027 / LĪGO 2027 CALLOUT -->
-      <div class="diwali-block" role="region" aria-labelledby="diwali-h">
-        <span class="diwali-tag">🎼 Special departure</span>
-        <h3 id="diwali-h">Liepāja 2027: a dedicated European Capital of Culture departure</h3>
-        <p>Liepāja is one of the two European Capitals of Culture for <strong>2027</strong> (the other is Évora, Portugal). The designation runs the full calendar year &mdash; January through December 2027 &mdash; with a year-long programme of music, theatre, exhibitions and outdoor events anchored around the city&rsquo;s Latvian-rock heritage, the Karosta former military port, and the Great Amber concert hall. We run an <strong>ECoC 2027 departure</strong> with an extra night in Liepāja and bookings into whichever flagship programme events land in your dates &mdash; the festival schedule rolls out in late 2026, so dates lock about three months ahead.</p>
-        <a href="https://wa.me/37126440152?text=Hi%20Daiga%21%20Please%20add%20me%20to%20the%20Liep%C4%81ja%202027%20ECoC%20interest%20list%20for%20the%20Latvia%208-day." class="diwali-cta" target="_blank" rel="noopener">
-          <span>Register interest in Liepāja 2027</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+      
 
       <!-- WOMEN-LED -->
       <div class="guides-block" id="guides-h">
@@ -2117,44 +2091,7 @@ a:hover{color:#c0294a}
 <!-- CONTACT (compressed) -->
 
 <!-- GOOD TO KNOW — relocated from the top band (quick facts + Schengen visa + pricing fine print) -->
-<section class="bb-goodtoknow" aria-labelledby="gtk-h">
-  <div class="bb-goodtoknow-inner">
-    <h2 id="gtk-h">Good to know</h2>
-    <div class="qf-row-tight" role="list" aria-label="Tour quick facts">
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <div><div class="qf-label">Duration</div><div class="qf-val">9 days &middot; 8 nights &middot; 5 guided + 2 self-guided rest days + arrival &amp; departure days</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <div><div class="qf-label">Group size</div><div class="qf-val">Min 7 &middot; max 14 per departure</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <div><div class="qf-label">Length</div><div class="qf-val">9 days</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      <div><div class="qf-label">Pricing</div><div class="qf-val">&euro;730 Land + Guiding only &middot; indicative all-in &middot; pay on arrival · + taxes (EU VAT / India GST)</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
-      <div><div class="qf-label">Operator</div><div class="qf-val">Fully insured Latvia operator &middot; Daiga &amp; her team</div></div>
-    </div>
-  </div>
-    <div class="visa-band" role="note">
-  <div class="visa-band-inner">
-    <div class="visa-band-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 12h6M12 9v6"/></svg>
-    </div>
-    <div class="visa-band-text">
-      <strong>Schengen visa assistance.</strong> Latvia is in the Schengen area, so Indian passport holders apply for a single Schengen short-stay visa (Type C) at the Latvian consulate (via VFS Global in Delhi, Mumbai, Chennai, Bengaluru or Kolkata). We&rsquo;ll walk you through the paperwork &mdash; application form, invitation letter, day-by-day itinerary, travel-insurance guidance &mdash; at no extra cost. You pay the consulate fee directly (currently ~&euro;90).
-    </div>
-  </div>
-</div>
-    <div class="zero-banner-detail">Need flights or hotels? We can book those too. Those carry their own deposits. Quoted prices exclude EU VAT / India GST &mdash; taxes settled on issue of invoice.</div>
-  </div>
-</section>
+
 
 <section class="contact-row">
   <h3>Prefer to just talk?</h3>
@@ -2666,6 +2603,48 @@ a:hover{color:#c0294a}
 </section>
 
 <script id="bb-en-in-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
+<script id="bb-faqmove-js">(function(){
+  function process(){
+    var main=document.querySelector('.content-main');if(!main)return;
+    if(document.querySelector('.bb-ts-fold'))return;            /* per-load idempotent */
+    var faqList=document.querySelector('.faq-list');if(!faqList)return;
+    var anchor=faqList.previousElementSibling;                  /* the "Frequently asked" h2 */
+    if(!anchor||anchor.parentNode!==main)anchor=faqList;
+    var CHEV='<svg class="disclosure-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
+    /* 1. .trip-shape (expanded prose) -> collapsed .disclosure folds, one per <h2> */
+    var ts=document.querySelector('.trip-shape');var tsFolds=[];
+    if(ts){
+      var groups=[],cur=null;
+      Array.prototype.forEach.call(ts.children,function(el){
+        if(el.tagName==='H2'){cur={title:el.textContent.trim(),nodes:[]};groups.push(cur);}
+        else if(cur){cur.nodes.push(el);}
+      });
+      groups.forEach(function(g){
+        var d=document.createElement('details');d.className='disclosure bb-ts-fold';
+        var s=document.createElement('summary');
+        var span=document.createElement('span');span.textContent=g.title;
+        s.appendChild(span);s.insertAdjacentHTML('beforeend',CHEV);
+        d.appendChild(s);
+        var body=document.createElement('div');body.className='disclosure-body';
+        g.nodes.forEach(function(n){body.appendChild(n);});
+        d.appendChild(body);tsFolds.push(d);
+      });
+      if(ts.parentNode)ts.parentNode.removeChild(ts);
+    }
+    /* 2. cluster (in reading order) + move above the FAQ */
+    var cluster=[];
+    var expect=document.querySelector('.expect-section');if(expect)cluster.push(expect);
+    tsFolds.forEach(function(d){cluster.push(d);});
+    Array.prototype.forEach.call(main.querySelectorAll(':scope > details.disclosure'),function(d){
+      if(!d.classList.contains('bb-ts-fold'))cluster.push(d);
+    });
+    if(!cluster.length)return;
+    var lead=document.createElement('p');lead.className='bb-faq-cluster-lead';lead.textContent='More about this trip';
+    main.insertBefore(lead,anchor);
+    cluster.forEach(function(b){main.insertBefore(b,anchor);});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
+})();</script>
 <script id="bb-itin-photos-js">(function(){
   function process(){
     var bodies=document.querySelectorAll('.itin-day-body');
@@ -2707,48 +2686,6 @@ a:hover{color:#c0294a}
       bar.appendChild(mk('Expand all days',true));bar.appendChild(mk('Collapse all',false));
       first.parentNode.insertBefore(bar,first);
     }
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
-})();</script>
-<script id="bb-faqmove-js">(function(){
-  function process(){
-    var main=document.querySelector('.content-main');if(!main)return;
-    if(document.querySelector('.bb-ts-fold'))return;            /* per-load idempotent */
-    var faqList=document.querySelector('.faq-list');if(!faqList)return;
-    var anchor=faqList.previousElementSibling;                  /* the "Frequently asked" h2 */
-    if(!anchor||anchor.parentNode!==main)anchor=faqList;
-    var CHEV='<svg class="disclosure-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
-    /* 1. .trip-shape (expanded prose) -> collapsed .disclosure folds, one per <h2> */
-    var ts=document.querySelector('.trip-shape');var tsFolds=[];
-    if(ts){
-      var groups=[],cur=null;
-      Array.prototype.forEach.call(ts.children,function(el){
-        if(el.tagName==='H2'){cur={title:el.textContent.trim(),nodes:[]};groups.push(cur);}
-        else if(cur){cur.nodes.push(el);}
-      });
-      groups.forEach(function(g){
-        var d=document.createElement('details');d.className='disclosure bb-ts-fold';
-        var s=document.createElement('summary');
-        var span=document.createElement('span');span.textContent=g.title;
-        s.appendChild(span);s.insertAdjacentHTML('beforeend',CHEV);
-        d.appendChild(s);
-        var body=document.createElement('div');body.className='disclosure-body';
-        g.nodes.forEach(function(n){body.appendChild(n);});
-        d.appendChild(body);tsFolds.push(d);
-      });
-      if(ts.parentNode)ts.parentNode.removeChild(ts);
-    }
-    /* 2. cluster (in reading order) + move above the FAQ */
-    var cluster=[];
-    var expect=document.querySelector('.expect-section');if(expect)cluster.push(expect);
-    tsFolds.forEach(function(d){cluster.push(d);});
-    Array.prototype.forEach.call(main.querySelectorAll(':scope > details.disclosure'),function(d){
-      if(!d.classList.contains('bb-ts-fold'))cluster.push(d);
-    });
-    if(!cluster.length)return;
-    var lead=document.createElement('p');lead.className='bb-faq-cluster-lead';lead.textContent='More about this trip';
-    main.insertBefore(lead,anchor);
-    cluster.forEach(function(b){main.insertBefore(b,anchor);});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
 })();</script>
