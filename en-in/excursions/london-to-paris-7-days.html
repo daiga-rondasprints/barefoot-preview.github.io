@@ -801,8 +801,10 @@ footer{background:var(--bark);color:rgba(255,255,255,.85);padding-top:var(--spac
   --carmine:#c0294a; --carmine-dark:#a0213c;
 }
 body{background:#0b0c0e}
-/* nav: solid linen sticky -> solid dark sticky, full-width, white menu */
-.nav{background:rgba(11,12,14,.95) !important;border-bottom:1px solid rgba(244,241,234,.14) !important;backdrop-filter:saturate(140%) blur(8px)}
+/* nav: solid linen sticky -> .com-style OVERLAY (transparent gradient -> solid on scroll) */
+.nav{position:fixed !important;inset:0 0 auto 0 !important;background-color:transparent !important;background-image:linear-gradient(180deg,rgba(8,9,11,.74) 0%,rgba(8,9,11,.34) 52%,rgba(8,9,11,0) 100%) !important;border-bottom:1px solid transparent !important;transition:background-color .4s ease,border-color .4s ease}
+.nav.scrolled{background-color:rgba(11,12,14,.95) !important;background-image:none !important;border-bottom-color:rgba(244,241,234,.14) !important}
+html{scroll-padding-top:5.5rem}
 .nav-inner{max-width:none !important;margin:0;display:flex;align-items:center;justify-content:space-between;gap:clamp(1.4rem,3vw,4rem);padding:1.1rem clamp(1.1rem,4vw,2.6rem)}
 .nav-logo{height:auto !important}
 .nav-logo img{height:40px !important}
@@ -813,13 +815,20 @@ body{background:#0b0c0e}
 .hamburger span{background:#f4f1ea}
 @media(max-width:1100px){.nav .nav-links.open{background:#0b0c0e !important;border-bottom:1px solid rgba(244,241,234,.14)}}
 .skip-link{background:#c0294a}
-.breadcrumbs{background:#0b0c0e;border-bottom:1px solid rgba(244,241,234,.1)}
-.breadcrumbs a{color:#9fb3d6}
-/* hero: keep the photo, cool the fallback + scrim for legible white text */
-.page-hero{background:#101216}
-.page-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,14,.45) 0%,rgba(11,12,14,.2) 35%,rgba(11,12,14,.78) 100%)}
-.page-hero > *:not(.hero-img){position:relative;z-index:2}
-.hero-route-title{background:rgba(11,12,14,.55) !important;color:#f4f1ea !important;backdrop-filter:blur(6px)}
+/* breadcrumbs over the hero (.com pattern) */
+.breadcrumbs{position:absolute !important;z-index:50;top:64px;left:0;right:0;background:transparent !important;border-bottom:0 !important}
+.breadcrumbs a{color:#d8a24a !important}
+.breadcrumbs li,.breadcrumbs .sep,.breadcrumbs li[aria-current]{color:rgba(244,241,234,.74) !important}
+/* HERO: cinematic .com banner — prominent photo, one calibrated scrim, clean title, hide the busy pills */
+.page-hero{background:#0b0c0e}
+.hero-img{opacity:.85 !important}
+.hero-overlay{background:linear-gradient(180deg,rgba(11,12,14,0) 0%,rgba(11,12,14,.4) 55%,rgba(11,12,14,.85) 100%) !important}
+.hero-route-title{background:transparent !important;backdrop-filter:none !important;color:rgba(244,241,234,.9) !important;padding:0 !important;border-left:0 !important;border-radius:0 !important;box-shadow:none !important;font-weight:600 !important;font-size:clamp(1rem,1.6vw,1.2rem) !important;letter-spacing:0 !important}
+.hero-feeling{display:none !important}
+.hero-pills{display:none !important}
+/* decorative flourishes -> gone (peculiar vs .com) */
+.channel-flag-band,.channel-flag-band-label{display:none !important}
+.itin-day[class*="country-"]::before{display:none !important}
 /* light sections / inline linen blocks -> dark grounds */
 [style*="background:var(--linen)"]{background:#101216 !important}
 #photo-credits{background:#101216 !important}
@@ -2993,5 +3002,6 @@ a:hover{color:#c0294a}
   </div>
 </section>
 
+<script id="bb-en-in-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
 </body>
 </html>
