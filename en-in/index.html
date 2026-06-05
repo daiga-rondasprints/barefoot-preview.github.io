@@ -2984,6 +2984,11 @@ footer a:hover{color:#fff}
   .faq-q{font-size:1rem;padding:var(--space-4) 0}
 }
 </style>
+<style id="bb-daiga-splash">
+/* Water-splash edge on Daiga's portrait (additive). */
+.about-photo{border:0 !important;border-radius:0 !important;background:transparent !important;overflow:visible;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+</style>
 <style id="bb-en-in-dark">
 /* ===== en-in HOME: cinematic dark theme + calibrated palette (additive). ===== */
 :root{
@@ -3010,6 +3015,8 @@ footer a{color:#cdc8bd}
 /* hero scrim: warm -> cool filmic */
 .hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 42%,rgba(11,12,14,.15) 100%),linear-gradient(0deg,rgba(11,12,14,.55),transparent 40%)}
 @media(min-width:769px){.hero-inner{align-items:center}}
+/* mobile: the hero content is top-aligned, so push it clear of the ~92px fixed overlay nav (was overlapping the logo) */
+@media(max-width:768px){.hero .hero-inner{padding-top:7rem !important}}
 /* card / surface bodies: white|sand -> dark surface */
 .exc-card,.trust-card,.review-card,.tour-video-card,.field-note-card{background:#16191e}
 .about-photo{background:#16191e}
@@ -3095,11 +3102,6 @@ html{scroll-padding-top:5.5rem}
   #excursions .exc-card-body{max-width:none}
   #excursions .exc-card-img::after,#excursions .exc-card:nth-child(even) .exc-card-img::after{background:linear-gradient(0deg,rgba(11,12,14,.94) 0%,rgba(11,12,14,.55) 45%,rgba(11,12,14,.2) 100%)}
 }
-</style>
-<style id="bb-daiga-splash">
-/* Water-splash edge on Daiga's portrait (additive). */
-.about-photo{border:0 !important;border-radius:0 !important;background:transparent !important;overflow:visible;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20760%27%20preserveAspectRatio%3D%27none%27%3E%3Cfilter%20id%3D%27sp%27%20x%3D%27-15%25%27%20y%3D%27-15%25%27%20width%3D%27130%25%27%20height%3D%27130%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.012%200.018%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20result%3D%27n%27%2F%3E%3CfeDisplacementMap%20in%3D%27SourceGraphic%27%20in2%3D%27n%27%20scale%3D%2730%27%20xChannelSelector%3D%27R%27%20yChannelSelector%3D%27G%27%2F%3E%3C%2Ffilter%3E%3Cg%20fill%3D%27%23fff%27%20filter%3D%27url%28%23sp%29%27%3E%3Crect%20x%3D%2744%27%20y%3D%2744%27%20width%3D%27512%27%20height%3D%27672%27%20rx%3D%2746%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27310%27%20r%3D%2724%27%2F%3E%3Ccircle%20cx%3D%27566%27%20cy%3D%27470%27%20r%3D%2719%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27742%27%20r%3D%2715%27%2F%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%2770%27%20r%3D%2713%27%2F%3E%3Ccircle%20cx%3D%27300%27%20cy%3D%27748%27%20r%3D%2711%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;}
-.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
 </style>
 </head>
 <body>

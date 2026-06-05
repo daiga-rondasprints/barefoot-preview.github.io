@@ -2972,6 +2972,8 @@ footer{background:#0b0c0e}
 footer a{color:#cdc8bd}
 /* hero scrim: warm brown -> cool filmic, text side kept darkest */
 .hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 42%,rgba(11,12,14,.15) 100%),linear-gradient(0deg,rgba(11,12,14,.55),transparent 40%)}
+/* mobile: hero content is top-aligned -> push it clear of the ~92px fixed overlay nav (was overlapping the logo) */
+@media(max-width:768px){.hero .hero-inner{padding-top:7rem !important}}
 /* card / surface bodies: white|sand -> dark surface */
 .exc-card,.trust-card,.review-card,.tour-video-card{background:#16191e}
 .trust-detail{background:#101216}
