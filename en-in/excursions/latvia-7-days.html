@@ -847,6 +847,37 @@ a:hover{color:#c0294a}
 .referral-card,.refer-card{background:#16191e !important;border-color:rgba(216,162,74,.4) !important;color:#cdc8bd !important}
 .refer-card-top span,.referral-card .refer-top span{color:#9cc089 !important}
 </style>
+<style id="bb-itin-photos">
+/* ===== Photo-forward itinerary (operator 2026-06-05): lead each day with enlarged
+   photos, tuck the prose behind a per-day toggle + an expand/collapse-all control. ===== */
+/* enlarged per-day photo grid (was a 90x64 strip) */
+.day-photos{margin:var(--space-3) 0 var(--space-2) !important;border-top:0 !important;padding-top:0 !important}
+.day-photos-h{font-size:.7rem !important;letter-spacing:.1em !important;text-transform:uppercase !important;color:#9a958b !important;margin-bottom:.55rem !important}
+.day-photo-strip{display:grid !important;grid-template-columns:repeat(auto-fill,minmax(190px,1fr)) !important;gap:.55rem !important;flex-wrap:initial !important}
+.day-photo-thumb{width:100% !important;height:165px !important;border-radius:12px !important;border:1px solid rgba(244,241,234,.14) !important}
+.day-photo-thumb img{width:100% !important;height:100% !important;object-fit:cover !important;transition:transform .4s ease}
+.day-photo-thumb:hover{border-color:#d8a24a !important;transform:none !important}
+.day-photo-thumb:hover img{transform:scale(1.05)}
+.day-photo-thumb.placeholder{display:none !important}
+.day-photo-more{display:none !important}
+@media(max-width:640px){.day-photo-strip{grid-template-columns:repeat(2,1fr) !important}.day-photo-thumb{height:135px !important}}
+/* per-day prose collapse (grid-rows 0fr<->1fr = animatable, no max-height guess) */
+.bb-day-fold{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.bb-day-fold.open{grid-template-rows:1fr}
+.bb-day-fold>.bb-day-fold-inner{overflow:hidden;min-height:0}
+.bb-day-fold>.bb-day-fold-inner>:first-child{margin-top:.4rem}
+.bb-day-toggle{display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;background:transparent;border:1px solid rgba(244,241,234,.22);color:#cdc8bd;font-family:inherit;font-weight:600;font-size:.85rem;letter-spacing:.02em;padding:.5rem 1.05rem;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s}
+.bb-day-toggle:hover{border-color:#d8a24a;color:#f4f1ea}
+.bb-day-toggle::after{content:"\25BE";font-size:.85em;transition:transform .25s ease}
+.bb-day-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+/* expand/collapse-all control */
+.bb-itin-allctrl{display:flex;gap:.55rem;justify-content:flex-end;align-items:center;margin:0 0 var(--space-4)}
+.bb-itin-allbtn{background:transparent;border:1px solid rgba(244,241,234,.22);color:#cdc8bd;font-family:inherit;font-weight:600;font-size:.82rem;letter-spacing:.02em;padding:.45rem .95rem;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s}
+.bb-itin-allbtn:hover{border-color:#d8a24a;color:#f4f1ea}
+/* lightbox: cool the warm default overlay to the calibrated near-black + legible caption */
+.lightbox-overlay{background:rgba(11,12,14,.94) !important}
+.lightbox-caption{color:#cdc8bd !important}
+</style>
 </head>
 <body>
 
@@ -2602,5 +2633,49 @@ a:hover{color:#c0294a}
 </section>
 
 <script id="bb-en-in-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
+<script id="bb-itin-photos-js">(function(){
+  function process(){
+    var bodies=document.querySelectorAll('.itin-day-body');
+    if(!bodies.length)return;
+    bodies.forEach(function(body){
+      if(body.querySelector('.bb-day-fold'))return; /* idempotent */
+      var h4=body.querySelector('h4');
+      var photos=body.querySelector('.day-photos');
+      var glance=null,prose=[];
+      Array.prototype.forEach.call(body.children,function(el){
+        if(el.tagName==='P'&&/border-left/.test(el.getAttribute('style')||'')){glance=el;return;}
+        if(el.tagName==='P'||el.tagName==='UL')prose.push(el);
+      });
+      if(!prose.length)return;
+      var real=photos?photos.querySelectorAll('.day-photo-thumb:not(.placeholder)').length:0;
+      var fold=document.createElement('div');fold.className='bb-day-fold';
+      var inner=document.createElement('div');inner.className='bb-day-fold-inner';fold.appendChild(inner);
+      prose.forEach(function(el){inner.appendChild(el);});
+      var toggle=document.createElement('button');toggle.type='button';toggle.className='bb-day-toggle';
+      toggle.setAttribute('aria-expanded','false');toggle.appendChild(document.createTextNode('Read the full day plan'));
+      toggle.addEventListener('click',function(){
+        var open=fold.classList.toggle('open');
+        toggle.setAttribute('aria-expanded',open?'true':'false');
+        toggle.firstChild.nodeValue=open?'Hide day plan':'Read the full day plan';
+      });
+      if(photos&&real&&h4){h4.parentNode.insertBefore(photos,h4.nextSibling);}
+      else if(photos&&!real){photos.style.display='none';}
+      if(glance)body.appendChild(glance);
+      body.appendChild(toggle);body.appendChild(fold);
+    });
+    var first=document.querySelector('.itin-day');
+    if(first&&first.parentNode&&!document.querySelector('.bb-itin-allctrl')){
+      var bar=document.createElement('div');bar.className='bb-itin-allctrl';
+      function mk(label,open){var b=document.createElement('button');b.type='button';b.className='bb-itin-allbtn';b.textContent=label;
+        b.addEventListener('click',function(){
+          document.querySelectorAll('.bb-day-fold').forEach(function(f){f.classList.toggle('open',open);});
+          document.querySelectorAll('.bb-day-toggle').forEach(function(t){t.setAttribute('aria-expanded',open?'true':'false');t.firstChild.nodeValue=open?'Hide day plan':'Read the full day plan';});
+        });return b;}
+      bar.appendChild(mk('Expand all days',true));bar.appendChild(mk('Collapse all',false));
+      first.parentNode.insertBefore(bar,first);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
+})();</script>
 </body>
 </html>
