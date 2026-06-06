@@ -938,6 +938,9 @@ a:hover{color:#c0294a}
 .route-map-section-title{color:#f4f1ea !important}
 .route-map-section-sub{color:#cdc8bd !important}
 .highlight svg,.disclosure-chev{color:#7c9a6b !important}
+/* FAQ question hover/focus: base .faq-q:hover{background:var(--sand)} = light -> dark */
+.faq-q:hover,.faq-q:focus-visible{background:#1d2127 !important}
+.faq-q[aria-expanded="true"]{background:#16191e !important}
 /* === comparison / culture tours (baltic-trio etc.): contrast cards + country-compare
    panels + song/pagan culture blocks + inline folk-callout gradient. Carmine emphasis
    text -> legible rose (palette rule: carmine is never small text). === */
@@ -952,6 +955,68 @@ a:hover{color:#c0294a}
 /* referral / bring-a-friend promo cards (class name varies per tour) */
 .referral-card,.refer-card{background:#16191e !important;border-color:rgba(216,162,74,.4) !important;color:#cdc8bd !important}
 .refer-card-top span,.referral-card .refer-top span{color:#9cc089 !important}
+</style>
+<style id="bb-itin-photos">
+/* ===== Photo-forward itinerary (operator 2026-06-05): lead each day with enlarged
+   photos, tuck the prose behind a per-day toggle + an expand/collapse-all control. ===== */
+/* enlarged per-day photo grid (was a 90x64 strip) */
+.day-photos{margin:var(--space-3) 0 var(--space-2) !important;border-top:0 !important;padding-top:0 !important}
+.day-photos-h{font-size:.7rem !important;letter-spacing:.1em !important;text-transform:uppercase !important;color:#9a958b !important;margin-bottom:.55rem !important}
+.day-photo-strip{display:grid !important;grid-template-columns:repeat(auto-fill,minmax(190px,1fr)) !important;gap:.55rem !important;flex-wrap:initial !important}
+.day-photo-thumb{width:100% !important;height:165px !important;border-radius:12px !important;border:1px solid rgba(244,241,234,.14) !important}
+.day-photo-thumb img{width:100% !important;height:100% !important;object-fit:cover !important;transition:transform .4s ease}
+.day-photo-thumb:hover{border-color:#d8a24a !important;transform:none !important}
+.day-photo-thumb:hover img{transform:scale(1.05)}
+.day-photo-thumb.placeholder{display:none !important}
+.day-photo-more{display:none !important}
+@media(max-width:640px){.day-photo-strip{grid-template-columns:repeat(2,1fr) !important}.day-photo-thumb{height:135px !important}}
+/* per-day prose collapse (grid-rows 0fr<->1fr = animatable, no max-height guess) */
+.bb-day-fold{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.bb-day-fold.open{grid-template-rows:1fr}
+.bb-day-fold>.bb-day-fold-inner{overflow:hidden;min-height:0}
+.bb-day-fold>.bb-day-fold-inner>:first-child{margin-top:.4rem}
+.bb-day-toggle{display:inline-flex;align-items:center;gap:.55rem;margin-top:.6rem;background:#16191e;border:1px solid rgba(216,162,74,.4);color:#f4f1ea;font-family:inherit;font-weight:600;font-size:.85rem;letter-spacing:.02em;padding:.55rem 1.15rem;border-radius:999px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.bb-day-toggle:hover{background:#1d2127;border-color:#d8a24a;color:#fff}
+.bb-day-toggle::after{content:"\25BE";font-size:.85em;color:#d8a24a;transition:transform .25s ease}
+.bb-day-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+/* expand/collapse-all control */
+.bb-itin-allctrl{display:flex;gap:.55rem;justify-content:flex-end;align-items:center;margin:0 0 var(--space-4)}
+.bb-itin-allbtn{background:transparent;border:1px solid rgba(244,241,234,.22);color:#cdc8bd;font-family:inherit;font-weight:600;font-size:.82rem;letter-spacing:.02em;padding:.45rem .95rem;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s}
+.bb-itin-allbtn:hover{border-color:#d8a24a;color:#f4f1ea}
+/* lightbox: cool the warm default overlay to the calibrated near-black + legible caption */
+.lightbox-overlay{background:rgba(11,12,14,.94) !important}
+.lightbox-caption{color:#cdc8bd !important}
+</style>
+<style id="bb-faqmove">
+/* explainer folds relocated above the FAQ — keep spacing consistent with the disclosures */
+.bb-ts-fold{margin-bottom:var(--space-3)}
+.bb-faq-cluster-lead{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9a958b;margin:var(--space-6) 0 var(--space-3)}
+</style>
+<style id="bb-top-tight">
+/* ===== Top-of-page declutter (operator 2026-06-05): slim the zero-deposit hook to a
+   tight single-line strip. The flights/taxes fine print + Schengen visa band +
+   quick-facts + promo blocks are removed outright (see _stage_en_in_top.py). ===== */
+.zero-banner-inner{padding:.72rem var(--space-8) !important;gap:var(--space-3) !important;flex-wrap:nowrap !important}
+.zero-banner-main{font-size:.92rem !important}
+@media(max-width:760px){.zero-banner-inner{flex-wrap:wrap !important;padding:.7rem var(--space-5) !important}}
+</style>
+<style id="bb-hero-kb">
+/* ===== Ken Burns hero slideshow (operator 2026-06-06): many landscape photos, slow
+   zoom anchored to the TOP so the top is never cropped, crossfading. ===== */
+.page-hero{position:relative}
+.page-hero .hero-img{display:none !important}      /* replaced by the KB slideshow */
+.bb-hero-kb{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bb-hero-kb-layer{position:absolute;inset:0;background-size:cover;background-position:center top;background-repeat:no-repeat;opacity:0;transform:scale(1.001);transform-origin:center top;transition:opacity 1.8s ease;will-change:opacity,transform}
+.bb-hero-kb-layer.on{opacity:.9}
+.bb-hero-kb-layer.kb{animation:bbHeroKB 13s ease-out forwards}
+@keyframes bbHeroKB{from{transform:scale(1.001)}to{transform:scale(1.13)}}
+/* stronger, even scrim so hero text stays legible over ANY cycling photo (top no longer transparent) */
+.page-hero .hero-overlay{background:linear-gradient(180deg,rgba(11,12,14,.5) 0%,rgba(11,12,14,.28) 38%,rgba(11,12,14,.55) 72%,rgba(11,12,14,.92) 100%) !important;z-index:1}
+.page-hero .hero-inner,.page-hero .hero-photo-credit{position:relative;z-index:3}
+@media(prefers-reduced-motion:reduce){.bb-hero-kb-layer.kb{animation:none}}
+/* ===== Daiga thumbnail in the "Talk to Daiga first?" card ===== */
+.daiga-avatar{overflow:hidden;border:1.5px solid rgba(216,162,74,.55) !important;background:#16191e !important;padding:0 !important}
+.daiga-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block}
 </style>
 </head>
 <body>
@@ -1026,7 +1091,7 @@ a:hover{color:#c0294a}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
       Book with &euro;0 deposit when you arrange your own flights and hotels. Pay only when you land.
     </div>
-    <div class="zero-banner-detail">Need flights or hotels? We can book those too. Those have their own deposits. Quoted prices exclude EU VAT / India GST &mdash; taxes settled on issue of invoice.</div>
+    
   </div>
 </div>
 
@@ -1038,28 +1103,7 @@ a:hover{color:#c0294a}
 <div class="page-body">
 
   <!-- Tight horizontal quick-facts row (matches Sigulda / Rundāle pattern) -->
-  <div class="qf-row-tight" role="list" aria-label="Tour quick facts">
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <div><div class="qf-label">Duration</div><div class="qf-val">9 days · TLL Day 1 → VNO Day 9</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <div><div class="qf-label">Group size</div><div class="qf-val">Min 7 · max 14 · one van</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <div><div class="qf-label">Route</div><div class="qf-val">3 options · van the whole way</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      <div><div class="qf-label">Pricing</div><div class="qf-val">€730 Land + Guiding only · €0 deposit · no paid attraction entries · + taxes (EU VAT / India GST)</div></div>
-    </div>
-    <div class="qf" role="listitem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
-      <div><div class="qf-label">Operator</div><div class="qf-val">Daiga &amp; her team · Latvia-licensed</div></div>
-    </div>
-  </div>
+  
 
   <div class="content-grid" id="reserve-now">
 
@@ -1901,16 +1945,7 @@ a:hover{color:#c0294a}
     </div>
 
     <!-- DIWALI 2026 CALLOUT -->
-    <div class="diwali-block" role="region" aria-labelledby="diwali-h">
-      <span class="diwali-tag">🪔 Special departure</span>
-      <h3 id="diwali-h">A dedicated Diwali 2026 departure</h3>
-      <p>We&rsquo;re running one special departure timed around Diwali 2026 (8 November 2026). Festive Indian meals routed through Riga's Indian community on the three evenings around Diwali, a small home-style celebration with diyas and sweets on the Baltic coast on the night itself, and an optional Riga Sri Ramanuja mandir visit in P&amacr;rdaugava with the priest. One van only &mdash; fourteen seats, min 7 to run.</p>
-      <p>Dates and full details are still being confirmed. Register your interest now and we&rsquo;ll send you the itinerary before it&rsquo;s public.</p>
-      <a href="https://wa.me/37126440152?text=Hi%20Daiga%21%20Please%20add%20me%20to%20the%20Diwali%202026%20Baltic%20tour%20interest%20list." class="diwali-cta" target="_blank" rel="noopener">
-        <span>Register interest in Diwali 2026</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div><!-- /diwali-block -->
+    <!-- /diwali-block -->
 
       <!-- WOMEN-LED -->
       <div class="guides-block" id="guides-h">
@@ -2431,7 +2466,7 @@ a:hover{color:#c0294a}
       <!-- Talk to Daiga first -->
       <div class="daiga-card">
         <div class="daiga-card-top">
-          <div class="daiga-avatar" aria-hidden="true">D</div>
+          <div class="daiga-avatar"><img src="/images/daiga-barefoot-baltic-india-portrait.webp" alt="Daiga" loading="lazy" width="42" height="42"></div>
           <div>
             <div class="daiga-card-name">Talk to Daiga first?</div>
             <div class="daiga-card-sub">Most Indian guests message first. No pressure to book on the spot.</div>
@@ -3120,5 +3155,133 @@ a:hover{color:#c0294a}
 </section>
 
 <script id="bb-en-in-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;function o(){n.classList.toggle("scrolled",window.scrollY>40);}o();window.addEventListener("scroll",o,{passive:true});})();</script>
+<script id="bb-itin-photos-js">(function(){
+  function process(){
+    var bodies=document.querySelectorAll('.itin-day-body');
+    if(!bodies.length)return;
+    bodies.forEach(function(body){
+      if(body.querySelector('.bb-day-fold'))return; /* idempotent */
+      var h4=body.querySelector('h4');
+      var photos=body.querySelector('.day-photos');
+      var glance=null,prose=[];
+      Array.prototype.forEach.call(body.children,function(el){
+        if(el.tagName==='P'&&/border-left/.test(el.getAttribute('style')||'')){glance=el;return;}
+        if(el.tagName==='P'||el.tagName==='UL')prose.push(el);
+      });
+      if(!prose.length)return;
+      var real=photos?photos.querySelectorAll('.day-photo-thumb:not(.placeholder)').length:0;
+      var fold=document.createElement('div');fold.className='bb-day-fold';
+      var inner=document.createElement('div');inner.className='bb-day-fold-inner';fold.appendChild(inner);
+      prose.forEach(function(el){inner.appendChild(el);});
+      var toggle=document.createElement('button');toggle.type='button';toggle.className='bb-day-toggle';
+      toggle.setAttribute('aria-expanded','false');toggle.appendChild(document.createTextNode('Read the full day plan'));
+      toggle.addEventListener('click',function(){
+        var open=fold.classList.toggle('open');
+        toggle.setAttribute('aria-expanded',open?'true':'false');
+        toggle.firstChild.nodeValue=open?'Hide day plan':'Read the full day plan';
+      });
+      if(photos&&real&&h4){h4.parentNode.insertBefore(photos,h4.nextSibling);}
+      else if(photos&&!real){photos.style.display='none';}
+      if(glance)body.appendChild(glance);
+      body.appendChild(toggle);body.appendChild(fold);
+    });
+    var first=document.querySelector('.itin-day');
+    if(first&&first.parentNode&&!document.querySelector('.bb-itin-allctrl')){
+      var bar=document.createElement('div');bar.className='bb-itin-allctrl';
+      function mk(label,open){var b=document.createElement('button');b.type='button';b.className='bb-itin-allbtn';b.textContent=label;
+        b.addEventListener('click',function(){
+          document.querySelectorAll('.bb-day-fold').forEach(function(f){f.classList.toggle('open',open);});
+          document.querySelectorAll('.bb-day-toggle').forEach(function(t){t.setAttribute('aria-expanded',open?'true':'false');t.firstChild.nodeValue=open?'Hide day plan':'Read the full day plan';});
+        });return b;}
+      bar.appendChild(mk('Expand all days',true));bar.appendChild(mk('Collapse all',false));
+      first.parentNode.insertBefore(bar,first);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
+})();</script>
+<script id="bb-faqmove-js">(function(){
+  function process(){
+    var main=document.querySelector('.content-main');if(!main)return;
+    if(document.querySelector('.bb-ts-fold'))return;            /* per-load idempotent */
+    var faqList=document.querySelector('.faq-list');if(!faqList)return;
+    var anchor=faqList.previousElementSibling;                  /* the "Frequently asked" h2 */
+    if(!anchor||anchor.parentNode!==main)anchor=faqList;
+    var CHEV='<svg class="disclosure-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
+    /* 1. .trip-shape (expanded prose) -> collapsed .disclosure folds, one per <h2> */
+    var ts=document.querySelector('.trip-shape');var tsFolds=[];
+    if(ts){
+      var groups=[],cur=null;
+      Array.prototype.forEach.call(ts.children,function(el){
+        if(el.tagName==='H2'){cur={title:el.textContent.trim(),nodes:[]};groups.push(cur);}
+        else if(cur){cur.nodes.push(el);}
+      });
+      groups.forEach(function(g){
+        var d=document.createElement('details');d.className='disclosure bb-ts-fold';
+        var s=document.createElement('summary');
+        var span=document.createElement('span');span.textContent=g.title;
+        s.appendChild(span);s.insertAdjacentHTML('beforeend',CHEV);
+        d.appendChild(s);
+        var body=document.createElement('div');body.className='disclosure-body';
+        g.nodes.forEach(function(n){body.appendChild(n);});
+        d.appendChild(body);tsFolds.push(d);
+      });
+      if(ts.parentNode)ts.parentNode.removeChild(ts);
+    }
+    /* 2. cluster (in reading order) + move above the FAQ */
+    var cluster=[];
+    var expect=document.querySelector('.expect-section');if(expect)cluster.push(expect);
+    tsFolds.forEach(function(d){cluster.push(d);});
+    Array.prototype.forEach.call(main.querySelectorAll(':scope > details.disclosure'),function(d){
+      if(!d.classList.contains('bb-ts-fold'))cluster.push(d);
+    });
+    if(!cluster.length)return;
+    var lead=document.createElement('p');lead.className='bb-faq-cluster-lead';lead.textContent='More about this trip';
+    main.insertBefore(lead,anchor);
+    cluster.forEach(function(b){main.insertBefore(b,anchor);});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',process);else process();
+})();</script>
+<script id="bb-hero-kb-js">(function(){
+  function init(){
+    var hero=document.querySelector('.page-hero');
+    if(!hero||hero.querySelector('.bb-hero-kb'))return;
+    var heroImg=hero.querySelector('.hero-img');
+    var heroSrc=heroImg&&heroImg.getAttribute('src');
+    if(!heroSrc&&!document.querySelector('.day-photo-thumb'))return; /* not a multi-day hero */
+    var box=document.createElement('div');box.className='bb-hero-kb';hero.insertBefore(box,hero.firstChild);
+    function addLayer(src,eager){var L=document.createElement('div');L.className='bb-hero-kb-layer';
+      if(eager){L.style.backgroundImage='url("'+src+'")';}else{L.setAttribute('data-src',src);}box.appendChild(L);return L;}
+    function reveal(L){if(L&&!L.style.backgroundImage){var s=L.getAttribute('data-src');if(s)L.style.backgroundImage='url("'+s+'")';}}
+    var seen={};
+    if(heroSrc){seen[heroSrc]=1;var f=addLayer(heroSrc,true);f.classList.add('on','kb');}
+    var thumbs=[].slice.call(document.querySelectorAll('.day-photo-thumb:not(.placeholder)')).slice(0,20);
+    var fulls=[],pending=thumbs.length;
+    if(!pending){startCycle();return;}
+    thumbs.forEach(function(b){
+      var full=b.getAttribute('data-full');var timg=b.querySelector('img');
+      var tsrc=timg&&(timg.getAttribute('src'));
+      if(!full||seen[full]){done();return;}
+      var probe=new Image();
+      probe.onload=function(){if(probe.naturalWidth>=probe.naturalHeight){seen[full]=1;fulls.push(full);}done();};
+      probe.onerror=function(){done();};
+      probe.src=tsrc||full;
+    });
+    function done(){if(--pending>0)return;fulls.slice(0,12).forEach(function(s){addLayer(s,false);});startCycle();}
+    function startCycle(){
+      var layers=box.querySelectorAll('.bb-hero-kb-layer');
+      if(layers.length<2)return;
+      reveal(layers[1]);
+      var idx=0;
+      setInterval(function(){
+        layers[idx].classList.remove('on','kb');
+        idx=(idx+1)%layers.length;
+        var L=layers[idx];reveal(L);L.classList.add('on');
+        L.classList.remove('kb');void L.offsetWidth;L.classList.add('kb');
+        reveal(layers[(idx+1)%layers.length]);
+      },6500);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();</script>
 </body>
 </html>
