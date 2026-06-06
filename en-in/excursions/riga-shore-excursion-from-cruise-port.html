@@ -2376,6 +2376,15 @@ footer a{color:#cdc8bd}
 .mobile-cta-bar{background:#101216 !important;border-color:rgba(244,241,234,.14) !important;box-shadow:0 -8px 24px rgba(0,0,0,.5) !important}
 .mobile-cta-bar,.mobile-cta-bar *{color:#f4f1ea !important}
 </style>
+<style id="bb-dt-hero-kb">
+/* ===== Day-trip hero Ken Burns: anchor the zoom to the TOP so the top of the picture is
+   never cropped during the zoom (operator 2026-06-06). The rotation JS sets animationName
+   inline but not transform-origin, so this CSS wins. Vertical-drift variants redefined to
+   top-safe zooms (no upward pan). ===== */
+.hero-slide img{transform-origin:center top !important}
+@keyframes kb-drift-up{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+@keyframes kb-drift-down{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+</style>
 </head>
 <body>
 <!-- Skip navigation -->
@@ -3204,7 +3213,7 @@ footer a{color:#cdc8bd}
 
       <a href="#book" class="daiga-card daiga-card-ask" style="display:block;text-decoration:none;color:inherit">
         <div class="daiga-card-top">
-          <div class="daiga-avatar"><img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy"></div>
+          <div class="daiga-avatar"><img src="/images/daiga-barefoot-baltic-india-portrait.webp" alt="Daiga" width="42" height="42" loading="lazy"></div>
           <div>
             <div class="daiga-card-name" data-bk-i18n="daiga.title">Not sure yet? Ask Daiga.</div>
             <div class="daiga-card-sub" data-bk-i18n="daiga.sub">Most guests message first, no pressure to book on the spot.</div>
@@ -3433,7 +3442,7 @@ footer a{color:#cdc8bd}
       <div class="daiga-card">
         <div class="daiga-card-top">
           <div class="daiga-avatar">
-            <img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy">
+            <img src="/images/daiga-barefoot-baltic-india-portrait.webp" alt="Daiga" width="42" height="42" loading="lazy">
           </div>
           <div>
             <div class="daiga-card-name" data-bk-i18n="daiga.title">Not sure yet? Ask Daiga.</div>
