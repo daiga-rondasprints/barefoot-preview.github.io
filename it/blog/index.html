@@ -41,8 +41,8 @@
 
 
 
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="https://barefootbaltic.com/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://barefootbaltic.com/images/apple-touch-icon.png">
 <link rel="canonical" href="https://barefootbaltic.it/blog/index.html">
 
 <!-- RSS feed autodiscovery -->
@@ -1523,6 +1523,134 @@ footer a:hover{color:#fff}
   .faq-q{font-size:1rem;padding:var(--space-4) 0}
 }
 </style>
+<style id="bb-blog-dark">
+
+/* ===== .com BLOG — dark cinematic theme, calibrated palette (blue/red/white). ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.12);--peat:#f4f1ea;--indigo:#9fb3d6;--carmine:#c0294a;--carmine-dark:#a0213c}
+body{background:#0b0c0e;color:#f4f1ea}
+/* ── NAV shared: light links -> white, indigo CTA, dark hamburger, logo toggle ── */
+/* nav layout = homepage parity: full-width bar (logo flush-left, menu pushed right
+   via space-between + the inter-group gap clamp), tight 1rem menu-item gap, .92rem links */
+.nav-inner{max-width:none!important;gap:clamp(1.4rem,3vw,4rem);padding:1.1rem 2.6rem!important}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{color:#f4f1ea;font-size:.92rem}
+.nav .nav-links a:hover{color:#fff}
+.nav-cta{background:#253961!important;color:#fff!important}
+.nav-cta:hover{background:#1a2a48!important;color:#fff!important}
+.nav-links a[aria-current="page"]{color:#fff!important}
+.hamburger span{background:#f4f1ea}
+/* geo locale-suggestion banner close button (UA-default light) -> dark */
+#langSuggest button{background:rgba(244,241,234,.1)!important;color:#f4f1ea!important;border:0!important}
+/* logo: the white wordmark always — no scroll-swap to the monogram (consistent header) */
+.nav .logo-scrolled{display:none!important}
+.nav.scrolled .logo-top{display:block!important}
+html{scroll-padding-top:5.5rem}
+/* mobile dropdown panel (base collapses at <=1100px, light --cream) -> dark */
+@media(max-width:1100px){.nav .nav-links{background:#101216!important;border-bottom-color:rgba(244,241,234,.12)!important;box-shadow:0 8px 22px rgba(0,0,0,.5)!important}}
+/* ── language switcher dropdown -> dark ── */
+.lang-switcher-list{background:#16191e!important;border-color:rgba(244,241,234,.16)!important}
+.lang-switcher-list a{color:#cdc8bd!important}
+.lang-switcher-list a:hover,.lang-switcher-list a:focus{background:#1d2127!important;color:#fff!important}
+.lang-switcher-list a[aria-current="true"]{color:#fff!important}
+.lang-switcher-summary{color:#f4f1ea}
+.lang-switcher-list-en{color:#9a958b!important}
+/* ── ARTICLE GRID section (inline style="background:var(--sand)") -> dark ── */
+#articles{background:#0b0c0e!important}
+.section-label{color:#7c9a6b}
+/* ── EXC-CARD post cards: white -> #16191e (home parity) ── */
+.exc-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.exc-card:hover{border-color:#c0294a!important;box-shadow:0 10px 30px rgba(0,0,0,.55)!important}
+.exc-card-body h3{color:#f4f1ea}
+.exc-card-body p{color:#cdc8bd}
+.exc-card-meta{color:#9fb3d6}
+.exc-card-price{color:#cdc8bd!important}
+.exc-card-price span{color:#9a958b}
+.exc-card-cta{color:#9fb3d6}
+.exc-card-footer{border-top-color:rgba(244,241,234,.1)}
+.exc-card-badge.soon{background:#1d2127!important;color:#d8a24a!important}
+/* ── 'What's On in Latvia' events page (.we-* generator components: white cards -> dark) ── */
+.we-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.we-card__poster{background:#101216!important}
+.we-card__cta{color:#7c9a6b!important}
+.we-card__date{color:#9a958b!important}
+.we-hero figcaption{background:rgba(11,12,14,.78)!important;color:#cdc8bd!important}
+/* ── ARTICLE DETAIL: header + breadcrumbs + section tabs ── */
+.breadcrumbs li[aria-current="page"]{color:#f4f1ea}
+.breadcrumbs li{color:#9a958b}
+.breadcrumbs a{color:#7c9a6b!important}
+.breadcrumbs a:hover{color:#c0294a!important}
+.breadcrumbs .sep{color:#9a958b}
+.article-hero{background:#101216!important;border-bottom-color:rgba(244,241,234,.12)!important}
+.article-hero h1{color:#f4f1ea}
+.article-kicker{color:#d8a24a!important}
+.article-byline{color:#cdc8bd!important}
+.article-byline strong{color:#f4f1ea!important}
+.section-tabs{background:rgba(11,12,14,.94)!important;border-color:rgba(244,241,234,.12)!important}
+.section-tab{color:#cdc8bd!important;border-color:rgba(244,241,234,.16)!important}
+.section-tab:hover,.section-tab.active,.section-tab[aria-current="true"]{color:#fff!important;border-color:#c0294a!important;background:#1d2127!important}
+/* ── ARTICLE BODY prose ── */
+.article-body p,.article-body li,.article-body h2,.article-body h3{color:#f4f1ea}
+.article-body p:first-of-type{color:#f4f1ea}
+.article-body strong{color:#f4f1ea}
+.article-body a{color:#7c9a6b!important}
+.article-body a:hover{color:#c0294a!important}
+.article-body em{color:#7c9a6b!important}
+.article-body hr{background:rgba(244,241,234,.12)}
+/* prose tables */
+.article-body table{background:#16191e!important;border-color:rgba(244,241,234,.12)!important;box-shadow:0 1px 3px rgba(0,0,0,.4)!important}
+.article-body thead tr{background:#19241b!important;color:#f4f1ea!important}
+.article-body th{color:#f4f1ea!important}
+.article-body td{border-top-color:rgba(244,241,234,.12)!important;color:#cdc8bd!important}
+.article-body td strong{color:#f4f1ea!important}
+.article-body tbody tr:nth-child(odd){background:#1d2127!important}
+.article-body tbody tr:hover{background:rgba(124,154,107,.12)!important}
+/* pull-quote */
+.pull-quote{background:#16191e!important;border-left-color:#c0294a!important}
+.pull-quote p{color:#f4f1ea!important}
+.pull-quote cite{color:#7c9a6b!important}
+/* figures */
+.article-figure figcaption,.rundale-gallery__caption{color:#9a958b!important}
+/* ── FAQ ── */
+.faq-section h2{color:#f4f1ea}
+.faq-item,.faq-item:first-child{border-color:rgba(244,241,234,.12)}
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#7c9a6b}
+.faq-a p{color:#cdc8bd}
+.faq-a p strong{color:#f4f1ea}
+/* ── FURTHER READING (Keep Exploring Latvia): linen cards -> dark, green price badge ── */
+.further-reading-label{color:#7c9a6b}
+.further-link{background:#16191e!important;border-color:rgba(244,241,234,.12)!important;color:#f4f1ea!important}
+.further-link:hover{background:#1d2127!important;border-color:#c0294a!important;color:#fff!important}
+.further-link-icon{color:#7c9a6b!important}
+.further-link-badge{background:#19241b!important;color:#9cc089!important;border-color:rgba(124,154,107,.3)!important}
+/* ── CONTACT (shared dark band; --bark/--peat bg would invert -> re-ground) ── */
+.section.contact{background:#101216!important}
+.section.contact .section-title{color:#f4f1ea!important}
+.section.contact .section-label{color:#d8a24a!important}
+.contact-method{background:rgba(244,241,234,.05)!important;border-color:rgba(244,241,234,.1)!important}
+.contact-method:hover{background:rgba(244,241,234,.09)!important;border-color:rgba(244,241,234,.18)!important}
+.contact-right{background:rgba(244,241,234,.04)!important;border-color:rgba(244,241,234,.1)!important}
+.contact-right h3{color:#f4f1ea!important}
+/* ── COOKIE banner (dual-use dark card) -> cool ground ── */
+.cookie-banner{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+.cookie-inner p{color:#cdc8bd!important}
+.cookie-inner a{color:#d8a24a!important}
+/* ── FOOTER (--peat bg would invert -> re-ground) ── */
+footer{background:#0b0c0e!important;color:#cdc8bd!important}
+footer a{color:#cdc8bd!important;border-bottom-color:rgba(244,241,234,.22)!important}
+footer a:hover{color:#fff!important;border-bottom-color:#fff!important}
+.skip-link{background:#c0294a!important;color:#fff!important}
+/* ── NAV (landing): solid-light sticky -> fixed transparent overlay over the hero ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(11,12,14,.74) 0%,rgba(11,12,14,.34) 52%,rgba(11,12,14,0) 100%)!important;border-bottom:0!important;transition:background .4s ease}
+.nav.scrolled{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+/* ── HERO: warm brown overlay -> cool cinematic scrim (left text legibility + bottom fade to ground) ── */
+.hero-overlay{background:linear-gradient(to right,rgba(11,12,14,.82) 0%,rgba(11,12,14,.5) 48%,rgba(11,12,14,.22) 100%),linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,0) 24%,rgba(11,12,14,0) 62%,#0b0c0e 100%)!important}
+.hero-label{color:#d8a24a}
+/* clear the fixed overlay nav: centre the hero on desktop (home-page parity) but with a
+   top-padding floor (~nav height + breathing room) so the taller blog hero (label + big
+   headline + paragraph + buttons + pills) never tucks under the 80px nav/logo */
+@media(min-width:769px){.hero-inner{align-items:center!important;padding-top:104px!important}}
+</style>
 </head>
 <body>
 
@@ -1535,7 +1663,7 @@ footer a:hover{color:#fff}
 <nav class="nav" id="nav" aria-label="Navigazione principale">
   <div class="nav-inner">
     <a href="/it/" class="nav-logo" aria-label="Barefoot Baltic — pagina iniziale">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:40px;width:auto" width="1245" height="210">
+      <img src="https://barefootbaltic.com/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:40px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Apri/chiudi menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -1882,7 +2010,7 @@ footer a:hover{color:#fff}
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-slides" id="heroSlides">
-      <div class="hero-slide active"><picture><source media="(max-width:768px)" srcset="/images/riga-old-town-aerial-daugava-river-latvia-mobile.webp" type="image/webp"><source media="(max-width:768px)" srcset="/images/riga-old-town-aerial-daugava-river-latvia-mobile.jpg" type="image/jpeg"><source srcset="/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp"><img src="/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="Riga Old Town aerial view over the Daugava river" fetchpriority="high" width="1920" height="1280"></picture></div>
+      <div class="hero-slide active"><picture><source media="(max-width:768px)" srcset="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia-mobile.webp" type="image/webp"><source media="(max-width:768px)" srcset="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia-mobile.jpg" type="image/jpeg"><source srcset="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="Riga Old Town aerial view over the Daugava river" fetchpriority="high" width="1920" height="1280"></picture></div>
     </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
@@ -1926,8 +2054,8 @@ footer a:hover{color:#fff}
     <a href="things-to-do-in-cesis.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-cesis/cesis-castle-exterior-red-walls-latvia.webp" type="image/webp">
-          <img src="/images/exc-cesis/cesis-castle-exterior-red-walls-latvia.jpg" alt="Esterno delle rovine del castello medievale di Cēsis, mura di mattoni rossi nella luce autunnale, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/exc-cesis/cesis-castle-exterior-red-walls-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-cesis/cesis-castle-exterior-red-walls-latvia.jpg" alt="Esterno delle rovine del castello medievale di Cēsis, mura di mattoni rossi nella luce autunnale, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Guida pilastro &middot; C&#275;sis</div>
       </div>
@@ -1945,8 +2073,8 @@ footer a:hover{color:#fff}
     <a href="things-to-do-in-sigulda.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.webp" type="image/webp">
-          <img src="/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi sopra la valle del Gauja, Sigulda, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi sopra la valle del Gauja, Sigulda, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Guida pilastro &middot; Sigulda</div>
       </div>
@@ -1964,8 +2092,8 @@ footer a:hover{color:#fff}
     <a href="sigulda-day-trip-from-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-sigulda/sigulda-cable-car-gauja-valley-latvia.webp" type="image/webp">
-          <img src="/images/exc-sigulda/sigulda-cable-car-gauja-valley-latvia.jpg" alt="La funivia di Sigulda che attraversa la Valle della Gauja, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/exc-sigulda/sigulda-cable-car-gauja-valley-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-sigulda/sigulda-cable-car-gauja-valley-latvia.jpg" alt="La funivia di Sigulda che attraversa la Valle della Gauja, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Gita di un giorno &middot; Sigulda</div>
       </div>
@@ -1983,8 +2111,8 @@ footer a:hover{color:#fff}
     <a href="sigulda-in-winter.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.webp" type="image/webp">
-          <img src="/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi sulla collina sopra la Valle della Gauja, Sigulda, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-sigulda/turaida-castle-aerial-red-brick-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi sulla collina sopra la Valle della Gauja, Sigulda, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Stagionale &middot; Sigulda</div>
       </div>
@@ -2002,8 +2130,8 @@ footer a:hover{color:#fff}
     <a href="latvia-restoration-day-may-4-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-restoration-day-may-4-2026/latgale-flag-raised-procession-may-4-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-restoration-day-may-4-2026/latgale-flag-raised-procession-may-4-riga-latvia.jpg" alt="Guardia d'onore dell'Esercito lettone al Monumento della Libertà con una parete di fiori deposta contro la base, Riga, nel Giorno del Ripristino dell'Indipendenza" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-restoration-day-may-4-2026/latgale-flag-raised-procession-may-4-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-restoration-day-may-4-2026/latgale-flag-raised-procession-may-4-riga-latvia.jpg" alt="Guardia d'onore dell'Esercito lettone al Monumento della Libertà con una parete di fiori deposta contro la base, Riga, nel Giorno del Ripristino dell'Indipendenza" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Stagionale &middot; civic</div>
       </div>
@@ -2021,8 +2149,8 @@ footer a:hover{color:#fff}
     <a href="kristaps-porzingis-liepaja-to-nba.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-history/latvian-flag-carmine-red-white-flagpole-blue-sky.webp" type="image/webp">
-          <img src="/images/blog-history/latvian-flag-carmine-red-white-flagpole-blue-sky.jpg" alt="La bandiera lettone contro un cielo azzurro, il rosso carminio e il bianco che Porziņģis portava sulle spalle alle Finals NBA del 2024" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-history/latvian-flag-carmine-red-white-flagpole-blue-sky.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-history/latvian-flag-carmine-red-white-flagpole-blue-sky.jpg" alt="La bandiera lettone contro un cielo azzurro, il rosso carminio e il bianco che Porziņģis portava sulle spalle alle Finals NBA del 2024" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Lettoni famosi</div>
       </div>
@@ -2040,8 +2168,8 @@ footer a:hover{color:#fff}
     <a href="krisjanis-barons-father-of-dainas.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-national-library/latvian-national-library-globe-cabinet-folksongs-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-national-library/latvian-national-library-globe-cabinet-folksongs-riga-latvia.jpg" alt="Lo Schedario dei Canti Popolari (Dainu skapis) e il globo alla Biblioteca Nazionale di Lettonia, dove sono custoditi i 217.996 cartoncini delle dainas di Krišjānis Barons" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-national-library/latvian-national-library-globe-cabinet-folksongs-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-national-library/latvian-national-library-globe-cabinet-folksongs-riga-latvia.jpg" alt="Lo Schedario dei Canti Popolari (Dainu skapis) e il globo alla Biblioteca Nazionale di Lettonia, dove sono custoditi i 217.996 cartoncini delle dainas di Krišjānis Barons" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Lettoni famosi</div>
       </div>
@@ -2059,8 +2187,8 @@ footer a:hover{color:#fff}
     <a href="dainu-kalns-sculpture-field-guide.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-dainu-kalns/dainu-kalns-bench-and-sculpture.webp" type="image/webp">
-          <img src="/images/blog-dainu-kalns/dainu-kalns-bench-and-sculpture.jpg" alt="Scultura in granito a Dainu kalns, la Collina delle Daine, Turaida, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-dainu-kalns/dainu-kalns-bench-and-sculpture.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-dainu-kalns/dainu-kalns-bench-and-sculpture.jpg" alt="Scultura in granito a Dainu kalns, la Collina delle Daine, Turaida, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Guida sul campo al folklore lettone</div>
       </div>
@@ -2078,8 +2206,8 @@ footer a:hover{color:#fff}
     <a href="konventa-seta-convent-yard-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-konventa-seta/konventa-seta-entrance-kaleju-iela-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-konventa-seta/konventa-seta-entrance-kaleju-iela-riga-latvia.jpg" alt="L’ingresso ad arco di Konventa Sēta da Kalēju iela nella Città Vecchia di Riga, Lettonia, con la scritta «KONVENTA SĒTA» sopra l’arco." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-konventa-seta/konventa-seta-entrance-kaleju-iela-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-konventa-seta/konventa-seta-entrance-kaleju-iela-riga-latvia.jpg" alt="L’ingresso ad arco di Konventa Sēta da Kalēju iela nella Città Vecchia di Riga, Lettonia, con la scritta «KONVENTA SĒTA» sopra l’arco." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2097,8 +2225,8 @@ footer a:hover{color:#fff}
     <a href="vermanes-darzs-merkela-park-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-vermanes-darzs/vermanes-darzs-central-fountain-riga-oldest-park-latvia.webp" type="image/webp">
-          <img src="/images/blog-vermanes-darzs/vermanes-darzs-central-fountain-riga-oldest-park-latvia.jpg" alt="La fontana centrale di Vērmanes dārzs, il parco pubblico più antico di Riga, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-vermanes-darzs/vermanes-darzs-central-fountain-riga-oldest-park-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-vermanes-darzs/vermanes-darzs-central-fountain-riga-oldest-park-latvia.jpg" alt="La fontana centrale di Vērmanes dārzs, il parco pubblico più antico di Riga, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2116,8 +2244,8 @@ footer a:hover{color:#fff}
     <a href="house-of-blackheads-melngalvju-nams.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-house-of-blackheads/house-of-blackheads-melngalvju-nams-town-hall-square-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-house-of-blackheads/house-of-blackheads-melngalvju-nams-town-hall-square-riga-latvia.jpg" alt="La Casa delle Teste Nere (Melngalvju nams) in Piazza del Municipio, Riga, Lettonia, con l’elaborata facciata rinascimentale olandese rossa e bianca." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-house-of-blackheads/house-of-blackheads-melngalvju-nams-town-hall-square-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-house-of-blackheads/house-of-blackheads-melngalvju-nams-town-hall-square-riga-latvia.jpg" alt="La Casa delle Teste Nere (Melngalvju nams) in Piazza del Municipio, Riga, Lettonia, con l’elaborata facciata rinascimentale olandese rossa e bianca." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2135,8 +2263,8 @@ footer a:hover{color:#fff}
     <a href="powder-tower-war-museum-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-powder-tower/powder-tower-pulvertornis-medieval-defense-tower-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-powder-tower/powder-tower-pulvertornis-medieval-defense-tower-riga-latvia.jpg" alt="La Torre delle Polveri (Pulvertornis) a Riga, Lettonia, l&rsquo;unica torre difensiva medievale superstite, oggi sede del Museo della Guerra lettone." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-powder-tower/powder-tower-pulvertornis-medieval-defense-tower-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-powder-tower/powder-tower-pulvertornis-medieval-defense-tower-riga-latvia.jpg" alt="La Torre delle Polveri (Pulvertornis) a Riga, Lettonia, l&rsquo;unica torre difensiva medievale superstite, oggi sede del Museo della Guerra lettone." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2154,8 +2282,8 @@ footer a:hover{color:#fff}
     <a href="riga-castle-rigas-pils.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-riga-castle/riga-castle-rigas-pils-holy-spirit-tower-latvia.webp" type="image/webp">
-          <img src="/images/blog-riga-castle/riga-castle-rigas-pils-holy-spirit-tower-latvia.jpg" alt="Castello di Riga (Rīgas pils) con le sue mura bianche, il tetto rosso e la torre rotonda dello Spirito Santo a Riga, in Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-riga-castle/riga-castle-rigas-pils-holy-spirit-tower-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-riga-castle/riga-castle-rigas-pils-holy-spirit-tower-latvia.jpg" alt="Castello di Riga (Rīgas pils) con le sue mura bianche, il tetto rosso e la torre rotonda dello Spirito Santo a Riga, in Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2173,8 +2301,8 @@ footer a:hover{color:#fff}
     <a href="st-james-cathedral-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-st-james-cathedral/st-james-cathedral-spire-tower-jekaba-iela-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-st-james-cathedral/st-james-cathedral-spire-tower-jekaba-iela-riga-latvia.jpg" alt="La cattedrale di San Giacomo (Sv. Jēkaba katedrāle) in Jēkaba iela nella Città Vecchia di Riga, Lettonia, con un campanile gotico alto e snello sopra un corpo in mattoni." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-st-james-cathedral/st-james-cathedral-spire-tower-jekaba-iela-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-st-james-cathedral/st-james-cathedral-spire-tower-jekaba-iela-riga-latvia.jpg" alt="La cattedrale di San Giacomo (Sv. Jēkaba katedrāle) in Jēkaba iela nella Città Vecchia di Riga, Lettonia, con un campanile gotico alto e snello sopra un corpo in mattoni." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2192,8 +2320,8 @@ footer a:hover{color:#fff}
     <a href="st-peters-church-tower-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-st-peters-church/st-peters-church-spire-facade-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-st-peters-church/st-peters-church-spire-facade-riga-latvia.jpg" alt="La Chiesa di San Pietro (Sv. Pētera baznīca) con la sua alta guglia verde contro un cielo azzurro nella Città Vecchia di Riga, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-st-peters-church/st-peters-church-spire-facade-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-st-peters-church/st-peters-church-spire-facade-riga-latvia.jpg" alt="La Chiesa di San Pietro (Sv. Pētera baznīca) con la sua alta guglia verde contro un cielo azzurro nella Città Vecchia di Riga, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2211,8 +2339,8 @@ footer a:hover{color:#fff}
     <a href="swedish-gate-zviedru-varti.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-swedish-gate/swedish-gate-archway-torna-iela-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-swedish-gate/swedish-gate-archway-torna-iela-riga-latvia.jpg" alt="La Porta Svedese (Zviedru vārti) su Torņa iela nella Città Vecchia di Riga, Lettonia, un arco di pietra tra due edifici gialli." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-swedish-gate/swedish-gate-archway-torna-iela-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-swedish-gate/swedish-gate-archway-torna-iela-riga-latvia.jpg" alt="La Porta Svedese (Zviedru vārti) su Torņa iela nella Città Vecchia di Riga, Lettonia, un arco di pietra tra due edifici gialli." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2230,8 +2358,8 @@ footer a:hover{color:#fff}
     <a href="freedom-monument-riga-milda.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-freedom-monument/freedom-monument-milda-statue-three-stars-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-freedom-monument/freedom-monument-milda-statue-three-stars-riga-latvia.jpg" alt="Il Monumento della Libertà (Brīvības piemineklis) a Riga, con Milda che regge tre stelle d’oro in cima, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-freedom-monument/freedom-monument-milda-statue-three-stars-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-freedom-monument/freedom-monument-milda-statue-three-stars-riga-latvia.jpg" alt="Il Monumento della Libertà (Brīvības piemineklis) a Riga, con Milda che regge tre stelle d’oro in cima, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2249,8 +2377,8 @@ footer a:hover{color:#fff}
     <a href="cat-house-riga-meistaru.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-cat-house/cat-house-meistaru-iela-corner-turret-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-cat-house/cat-house-meistaru-iela-corner-turret-riga-latvia.jpg" alt="La Casa dei Gatti (Kaķu nams) su Meistaru iela nella Città Vecchia di Riga, con la sua facciata gialla in stile Art Nouveau e il gatto di bronzo sulla torretta d’angolo, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-cat-house/cat-house-meistaru-iela-corner-turret-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-cat-house/cat-house-meistaru-iela-corner-turret-riga-latvia.jpg" alt="La Casa dei Gatti (Kaķu nams) su Meistaru iela nella Città Vecchia di Riga, con la sua facciata gialla in stile Art Nouveau e il gatto di bronzo sulla torretta d’angolo, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2268,8 +2396,8 @@ footer a:hover{color:#fff}
     <a href="three-brothers-oldest-houses-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-three-brothers/three-brothers-mazas-pils-iela-17-19-21-riga-latvia.webp" type="image/webp">
-          <img src="/images/blog-three-brothers/three-brothers-mazas-pils-iela-17-19-21-riga-latvia.jpg" alt="Le case dei Tre Fratelli su Mazā Pils iela 17, 19, 21 affiancate nella Città Vecchia di Riga, in Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-three-brothers/three-brothers-mazas-pils-iela-17-19-21-riga-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-three-brothers/three-brothers-mazas-pils-iela-17-19-21-riga-latvia.jpg" alt="Le case dei Tre Fratelli su Mazā Pils iela 17, 19, 21 affiancate nella Città Vecchia di Riga, in Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2287,8 +2415,8 @@ footer a:hover{color:#fff}
     <a href="riga-cathedral-doma-baznica.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-riga-cathedral/riga-cathedral-doma-square-tower-blue-sky-latvia.webp" type="image/webp">
-          <img src="/images/blog-riga-cathedral/riga-cathedral-doma-square-tower-blue-sky-latvia.jpg" alt="La Cattedrale di Riga (Doma baznīca) in Doma laukums, con la sua torre barocca contro un cielo azzurro di primavera, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-riga-cathedral/riga-cathedral-doma-square-tower-blue-sky-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-riga-cathedral/riga-cathedral-doma-square-tower-blue-sky-latvia.jpg" alt="La Cattedrale di Riga (Doma baznīca) in Doma laukums, con la sua torre barocca contro un cielo azzurro di primavera, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Approfondimento Città Vecchia</div>
       </div>
@@ -2306,8 +2434,8 @@ footer a:hover{color:#fff}
     <a href="dainu-kalns-folk-song-hill-turaida.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-dainu-kalns/dainu-kalns-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-dainu-kalns/dainu-kalns-tile-1200x800.jpg" alt="Scultura in granito a Dainu kalns, la Collina delle Daine, Turaida, Lettonia" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-dainu-kalns/dainu-kalns-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-dainu-kalns/dainu-kalns-tile-1200x800.jpg" alt="Scultura in granito a Dainu kalns, la Collina delle Daine, Turaida, Lettonia" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Lettura lunga &middot; Singing Revolution</div>
       </div>
@@ -2328,8 +2456,8 @@ footer a:hover{color:#fff}
     <a href="legend-of-rose-of-turaida.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-rose-of-turaida/rose-of-turaida-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-rose-of-turaida/rose-of-turaida-tile-1200x800.jpg" alt="Francobollo lettone EUROPA del 1997, Leggenda della Rosa di Turaida, disegno di Juris Utāns" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-rose-of-turaida/rose-of-turaida-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-rose-of-turaida/rose-of-turaida-tile-1200x800.jpg" alt="Francobollo lettone EUROPA del 1997, Leggenda della Rosa di Turaida, disegno di Juris Utāns" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Lettura lunga</div>
       </div>
@@ -2346,8 +2474,8 @@ footer a:hover{color:#fff}
     <a href="orthodox-churches-latvia.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-orthodox/orthodox-wooden-church-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-orthodox/orthodox-wooden-church-tile-1200x800.jpg" alt="Una chiesa ortodossa in legno con cupola a cipolla e la croce ortodossa a otto punte e tre traverse, Lettonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-orthodox/orthodox-wooden-church-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-orthodox/orthodox-wooden-church-tile-1200x800.jpg" alt="Una chiesa ortodossa in legno con cupola a cipolla e la croce ortodossa a otto punte e tre traverse, Lettonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Religion &amp; architecture</div>
       </div>
@@ -2364,8 +2492,8 @@ footer a:hover{color:#fff}
     <a href="whats-on-in-latvia.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-local-events/whats-on-latvia-events-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-local-events/whats-on-latvia-events-tile-1200x800.jpg" alt="Quattro manifesti di eventi visti in giro per la Lettonia nella primavera 2026" loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-local-events/whats-on-latvia-events-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-local-events/whats-on-latvia-events-tile-1200x800.jpg" alt="Quattro manifesti di eventi visti in giro per la Lettonia nella primavera 2026" loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Calendario vivo</div>
       </div>
@@ -2382,8 +2510,8 @@ footer a:hover{color:#fff}
     <a href="castle-of-light-latvian-national-library.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-national-library/latvian-national-library-castle-of-light-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-national-library/latvian-national-library-castle-of-light-tile-1200x800.jpg" alt="Il Castello della Luce, la Biblioteca Nazionale di Lettonia, Riga, contro un cielo limpido." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-national-library/latvian-national-library-castle-of-light-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-national-library/latvian-national-library-castle-of-light-tile-1200x800.jpg" alt="Il Castello della Luce, la Biblioteca Nazionale di Lettonia, Riga, contro un cielo limpido." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Architecture &amp; folklore</div>
       </div>
@@ -2400,8 +2528,8 @@ footer a:hover{color:#fff}
     <a href="why-latvian-cuisine-is-pork-not-beef.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-pork-cuisine/latvian-pork-bbq-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-pork-cuisine/latvian-pork-bbq-tile-1200x800.jpg" alt="Salsiccia lettone arrotolata, costine di maiale, costine corte di manzo e spiedini su una griglia a carbone, il fondamento della cucina lettone." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-pork-cuisine/latvian-pork-bbq-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-pork-cuisine/latvian-pork-bbq-tile-1200x800.jpg" alt="Salsiccia lettone arrotolata, costine di maiale, costine corte di manzo e spiedini su una griglia a carbone, il fondamento della cucina lettone." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Food &amp; landscape</div>
       </div>
@@ -2418,8 +2546,8 @@ footer a:hover{color:#fff}
     <a href="religion-estonia-latvia-lithuania-compared.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp">
-          <img src="/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="La cattedrale della Natività di Cristo, a Riga, la più grande chiesa ortodossa della Lettonia." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="La cattedrale della Natività di Cristo, a Riga, la più grande chiesa ortodossa della Lettonia." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Religion &amp; identity</div>
       </div>
@@ -2436,8 +2564,8 @@ footer a:hover{color:#fff}
     <a href="jurmala-seaside-resort-from-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-jurmala/jurmala-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-jurmala/jurmala-tile-1200x800.jpg" alt="Jūrmala, la pineta che incontra la sabbia di quarzo bianca del Mar Baltico, a 25 km da Riga." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-jurmala/jurmala-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-jurmala/jurmala-tile-1200x800.jpg" alt="Jūrmala, la pineta che incontra la sabbia di quarzo bianca del Mar Baltico, a 25 km da Riga." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Coast &amp; spa</div>
       </div>
@@ -2454,8 +2582,8 @@ footer a:hover{color:#fff}
     <a href="baltic-nordic-sauna-cultures-compared.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-sauna/baltic-sauna-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-sauna/baltic-sauna-tile-1200x800.jpg" alt="Interno di una sauna baltica rivestita in legno. Stufa kiuas riempita di pietre e una vasta di betulla sulla panca." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-sauna/baltic-sauna-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-sauna/baltic-sauna-tile-1200x800.jpg" alt="Interno di una sauna baltica rivestita in legno. Stufa kiuas riempita di pietre e una vasta di betulla sulla panca." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Cultura della sauna</div>
       </div>
@@ -2472,8 +2600,8 @@ footer a:hover{color:#fff}
     <a href="suwalki-gap-baltic-perspective.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-suwalki-gap/suwalki-gap-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-suwalki-gap/suwalki-gap-tile-1200x800.jpg" alt="Cartello di uscita Suwałki Zachód sulla superstrada S61 attraverso il varco di Suwałki, nel nord-est della Polonia." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-suwalki-gap/suwalki-gap-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-suwalki-gap/suwalki-gap-tile-1200x800.jpg" alt="Cartello di uscita Suwałki Zachód sulla superstrada S61 attraverso il varco di Suwałki, nel nord-est della Polonia." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Geography &amp; geopolitics</div>
       </div>
@@ -2490,8 +2618,8 @@ footer a:hover{color:#fff}
     <a href="hill-of-crosses-lithuania-from-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-hill-of-crosses/hill-of-crosses-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-hill-of-crosses/hill-of-crosses-tile-1200x800.jpg" alt="Collina delle Croci, Lituania, la passerella d’accesso con la statua di Gesù pellegrino e le croci intagliate a mano." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-hill-of-crosses/hill-of-crosses-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-hill-of-crosses/hill-of-crosses-tile-1200x800.jpg" alt="Collina delle Croci, Lituania, la passerella d’accesso con la statua di Gesù pellegrino e le croci intagliate a mano." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">Lithuania &amp; memory</div>
       </div>
@@ -2508,8 +2636,8 @@ footer a:hover{color:#fff}
     <a href="brief-history-of-latvia-first-person.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-history/latvia-flag-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-history/latvia-flag-tile-1200x800.jpg" alt="La bandiera lettone, rosso carminio con una banda bianca, che sventola contro un cielo azzurro." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-history/latvia-flag-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-history/latvia-flag-tile-1200x800.jpg" alt="La bandiera lettone, rosso carminio con una banda bianca, che sventola contro un cielo azzurro." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Otto voci</div>
       </div>
@@ -2526,8 +2654,8 @@ footer a:hover{color:#fff}
     <a href="why-visit-occupation-museum-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-occupation-museum/riga-occupation-museum-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-occupation-museum/riga-occupation-museum-tile-1200x800.jpg" alt="Il Monumento ai fucilieri lettoni e il Museo dell'Occupazione della Lettonia, Riga." loading="lazy" width="1200" height="800">
+          <source srcset="https://barefootbaltic.com/images/blog-occupation-museum/riga-occupation-museum-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-occupation-museum/riga-occupation-museum-tile-1200x800.jpg" alt="Il Monumento ai fucilieri lettoni e il Museo dell'Occupazione della Lettonia, Riga." loading="lazy" width="1200" height="800">
         </picture>
         <div class="exc-card-badge now">History &amp; memory</div>
       </div>
@@ -2544,8 +2672,8 @@ footer a:hover{color:#fff}
     <a href="why-visit-ethnographic-open-air-museum-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-ethnographic-museum/etnografiskais-muzejs-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-ethnographic-museum/etnografiskais-muzejs-tile-1200x800.jpg" alt="Visitatori in abito tradizionale attorno a un falò di Mārtiņdiena al Museo etnografico all'aperto della Lettonia, Riga." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-ethnographic-museum/etnografiskais-muzejs-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-ethnographic-museum/etnografiskais-muzejs-tile-1200x800.jpg" alt="Visitatori in abito tradizionale attorno a un falò di Mārtiņdiena al Museo etnografico all'aperto della Lettonia, Riga." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Cultura popolare</div>
       </div>
@@ -2562,8 +2690,8 @@ footer a:hover{color:#fff}
     <a href="riga-tv-tower-tallest-eu.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-tv-tower/riga-tv-tower-tile-1200x800.webp" type="image/webp">
-          <img src="/images/blog-tv-tower/riga-tv-tower-tile-1200x800.jpg" alt="La Torre della TV di Riga di 368.5 m, la struttura autoportante più alta dell'Unione Europea." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-tv-tower/riga-tv-tower-tile-1200x800.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-tv-tower/riga-tv-tower-tile-1200x800.jpg" alt="La Torre della TV di Riga di 368.5 m, la struttura autoportante più alta dell'Unione Europea." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Storia dell’era sovietica</div>
       </div>
@@ -2580,8 +2708,8 @@ footer a:hover{color:#fff}
     <a href="sigulda-and-cesis-in-one-day.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-sigulda/cesis-castle-autumn-forest-latvia.webp" type="image/webp">
-          <img src="/images/exc-sigulda/cesis-castle-autumn-forest-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi, Sigulda, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/exc-sigulda/cesis-castle-autumn-forest-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-sigulda/cesis-castle-autumn-forest-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi, Sigulda, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Logistica</div>
       </div>
@@ -2598,8 +2726,8 @@ footer a:hover{color:#fff}
     <a href="riga-vs-tallinn-vs-vilnius.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/riga-old-town-cobblestone-street-restaurants-latvia.webp" type="image/webp">
-          <img src="/images/riga-old-town-cobblestone-street-restaurants-latvia.jpg" alt="La statua di Rolando di Riga e la Casa delle Teste Nere, la città a confronto con Tallinn e Vilnius." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/riga-old-town-cobblestone-street-restaurants-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/riga-old-town-cobblestone-street-restaurants-latvia.jpg" alt="La statua di Rolando di Riga e la Casa delle Teste Nere, la città a confronto con Tallinn e Vilnius." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Confronto</div>
       </div>
@@ -2616,8 +2744,8 @@ footer a:hover{color:#fff}
     <a href="riga-old-town-guide.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp">
-          <img src="/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="Via acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/riga-old-town-aerial-daugava-river-latvia.jpg" alt="Via acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Guida pilastro</div>
       </div>
@@ -2634,8 +2762,8 @@ footer a:hover{color:#fff}
     <a href="riga-in-winter.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/riga-roland-statue-house-of-blackheads-latvia.webp" type="image/webp">
-          <img src="/images/riga-roland-statue-house-of-blackheads-latvia.jpg" alt="Strada acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/riga-roland-statue-house-of-blackheads-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/riga-roland-statue-house-of-blackheads-latvia.jpg" alt="Strada acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Stagionale</div>
       </div>
@@ -2652,8 +2780,8 @@ footer a:hover{color:#fff}
     <a href="planning-first-48-hours-in-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/riga-old-town-cobblestone-street-restaurants-latvia.webp" type="image/webp">
-          <img src="/images/riga-old-town-cobblestone-street-restaurants-latvia.jpg" alt="Strada acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/riga-old-town-cobblestone-street-restaurants-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/riga-old-town-cobblestone-street-restaurants-latvia.jpg" alt="Strada acciottolata con ristoranti nella Città Vecchia di Riga, Lettonia." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Pianificazione</div>
       </div>
@@ -2670,8 +2798,8 @@ footer a:hover{color:#fff}
     <a href="latvian-food-honest-guide.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/food/rupjmaize-and-biezpiens.webp" type="image/webp">
-          <img src="/images/food/rupjmaize-and-biezpiens.jpg" alt="Rupjmaize lettone (pane di segale) con biezpiens (formaggio fresco), pilastri della tavola lettone." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/food/rupjmaize-and-biezpiens.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/food/rupjmaize-and-biezpiens.jpg" alt="Rupjmaize lettone (pane di segale) con biezpiens (formaggio fresco), pilastri della tavola lettone." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Food &amp; Drink</div>
       </div>
@@ -2688,8 +2816,8 @@ footer a:hover{color:#fff}
     <a href="kemeri-bog-in-autumn.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.webp" type="image/webp">
-          <img src="/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg" alt="Veduta aerea della Grande Torbiera di Ķemeri, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg" alt="Veduta aerea della Grande Torbiera di Ķemeri, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Stagionale</div>
       </div>
@@ -2706,8 +2834,8 @@ footer a:hover{color:#fff}
     <a href="is-sigulda-worth-visiting.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-sigulda/gauja-river-bend-aerial-valley-latvia.webp" type="image/webp">
-          <img src="/images/exc-sigulda/gauja-river-bend-aerial-valley-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi, Sigulda, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/exc-sigulda/gauja-river-bend-aerial-valley-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-sigulda/gauja-river-bend-aerial-valley-latvia.jpg" alt="Veduta aerea del castello di Turaida in mattoni rossi, Sigulda, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Risposta onesta</div>
       </div>
@@ -2724,8 +2852,8 @@ footer a:hover{color:#fff}
     <a href="is-rundale-palace-worth-visiting.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-rundale/rundale-palace-red-room-baroque-interior-latvia.webp" type="image/webp">
-          <img src="/images/exc-rundale/rundale-palace-red-room-baroque-interior-latvia.jpg" alt="Facciata sud e giardini all’italiana del Palazzo di Rundāle, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/exc-rundale/rundale-palace-red-room-baroque-interior-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-rundale/rundale-palace-red-room-baroque-interior-latvia.jpg" alt="Facciata sud e giardini all’italiana del Palazzo di Rundāle, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Risposta onesta</div>
       </div>
@@ -2742,8 +2870,8 @@ footer a:hover{color:#fff}
     <a href="is-kemeri-bog-worth-it.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.webp" type="image/webp">
-          <img src="/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg" alt="Veduta aerea della Grande torbiera di Ķemeri in primavera, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg" alt="Veduta aerea della Grande torbiera di Ķemeri in primavera, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Risposta onesta</div>
       </div>
@@ -2760,8 +2888,8 @@ footer a:hover{color:#fff}
     <a href="inside-rundale-palace-rooms-guide.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/blog-rundale-rooms/rundale-palace-gold-hall-2-latvia.webp" type="image/webp">
-          <img src="/images/blog-rundale-rooms/rundale-palace-gold-hall-2-latvia.jpg" alt="La Sala d’Oro nel palazzo di Rundāle, Lettonia, stucchi dorati e plafone del soffitto di Martini e Zucchi." loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/blog-rundale-rooms/rundale-palace-gold-hall-2-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/blog-rundale-rooms/rundale-palace-gold-hall-2-latvia.jpg" alt="La Sala d’Oro nel palazzo di Rundāle, Lettonia, stucchi dorati e plafone del soffitto di Martini e Zucchi." loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Visita visiva</div>
       </div>
@@ -2778,8 +2906,8 @@ footer a:hover{color:#fff}
     <a href="day-trips-from-riga.html" class="exc-card">
       <div class="exc-card-img">
         <picture>
-          <source srcset="/images/rundale-palace-baroque-rose-gardens-latvia.webp" type="image/webp">
-          <img src="/images/rundale-palace-baroque-rose-gardens-latvia.jpg" alt="I giardini di rose barocchi del Palazzo di Rundāle, Lettonia" loading="lazy" width="800" height="533">
+          <source srcset="https://barefootbaltic.com/images/rundale-palace-baroque-rose-gardens-latvia.webp" type="image/webp">
+          <img src="https://barefootbaltic.com/images/rundale-palace-baroque-rose-gardens-latvia.jpg" alt="I giardini di rose barocchi del Palazzo di Rundāle, Lettonia" loading="lazy" width="800" height="533">
         </picture>
         <div class="exc-card-badge now">Pianificazione</div>
       </div>
@@ -2823,7 +2951,7 @@ footer a:hover{color:#fff}
             <div><div class="cm-label">Email</div><div class="cm-value">daiga@rondasprints.com</div></div>
           </a>
           <div class="contact-qr">
-            <img src="/images/qr-whatsapp.png" alt="Scansiona per aprire una chat WhatsApp con Barefoot Baltic" width="292" height="292">
+            <img src="https://barefootbaltic.com/images/qr-whatsapp.png" alt="Scansiona per aprire una chat WhatsApp con Barefoot Baltic" width="292" height="292">
             <span>Scansiona per aprire WhatsApp</span>
           </div>
         </div>
@@ -3025,5 +3153,6 @@ function declineCookies(){
 
 </script>
 
+<script id="bb-blog-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
 </body>
 </html>

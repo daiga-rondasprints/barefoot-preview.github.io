@@ -6,8 +6,8 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Minu konto — Barefoot Baltic</title>
 <meta name="description" content="Logige sisse, et vaadata ja hallata oma Barefoot Balticu broneeringuid.">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="https://barefootbaltic.com/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://barefootbaltic.com/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -485,13 +485,69 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   background-size:64px 22px;
 }
 </style>
+<style id="bb-account-dark">
+/* ===== Customer account portal — dark cinematic theme, calibrated palette. ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.12);--peat:#f4f1ea;--carmine:#c0294a;--carmine-dark:#a0213c;--indigo:#9fb3d6}
+body{background:#0b0c0e!important;color:#f4f1ea}
+/* header */
+.page-header{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+.logo-link{color:#f4f1ea!important}
+.back-link,.user-email{color:#cdc8bd!important}
+.back-link:hover{color:#fff!important}
+.logout-btn{background:transparent!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.26)!important}
+.logout-btn:hover{color:#fff!important;border-color:#7c9a6b!important}
+/* headings + lede */
+.login-heading,.bookings-heading,.bookings-section-title,.modal-content h2{color:#f4f1ea!important}
+.login-lede,.bookings-subhead,.empty-state p,.error-state p,#bookings-loading p,#loading-state p{color:#cdc8bd!important}
+/* sign-in card */
+.login-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.login-btn{background:#1d2127!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+.login-btn:hover{background:#222730!important;border-color:rgba(244,241,234,.28)!important}
+.divider{color:#9a958b!important}
+.divider::before,.divider::after{border-color:rgba(244,241,234,.16)!important;background:rgba(244,241,234,.16)!important}
+.login-form label{color:#cdc8bd!important}
+.login-form input{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+.login-form input::placeholder{color:#8a857b!important}
+.login-form input:focus{border-color:#7c9a6b!important}
+.login-form button[type="submit"]{background:#c0294a!important;color:#fff!important}
+.login-form button[type="submit"]:hover{background:#a0213c!important}
+.otp-sent-msg{color:#cdc8bd!important}
+.link-btn{color:#7c9a6b!important}
+/* primary / secondary buttons */
+.primary-btn{background:#c0294a!important;color:#fff!important;border-color:#c0294a!important}
+.primary-btn:hover{background:#a0213c!important;border-color:#a0213c!important}
+.secondary-btn{background:transparent!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.26)!important}
+.secondary-btn:hover{color:#fff!important;border-color:#7c9a6b!important}
+/* booking cards */
+.booking-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important;color:#f4f1ea}
+.booking-card.is-cancelled{background:#101216!important}
+.booking-card *{border-color:rgba(244,241,234,.12)}
+/* banners + errors */
+.banner-error,.error-state{background:rgba(192,41,74,.16)!important;color:#f0a9b6!important;border-color:rgba(192,41,74,.4)!important}
+.form-error{color:#f0a9b6!important}
+/* cancellation modal */
+.modal-overlay{background:rgba(7,8,9,.72)!important}
+.modal-content{background:#16191e!important;border-color:rgba(244,241,234,.14)!important;color:#f4f1ea}
+.modal-content p{color:#cdc8bd!important}
+.modal-content p strong{color:#f4f1ea!important}
+.modal-policy{color:#9a958b!important}
+/* footer + chrome */
+.footer{background:#0b0c0e!important;color:#cdc8bd!important;border-top-color:rgba(244,241,234,.1)!important}
+.footer p{color:#cdc8bd!important}
+.footer a{color:#cdc8bd!important}
+.footer a:hover{color:#fff!important}
+.skip-link{background:#c0294a!important;color:#fff!important}
+.josta-strip{opacity:.5}
+/* logo: the white wordmark image (consistent with every other page's header) */
+.logo-link img{display:block;height:40px;width:auto}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Hüppa põhisisu juurde</a>
 
 <header class="page-header">
   <div class="page-header-inner">
-    <a href="/" class="logo-link">Barefoot Baltic</a>
+    <a href="/" class="logo-link"><img src="https://barefootbaltic.com/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" width="1245" height="210"></a>
     <div class="header-right">
       <a href="/" class="back-link">← Tagasi saidile</a>
       <div class="user-menu" id="user-menu">

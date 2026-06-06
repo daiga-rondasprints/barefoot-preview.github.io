@@ -60,8 +60,8 @@
 
 
 
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="https://barefootbaltic.com/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://barefootbaltic.com/images/apple-touch-icon.png">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Ķemeri Bog Off-Boardwalk Hike from Riga, Lake Picnic &amp; Optional Swim | Barefoot Baltic">
@@ -2214,6 +2214,240 @@ footer a:hover{color:#fff}
 }
 /* BB_SIDEBAR_FIX_END */
 </style>
+<style id="bb-detail-dark">
+/* ===== Excursion detail — dark cinematic theme, seamless with home. ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.14);--peat:#f4f1ea;--indigo:#9fb3d6;--carmine:#c0294a;--carmine-dark:#a0213c}
+body{background:#0b0c0e;color:#f4f1ea}
+/* ── NAV: solid-light sticky -> fixed transparent overlay (home match) ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(11,12,14,.74) 0%,rgba(11,12,14,.34) 52%,rgba(11,12,14,0) 100%)!important;border-bottom:0!important;transition:background .4s ease}
+.nav.scrolled{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+.nav-inner{max-width:none;gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{color:#f4f1ea;font-size:.92rem}
+.nav .nav-links a:hover{color:#fff}
+.nav-cta{background:#253961!important;color:#fff!important}
+.nav-cta:hover{background:#1a2a48!important;color:#fff!important}
+.nav-links a[aria-current="page"]{color:#fff!important;border-bottom-color:var(--carmine)!important}
+.hamburger span{background:#f4f1ea}
+/* logo: the white wordmark always — no scroll-swap to the monogram (consistent header) */
+.nav .logo-scrolled{display:none!important}
+.nav.scrolled .logo-top{display:block!important}
+html{scroll-padding-top:5.5rem}
+/* ── BREADCRUMBS over the hero ── */
+.breadcrumbs{position:absolute;z-index:50;left:50%;transform:translateX(-50%);top:62px;width:100%}
+.breadcrumbs li,.breadcrumbs .sep{color:rgba(244,241,234,.72)}
+.breadcrumbs a{color:#d8a24a}
+.breadcrumbs a:hover{color:#fff}
+/* ── PAGE HERO: cinematic scrim + dark slide letterbox + legible title ── */
+.page-hero{height:66vh;min-height:460px}
+.page-hero .hero-slide img{background:#0b0c0e!important}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,14,.6) 0%,rgba(11,12,14,.08) 26%,rgba(11,12,14,.18) 52%,rgba(11,12,14,.93) 100%)}
+.page-hero-content,.hero-creds,.photo-credit{z-index:3}
+.page-hero h1{color:#f4f1ea;text-shadow:0 2px 20px rgba(0,0,0,.55);font-size:clamp(1.7rem,3.4vw,2.35rem)}
+.page-hero .hero-sub{color:rgba(244,241,234,.92);text-shadow:0 1px 14px rgba(0,0,0,.5)}
+/* ── BOOKING CARD ── */
+.booking-card{background:#16191e;border-color:rgba(244,241,234,.14);box-shadow:0 14px 44px rgba(0,0,0,.55)}
+.booking-card-header,.bk-step-header{background:#19241b!important;border-bottom-color:rgba(244,241,234,.12)!important}
+.price-label{color:#9cc089!important}
+.booking-card-header .price,.bk-price-big{color:#fff!important}
+.bk-price-cross,.price-cross{color:#9a958b!important}
+.booking-card-header .price-child{color:#cdc8bd}
+.btn-reserve{color:#f4f1ea!important;border-color:rgba(244,241,234,.3)!important}
+.btn-reserve:hover{border-color:#7c9a6b!important;color:#7c9a6b!important}
+.booking-card-details{border-top-color:rgba(244,241,234,.12);color:#cdc8bd}
+.booking-card-compare{color:#cdc8bd}
+.booking-card-compare a,.booking-card-details li svg{color:#7c9a6b}
+/* zero-pay strip + cta box + related reading: light flax islands -> dark */
+.bk-zero-strip{background:#1d2127!important;border-bottom-color:rgba(244,241,234,.14)!important}
+.bk-zero-strip-main{color:#f4f1ea!important}
+.bk-zero-step{color:#cdc8bd!important}
+.cta-box{background:#16191e!important;border-color:rgba(244,241,234,.14)!important;border-left-color:var(--carmine)!important}
+.cta-box h3{color:#f4f1ea}
+.cta-box p{color:#cdc8bd}
+.related-reading{background:#101216!important}
+/* ── ENQUIRY FORM / EMAIL REVEAL / SUCCESS — inline white bgs -> dark ── */
+#daiga-enquiry-form-reveal,#daiga-email-reveal,#daiga-enq-success-card{background:#16191e!important;border-color:rgba(244,241,234,.16)!important;color:#f4f1ea!important}
+#daiga-enquiry-form-reveal input,#daiga-enquiry-form-reveal textarea{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+#daiga-enquiry-form-reveal input::placeholder,#daiga-enquiry-form-reveal textarea::placeholder{color:#9a958b}
+#daiga-enquiry-form-reveal label span,#daiga-email-reveal>div:first-child{color:#cdc8bd!important}
+#daiga-email-reveal a,#daiga-enq-success-card a{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+#daiga-enq-status,#daiga-enq-success-card p,#daiga-enq-success-card strong{color:#cdc8bd!important}
+/* ── GALLERY / LIGHTBOX ── */
+.gallery-more-overlay{background:rgba(11,12,14,.5)}
+.gallery-more:hover .gallery-more-overlay{background:rgba(11,12,14,.28)}
+.lightbox{background:rgba(11,12,14,.96)}
+/* ── SHARED: faq, contact, footer, cards ── */
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#c0294a}
+.faq-q:hover,.faq-a p em{color:#7c9a6b}
+.faq-a p{color:#cdc8bd}.faq-a p strong{color:#f4f1ea}
+.faq-item,.faq-item:first-child{border-color:rgba(244,241,234,.12)}
+.section-label{color:#7c9a6b}
+.contact{background:#101216!important}
+footer{background:#0b0c0e!important}
+footer a{color:#cdc8bd}
+.related-reading h3{color:#f4f1ea}
+.bf-card,.related-card{background:#16191e;border-color:rgba(244,241,234,.12)}
+/* ── more detail light islands -> dark ── */
+.skip-link{background:#c0294a}
+.lang-switcher-list,.lang-switcher-menu,.lang-menu{background:#16191e!important;border-color:rgba(244,241,234,.16)!important}
+.lang-switcher-option,.lang-option{color:#cdc8bd!important}
+.lang-switcher-option:hover,.lang-option:hover{background:#1d2127!important;color:#fff!important}
+.quick-facts{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.quick-facts *{color:#cdc8bd}
+/* summary bar on ONE line (was wrapping 4+1, imbalanced) — items share the row + shrink; wrap only on mobile */
+.quick-facts{flex-wrap:nowrap!important}
+.quick-facts .qf{flex:1 1 0!important;min-width:0!important}
+@media(max-width:760px){.quick-facts{flex-wrap:wrap!important}.quick-facts .qf{flex:1 1 42%!important}}
+.top-reviews{background:#0b0c0e!important}
+.top-reviews .review-card,.reviews-rail .review-card,.review-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.route-map-summary{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+.itin-num{background:#19241b!important;color:#9cc089!important}
+.specialist-insight{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.review-lang-tag{background:#1d2127!important;color:#cdc8bd!important}
+.related-link{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.daiga-card{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+/* ── booking widget bk-* namespace + price options ── */
+.bk-input,select.bk-input,.bk-input select,.bk-input input{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+.bk-input[type="date"]::-webkit-calendar-picker-indicator,input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.85);opacity:.9;cursor:pointer}
+.bk-input[type="date"]{color-scheme:dark}
+.bk-step-pill,.bk-avail-hint,.bk-s1-zero-note,.bk-note{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.14)!important}
+.price-option{background:#16191e!important;border-color:rgba(244,241,234,.16)!important;color:#cdc8bd!important}
+.price-option.direct{background:#19241b!important;border-color:rgba(124,154,107,.4)!important}
+.price-main{color:#fff!important}
+.subtitle,.bk-price-save{color:#9cc089!important;background:transparent!important}
+.btn-daiga{background:#1d2127!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.2)!important}
+.btn-daiga-email{background:var(--carmine)!important;color:#fff!important;border-color:var(--carmine)!important}
+/* hardcoded-dark text -> light */
+.route-map-section-title{color:#f4f1ea!important}
+.route-map-section-sub{color:#cdc8bd!important}
+/* route map: crop Google My Maps' unstylable cross-origin header (~56px: map title +
+   "Daiga Taurite" + the "manas kartes" line + share/fullscreen) by pulling the iframe
+   up; the wrapper's overflow:hidden clips it, the visible map is unchanged. Scoped to
+   /maps/d/embed so the standard place embed on riga-shore is left intact. Higher
+   specificity + !important beats route-map.css's later-loaded iframe{height:100%}. */
+.route-map-section .route-map-google{overflow:hidden!important;background:#101216!important;border:1px solid rgba(244,241,234,.1)}
+.route-map-section .route-map-google iframe[src*="/maps/d/embed"]{margin-top:-84px!important;height:calc(100% + 84px)!important}
+.route-map-fullmap{display:inline-block;margin-top:.75rem;color:#7c9a6b!important;font-size:.85rem;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(138,166,118,.4)}
+.route-map-fullmap:hover{color:#fff!important;border-bottom-color:#fff}
+[class*="lang-switcher-list"]{color:#cdc8bd!important}
+.trust-strip-item a,a[href^="tel:"]{color:#7c9a6b!important}
+.photo-credits-section{background:#0b0c0e!important;border-color:rgba(244,241,234,.12)!important}
+[class*="-extras"]{background:#1d2127!important;border-color:rgba(244,241,234,.14)!important}
+#main-content p a,#main-content li a,.specialist-insight a,.photo-credits-section a{color:#7c9a6b!important}
+.itin-body h3,.itin-body h4{color:#f4f1ea!important}
+/* ===== light-surface holdouts -> dark palette (operator 2026-06-04 calibration) ===== */
+.bk-date-chip{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.14)!important}
+.bk-date-chip svg{color:#7c9a6b!important}
+.exc-reel-nav,.exc-reel-prev,.exc-reel-next{background:#16191e!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+.exc-reel-nav:hover,.exc-reel-prev:hover,.exc-reel-next:hover{background:#1d2127!important;color:#c0294a!important}
+#bk-email-hint,#bk-otp-hint{background:rgba(192,41,74,.16)!important;color:#f0a9b6!important}
+.bk-close-warning{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(216,162,74,.4)!important}
+/* ===== calibration fixes (operator 2026-06-04) ===== */
+/* layout: long content spans full width below the booking row -> kills the empty
+   void on the right (operator wants the sidebar static, no sticky pinning) */
+.content-grid{grid-template-areas:"preview sidebar" "main main"}
+.content-preview{grid-area:preview;min-width:0}
+.content-sidebar{grid-area:sidebar;align-self:start}
+.content-main{grid-area:main;min-width:0;max-width:880px}
+/* itinerary (.dayplan-fold) + prose (.prose-fold) folds: toggle moves to the END when open (not stuck mid-list) */
+.prose-fold[open],.dayplan-fold[open]{display:flex;flex-direction:column}
+.prose-fold[open]>summary,.dayplan-fold[open]>summary{order:99;margin-top:.7rem}
+/* reviews: open the rails into a masonry wall (no horizontal scroller) */
+.reviews-rail{display:block!important;column-count:2;column-gap:1.3rem;overflow:visible!important;scroll-snap-type:none;-webkit-mask-image:none!important;mask-image:none!important;padding-left:0!important;padding-right:0!important}
+@media(min-width:980px){.top-reviews .reviews-rail{column-count:3}}
+@media(max-width:680px){.reviews-rail{column-count:1}}
+.reviews-rail .review-card{flex:none!important;width:100%!important;max-width:none!important;min-width:0!important;display:inline-block;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 1.3rem!important;vertical-align:top;scroll-snap-align:none;height:auto!important}
+.reviews-rail .review-text{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
+.reviews-rail .review-card-toggle{display:none!important}
+/* reviews: classic read-more. Collapsed masonry (first 8) dissolves into a gradient;
+   a "Show all N reviews" button floats ON the fade (reads as a boundary, hides the
+   ragged masonry bottom). Expanded swaps to a "Collapse" pill at the very end that
+   returns to the reviews heading, so nothing is stranded after all the cards. */
+.bb-rev-collapsible{position:relative}
+.bb-rev-collapsible:not(.expanded) .reviews-rail{max-height:680px!important;overflow:hidden!important}
+.bb-rev-fade{position:absolute;left:0;right:0;bottom:0;height:230px;z-index:3;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:38px;background:linear-gradient(rgba(11,12,14,0) 0%,rgba(11,12,14,.45) 32%,rgba(11,12,14,.92) 72%,#0b0c0e 100%)}
+.bb-rev-collapsible.expanded .bb-rev-fade{display:none}
+.bb-rev-showall{pointer-events:auto;background:#d8a24a;border:1px solid #d8a24a;color:#1a160e;font-family:inherit;font-weight:700;font-size:1.05rem;line-height:1.1;letter-spacing:.01em;padding:.95rem 2.2rem;border-radius:999px;cursor:pointer;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.6),0 0 0 6px rgba(216,162,74,.16);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.bb-rev-showall:hover{background:#d8a24a;color:#1a160e;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.66),0 0 0 9px rgba(216,162,74,.22)}
+.bb-rev-collapse{display:none;margin:1.8rem auto .2rem;background:#d8a24a;border:1px solid #d8a24a;color:#1a160e;font-family:inherit;font-weight:700;font-size:1.05rem;line-height:1.1;letter-spacing:.01em;padding:.95rem 2.2rem;border-radius:999px;cursor:pointer;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.6),0 0 0 6px rgba(216,162,74,.16);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.bb-rev-collapse:hover{background:#d8a24a;color:#1a160e;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.66),0 0 0 9px rgba(216,162,74,.22)}
+.bb-rev-collapsible.expanded .bb-rev-collapse{display:block}
+</style>
+<style id="bb-detail-layout">
+/* ===== Showcase stack (operator 2026-06-04): a large photo gallery above a
+   horizontal booking band, then highlights + prose. "Images sell tours." The
+   gallery matches the booking band's width (both fill the content column) rather
+   than going edge-to-edge, so the sections line up. ===== */
+.content-grid{display:grid!important;grid-template-columns:1fr!important;grid-template-areas:"gallery" "sidebar" "preview" "main"!important;gap:var(--space-5)!important;align-items:start}
+.content-grid > .gallery-grid{grid-area:gallery!important}
+.content-grid > .content-sidebar{grid-area:sidebar!important}
+.content-grid > .content-preview{grid-area:preview!important}
+.content-grid > .content-main{grid-area:main!important}
+/* text column aligns to the SAME content width as the gallery + booking band, so the
+   whole page is one consistent column (was capped at 880 → read as misaligned). */
+.content-grid > .content-preview,.content-grid > .content-main{max-width:none!important;width:100%;margin-left:0;margin-right:0}
+/* the contact footer band's inner is the bare 1100 wrap (no inner padding) while every
+   body section sits at 1100−64 = 1036; cap it to 1036 so it lines up with the column. */
+.contact .section-inner{max-width:1036px!important}
+/* ── GALLERY: content-width cinematic 1+4 mosaic (matches the booking band below) ── */
+.content-grid > .gallery-grid{width:100%;display:grid!important;grid-template-columns:repeat(4,1fr)!important;grid-auto-rows:1fr;gap:6px!important;height:clamp(380px,56vh,640px);margin:0 0 var(--space-3);border-radius:14px;overflow:hidden;background:#0b0c0e;-webkit-mask-image:none!important;mask-image:none!important}
+.content-grid > .gallery-grid .g-img{height:100%!important;width:100%!important;margin:0!important;border-radius:0!important;min-width:0}
+.content-grid > .gallery-grid .g-img:first-child{grid-column:1 / 3;grid-row:1 / 3}
+.content-grid > .gallery-grid .g-img img{width:100%!important;height:100%!important;object-fit:cover!important;display:block}
+@media(max-width:760px){
+  .content-grid > .gallery-grid{grid-template-columns:1fr 1fr!important;height:60vh;gap:4px!important}
+  .content-grid > .gallery-grid .g-img:first-child{grid-column:1 / 3;grid-row:auto}
+  .content-grid > .gallery-grid .g-img:nth-child(n+4){display:none}
+}
+/* ── HORIZONTAL BOOKING BAND (booking sits first, right under the gallery; the
+   "Ask Daiga" enquiry card drops below it) ── */
+.content-grid > .content-sidebar{position:static!important;max-height:none!important;overflow:visible!important;width:100%;max-width:none;padding-right:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.content-sidebar .booking-card{order:-1;width:100%;max-width:none;display:grid;grid-template-columns:minmax(230px,290px) 1fr;grid-template-areas:"header zero" "body body"}
+.content-sidebar .daiga-card{order:0;width:100%;max-width:760px;margin-left:auto;margin-right:auto}
+.booking-card .bk-step-header{grid-area:header;border-bottom:0!important;border-right:1px solid rgba(244,241,234,.12)}
+.booking-card .bk-zero-strip{grid-area:zero;display:flex;flex-direction:column;justify-content:center;gap:.4rem}
+.booking-card .bk-body{grid-area:body;border-top:1px solid rgba(244,241,234,.12)}
+/* step 1 -> a horizontal booking bar: [date][group] ........ [Reserve], notes below.
+   order: pill(0) full row, fields(1), button(2) pushed right, hints/notes(3,4) full rows. */
+#bk-s1.active{display:flex!important;flex-wrap:wrap;align-items:flex-end;gap:var(--space-3) var(--space-4)}
+#bk-s1 > .bk-step-pill{flex-basis:100%;margin-bottom:0;order:0}
+#bk-s1 .bk-field{margin-bottom:0;flex:0 0 auto;order:1}
+#bk-s1 > .bk-row{flex:0 0 auto;min-width:230px;order:1}
+#bk-s1 > #bk-kemeri-extras{flex-basis:100%;order:1}
+#bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{order:2;margin-left:auto;width:auto!important;flex:0 0 auto;align-self:flex-end}
+#bk-s1 > .bk-avail-hint{flex-basis:100%;order:3;margin:0}
+#bk-s1 > .bk-s1-zero-note{flex-basis:100%;order:4;margin:0}
+/* later steps fill the band cleanly instead of a narrow column stranded on the left:
+   step-2 details + step-3 payment options go TWO-COLUMN; buttons/notes span both;
+   focused panels (OTP entry, payment instructions) keep a centred readable width. */
+.bk-body > .bk-step:not(#bk-s1){max-width:none}
+#bk-s2a{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.4rem;align-items:start}
+#bk-s2a > .bk-field{margin-bottom:0}
+#bk-s2a > *:not(.bk-field){grid-column:1 / -1}
+#bk-s2b{max-width:460px;margin-left:auto;margin-right:auto}
+#bk-s3 > .bk-price-breakdown{max-width:440px}
+#bk-s3 .bk-pay-opts{display:grid!important;grid-template-columns:1fr 1fr;gap:.8rem;align-items:start}
+#bk-s4-bank,#bk-s4-revolut,#bk-s4-stripe,#bk-s4-paylater,#bk-s-err{max-width:580px;margin-left:auto;margin-right:auto}
+/* mobile: fold the band back into a stacked card */
+@media(max-width:760px){
+  .content-sidebar .booking-card{grid-template-columns:1fr;grid-template-areas:"header" "zero" "body"}
+  .booking-card .bk-step-header{border-right:0}
+  #bk-s1.active{display:block!important}
+  #bk-s1 .bk-field{margin-bottom:var(--space-3)}
+  #bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{width:100%!important;margin-left:0!important;margin-top:var(--space-2)}
+  #bk-s2a{grid-template-columns:1fr}
+  #bk-s2a > .bk-field{margin-bottom:var(--space-3)}
+  #bk-s3 .bk-pay-opts{grid-template-columns:1fr!important}
+}
+/* ── BOOKING collapsed by default (operator: the open form takes too much space).
+   The card shows only price + reassurance + a full-width "Check availability & book"
+   button; the form body (all steps) opens on click. The multi-step flow is untouched. ── */
+.booking-card:not(.bb-expanded) .bk-body{display:none!important}
+.bb-book-open{grid-column:1 / -1;display:none;width:100%;background:#c0294a;color:#fff;border:0;padding:1.05rem 1.25rem;font-family:inherit;font-weight:700;font-size:1.05rem;letter-spacing:.01em;line-height:1.1;cursor:pointer;border-radius:0 0 14px 14px;transition:background .2s}
+.bb-book-open:hover{background:#a0213c}
+.booking-card:not(.bb-expanded) .bb-book-open{display:block}
+</style>
 </head>
 <body>
 
@@ -2224,7 +2458,7 @@ footer a:hover{color:#fff}
 <nav class="nav" id="nav" aria-label="Põhinavigatsioon">
   <div class="nav-inner">
     <a href="/et/" class="nav-logo" aria-label="Barefoot Baltic — avaleht">
-      <img src="/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:40px;width:auto" width="1245" height="210">
+      <img src="https://barefootbaltic.com/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:40px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Lülita menüü" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -2579,62 +2813,62 @@ footer a:hover{color:#fff}
   <div class="hero-slides" id="heroSlides">
     <div class="hero-slide active" data-hero-slot="0" data-credit="Photo: Pink dawn over the bog, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg" alt="Pink clouds reflected in the dark waters of the Ķemeri raised bog at golden hour" width="1920" height="1441" fetchpriority="high">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg" alt="Pink clouds reflected in the dark waters of the Ķemeri raised bog at golden hour" width="1920" height="1441" fetchpriority="high">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="1" data-credit="Photo: Ķemeri bog from the watchtower, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.jpg" alt="View from the Ķemeri bog watchtower across pools and dwarf pines in summer" width="1920" height="1440" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.jpg" alt="View from the Ķemeri bog watchtower across pools and dwarf pines in summer" width="1920" height="1440" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="2" data-credit="Photo: Bog pond &amp; summer clouds, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.jpg" alt="A small dark Ķemeri bog pond reflecting summer clouds" width="1920" height="1440" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.jpg" alt="A small dark Ķemeri bog pond reflecting summer clouds" width="1920" height="1440" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="3" data-credit="Photo: Bog-shoe walkers near the pool, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.jpg" alt="A small group in bog shoes standing at the edge of a Ķemeri bog pool" width="1920" height="1441" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.jpg" alt="A small group in bog shoes standing at the edge of a Ķemeri bog pool" width="1920" height="1441" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="4" data-credit="Photo: Solo walker, golden hour, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" alt="Solo walker in bog shoes beside a bog pool reflecting pink dawn light" width="1920" height="1441" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" alt="Solo walker in bog shoes beside a bog pool reflecting pink dawn light" width="1920" height="1441" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="5" data-credit="Photo: Bog sunset over the pines, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.jpg" alt="Sunset glow over the dwarf pines of the Ķemeri raised bog" width="1920" height="1441" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.jpg" alt="Sunset glow over the dwarf pines of the Ķemeri raised bog" width="1920" height="1441" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="6" data-credit="Photo: Ķemeri pine forest light, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.jpg" alt="Slender pine trunks in the Ķemeri forest catching low morning light" width="1920" height="1440" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.jpg" alt="Slender pine trunks in the Ķemeri forest catching low morning light" width="1920" height="1440" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="7" data-credit="Photo: Bog aerial, autumn colour, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg" alt="Aerial view of the Ķemeri bog in autumn, rust-coloured grasses surrounding mirror pools" width="1920" height="1280" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg" alt="Aerial view of the Ķemeri bog in autumn, rust-coloured grasses surrounding mirror pools" width="1920" height="1280" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="8" data-credit="Photo: Sundew, the bog's tiny carnivore, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-sundew-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-sundew-latvia.jpg" alt="Close-up of round-leaved sundew, the carnivorous plant of the Ķemeri raised bog" width="1920" height="1440" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-sundew-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-sundew-latvia.jpg" alt="Close-up of round-leaved sundew, the carnivorous plant of the Ķemeri raised bog" width="1920" height="1440" loading="lazy">
       </picture>
     </div>
     <div class="hero-slide" data-hero-slot="9" data-credit="Photo: Bog-shoe walker, golden hour, credits in footer ↓">
       <picture>
-        <source srcset="/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.webp" type="image/webp">
-        <img src="/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.jpg" alt="A guest in bogshoes walking out on the open bog at golden hour, Ķemeri" width="1920" height="1441" loading="lazy">
+        <source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.webp" type="image/webp">
+        <img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.jpg" alt="A guest in bogshoes walking out on the open bog at golden hour, Ķemeri" width="1920" height="1441" loading="lazy">
       </picture>
     </div>
   </div>
@@ -2683,7 +2917,7 @@ footer a:hover{color:#fff}
   <div class="htb-divider" aria-hidden="true"></div>
   <div class="htb-detail">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/></svg>
-    Rest at the van on the day
+    Rest before departure
   </div>
   <div class="htb-divider" aria-hidden="true"></div>
   <div class="htb-detail">
@@ -2727,6 +2961,28 @@ footer a:hover{color:#fff}
   <!-- TWO-COLUMN LAYOUT -->
   <div class="content-grid" id="reserve-now" style="scroll-margin-top:130px">
 
+    <div class="gallery-grid" role="group" aria-label="Photo gallery, click any image to browse all 47 photos" tabindex="0">
+        <div class="g-img" data-gallery-slot="0">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg" alt="Our small group out on the open Ķemeri raised bog at sunset in bog shoes" width="1920" height="1280" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="1">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg" alt="Three guests striding across the open raised bog in bog shoes" width="1350" height="2000" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="2">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg" alt="Sunset clouds reflected across the open bog pools in Ķemeri" width="1280" height="1920" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="3">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" alt="A guest in bog shoes beside a pink-lit bog pool" width="1920" height="1280" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img gallery-more" data-gallery-slot="4" aria-label="View all 47 photos">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-kemeri/kemeri-sundew-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-kemeri/kemeri-sundew-latvia.jpg" alt="Close-up of carnivorous sundew plants in the Ķemeri bog" width="1920" height="1440" loading="lazy" decoding="async"></picture>
+          <div class="gallery-more-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            +42 photos
+          </div>
+        </div>
+      </div>
+
     <!-- ═══ PREVIEW (mobile-first highlights + gallery) ═══ -->
 
     <div class="content-preview">
@@ -2768,27 +3024,6 @@ footer a:hover{color:#fff}
       </div>
 
       <!-- PHOTO GALLERY -->
-      <div class="gallery-grid" role="group" aria-label="Photo gallery, click any image to browse all 47 photos" tabindex="0">
-        <div class="g-img" data-gallery-slot="0">
-          <picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg" alt="Our small group out on the open Ķemeri raised bog at sunset in bog shoes" width="1920" height="1280" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="1">
-          <picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg" alt="Three guests striding across the open raised bog in bog shoes" width="1350" height="2000" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="2">
-          <picture><source srcset="/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg" alt="Sunset clouds reflected across the open bog pools in Ķemeri" width="1280" height="1920" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="3">
-          <picture><source srcset="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg" alt="A guest in bog shoes beside a pink-lit bog pool" width="1920" height="1280" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img gallery-more" data-gallery-slot="4" aria-label="View all 47 photos">
-          <picture><source srcset="/images/exc-kemeri/kemeri-sundew-latvia.webp" type="image/webp"><img src="/images/exc-kemeri/kemeri-sundew-latvia.jpg" alt="Close-up of carnivorous sundew plants in the Ķemeri bog" width="1920" height="1440" loading="lazy" decoding="async"></picture>
-          <div class="gallery-more-overlay">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-            +42 photos
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -2799,14 +3034,14 @@ footer a:hover{color:#fff}
 
       <h2>A four-hour walk into one of Europe&rsquo;s rarest ecosystems</h2>
       <p>Four hours door to door, small group of up to eight guests, three time-slot choices: sunrise, mid-day, or sunset. We pick you up from your Riga hotel, drive about 50 minutes west to Ķemeri National Park, hike off the boardwalk and onto the open raised bog with you in <strong>bogshoes</strong> and our <strong>rubber shoes</strong>, pause for a picnic at a small <strong>bog lake</strong> with an <strong>optional swim</strong> (we provide life vests), hike back out, and serve <strong>tea, coffee, biscuits, Latvian pastry, crisps and chocolate at the van</strong> while we debrief. Then we drive you home. €45 per adult, €35 for children aged 3&ndash;14. Hotel pickup, air-conditioned minibus, nature-enthusiast guide, <strong>bogshoes &amp; rubber shoes</strong> sized to your booking, life vests for swimmers, refreshments at the van, mosquito repellent, and every park access fee, included. You pay nothing today: a 20% deposit goes out 48 hours before departure, the rest settles at the van. Free cancellation up to 24 hours before departure.</p>
+      <p class="prose-fold-lead">Quick question: when you hear the words <em>carbon sink</em>, what comes to mind? Almost everyone says rainforest. The honest answer is that the world&rsquo;s peat bogs cover only about 3% of the land surface yet store roughly <strong>30% of all soil carbon on the planet</strong> &mdash; that&rsquo;s twice as much carbon as is locked in every forest on Earth combined. Latvia is one of a handful of European countries that kept its raised bogs largely intact through the 19th and 20th centuries, while most of the UK, Germany and the Netherlands drained theirs for fuel and farmland. Today, EU peatland-restoration scientists treat Latvia as a working model &mdash; come to Ķemeri, see what an intact ten-thousand-year-old bog actually looks like, and learn how to rebuild your own.</p>
+      <p class="prose-fold-lead"><strong>Ķemeri National Park</strong> protects the <strong>Great Ķemeri Bog</strong> (<em>Lielais Ķemeru tīrelis</em>), one of the largest and best-preserved raised bogs in the Baltics. It has been quietly growing upward for around <strong>ten thousand years</strong> &mdash; older than the Pyramids, older than writing &mdash; fed only by rainwater, building up at roughly a millimetre a year. The peat beneath your feet is between 5 and 15 metres deep. The landscape that sits on top is unlike anywhere else in Europe: a flat, treeless expanse of soft <strong>sphagnum moss</strong>, <strong>dwarf pines</strong> that may be 200 or 300 years old and still no taller than a Christmas tree, and dozens of small dark <strong>bog pools</strong> that reflect the sky like mirrors. Some sections of bog are slated for deliberate re-flooding under EU LIFE peatland-restoration projects to lock in the carbon for the long haul &mdash; wonderful for the climate, but it means the level of off-boardwalk access we offer today may not stay available in a few years. If walking the open bog is something you&rsquo;ve been meaning to do, this is a sensible season to do it.</p>
       <details class="prose-fold">
         <summary class="prose-fold-toggle">
           <span class="prose-fold-more">Read more</span>
           <span class="prose-fold-less">Read less</span>
           <svg class="prose-fold-chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
-      <p>Quick question: when you hear the words <em>carbon sink</em>, what comes to mind? Almost everyone says rainforest. The honest answer is that the world&rsquo;s peat bogs cover only about 3% of the land surface yet store roughly <strong>30% of all soil carbon on the planet</strong> &mdash; that&rsquo;s twice as much carbon as is locked in every forest on Earth combined. Latvia is one of a handful of European countries that kept its raised bogs largely intact through the 19th and 20th centuries, while most of the UK, Germany and the Netherlands drained theirs for fuel and farmland. Today, EU peatland-restoration scientists treat Latvia as a working model &mdash; come to Ķemeri, see what an intact ten-thousand-year-old bog actually looks like, and learn how to rebuild your own.</p>
-      <p><strong>Ķemeri National Park</strong> protects the <strong>Great Ķemeri Bog</strong> (<em>Lielais Ķemeru tīrelis</em>), one of the largest and best-preserved raised bogs in the Baltics. It has been quietly growing upward for around <strong>ten thousand years</strong> &mdash; older than the Pyramids, older than writing &mdash; fed only by rainwater, building up at roughly a millimetre a year. The peat beneath your feet is between 5 and 15 metres deep. The landscape that sits on top is unlike anywhere else in Europe: a flat, treeless expanse of soft <strong>sphagnum moss</strong>, <strong>dwarf pines</strong> that may be 200 or 300 years old and still no taller than a Christmas tree, and dozens of small dark <strong>bog pools</strong> that reflect the sky like mirrors. Some sections of bog are slated for deliberate re-flooding under EU LIFE peatland-restoration projects to lock in the carbon for the long haul &mdash; wonderful for the climate, but it means the level of off-boardwalk access we offer today may not stay available in a few years. If walking the open bog is something you&rsquo;ve been meaning to do, this is a sensible season to do it.</p>
       <p><strong>Biodiversity, up close.</strong> Ķemeri holds 897 species of flowering plants, around 250 bird species, eight of Latvia&rsquo;s nine woodpeckers, and roughly a quarter of all plants in Latvia&rsquo;s Red Book of endangered species. The carnivore in the moss is the <strong>round-leaved sundew</strong> (<em>Drosera rotundifolia</em>) &mdash; a tiny carnivorous plant smaller than a coin, with sticky red tentacles that trap insects and slowly digest them, an adaptation to the bog&rsquo;s extreme nitrogen poverty. Charles Darwin spent years obsessed with it; in 1860 he wrote that he &lsquo;cared more about Drosera than the origin of all the species in the world.&rsquo; Around the sundew you&rsquo;ll smell <strong>wild rosemary</strong> (<em>vaivariņš</em>) &mdash; Northern Europe&rsquo;s iconic bog scent, intoxicating in a literal sense (medieval Germans put it in beer to make it stronger and were eventually banned for it). Listen for the trumpeting call of <strong>cranes</strong> across the open mire. In late summer, look for <strong>cranberries, cloudberries</strong> and the white tufts of <strong>cottongrass</strong>.</p>
       <p><strong>Why the spa industry was built here.</strong> Beneath Ķemeri lies a layer of dolomite bedrock; when acidic peat-water seeps down to meet it, the reaction releases hydrogen sulphide and dissolved minerals &mdash; calcium, magnesium, iron &mdash; which over millennia, combined with the bog peat, produced the therapeutic black mud that made Ķemeri famous. From 1836, Tsar Nicholas I personally funded a sanatorium here. By 1912 a direct railway line was bringing roughly 8,300 patients per year from Moscow. The 1936 &ldquo;White Ship&rdquo; sanatorium was, briefly, one of the most modern hotels in Europe. The whole <strong>Jūrmala spa heritage</strong> on the coast just up the road grew out of the same mineral chemistry &mdash; same bog, same minerals, different town.</p>
       <p><strong>And it ends up in your skincare.</strong> The same bog-derived minerals that healed wounded Russian officers fighting Napoleon are, today, the foundation of a small but globally respected Latvian natural cosmetics industry. The most internationally recognised brand is <strong>MÁDARA</strong> (founded 2006, sold in over 30 countries, on the shelves of Selfridges in London). Their hero ingredient, <strong>fossil mud</strong>, is essentially what we walk on today: peat that has been compressing for thousands of years. The brand&rsquo;s name &mdash; <em>madara</em> &mdash; is the Latvian word for wild madder, a Baltic-meadow plant. Other Latvian skincare brands also draw on bog-derived peat extracts and humic acids. Few destinations on Earth let you walk across the very ground that ends up in cosmetics on the shelves of London, Paris and Tokyo.</p>
@@ -2817,13 +3052,6 @@ footer a:hover{color:#fff}
 
       <!-- ROUTE MAP (optional, shown when route_map_enabled) -->
       <!-- ROUTE MAP (Google Maps embed) -->
-      <section class="route-map-section">
-        <h2 class="route-map-section-title">The route, on the map</h2>
-        <p class="route-map-section-sub">Riga out to the bog, four-hour out-and-back &mdash; about 50 minutes&rsquo; drive each way, then around two and a half hours on the mire (boardwalk warm-up, off-boardwalk hike, lake picnic and optional swim, hike back), and a short refreshments-and-debrief stop at the van before we drive home. No Jūrmala detour, no other towns &mdash; the day is deliberately focused on the bog.</p>
-        <link rel="stylesheet" href="/_assets/css/route-map.css?v=0">
-        <p class="route-map-summary">Around 100 km out-and-back · 4 hours total · A small-group tour, focused on the bog</p>
-        <div class="route-map-google">'<iframe src="https://www.google.com/maps/d/embed?mid=1qrfea7DtesGFafZbQPgm9CPn5R-fgXw&ehbc=2E312F" width="640" height="480"></iframe>'</div>
-      </section>
 
 
       <!-- VIDEO REEL (sits just above the day plan so visitors see real footage
@@ -2840,8 +3068,8 @@ footer a:hover{color:#fff}
       <ul class="exc-reel-track" id="excReelTrack" role="list">
         <li class="exc-reel-card" role="listitem" data-reel-idx="0">
           <video class="exc-reel-video" muted playsinline loop preload="metadata"
-                 poster="/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia-poster.jpg">
-            <source src="/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia-poster.jpg">
+            <source src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-open-mire-walk-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Stepping off the boardwalk into the open mire</p>
@@ -2853,8 +3081,8 @@ footer a:hover{color:#fff}
         </li>
         <li class="exc-reel-card" role="listitem" data-reel-idx="1">
           <video class="exc-reel-video" muted playsinline loop preload="metadata"
-                 poster="/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia-poster.jpg">
-            <source src="/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia-poster.jpg">
+            <source src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-spongy-moss-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Bog shoes — wide soles for the spongy moss</p>
@@ -2864,10 +3092,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="2" data-reel-src="/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="2" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-and-pines-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Pine islands rising out of the bog pools</p>
@@ -2877,10 +3105,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="3" data-reel-src="/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="3" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guide-on-mire-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Daiga, your guide, out on the open mire</p>
@@ -2890,10 +3118,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="4" data-reel-src="/images/exc-kemeri/kemeri-bog-cotton-grass-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="4" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cotton-grass-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-cotton-grass-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-cotton-grass-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cotton-grass-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cotton-grass-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Cotton grass and sphagnum moss underfoot</p>
@@ -2903,10 +3131,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="5" data-reel-src="/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="5" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sundews-close-up-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Carnivorous sundews in the late-afternoon light</p>
@@ -2916,10 +3144,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="6" data-reel-src="/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="6" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-step-detail-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">First steps off the boardwalk</p>
@@ -2929,10 +3157,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="7" data-reel-src="/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="7" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-walking-on-mire-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Walking on 10,000-year-old peat</p>
@@ -2942,10 +3170,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="8" data-reel-src="/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="8" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-cranberry-vines-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Cranberry vines and bog rosemary</p>
@@ -2955,10 +3183,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="9" data-reel-src="/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="9" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-picnic-spot-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">A small bog lake — our picnic spot</p>
@@ -2968,10 +3196,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="10" data-reel-src="/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="10" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-swim-life-vest-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Optional bog-lake swim — life vests provided</p>
@@ -2981,10 +3209,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="11" data-reel-src="/images/exc-kemeri/kemeri-bog-group-on-mire-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="11" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-group-on-mire-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-group-on-mire-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-group-on-mire-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-group-on-mire-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-group-on-mire-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Small-group hike on the open mire</p>
@@ -2994,10 +3222,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="12" data-reel-src="/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="12" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pool-water-clarity-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">The clarity of bog-pool water</p>
@@ -3007,10 +3235,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="13" data-reel-src="/images/exc-kemeri/kemeri-bog-moss-detail-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="13" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-moss-detail-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-moss-detail-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-moss-detail-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-moss-detail-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-moss-detail-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Sphagnum moss — the bog's living engine</p>
@@ -3020,10 +3248,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="14" data-reel-src="/images/exc-kemeri/kemeri-bog-pine-island-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="14" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pine-island-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-pine-island-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-pine-island-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pine-island-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pine-island-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">A lone pine on a peat island</p>
@@ -3033,10 +3261,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="15" data-reel-src="/images/exc-kemeri/kemeri-bog-guests-walking-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="15" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guests-walking-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-guests-walking-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-guests-walking-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guests-walking-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-guests-walking-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Guests on the off-boardwalk hike</p>
@@ -3046,10 +3274,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="16" data-reel-src="/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="16" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-late-afternoon-light-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Late-afternoon light over the bog pools</p>
@@ -3059,10 +3287,10 @@ footer a:hover{color:#fff}
             </div>
           </div>
         </li>
-        <li class="exc-reel-card" role="listitem" data-reel-idx="17" data-reel-src="/images/exc-kemeri/kemeri-bog-sunset-mire-latvia.mp4">
+        <li class="exc-reel-card" role="listitem" data-reel-idx="17" data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-mire-latvia.mp4">
           <video class="exc-reel-video" muted playsinline loop preload="none"
-                 poster="/images/exc-kemeri/kemeri-bog-sunset-mire-latvia-poster.jpg">
-            <source data-reel-src="/images/exc-kemeri/kemeri-bog-sunset-mire-latvia.mp4" type="video/mp4">
+                 poster="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-mire-latvia-poster.jpg">
+            <source data-reel-src="https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-mire-latvia.mp4" type="video/mp4">
           </video>
           <div class="exc-reel-overlay">
             <p class="exc-reel-cap">Sunset on the Great Ķemeri raised bog</p>
@@ -3192,6 +3420,14 @@ footer a:hover{color:#fff}
         </div>
       </div>
 
+      <section class="route-map-section">
+        <h2 class="route-map-section-title">The route, on the map</h2>
+        <p class="route-map-section-sub">Riga out to the bog, four-hour out-and-back &mdash; about 50 minutes&rsquo; drive each way, then around two and a half hours on the mire (boardwalk warm-up, off-boardwalk hike, lake picnic and optional swim, hike back), and a short refreshments-and-debrief stop at the van before we drive home. No Jūrmala detour, no other towns &mdash; the day is deliberately focused on the bog.</p>
+        <link rel="stylesheet" href="/_assets/css/route-map.css?v=0">
+        <p class="route-map-summary">Around 100 km out-and-back · 4 hours total · A small-group tour, focused on the bog</p>
+        <div class="route-map-google"><iframe src="https://www.google.com/maps/d/embed?mid=1qrfea7DtesGFafZbQPgm9CPn5R-fgXw&ehbc=2E312F" width="640" height="480"></iframe></div><a class="route-map-fullmap" href="https://www.google.com/maps/d/view?mid=1qrfea7DtesGFafZbQPgm9CPn5R-fgXw" target="_blank" rel="noopener">View larger map ↗</a>
+      </section>
+
       <!-- GOOD TO KNOW -->
       <h2>Good to Know</h2>
       <div class="gtk-item">
@@ -3229,7 +3465,7 @@ footer a:hover{color:#fff}
 
       <a href="#book" class="daiga-card daiga-card-ask" style="display:block;text-decoration:none;color:inherit">
         <div class="daiga-card-top">
-          <div class="daiga-avatar"><img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy"></div>
+          <div class="daiga-avatar"><img src="https://barefootbaltic.com/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy"></div>
           <div>
             <div class="daiga-card-name" data-bk-i18n="daiga.title">Not sure yet? Ask Daiga.</div>
             <div class="daiga-card-sub" data-bk-i18n="daiga.sub">Most guests message first, no pressure to book on the spot.</div>
@@ -3610,7 +3846,7 @@ footer a:hover{color:#fff}
       <div class="daiga-card">
         <div class="daiga-card-top">
           <div class="daiga-avatar">
-            <img src="/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy">
+            <img src="https://barefootbaltic.com/images/daiga-barefoot-baltic-guide-riga-latvia.webp" alt="Daiga" width="42" height="42" loading="lazy">
           </div>
           <div>
             <div class="daiga-card-name" data-bk-i18n="daiga.title">Pole veel kindel? Küsi Daigalt.</div>
@@ -4289,7 +4525,7 @@ footer a:hover{color:#fff}
             <div><div class="cm-label">E-post</div><div class="cm-value">daiga@rondasprints.com</div></div>
           </a>
           <div class="contact-qr">
-            <img src="/images/qr-whatsapp.png" alt="Skaneerige, et avada WhatsApp-vestlus Barefoot Balticuga" width="292" height="292">
+            <img src="https://barefootbaltic.com/images/qr-whatsapp.png" alt="Skaneerige, et avada WhatsApp-vestlus Barefoot Balticuga" width="292" height="292">
             <span>Skaneerige, et avada WhatsApp</span>
           </div>
         </div>
@@ -5528,60 +5764,60 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 
 // ── PHOTO GALLERY LIGHTBOX ──
 const lbPhotos = [
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg', cap:'Striding across the bog in snowshoe-style bog shoes', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg', cap:'Our group out on the bog at sunset', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-walking-trail-latvia.jpg', cap:'Single file across the open bog at golden hour', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-trail-cottongrass-latvia.jpg', cap:'Bog shoes through cottongrass and dwarf pines', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-couple-autumn-latvia.jpg', cap:'A couple kitted up in bog shoes in late autumn', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-child-cottongrass-latvia.jpg', cap:'Stepping out in bog shoes through the cottongrass', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-feet-detail-latvia.jpg', cap:'The kit: snowshoe-style bog shoes that float on the moss', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-pools-dusk-portrait-latvia.jpg', cap:'Mirror-still bog pools at dusk', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg', cap:'Sunset clouds over the open bog and its pools', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-photographer-sunset-latvia.jpg', cap:'A guest photographing the bog at golden hour', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-walker-distant-pines-latvia.jpg', cap:'Walking out into the bog among the dwarf pines', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-solo-walker-pines-latvia.jpg', cap:'A quiet moment out on the bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pine-silhouette-latvia.jpg', cap:'Sunset through the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-restoration-info-sign-latvia.jpg', cap:'Bog ecosystem restoration project information board on site', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-aerial-autumn-alt-latvia.jpg', cap:'Aerial view of the bog in autumn', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg', cap:'Autumn colours across the Ķemeri raised bog', credit:'Photo: Liga Meijere / Unsplash'},
-  {src:'/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.jpg', cap:'View from the Ķemeri observation tower', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg', cap:'The Great Ķemeri Bog from above in spring', credit:'Photo: licensed via iStock'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pine-closeup-latvia.jpg', cap:'Last light on a single bog pine', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pine-glow-latvia.jpg', cap:'Pine trees glowing in the evening light', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.jpg', cap:'Sunset over the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg', cap:'Pink clouds reflected in the dark bog pools', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pond-latvia.jpg', cap:'A bog pool at golden hour', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-couple-portrait-latvia.jpg', cap:'A couple ready for the bog shoe walk', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-forest-trail-latvia.jpg', cap:'Heading back through the forest trail', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-listening-latvia.jpg', cap:'Learning about the moss underfoot', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-pond-edge-latvia.jpg', cap:'Pausing at the edge of a bog pool', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.jpg', cap:'Walking together past a bog pool', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-portrait-latvia.jpg', cap:'Our group kitted up in bog shoes', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-pond-edge-latvia.jpg', cap:'A quiet bog pool seen from the moss', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg', cap:'Bog shoe walking beside a pink-lit pool', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.jpg', cap:'A guest in bog shoes out on the open bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-poppies-latvia.jpg', cap:'Wildflowers in Ķemeri National Park', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-sundew-latvia.jpg', cap:'Carnivorous sundew, the bog’s tiny predator', credit:'Photo: Teresa Wang / Pexels'},
-  {src:'/images/exc-kemeri/kemeri-bog-grasses-latvia.jpg', cap:'Cotton grass on the open bog', credit:'Photo: Katrīna Eglīte / Unsplash'},
-  {src:'/images/exc-kemeri/kemeri-bog-pond-from-tower-portrait-latvia.jpg', cap:'A bog pool seen from the tower', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.jpg', cap:'Clouds reflected in a summer bog pool', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-info-board-raised-bog-latvia.jpg', cap:'Learning about the raised bog ecosystem', credit:'Photo: source pending, see footer credits'},
-  {src:'/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.jpg', cap:'Pine trunks in Ķemeri National Park'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-couple-pools-sunset-latvia.jpg', cap:'A couple in bog shoes pausing at sunset on the open raised bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-pools-sunset-walker-latvia.jpg', cap:'A guest looking out across the bog pools at sunset', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-forest-walk-latvia.jpg', cap:'Heading out through the pine forest with bog shoes in hand', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-fitting-edge-latvia.jpg', cap:'Strapping on the bog shoes at the edge of the open bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-among-pines-latvia.jpg', cap:'Walking in bog shoes through the dwarf pines on the bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-walkers-pool-sunset-latvia.jpg', cap:'Two guests at the bog pool\'s edge watching the sunset', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-lake-swim-sunset-latvia.jpg', cap:'Swimming in the bog lake as the sun sets', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-lake-swim-wide-latvia.jpg', cap:'Guests swimming in the bog lake at dusk', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-pines-golden-latvia.jpg', cap:'Group at the pine tree in golden hour light', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-sunset-pine-cottongrass-latvia.jpg', cap:'Sunset pines above a field of cottongrass', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-open-birch-daylight-latvia.jpg', cap:'Open bog with birch in afternoon light', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-pine-sunbeam-latvia.jpg', cap:'Sunbeams filtering through the bog pines', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-birch-golden-hour-latvia.jpg', cap:'A lone birch at golden hour on the bog', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-group-golden-trail-latvia.jpg', cap:'Group walking into the pines at golden hour', credit:'© Barefoot Baltic'},
-  {src:'/images/exc-kemeri/kemeri-bog-shoe-pine-trail-sunset-latvia.jpg', cap:'Walking the bog trail beside a lone pine at sunset', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia.jpg', cap:'Striding across the bog in snowshoe-style bog shoes', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia.jpg', cap:'Our group out on the bog at sunset', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-walking-trail-latvia.jpg', cap:'Single file across the open bog at golden hour', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-trail-cottongrass-latvia.jpg', cap:'Bog shoes through cottongrass and dwarf pines', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-couple-autumn-latvia.jpg', cap:'A couple kitted up in bog shoes in late autumn', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-child-cottongrass-latvia.jpg', cap:'Stepping out in bog shoes through the cottongrass', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-feet-detail-latvia.jpg', cap:'The kit: snowshoe-style bog shoes that float on the moss', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-dusk-portrait-latvia.jpg', cap:'Mirror-still bog pools at dusk', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia.jpg', cap:'Sunset clouds over the open bog and its pools', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-photographer-sunset-latvia.jpg', cap:'A guest photographing the bog at golden hour', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-walker-distant-pines-latvia.jpg', cap:'Walking out into the bog among the dwarf pines', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-solo-walker-pines-latvia.jpg', cap:'A quiet moment out on the bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pine-silhouette-latvia.jpg', cap:'Sunset through the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-restoration-info-sign-latvia.jpg', cap:'Bog ecosystem restoration project information board on site', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-alt-latvia.jpg', cap:'Aerial view of the bog in autumn', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-autumn-latvia.jpg', cap:'Autumn colours across the Ķemeri raised bog', credit:'Photo: Liga Meijere / Unsplash'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-from-tower-summer-latvia.jpg', cap:'View from the Ķemeri observation tower', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-aerial-spring-latvia.jpg', cap:'The Great Ķemeri Bog from above in spring', credit:'Photo: licensed via iStock'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pine-closeup-latvia.jpg', cap:'Last light on a single bog pine', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pine-glow-latvia.jpg', cap:'Pine trees glowing in the evening light', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pines-latvia.jpg', cap:'Sunset over the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pink-clouds-latvia.jpg', cap:'Pink clouds reflected in the dark bog pools', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pond-latvia.jpg', cap:'A bog pool at golden hour', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-couple-portrait-latvia.jpg', cap:'A couple ready for the bog shoe walk', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-forest-trail-latvia.jpg', cap:'Heading back through the forest trail', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-listening-latvia.jpg', cap:'Learning about the moss underfoot', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-pond-edge-latvia.jpg', cap:'Pausing at the edge of a bog pool', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-pond-latvia.jpg', cap:'Walking together past a bog pool', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-portrait-latvia.jpg', cap:'Our group kitted up in bog shoes', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-pond-edge-latvia.jpg', cap:'A quiet bog pool seen from the moss', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-pond-pink-latvia.jpg', cap:'Bog shoe walking beside a pink-lit pool', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walker-solo-latvia.jpg', cap:'A guest in bog shoes out on the open bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-poppies-latvia.jpg', cap:'Wildflowers in Ķemeri National Park', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-sundew-latvia.jpg', cap:'Carnivorous sundew, the bog’s tiny predator', credit:'Photo: Teresa Wang / Pexels'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-grasses-latvia.jpg', cap:'Cotton grass on the open bog', credit:'Photo: Katrīna Eglīte / Unsplash'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pond-from-tower-portrait-latvia.jpg', cap:'A bog pool seen from the tower', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pond-summer-clouds-latvia.jpg', cap:'Clouds reflected in a summer bog pool', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-info-board-raised-bog-latvia.jpg', cap:'Learning about the raised bog ecosystem', credit:'Photo: source pending, see footer credits'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-pine-forest-trunks-latvia.jpg', cap:'Pine trunks in Ķemeri National Park'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-couple-pools-sunset-latvia.jpg', cap:'A couple in bog shoes pausing at sunset on the open raised bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-sunset-walker-latvia.jpg', cap:'A guest looking out across the bog pools at sunset', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-forest-walk-latvia.jpg', cap:'Heading out through the pine forest with bog shoes in hand', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-fitting-edge-latvia.jpg', cap:'Strapping on the bog shoes at the edge of the open bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-among-pines-latvia.jpg', cap:'Walking in bog shoes through the dwarf pines on the bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-walkers-pool-sunset-latvia.jpg', cap:'Two guests at the bog pool\'s edge watching the sunset', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-swim-sunset-latvia.jpg', cap:'Swimming in the bog lake as the sun sets', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-lake-swim-wide-latvia.jpg', cap:'Guests swimming in the bog lake at dusk', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-pines-golden-latvia.jpg', cap:'Group at the pine tree in golden hour light', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pine-cottongrass-latvia.jpg', cap:'Sunset pines above a field of cottongrass', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-open-birch-daylight-latvia.jpg', cap:'Open bog with birch in afternoon light', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pine-sunbeam-latvia.jpg', cap:'Sunbeams filtering through the bog pines', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-birch-golden-hour-latvia.jpg', cap:'A lone birch at golden hour on the bog', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-golden-trail-latvia.jpg', cap:'Group walking into the pines at golden hour', credit:'© Barefoot Baltic'},
+  {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-pine-trail-sunset-latvia.jpg', cap:'Walking the bog trail beside a lone pine at sunset', credit:'© Barefoot Baltic'},
 ];
 
 // ── BB: Randomise hero & gallery on each page load ──
@@ -5589,18 +5825,18 @@ const lbPhotos = [
   // Pools, landscape-oriented hero candidates (the wide aerial / sunset / watchtower shots)
   // and a "gallery candidates" pool that excludes nothing (any lbPhoto can appear in the grid).
   const heroPool = [
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia', alt:'Three guests striding across the open bog in bog shoes', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia', alt:'Our small group out on the Ķemeri bog at sunset', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-group-walking-trail-latvia', alt:'Walkers in bog shoes crossing the open peatland in golden hour', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-trail-cottongrass-latvia', alt:'Two guests in bog shoes among the cottongrass', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia', alt:'Sunset clouds reflected across the open bog pools', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-pools-dusk-portrait-latvia', alt:'Mirror-still bog pools and islands at dusk', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-photographer-sunset-latvia', alt:'A guest photographing the bog at golden hour', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-couple-autumn-latvia', alt:'A couple ready for the bog in late autumn', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-walker-distant-pines-latvia', alt:'A guest walking out among the dwarf pines', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-sunset-pine-silhouette-latvia', alt:'Sunset through the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-feet-detail-latvia', alt:'Snowshoe-style bog shoes that float on the moss', credit:'© Barefoot Baltic'},
-    {src:'/images/exc-kemeri/kemeri-bog-shoe-child-cottongrass-latvia', alt:'Bog shoes among the cottongrass', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-running-group-latvia', alt:'Three guests striding across the open bog in bog shoes', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-sunset-latvia', alt:'Our small group out on the Ķemeri bog at sunset', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-group-walking-trail-latvia', alt:'Walkers in bog shoes crossing the open peatland in golden hour', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-trail-cottongrass-latvia', alt:'Two guests in bog shoes among the cottongrass', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-sunset-clouds-latvia', alt:'Sunset clouds reflected across the open bog pools', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-pools-dusk-portrait-latvia', alt:'Mirror-still bog pools and islands at dusk', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-photographer-sunset-latvia', alt:'A guest photographing the bog at golden hour', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-couple-autumn-latvia', alt:'A couple ready for the bog in late autumn', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-walker-distant-pines-latvia', alt:'A guest walking out among the dwarf pines', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-sunset-pine-silhouette-latvia', alt:'Sunset through the dwarf pines of Ķemeri', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-feet-detail-latvia', alt:'Snowshoe-style bog shoes that float on the moss', credit:'© Barefoot Baltic'},
+    {src:'https://barefootbaltic.com/images/exc-kemeri/kemeri-bog-shoe-child-cottongrass-latvia', alt:'Bog shoes among the cottongrass', credit:'© Barefoot Baltic'},
   ];
 
   // Fisher-Yates shuffle
@@ -5615,7 +5851,7 @@ const lbPhotos = [
 
   // ── Hero: pick 3 random images from the heroPool and write them into the 3 hero slots ──
   try {
-    const heroPicks = shuffle(heroPool).slice(0, 3);
+    const heroPicks = [] /* portrait-only hero pool disabled — landscape static slides drive the hero */;
     document.querySelectorAll('.hero-slide').forEach((slide, i) => {
       const pick = heroPicks[i];
       if (!pick) return;
@@ -5974,5 +6210,9 @@ document.querySelector('.gallery-grid').addEventListener('click', function(e) {
   </div>
   <a class="mobile-cta-btn" href="#reserve-now">Reserve</a>
 </aside>
+<script id="bb-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
+<script id="bb-detail-reviews">(function(){function shuffle(rail){if(!rail)return;var a=[].slice.call(rail.querySelectorAll(".review-card"));for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}a.forEach(function(c){rail.appendChild(c);});}var top=document.querySelector(".top-reviews .reviews-rail");if(!top){shuffle(document.querySelector(".reviews-inline .reviews-rail"));return;}var DS=/Ranjith|Tharun|Vijay|Sanjay/;var seen={};function key(c){var t=c.querySelector(".review-text");return (t?t.textContent:c.textContent).replace(/\s+/g," ").trim().slice(0,60);}function proc(rail,move){[].slice.call(rail.querySelectorAll(".review-card")).forEach(function(c){if(DS.test(c.textContent)){c.remove();return;}var k=key(c);if(seen[k]){c.remove();return;}seen[k]=1;if(move)top.appendChild(c);});}proc(top,false);var inl=document.querySelector(".reviews-inline");if(inl){var ir=inl.querySelector(".reviews-rail");if(ir)proc(ir,true);inl.style.display="none";}var h=document.querySelector(".top-reviews-h3");if(h&&/highlighted/i.test(h.textContent))h.textContent="A few reviews from other travellers";shuffle(top);var wrap=document.querySelector(".top-reviews .reviews-rail-wrap");if(!wrap)return;if(top.scrollHeight<=860)return;wrap.classList.add("bb-rev-collapsible");var fade=document.createElement("div");fade.className="bb-rev-fade";var show=document.createElement("button");show.type="button";show.className="bb-rev-showall";show.textContent="Show more reviews";show.setAttribute("aria-expanded","false");fade.appendChild(show);var up=document.createElement("button");up.type="button";up.className="bb-rev-collapse";up.textContent="Collapse \u2191";up.setAttribute("aria-expanded","true");wrap.appendChild(fade);wrap.appendChild(up);show.addEventListener("click",function(){var y=wrap.getBoundingClientRect().top;wrap.classList.add("expanded");window.scrollBy(0,wrap.getBoundingClientRect().top-y);});up.addEventListener("click",function(){wrap.classList.remove("expanded");if(h&&h.scrollIntoView)h.scrollIntoView({block:"start"});});})();</script>
+<script id="bb-detail-datepicker">(function(){var last=-1;function op(e){var t=e.target;if(!t||!t.matches||!t.matches('input[type="date"]'))return;if(e.timeStamp-last<400)return;last=e.timeStamp;try{t.showPicker();}catch(_){}}document.addEventListener("focusin",op,true);document.addEventListener("click",op,true);})();</script>
+<script id="bb-detail-bookcollapse">(function(){var card=document.querySelector(".booking-card");if(!card)return;var body=card.querySelector(".bk-body");if(!body)return;if(card.querySelector(".bb-book-open"))return;var b=document.createElement("button");b.type="button";b.className="bb-book-open";b.setAttribute("aria-expanded","false");b.textContent="Check availability & book \u2192";body.parentNode.insertBefore(b,body);b.addEventListener("click",function(){card.classList.add("bb-expanded");b.setAttribute("aria-expanded","true");var d=card.querySelector('input[type="date"]');if(d){try{d.focus();}catch(_){}}});})();</script>
 </body>
 </html>

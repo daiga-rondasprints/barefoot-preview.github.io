@@ -6,7 +6,7 @@
 // STEP 5 LIVE (2026-04-24, revised) — LATVIAN LAUNCH + DIAGNOSTICS
 // ────────────────────────────────────────────────────────────────
 // Reverse-proxies barefootbaltic.lv/* to the origin Latvian bundle at
-// barefootbaltic.com/lv/*. Shared assets (/images/, /fonts/, /css/,
+// barefootbaltic.com/lv/*. Shared assets (https://barefootbaltic.com/images/, /fonts/, /css/,
 // /js/, /_assets/, /visit/) and locale-independent files (/sitemap.xml,
 // /robots.txt, /favicon.ico, /llms.txt) are served straight from the
 // .com root without the /lv/ prefix. Everything else is prefixed with
@@ -59,7 +59,7 @@ const DEBUG = false;
 
 // Paths that live at the .com ROOT (locale-independent: shared static
 // assets, and a small set of single-source files).
-const ROOT_PREFIXES = ['/images/', '/fonts/', '/css/', '/js/', '/visit/', '/_assets/'];
+const ROOT_PREFIXES = ['https://barefootbaltic.com/images/', '/fonts/', '/css/', '/js/', '/visit/', '/_assets/'];
 const ROOT_FILES    = ['/robots.txt', '/favicon.ico', '/sitemap.xml', '/llms.txt', '/CNAME'];
 
 export default {
