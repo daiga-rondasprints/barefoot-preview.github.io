@@ -1446,17 +1446,13 @@ a:hover{color:var(--carmine)}
 img{max-width:100%;display:block}
 
 /* ── NAV ── */
-.nav{position:sticky;top:0;z-index:100;background:var(--linen);border-bottom:3px solid var(--carmine)}
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(8,9,11,.5),rgba(8,9,11,0));border-bottom:1px solid transparent;transition:background .4s ease,border-color .4s ease}.nav.scrolled{background:rgba(11,12,14,.95);border-bottom-color:rgba(244,241,234,.14)}html{scroll-padding-top:5.5rem}
 
 /* Nav text colors: white when transparent, dark when scrolled */
-.nav .nav-links a{font-size:.875rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--bark-light);text-decoration:none;transition:color .2s}
+.nav .nav-links a{font-size:1rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#f4f1ea;text-decoration:none;transition:color .2s;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 
 
-.nav-inner{
-  max-width:1100px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:var(--space-3) var(--space-8);
-}
+.nav-inner{max-width:none;margin:0;display:flex;align-items:center;justify-content:space-between;padding:1.1rem clamp(1.1rem,4vw,2.6rem)}
 .nav-logo{
   display:flex;align-items:center;gap:var(--space-4);
   text-decoration:none;
@@ -2923,7 +2919,7 @@ footer a{color:#cdc8bd}
 .nav .logo-scrolled{display:none!important}
 .nav.scrolled .logo-top{display:block!important}
 /* breathing room: reclaim menu width so the wordmark + menu stop touching */
-.nav-inner{gap:clamp(1.4rem,3vw,4rem)}
+.nav-inner{max-width:none;margin:0;display:flex;align-items:center;justify-content:space-between;padding:1.1rem clamp(1.1rem,4vw,2.6rem)}
 .nav .nav-links{gap:1rem}
 .nav .nav-links a{font-size:.92rem}
 </style>
