@@ -483,7 +483,7 @@
       "name": "Barefoot Baltic",
       "legalName": "Ronda Sprints Solutions SIA",
       "url": "https://barefootbaltic.com",
-      "logo": "https://barefootbaltic.com/images/logo-full.png",
+      "logo": "https://barefootbaltic.com/images/brand/barefoot-baltic-wide-black.png",
       "telephone": "+37126440152",
       "email": "daiga@rondasprints.com",
       "address": {
@@ -2253,6 +2253,240 @@ h1,h2,h3,h4{color:var(--bark)}
 }
 /* BB_SIDEBAR_FIX_END */
 </style>
+<style id="bb-detail-dark">
+/* ===== Excursion detail — dark cinematic theme, seamless with home. ===== */
+:root{--bark:#f4f1ea;--bark-light:#cdc8bd;--sand-dark:rgba(244,241,234,.14);--peat:#f4f1ea;--indigo:#9fb3d6;--carmine:#c0294a;--carmine-dark:#a0213c}
+body{background:#0b0c0e;color:#f4f1ea}
+/* ── NAV: solid-light sticky -> fixed transparent overlay (home match) ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(11,12,14,.74) 0%,rgba(11,12,14,.34) 52%,rgba(11,12,14,0) 100%)!important;border-bottom:0!important;transition:background .4s ease}
+.nav.scrolled{background:rgba(11,12,14,.96)!important;border-bottom:1px solid rgba(244,241,234,.12)!important}
+.nav-inner{max-width:none;gap:clamp(1.4rem,3vw,4rem)}
+.nav .nav-links{gap:1rem}
+.nav .nav-links a{color:#f4f1ea;font-size:.92rem}
+.nav .nav-links a:hover{color:#fff}
+.nav-cta{background:#253961!important;color:#fff!important}
+.nav-cta:hover{background:#1a2a48!important;color:#fff!important}
+.nav-links a[aria-current="page"]{color:#fff!important;border-bottom-color:var(--carmine)!important}
+.hamburger span{background:#f4f1ea}
+/* logo: the white wordmark always — no scroll-swap to the monogram (consistent header) */
+.nav .logo-scrolled{display:none!important}
+.nav.scrolled .logo-top{display:block!important}
+html{scroll-padding-top:5.5rem}
+/* ── BREADCRUMBS over the hero ── */
+.breadcrumbs{position:absolute;z-index:50;left:50%;transform:translateX(-50%);top:62px;width:100%}
+.breadcrumbs li,.breadcrumbs .sep{color:rgba(244,241,234,.72)}
+.breadcrumbs a{color:#d8a24a}
+.breadcrumbs a:hover{color:#fff}
+/* ── PAGE HERO: cinematic scrim + dark slide letterbox + legible title ── */
+.page-hero{height:66vh;min-height:460px}
+.page-hero .hero-slide img{background:#0b0c0e!important}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,14,.6) 0%,rgba(11,12,14,.08) 26%,rgba(11,12,14,.18) 52%,rgba(11,12,14,.93) 100%)}
+.page-hero-content,.hero-creds,.photo-credit{z-index:3}
+.page-hero h1{color:#f4f1ea;text-shadow:0 2px 20px rgba(0,0,0,.55);font-size:clamp(1.7rem,3.4vw,2.35rem)}
+.page-hero .hero-sub{color:rgba(244,241,234,.92);text-shadow:0 1px 14px rgba(0,0,0,.5)}
+/* ── BOOKING CARD ── */
+.booking-card{background:#16191e;border-color:rgba(244,241,234,.14);box-shadow:0 14px 44px rgba(0,0,0,.55)}
+.booking-card-header,.bk-step-header{background:#19241b!important;border-bottom-color:rgba(244,241,234,.12)!important}
+.price-label{color:#9cc089!important}
+.booking-card-header .price,.bk-price-big{color:#fff!important}
+.bk-price-cross,.price-cross{color:#9a958b!important}
+.booking-card-header .price-child{color:#cdc8bd}
+.btn-reserve{color:#f4f1ea!important;border-color:rgba(244,241,234,.3)!important}
+.btn-reserve:hover{border-color:#7c9a6b!important;color:#7c9a6b!important}
+.booking-card-details{border-top-color:rgba(244,241,234,.12);color:#cdc8bd}
+.booking-card-compare{color:#cdc8bd}
+.booking-card-compare a,.booking-card-details li svg{color:#7c9a6b}
+/* zero-pay strip + cta box + related reading: light flax islands -> dark */
+.bk-zero-strip{background:#1d2127!important;border-bottom-color:rgba(244,241,234,.14)!important}
+.bk-zero-strip-main{color:#f4f1ea!important}
+.bk-zero-step{color:#cdc8bd!important}
+.cta-box{background:#16191e!important;border-color:rgba(244,241,234,.14)!important;border-left-color:var(--carmine)!important}
+.cta-box h3{color:#f4f1ea}
+.cta-box p{color:#cdc8bd}
+.related-reading{background:#101216!important}
+/* ── ENQUIRY FORM / EMAIL REVEAL / SUCCESS — inline white bgs -> dark ── */
+#daiga-enquiry-form-reveal,#daiga-email-reveal,#daiga-enq-success-card{background:#16191e!important;border-color:rgba(244,241,234,.16)!important;color:#f4f1ea!important}
+#daiga-enquiry-form-reveal input,#daiga-enquiry-form-reveal textarea{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+#daiga-enquiry-form-reveal input::placeholder,#daiga-enquiry-form-reveal textarea::placeholder{color:#9a958b}
+#daiga-enquiry-form-reveal label span,#daiga-email-reveal>div:first-child{color:#cdc8bd!important}
+#daiga-email-reveal a,#daiga-enq-success-card a{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+#daiga-enq-status,#daiga-enq-success-card p,#daiga-enq-success-card strong{color:#cdc8bd!important}
+/* ── GALLERY / LIGHTBOX ── */
+.gallery-more-overlay{background:rgba(11,12,14,.5)}
+.gallery-more:hover .gallery-more-overlay{background:rgba(11,12,14,.28)}
+.lightbox{background:rgba(11,12,14,.96)}
+/* ── SHARED: faq, contact, footer, cards ── */
+.faq-q{color:#f4f1ea}
+.faq-q svg{color:#c0294a}
+.faq-q:hover,.faq-a p em{color:#7c9a6b}
+.faq-a p{color:#cdc8bd}.faq-a p strong{color:#f4f1ea}
+.faq-item,.faq-item:first-child{border-color:rgba(244,241,234,.12)}
+.section-label{color:#7c9a6b}
+.contact{background:#101216!important}
+footer{background:#0b0c0e!important}
+footer a{color:#cdc8bd}
+.related-reading h3{color:#f4f1ea}
+.bf-card,.related-card{background:#16191e;border-color:rgba(244,241,234,.12)}
+/* ── more detail light islands -> dark ── */
+.skip-link{background:#c0294a}
+.lang-switcher-list,.lang-switcher-menu,.lang-menu{background:#16191e!important;border-color:rgba(244,241,234,.16)!important}
+.lang-switcher-option,.lang-option{color:#cdc8bd!important}
+.lang-switcher-option:hover,.lang-option:hover{background:#1d2127!important;color:#fff!important}
+.quick-facts{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.quick-facts *{color:#cdc8bd}
+/* summary bar on ONE line (was wrapping 4+1, imbalanced) — items share the row + shrink; wrap only on mobile */
+.quick-facts{flex-wrap:nowrap!important}
+.quick-facts .qf{flex:1 1 0!important;min-width:0!important}
+@media(max-width:760px){.quick-facts{flex-wrap:wrap!important}.quick-facts .qf{flex:1 1 42%!important}}
+.top-reviews{background:#0b0c0e!important}
+.top-reviews .review-card,.reviews-rail .review-card,.review-card{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.route-map-summary{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+.itin-num{background:#19241b!important;color:#9cc089!important}
+.specialist-insight{background:#101216!important;border-color:rgba(244,241,234,.12)!important}
+.review-lang-tag{background:#1d2127!important;color:#cdc8bd!important}
+.related-link{background:#16191e!important;border-color:rgba(244,241,234,.12)!important}
+.daiga-card{background:#16191e!important;border-color:rgba(244,241,234,.14)!important}
+/* ── booking widget bk-* namespace + price options ── */
+.bk-input,select.bk-input,.bk-input select,.bk-input input{background:#101216!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.22)!important}
+.bk-input[type="date"]::-webkit-calendar-picker-indicator,input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.85);opacity:.9;cursor:pointer}
+.bk-input[type="date"]{color-scheme:dark}
+.bk-step-pill,.bk-avail-hint,.bk-s1-zero-note,.bk-note{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.14)!important}
+.price-option{background:#16191e!important;border-color:rgba(244,241,234,.16)!important;color:#cdc8bd!important}
+.price-option.direct{background:#19241b!important;border-color:rgba(124,154,107,.4)!important}
+.price-main{color:#fff!important}
+.subtitle,.bk-price-save{color:#9cc089!important;background:transparent!important}
+.btn-daiga{background:#1d2127!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.2)!important}
+.btn-daiga-email{background:var(--carmine)!important;color:#fff!important;border-color:var(--carmine)!important}
+/* hardcoded-dark text -> light */
+.route-map-section-title{color:#f4f1ea!important}
+.route-map-section-sub{color:#cdc8bd!important}
+/* route map: crop Google My Maps' unstylable cross-origin header (~56px: map title +
+   "Daiga Taurite" + the "manas kartes" line + share/fullscreen) by pulling the iframe
+   up; the wrapper's overflow:hidden clips it, the visible map is unchanged. Scoped to
+   /maps/d/embed so the standard place embed on riga-shore is left intact. Higher
+   specificity + !important beats route-map.css's later-loaded iframe{height:100%}. */
+.route-map-section .route-map-google{overflow:hidden!important;background:#101216!important;border:1px solid rgba(244,241,234,.1)}
+.route-map-section .route-map-google iframe[src*="/maps/d/embed"]{margin-top:-84px!important;height:calc(100% + 84px)!important}
+.route-map-fullmap{display:inline-block;margin-top:.75rem;color:#7c9a6b!important;font-size:.85rem;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(138,166,118,.4)}
+.route-map-fullmap:hover{color:#fff!important;border-bottom-color:#fff}
+[class*="lang-switcher-list"]{color:#cdc8bd!important}
+.trust-strip-item a,a[href^="tel:"]{color:#7c9a6b!important}
+.photo-credits-section{background:#0b0c0e!important;border-color:rgba(244,241,234,.12)!important}
+[class*="-extras"]{background:#1d2127!important;border-color:rgba(244,241,234,.14)!important}
+#main-content p a,#main-content li a,.specialist-insight a,.photo-credits-section a{color:#7c9a6b!important}
+.itin-body h3,.itin-body h4{color:#f4f1ea!important}
+/* ===== light-surface holdouts -> dark palette (operator 2026-06-04 calibration) ===== */
+.bk-date-chip{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(244,241,234,.14)!important}
+.bk-date-chip svg{color:#7c9a6b!important}
+.exc-reel-nav,.exc-reel-prev,.exc-reel-next{background:#16191e!important;color:#f4f1ea!important;border-color:rgba(244,241,234,.18)!important}
+.exc-reel-nav:hover,.exc-reel-prev:hover,.exc-reel-next:hover{background:#1d2127!important;color:#c0294a!important}
+#bk-email-hint,#bk-otp-hint{background:rgba(192,41,74,.16)!important;color:#f0a9b6!important}
+.bk-close-warning{background:#1d2127!important;color:#cdc8bd!important;border-color:rgba(216,162,74,.4)!important}
+/* ===== calibration fixes (operator 2026-06-04) ===== */
+/* layout: long content spans full width below the booking row -> kills the empty
+   void on the right (operator wants the sidebar static, no sticky pinning) */
+.content-grid{grid-template-areas:"preview sidebar" "main main"}
+.content-preview{grid-area:preview;min-width:0}
+.content-sidebar{grid-area:sidebar;align-self:start}
+.content-main{grid-area:main;min-width:0;max-width:880px}
+/* itinerary (.dayplan-fold) + prose (.prose-fold) folds: toggle moves to the END when open (not stuck mid-list) */
+.prose-fold[open],.dayplan-fold[open]{display:flex;flex-direction:column}
+.prose-fold[open]>summary,.dayplan-fold[open]>summary{order:99;margin-top:.7rem}
+/* reviews: open the rails into a masonry wall (no horizontal scroller) */
+.reviews-rail{display:block!important;column-count:2;column-gap:1.3rem;overflow:visible!important;scroll-snap-type:none;-webkit-mask-image:none!important;mask-image:none!important;padding-left:0!important;padding-right:0!important}
+@media(min-width:980px){.top-reviews .reviews-rail{column-count:3}}
+@media(max-width:680px){.reviews-rail{column-count:1}}
+.reviews-rail .review-card{flex:none!important;width:100%!important;max-width:none!important;min-width:0!important;display:inline-block;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 1.3rem!important;vertical-align:top;scroll-snap-align:none;height:auto!important}
+.reviews-rail .review-text{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
+.reviews-rail .review-card-toggle{display:none!important}
+/* reviews: classic read-more. Collapsed masonry (first 8) dissolves into a gradient;
+   a "Show all N reviews" button floats ON the fade (reads as a boundary, hides the
+   ragged masonry bottom). Expanded swaps to a "Collapse" pill at the very end that
+   returns to the reviews heading, so nothing is stranded after all the cards. */
+.bb-rev-collapsible{position:relative}
+.bb-rev-collapsible:not(.expanded) .reviews-rail{max-height:680px!important;overflow:hidden!important}
+.bb-rev-fade{position:absolute;left:0;right:0;bottom:0;height:230px;z-index:3;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:38px;background:linear-gradient(rgba(11,12,14,0) 0%,rgba(11,12,14,.45) 32%,rgba(11,12,14,.92) 72%,#0b0c0e 100%)}
+.bb-rev-collapsible.expanded .bb-rev-fade{display:none}
+.bb-rev-showall{pointer-events:auto;background:#d8a24a;border:1px solid #d8a24a;color:#1a160e;font-family:inherit;font-weight:700;font-size:1.05rem;line-height:1.1;letter-spacing:.01em;padding:.95rem 2.2rem;border-radius:999px;cursor:pointer;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.6),0 0 0 6px rgba(216,162,74,.16);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.bb-rev-showall:hover{background:#d8a24a;color:#1a160e;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.66),0 0 0 9px rgba(216,162,74,.22)}
+.bb-rev-collapse{display:none;margin:1.8rem auto .2rem;background:#d8a24a;border:1px solid #d8a24a;color:#1a160e;font-family:inherit;font-weight:700;font-size:1.05rem;line-height:1.1;letter-spacing:.01em;padding:.95rem 2.2rem;border-radius:999px;cursor:pointer;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.6),0 0 0 6px rgba(216,162,74,.16);transition:background .2s,color .2s,transform .15s,box-shadow .2s}
+.bb-rev-collapse:hover{background:#d8a24a;color:#1a160e;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.66),0 0 0 9px rgba(216,162,74,.22)}
+.bb-rev-collapsible.expanded .bb-rev-collapse{display:block}
+</style>
+<style id="bb-detail-layout">
+/* ===== Showcase stack (operator 2026-06-04): a large photo gallery above a
+   horizontal booking band, then highlights + prose. "Images sell tours." The
+   gallery matches the booking band's width (both fill the content column) rather
+   than going edge-to-edge, so the sections line up. ===== */
+.content-grid{display:grid!important;grid-template-columns:1fr!important;grid-template-areas:"gallery" "sidebar" "preview" "main"!important;gap:var(--space-5)!important;align-items:start}
+.content-grid > .gallery-grid{grid-area:gallery!important}
+.content-grid > .content-sidebar{grid-area:sidebar!important}
+.content-grid > .content-preview{grid-area:preview!important}
+.content-grid > .content-main{grid-area:main!important}
+/* text column aligns to the SAME content width as the gallery + booking band, so the
+   whole page is one consistent column (was capped at 880 → read as misaligned). */
+.content-grid > .content-preview,.content-grid > .content-main{max-width:none!important;width:100%;margin-left:0;margin-right:0}
+/* the contact footer band's inner is the bare 1100 wrap (no inner padding) while every
+   body section sits at 1100−64 = 1036; cap it to 1036 so it lines up with the column. */
+.contact .section-inner{max-width:1036px!important}
+/* ── GALLERY: content-width cinematic 1+4 mosaic (matches the booking band below) ── */
+.content-grid > .gallery-grid{width:100%;display:grid!important;grid-template-columns:repeat(4,1fr)!important;grid-auto-rows:1fr;gap:6px!important;height:clamp(380px,56vh,640px);margin:0 0 var(--space-3);border-radius:14px;overflow:hidden;background:#0b0c0e;-webkit-mask-image:none!important;mask-image:none!important}
+.content-grid > .gallery-grid .g-img{height:100%!important;width:100%!important;margin:0!important;border-radius:0!important;min-width:0}
+.content-grid > .gallery-grid .g-img:first-child{grid-column:1 / 3;grid-row:1 / 3}
+.content-grid > .gallery-grid .g-img img{width:100%!important;height:100%!important;object-fit:cover!important;display:block}
+@media(max-width:760px){
+  .content-grid > .gallery-grid{grid-template-columns:1fr 1fr!important;height:60vh;gap:4px!important}
+  .content-grid > .gallery-grid .g-img:first-child{grid-column:1 / 3;grid-row:auto}
+  .content-grid > .gallery-grid .g-img:nth-child(n+4){display:none}
+}
+/* ── HORIZONTAL BOOKING BAND (booking sits first, right under the gallery; the
+   "Ask Daiga" enquiry card drops below it) ── */
+.content-grid > .content-sidebar{position:static!important;max-height:none!important;overflow:visible!important;width:100%;max-width:none;padding-right:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.content-sidebar .booking-card{order:-1;width:100%;max-width:none;display:grid;grid-template-columns:minmax(230px,290px) 1fr;grid-template-areas:"header zero" "body body"}
+.content-sidebar .daiga-card{order:0;width:100%;max-width:760px;margin-left:auto;margin-right:auto}
+.booking-card .bk-step-header{grid-area:header;border-bottom:0!important;border-right:1px solid rgba(244,241,234,.12)}
+.booking-card .bk-zero-strip{grid-area:zero;display:flex;flex-direction:column;justify-content:center;gap:.4rem}
+.booking-card .bk-body{grid-area:body;border-top:1px solid rgba(244,241,234,.12)}
+/* step 1 -> a horizontal booking bar: [date][group] ........ [Reserve], notes below.
+   order: pill(0) full row, fields(1), button(2) pushed right, hints/notes(3,4) full rows. */
+#bk-s1.active{display:flex!important;flex-wrap:wrap;align-items:flex-end;gap:var(--space-3) var(--space-4)}
+#bk-s1 > .bk-step-pill{flex-basis:100%;margin-bottom:0;order:0}
+#bk-s1 .bk-field{margin-bottom:0;flex:0 0 auto;order:1}
+#bk-s1 > .bk-row{flex:0 0 auto;min-width:230px;order:1}
+#bk-s1 > #bk-kemeri-extras{flex-basis:100%;order:1}
+#bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{order:2;margin-left:auto;width:auto!important;flex:0 0 auto;align-self:flex-end}
+#bk-s1 > .bk-avail-hint{flex-basis:100%;order:3;margin:0}
+#bk-s1 > .bk-s1-zero-note{flex-basis:100%;order:4;margin:0}
+/* later steps fill the band cleanly instead of a narrow column stranded on the left:
+   step-2 details + step-3 payment options go TWO-COLUMN; buttons/notes span both;
+   focused panels (OTP entry, payment instructions) keep a centred readable width. */
+.bk-body > .bk-step:not(#bk-s1){max-width:none}
+#bk-s2a{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.4rem;align-items:start}
+#bk-s2a > .bk-field{margin-bottom:0}
+#bk-s2a > *:not(.bk-field){grid-column:1 / -1}
+#bk-s2b{max-width:460px;margin-left:auto;margin-right:auto}
+#bk-s3 > .bk-price-breakdown{max-width:440px}
+#bk-s3 .bk-pay-opts{display:grid!important;grid-template-columns:1fr 1fr;gap:.8rem;align-items:start}
+#bk-s4-bank,#bk-s4-revolut,#bk-s4-stripe,#bk-s4-paylater,#bk-s-err{max-width:580px;margin-left:auto;margin-right:auto}
+/* mobile: fold the band back into a stacked card */
+@media(max-width:760px){
+  .content-sidebar .booking-card{grid-template-columns:1fr;grid-template-areas:"header" "zero" "body"}
+  .booking-card .bk-step-header{border-right:0}
+  #bk-s1.active{display:block!important}
+  #bk-s1 .bk-field{margin-bottom:var(--space-3)}
+  #bk-s1 > #bk-s1-next,#bk-s1 > .bk-btn-primary{width:100%!important;margin-left:0!important;margin-top:var(--space-2)}
+  #bk-s2a{grid-template-columns:1fr}
+  #bk-s2a > .bk-field{margin-bottom:var(--space-3)}
+  #bk-s3 .bk-pay-opts{grid-template-columns:1fr!important}
+}
+/* ── BOOKING collapsed by default (operator: the open form takes too much space).
+   The card shows only price + reassurance + a full-width "Check availability & book"
+   button; the form body (all steps) opens on click. The multi-step flow is untouched. ── */
+.booking-card:not(.bb-expanded) .bk-body{display:none!important}
+.bb-book-open{grid-column:1 / -1;display:none;width:100%;background:#c0294a;color:#fff;border:0;padding:1.05rem 1.25rem;font-family:inherit;font-weight:700;font-size:1.05rem;letter-spacing:.01em;line-height:1.1;cursor:pointer;border-radius:0 0 14px 14px;transition:background .2s}
+.bb-book-open:hover{background:#a0213c}
+.booking-card:not(.bb-expanded) .bb-book-open{display:block}
+/* mobile dropdown + sticky CTA bar (all detail pages) -> dark */.nav .nav-links.open,.nav-links.open{background-color:#0b0c0e !important;border-bottom:1px solid rgba(244,241,234,.14) !important}.nav-links.open a{color:#f4f1ea !important}.mobile-cta-bar{background:#101216 !important;border-color:rgba(244,241,234,.14) !important;box-shadow:0 -8px 24px rgba(0,0,0,.5) !important}.mobile-cta-bar,.mobile-cta-bar *{color:#f4f1ea !important}.mobile-cta-from{color:#cdc8bd !important}.mobile-cta-btn{background:#c0294a !important;color:#fff !important;border-color:transparent !important}.inc-col h3,.inc-col h4{color:#f4f1ea !important}</style>
 </head>
 <body>
 
@@ -2263,7 +2497,7 @@ h1,h2,h3,h4{color:var(--bark)}
 <nav class="nav" id="nav" aria-label="Nawigacja główna">
   <div class="nav-inner">
     <a href="/pl/" class="nav-logo" aria-label="Barefoot Baltic &mdash; strona główna">
-      <img src="https://barefootbaltic.com/images/brand/barefoot-baltic-wide-red.svg" alt="Barefoot Baltic" class="logo-dark" style="height:40px;width:auto" width="1245" height="210">
+      <img src="https://barefootbaltic.com/images/brand/barefoot-baltic-wide-white.svg" alt="Barefoot Baltic" class="logo-dark logo-top" style="height:40px;width:auto" width="1245" height="210">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Przełącz menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -2781,6 +3015,28 @@ h1,h2,h3,h4{color:var(--bark)}
   <!-- TWO-COLUMN LAYOUT -->
   <div class="content-grid" id="reserve-now" style="scroll-margin-top:130px">
 
+    <div class="gallery-grid" role="group" aria-label="Galeria zdjęć, kliknij dowolny obraz, aby przejrzeć wszystkie 65 zdjęć" tabindex="0">
+        <div class="g-img" data-gallery-slot="0">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/rundale-palace-gold-hall-gilded-stucco-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/rundale-palace-gold-hall-gilded-stucco-latvia.jpg" alt="Złocona sztukateria Złotej Sali w Pałacu Rundāle" width="1200" height="900" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="1">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/kemeri-bog-aerial-spring-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/kemeri-bog-aerial-spring-latvia.jpg" alt="Widok z lotu ptaka na pomost Wielkiego Torfowiska Ķemeri obok lustrzano-ciemnych oczek" width="1920" height="1280" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="2">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/bauska-castle-daiga-guide-explaining-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/bauska-castle-daiga-guide-explaining-latvia.jpg" alt="Daiga objaśniająca w zamku Bauska" width="1200" height="900" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img" data-gallery-slot="3">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/kemeri-boardwalk-pond-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/kemeri-boardwalk-pond-latvia.jpg" alt="Drewniany pomost wzdłuż spokojnego stawu na torfowisku wysokim Ķemeri" width="1920" height="1280" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="g-img gallery-more" data-gallery-slot="4" aria-label="Zobacz wszystkie 65 zdjęć">
+          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/rundale-palace-formal-gardens-winter-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/rundale-palace-formal-gardens-winter-latvia.jpg" alt="Formalne ogrody Pałacu Rundāle przyprószone zimowym śniegiem" width="900" height="1200" loading="lazy" decoding="async"></picture>
+          <div class="gallery-more-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            +60 zdjęć
+          </div>
+        </div>
+      </div>
+
     <!-- ═══ PREVIEW (mobile-first highlights + gallery) ═══ -->
 
     <div class="content-preview">
@@ -2810,27 +3066,6 @@ h1,h2,h3,h4{color:var(--bark)}
       </div>
 
       <!-- PHOTO GALLERY -->
-      <div class="gallery-grid" role="group" aria-label="Galeria zdjęć, kliknij dowolny obraz, aby przejrzeć wszystkie 65 zdjęć" tabindex="0">
-        <div class="g-img" data-gallery-slot="0">
-          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/rundale-palace-gold-hall-gilded-stucco-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/rundale-palace-gold-hall-gilded-stucco-latvia.jpg" alt="Złocona sztukateria Złotej Sali w Pałacu Rundāle" width="1200" height="900" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="1">
-          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/kemeri-bog-aerial-spring-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/kemeri-bog-aerial-spring-latvia.jpg" alt="Widok z lotu ptaka na pomost Wielkiego Torfowiska Ķemeri obok lustrzano-ciemnych oczek" width="1920" height="1280" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="2">
-          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/bauska-castle-daiga-guide-explaining-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/bauska-castle-daiga-guide-explaining-latvia.jpg" alt="Daiga objaśniająca w zamku Bauska" width="1200" height="900" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img" data-gallery-slot="3">
-          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/kemeri-boardwalk-pond-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/kemeri-boardwalk-pond-latvia.jpg" alt="Drewniany pomost wzdłuż spokojnego stawu na torfowisku wysokim Ķemeri" width="1920" height="1280" loading="lazy" decoding="async"></picture>
-        </div>
-        <div class="g-img gallery-more" data-gallery-slot="4" aria-label="Zobacz wszystkie 65 zdjęć">
-          <picture><source srcset="https://barefootbaltic.com/images/exc-rundale/rundale-palace-formal-gardens-winter-latvia.webp" type="image/webp"><img src="https://barefootbaltic.com/images/exc-rundale/rundale-palace-formal-gardens-winter-latvia.jpg" alt="Formalne ogrody Pałacu Rundāle przyprószone zimowym śniegiem" width="900" height="1200" loading="lazy" decoding="async"></picture>
-          <div class="gallery-more-overlay">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-            +60 zdjęć
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -2841,14 +3076,14 @@ h1,h2,h3,h4{color:var(--bark)}
 
       <h2>Czego się spodziewać</h2>
       <p>Bardzo bym chciała Państwa powitać na tej wycieczce. Mam nadzieję dać Państwu starannie zaplanowany dzień na Łotwie, dopasowany do naszej małej grupy i warty Państwa dziesięciu godzin.</p>
+      <p class="prose-fold-lead">Jedziemy na południe z Rygi przez około godzinę. W trakcie podróży busem nakreślę Państwu kontekst, dlaczego te żyzne niziny okazały się najcenniejszą posiadłością niemieckich rycerzy-mnichów krzyżowych, a później zażarcie walczyły o nie imperia rosyjskie, polskie i szwedzkie w różnych epokach. Architektoniczny punkt kulminacyjny dnia to Pałac Rundāle, zaprojektowany przez Francesca Rastrellego, tego samego architekta, który zbudował Pałac Zimowy w Sankt Petersburgu. Często nazywany jest Wersalem Bałtyku. Sama prowadzę Państwa przez pałac i dorzucam plotki dworskie z XVIII wieku, wspierając się cyfrowym audioprzewodnikiem od pałacu. W niektóre dni licencjonowany przewodnik pałacowy może dołączyć do naszej grupy bez dodatkowej opłaty.</p>
+      <p class="prose-fold-lead">Potem zamek Bauska, piętnastowieczna twierdza zakonu inflanckiego u zbiegu dwóch rzek. Atmosfera zupełnie inna niż w pałacu &mdash; kamień, wiatr i burzliwa historia pogranicza.</p>
       <details class="prose-fold">
         <summary class="prose-fold-toggle">
           <span class="prose-fold-more">Read more</span>
           <span class="prose-fold-less">Read less</span>
           <svg class="prose-fold-chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
-      <p>Jedziemy na południe z Rygi przez około godzinę. W trakcie podróży busem nakreślę Państwu kontekst, dlaczego te żyzne niziny okazały się najcenniejszą posiadłością niemieckich rycerzy-mnichów krzyżowych, a później zażarcie walczyły o nie imperia rosyjskie, polskie i szwedzkie w różnych epokach. Architektoniczny punkt kulminacyjny dnia to Pałac Rundāle, zaprojektowany przez Francesca Rastrellego, tego samego architekta, który zbudował Pałac Zimowy w Sankt Petersburgu. Często nazywany jest Wersalem Bałtyku. Sama prowadzę Państwa przez pałac i dorzucam plotki dworskie z XVIII wieku, wspierając się cyfrowym audioprzewodnikiem od pałacu. W niektóre dni licencjonowany przewodnik pałacowy może dołączyć do naszej grupy bez dodatkowej opłaty.</p>
-      <p>Potem zamek Bauska, piętnastowieczna twierdza zakonu inflanckiego u zbiegu dwóch rzek. Atmosfera zupełnie inna niż w pałacu &mdash; kamień, wiatr i burzliwa historia pogranicza.</p>
       <p>Zatrzymujemy się na spokojny obiad przy stole w lokalnej, wiejskiej restauracji (płaca Państwo restauracji bezpośrednio). Przeprowadzę Państwa przez menu i zasugeruję kilka rzeczy wartych spróbowania, jeśli nigdy nie jedli Państwo łotewskiej kuchni &mdash; chłodnik z buraków latem, szare groszki zimą, ciemny chleb żytni przez cały rok. Zabieram też ze sobą małą łotewską degustację do busa. Kilka napojów, słone przekąski i sezonowe słodycze, dobrane przeze mnie ręcznie, z opowieścią za każdym, podczas jazdy.</p>
       <p>Kierujemy się na Wielkie Torfowisko Ķemeri, jedno z największych i najlepiej zachowanych torfowisk wysokich regionu bałtyckiego. Łotwa jest jednym z nielicznych krajów Europy, których torfowiska przetrwały tak nienaruszone, dlatego naukowcy UE zajmujący się rewitalizacją torfowisk traktują je jako działający wzorzec funkcjonującego ekosystemu. Z pomostu zobaczą Państwo miękki torfowiec, karłowate sosny mające 200 lub 300 lat, a nadal nie wyższe od choinki, i kilkadziesiąt małych ciemnych oczek torfowiskowych. Wskażę mięsożerną rosiczkę okrągłolistną tuż obok pomostu (ulubioną roślinę Karola Darwina).</p>
       <p>Wracamy do Rygi wczesnym wieczorem. Mam nadzieję, że wyjadą Państwo z poczuciem, że dobrze wykorzystali ten dzień, zobaczyli coś wyjątkowego i zabrali ze sobą ciepłe wspomnienia Łotwy.</p>
@@ -2856,13 +3091,6 @@ h1,h2,h3,h4{color:var(--bark)}
 
       <!-- ROUTE MAP (optional, shown when route_map_enabled) -->
       <!-- ROUTE MAP (Google Maps embed) -->
-      <section class="route-map-section">
-        <h2 class="route-map-section-title">Trasa, na mapie</h2>
-        <p class="route-map-section-sub">Przystanki dnia jako pętla. Z Rygi na południe do Pałacu Rundāle (około 75 minut), potem krótkie skoki do Bauska na obiad, zamek Bauska, potem na zachód do pomostu Wielkiego Torfowiska Ķemeri przed powrotem (około godzina powrotu do Rygi). Kolejność można odwrócić w trakcie dnia, jeśli pogoda lub ruch sprawia, że jest to sensowne.</p>
-        <link rel="stylesheet" href="/_assets/css/route-map.css?v=1780234419">
-        <p class="route-map-summary">Pętla około 250 km · 6 przystanków</p>
-        <div class="route-map-google">'<iframe src="https://www.google.com/maps/d/embed?mid=1_8RLNgAnuUyeso6X5CI-hnASaaoxO4I&ehbc=2E312F" width="640" height="480"></iframe>'</div>
-      </section>
 
 
       <!-- VIDEO REEL (sits just above the day plan so visitors see real footage
@@ -3155,6 +3383,14 @@ h1,h2,h3,h4{color:var(--bark)}
           </div>
         </div>
       </div>
+
+      <section class="route-map-section">
+        <h2 class="route-map-section-title">Trasa, na mapie</h2>
+        <p class="route-map-section-sub">Przystanki dnia jako pętla. Z Rygi na południe do Pałacu Rundāle (około 75 minut), potem krótkie skoki do Bauska na obiad, zamek Bauska, potem na zachód do pomostu Wielkiego Torfowiska Ķemeri przed powrotem (około godzina powrotu do Rygi). Kolejność można odwrócić w trakcie dnia, jeśli pogoda lub ruch sprawia, że jest to sensowne.</p>
+        <link rel="stylesheet" href="/_assets/css/route-map.css?v=1780234419">
+        <p class="route-map-summary">Pętla około 250 km · 6 przystanków</p>
+        <div class="route-map-google"><iframe src="https://www.google.com/maps/d/embed?mid=1_8RLNgAnuUyeso6X5CI-hnASaaoxO4I&ehbc=2E312F" width="640" height="480"></iframe></div><a class="route-map-fullmap" href="https://www.google.com/maps/d/view?mid=1_8RLNgAnuUyeso6X5CI-hnASaaoxO4I" target="_blank" rel="noopener">View larger map ↗</a>
+      </section>
 
       <!-- GOOD TO KNOW -->
       <h2>Dobrze wiedzieć</h2>
@@ -5923,5 +6159,9 @@ document.querySelector('.gallery-grid').addEventListener('click', function(e) {
   </div>
   <a class="mobile-cta-btn" href="#reserve-now">Reserve</a>
 </aside>
+<script id="bb-detail-scroll">(function(){var n=document.getElementById("nav");if(!n)return;var f=function(){n.classList.toggle("scrolled",window.scrollY>50);};f();window.addEventListener("scroll",f,{passive:true});})();</script>
+<script id="bb-detail-reviews">(function(){function shuffle(rail){if(!rail)return;var a=[].slice.call(rail.querySelectorAll(".review-card"));for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}a.forEach(function(c){rail.appendChild(c);});}var top=document.querySelector(".top-reviews .reviews-rail");if(!top){shuffle(document.querySelector(".reviews-inline .reviews-rail"));return;}var DS=/Ranjith|Tharun|Vijay|Sanjay/;var seen={};function key(c){var t=c.querySelector(".review-text");return (t?t.textContent:c.textContent).replace(/\s+/g," ").trim().slice(0,60);}function proc(rail,move){[].slice.call(rail.querySelectorAll(".review-card")).forEach(function(c){if(DS.test(c.textContent)){c.remove();return;}var k=key(c);if(seen[k]){c.remove();return;}seen[k]=1;if(move)top.appendChild(c);});}proc(top,false);var inl=document.querySelector(".reviews-inline");if(inl){var ir=inl.querySelector(".reviews-rail");if(ir)proc(ir,true);inl.style.display="none";}var h=document.querySelector(".top-reviews-h3");if(h&&/highlighted/i.test(h.textContent))h.textContent="A few reviews from other travellers";shuffle(top);var wrap=document.querySelector(".top-reviews .reviews-rail-wrap");if(!wrap)return;if(top.scrollHeight<=860)return;wrap.classList.add("bb-rev-collapsible");var fade=document.createElement("div");fade.className="bb-rev-fade";var show=document.createElement("button");show.type="button";show.className="bb-rev-showall";show.textContent="Show more reviews";show.setAttribute("aria-expanded","false");fade.appendChild(show);var up=document.createElement("button");up.type="button";up.className="bb-rev-collapse";up.textContent="Collapse \u2191";up.setAttribute("aria-expanded","true");wrap.appendChild(fade);wrap.appendChild(up);show.addEventListener("click",function(){var y=wrap.getBoundingClientRect().top;wrap.classList.add("expanded");window.scrollBy(0,wrap.getBoundingClientRect().top-y);});up.addEventListener("click",function(){wrap.classList.remove("expanded");if(h&&h.scrollIntoView)h.scrollIntoView({block:"start"});});})();</script>
+<script id="bb-detail-datepicker">(function(){var last=-1;function op(e){var t=e.target;if(!t||!t.matches||!t.matches('input[type="date"]'))return;if(e.timeStamp-last<400)return;last=e.timeStamp;try{t.showPicker();}catch(_){}}document.addEventListener("focusin",op,true);document.addEventListener("click",op,true);})();</script>
+<script id="bb-detail-bookcollapse">(function(){var card=document.querySelector(".booking-card");if(!card)return;var body=card.querySelector(".bk-body");if(!body)return;if(card.querySelector(".bb-book-open"))return;var b=document.createElement("button");b.type="button";b.className="bb-book-open";b.setAttribute("aria-expanded","false");b.textContent="Check availability & book \u2192";body.parentNode.insertBefore(b,body);b.addEventListener("click",function(){card.classList.add("bb-expanded");b.setAttribute("aria-expanded","true");var d=card.querySelector('input[type="date"]');if(d){try{d.focus();}catch(_){}}});})();</script>
 </body>
 </html>
